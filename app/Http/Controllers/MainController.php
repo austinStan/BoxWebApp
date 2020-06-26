@@ -5,7 +5,7 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 use Inertia\Inertia;
 
-class PagesController extends Controller
+class MainController extends Controller
 {
     public function index()
     {
@@ -14,6 +14,6 @@ class PagesController extends Controller
            'lname'=>'roy',
        ];
 
-       return Inertia::render('Dashboard/Index',$data);
+       return Inertia::render('Index',$data);
     }
 }
