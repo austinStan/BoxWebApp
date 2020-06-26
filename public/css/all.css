@@ -126,3 +126,15 @@ body{
     right: -14px;
 }
 }
+
+.inner-header .advanced-search .input-group button {
+    font-size: 16px;
+    color: #ffffff;
+    position: absolute;
+    right: -8px;
+    top: -2px;
+    border: 1px solid #e7ab3c;
+    background: #e7ab3c;
+    padding: 12px 16px 12px;
+    cursor: pointer;
+}

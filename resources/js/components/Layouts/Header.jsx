@@ -55,7 +55,7 @@ export default function Header() {
                 <div className="container">
                     <div className="inner-header">
                         <div className="row">
-                            <div className="col-lg-8 col-md-8">
+                            <div className="col-lg-7 col-md-7">
                                 <div className="advanced-search">
                                     <button type="button" className="category-btn">
                                         All Categories
@@ -71,6 +71,8 @@ export default function Header() {
                                     </div>
                                 </div>
                             </div>
+                            
+
                         </div>
                     </div>
                 </div>
