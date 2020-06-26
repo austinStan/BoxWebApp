@@ -1,10 +1,10 @@
 import React from "react";
-import {MDBIcon} from 'mdbreact';
+import { MDBIcon, MDBCol } from "mdbreact";
 
 export default function Header() {
     return (
         <>
-            <header className="header-section bg-dark">
+            <header className="header-section">
                 <div className="header-top">
                     <a href="#">
                         <img
@@ -37,21 +37,44 @@ export default function Header() {
                             </div>
                             <div className="top-social">
                                 <a href="#">
-                                 <MDBIcon fab icon="facebook" />
+                                    <MDBIcon fab icon="facebook" />
                                 </a>
                                 <a href="#">
-                                <MDBIcon fab icon="whatsapp" />
+                                    <MDBIcon fab icon="whatsapp" />
                                 </a>
                                 <a href="#">
-                                <MDBIcon fab icon="twitter" />
+                                    <MDBIcon fab icon="twitter" />
                                 </a>
                                 <a href="#">
-                                <MDBIcon fab icon="instagram" />
+                                    <MDBIcon fab icon="instagram" />
                                 </a>
                             </div>
                         </div>
                     </div>
                 </div>
+                <div className="container">
+                    <div className="inner-header">
+                        <div className="row">
+                            <div className="col-lg-8 col-md-8">
+                                <div className="advanced-search">
+                                    <button type="button" className="category-btn">
+                                        All Categories
+                                    </button>
+                                    <div className="input-group">
+                                        <input
+                                            type="text"
+                                            placeholder="What do you need?"
+                                        />
+                                        <button type="button">
+                                          <i className="fa fa-search"></i>
+                                        </button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div className="nav-item"></div>
             </header>
         </>
     );
