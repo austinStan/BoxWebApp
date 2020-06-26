@@ -1,15 +1,31 @@
-import React from 'react';
+import React from "react";
 
 export default function Header() {
     return (
-        <div className="container">
-            <div className="row justify-content-center">
-                <div className="col-md-8">
-                    <div className="card">
-                        <div className="card-header">Header</div>
+        <>
+            <header className="header-section bg-dark">
+                <div className="header-top">
+                    <a href="#">
+                        <img
+                            src="images/logo/logo.png"
+                            height="55px"
+                            width="85px"
+                            alt="image"
+                            className="logo"
+                        />
+                    </a>
+                    <div className="ht-left">
+                        <div className="mail-service">
+                            <i className=" fa fa-envelope"></i>
+                            boxshopping@gmail.com
+                        </div>
+                    <div className="phone-service">
+                        <i className="fa fa-phone"></i>
+                        +256759189296
+                    </div>
                     </div>
                 </div>
-            </div>
-        </div>
+            </header>
+        </>
     );
 }
