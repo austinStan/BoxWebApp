@@ -92,10 +92,10 @@ export default function Header() {
                                         <table>
                                             <tbody>
                                                 <tr>
-                                                    <td className="si-pic"><img src="img/select-product-1.jpg" alt=""/></td>
+                                                    <td className="si-pic"><img src="images/imgtrolley/shoes.jpg" alt=""/></td>
                                                     <td className="si-text">
                                                         <div className="product-selected">
-                                                            <p>shs100,000.00</p>
+                                                            <p>shs50,000.00</p>
                                                             <h6>Shoes</h6>
                                                         </div>
                                                     </td>
@@ -104,11 +104,11 @@ export default function Header() {
                                                     </td>
                                                 </tr>
                                                 <tr>
-                                                    <td className="si-pic"><img src="img/select-product-2.jpg" alt=""/></td>
+                                                    <td className="si-pic"><img src="images/imgtrolley/bag.jpg" alt=""/></td>
                                                     <td className="si-text">
                                                         <div className="product-selected">
-                                                            <p>shs50,000.00</p>
-                                                            <h6>T-shirt</h6>
+                                                            <p>shs100,000.00</p>
+                                                            <h6>Bag</h6>
                                                         </div>
                                                     </td>
                                                     <td className="si-close">
@@ -120,10 +120,10 @@ export default function Header() {
                                     </div>
                                     <div className="select-total">
                                         <span>total:</span>
-                                        <h5>$120.00</h5>
+                                        <h5>shs150,000.00</h5>
                                     </div>
                                     <div className="select-button">
-                                        <a href="#" className="primary-btn view-card">BOX CARD</a>
+                                        <a href="#" className="primary-btn view-card">VIEW CARD</a>
                                         <a href="#" className="primary-btn checkout-btn">CHECK OUT</a>
                                     </div>
                                 </div>
