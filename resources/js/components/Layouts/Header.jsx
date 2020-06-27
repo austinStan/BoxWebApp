@@ -66,13 +66,19 @@ export default function Header() {
                                             <MDBIcon icon="bars" />
                                         </button>
                                         <div className="dropdown-content">
-                                            <div className="products" role='menu'>
-                                                <a href="#" role='menu-item'><MDBIcon icon="tshirt" /><span>fashion</span></a>
-                                                <div className="fashion" role='menu'>
-                                                    <div className='fashion-1'>
-                                                        Hello world
+                                            <div className="products">
+                                                <a href="#" role='menu-item' className='itm'><MDBIcon icon="tshirt" /><span>fashion</span></a>
+                                                <div className='sub'>
+                                                    <div className='sub-w'>
+                                                        <div className='co'>
+                                                            <div className='cat'>
+                                                            <a href="#" class="tit" role="menuitem">T-Shirts</a>
+                                                            <a href="#" class="s-itm" role="menuitem">Polystere Brands</a>
+                                                            </div>
+                                                        </div>
                                                     </div>
                                                 </div>
+                                                <a href="#" role='menu-item'><MDBIcon icon="car-alt" /><span>Cars</span></a>
                                             </div>
                                         </div>
                                     </div>
