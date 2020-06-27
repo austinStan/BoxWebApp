@@ -66,9 +66,14 @@ export default function Header() {
                                             <MDBIcon icon="bars" />
                                         </button>
                                         <div className="dropdown-content">
-                                            <a href="#">Fashion</a>
-                                            <a href="#">Cars</a>
-                                            <a href="#">Houses</a>
+                                            <div className="products" role='menu'>
+                                                <a href="#" role='menu-item'><MDBIcon icon="tshirt" /><span>fashion</span></a>
+                                                <div className="fashion" role='menu'>
+                                                    <div className='fashion-1'>
+                                                        Hello world
+                                                    </div>
+                                                </div>
+                                            </div>
                                         </div>
                                     </div>
                                     <div className="input-group">
