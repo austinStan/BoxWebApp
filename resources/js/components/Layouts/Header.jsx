@@ -57,12 +57,20 @@ export default function Header() {
                         <div className="row">
                             <div className="col-lg-7 col-md-7">
                                 <div className="advanced-search">
-                                    <button
-                                        type="button"
-                                        className="category-btn"
-                                    >
-                                        All Categories
-                                    </button>
+                                    <div className="dropdown">
+                                        <button
+                                            type="button"
+                                            className="category-btn"
+                                        >
+                                            All Categories
+                                            <MDBIcon icon="bars" />
+                                        </button>
+                                        <div className="dropdown-content">
+                                            <a href="#">Fashion</a>
+                                            <a href="#">Cars</a>
+                                            <a href="#">Houses</a>
+                                        </div>
+                                    </div>
                                     <div className="input-group">
                                         <input
                                             type="text"
@@ -76,57 +84,17 @@ export default function Header() {
                             </div>
                             <div className="col-lg-5 col-md-5 text-right">
                                 <ul className="nav-right">
-                                    <li className='heart-icon'>
+                                    <li className="heart-icon">
                                         <a href="#">
                                             <MDBIcon far icon="heart" />
-                                            <span>2</span>
+                                            WishList
                                         </a>
                                     </li>
-                                    <li className='cart-icon'>
+                                    <li className="cart-icon">
                                         <a href="#">
-                                        <MDBIcon icon="shopping-cart" />
-                                        <span>3</span>
+                                            <MDBIcon icon="shopping-cart" />{" "}
+                                            Cart
                                         </a>
-                                        <div className="cart-hover">
-                                    <div className="select-items">
-                                        <table>
-                                            <tbody>
-                                                <tr>
-                                                    <td className="si-pic"><img src="images/imgtrolley/shoes.jpg" alt=""/></td>
-                                                    <td className="si-text">
-                                                        <div className="product-selected">
-                                                            <p>shs50,000.00</p>
-                                                            <h6>Shoes</h6>
-                                                        </div>
-                                                    </td>
-                                                    <td className="si-close">
-                                                    <MDBIcon far icon="times-circle" />
-                                                    </td>
-                                                </tr>
-                                                <tr>
-                                                    <td className="si-pic"><img src="images/imgtrolley/bag.jpg" alt=""/></td>
-                                                    <td className="si-text">
-                                                        <div className="product-selected">
-                                                            <p>shs100,000.00</p>
-                                                            <h6>Bag</h6>
-                                                        </div>
-                                                    </td>
-                                                    <td className="si-close">
-                                                    <MDBIcon far icon="times-circle" />
-                                                    </td>
-                                                </tr>
-                                            </tbody>
-                                        </table>
-                                    </div>
-                                    <div className="select-total">
-                                        <span>total:</span>
-                                        <h5>shs150,000.00</h5>
-                                    </div>
-                                    <div className="select-button">
-                                        <a href="#" className="primary-btn view-card">VIEW CARD</a>
-                                        <a href="#" className="primary-btn checkout-btn">CHECK OUT</a>
-                                    </div>
-                                </div>
                                     </li>
                                 </ul>
                             </div>
