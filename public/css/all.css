@@ -218,11 +218,17 @@ ul, ol {
   }
 
   .nav-item .navbar-nav li a{
-    color: orange !important;
+    color: #ffffff !important;
 }
 
-.nav-item .dropdown-menu{
+.nav-item .dropdown-menu {
     background-color: #484848 !important;
 }
-
-.nav-item navbar .navbar-nav li a:hover{color: red;} 
+.nav-item .dropdown-menu a:hover{
+    background-color: #ffa500;
+    color: #ffffff
+}
+.navbar .navbar-nav > li > a:hover, .navbar .navbar-nav > li > a:focus {
+    background-color: #ffa500;
+    color: #ffffff;
+}
