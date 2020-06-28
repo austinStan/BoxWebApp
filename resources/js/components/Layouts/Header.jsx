@@ -151,12 +151,18 @@ export default function Header() {
                                         <a className="dropdown-item" href="#">
                                             Shopping Cart
                                         </a>
+                                        <a className="dropdown-item" href="#">
+                                            Wishlist
+                                        </a>
                                     </div>
                                 </li>
                             </ul>
                             </div>
                         </div>
                     </nav>
+                </div>
+                <div className='products'>
+                    Hello world
                 </div>
             </header>
         </>
