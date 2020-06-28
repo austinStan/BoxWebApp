@@ -59,28 +59,11 @@ export default function Header() {
                                 <div className="advanced-search">
                                     <div className="dropdown">
                                         <button
-                                            type="button"
+                                            href="#"
                                             className="category-btn"
                                         >
-                                            All Categories
-                                            <MDBIcon icon="bars" />
+                                            BOX SEARCH
                                         </button>
-                                        <div className="dropdown-content">
-                                            <div className="products">
-                                                <a href="#" role='menu-item' className='itm'><MDBIcon icon="tshirt" /><span>fashion</span></a>
-                                                <div className='sub'>
-                                                    <div className='sub-w'>
-                                                        <div className='co'>
-                                                            <div className='cat'>
-                                                            <a href="#" class="tit" role="menuitem">T-Shirts</a>
-                                                            <a href="#" class="s-itm" role="menuitem">Polystere Brands</a>
-                                                            </div>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                                <a href="#" role='menu-item'><MDBIcon icon="car-alt" /><span>Cars</span></a>
-                                            </div>
-                                        </div>
                                     </div>
                                     <div className="input-group">
                                         <input
@@ -112,7 +95,80 @@ export default function Header() {
                         </div>
                     </div>
                 </div>
-                <div className="nav-item"></div>
+                <div className="nav-item">
+                    <nav className="navbar navbar-expand-lg navbar-light bg-dark">
+                        <button
+                            className="navbar-toggler"
+                            type="button"
+                            data-toggle="collapse"
+                            data-target="#navbarNavDropdown"
+                            aria-controls="navbarNavDropdown"
+                            aria-expanded="false"
+                            aria-label="Toggle navigation"
+                        >
+                            <span className="navbar-toggler-icon"></span>
+                        </button>
+                        <div
+                            className="collapse navbar-collapse"
+                            id="navbarNavDropdown"
+                        >
+                            <div className='container'>
+                            <ul className="navbar-nav">
+                                <li className="nav-item active">
+                                    <a className="nav-link" href="#">
+                                        Home
+                                    </a>
+                                </li>
+                                <li className="nav-item">
+                                    <a className="nav-link" href="#">
+                                        About Us
+                                    </a>
+                                </li>
+                                <li className="nav-item">
+                                    <a className="nav-link" href="#">
+                                        Contacts
+                                    </a>
+                                </li>
+                                <li className="nav-item">
+                                    <a className="nav-link" href="#">
+                                        FAQs
+                                    </a>
+                                </li>
+                                <li className="nav-item dropdown">
+                                    <a
+                                        className="nav-link dropdown-toggle"
+                                        href="#"
+                                        id="navbarDropdownMenuLink"
+                                        role="button"
+                                        data-toggle="dropdown"
+                                        aria-haspopup="true"
+                                        aria-expanded="false"
+                                    >
+                                        Pages
+                                    </a>
+                                    <div
+                                        className="dropdown-menu"
+                                        aria-labelledby="navbarDropdownMenuLink"
+                                    >
+                                        <a className="dropdown-item" href="#">
+                                            Register
+                                        </a>
+                                        <a className="dropdown-item" href="#">
+                                            Login
+                                        </a>
+                                        <a className="dropdown-item" href="#">
+                                            FAQS
+                                        </a>
+                                        <a className="dropdown-item" href="#">
+                                            Shopping Cart
+                                        </a>
+                                    </div>
+                                </li>
+                            </ul>
+                            </div>
+                        </div>
+                    </nav>
+                </div>
             </header>
         </>
     );
