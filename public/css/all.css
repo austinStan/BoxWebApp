@@ -423,7 +423,7 @@ margin-bottom: 30px;
     color: #b2b2b2;
 }
 .footer-widget ul li a:hover{
-    color:orange;
+    color:#ffa500;
 }
 
 .newslatter-item h5 {
@@ -451,11 +451,11 @@ margin-bottom: 30px;
 .newslatter-item .subscribe-form button {
     display: inline-block;
     color: #ffffff;
-    background: #e7ab3c;
+    background: #ffa500;
     font-size: 13px;
     font-weight: 700;
     text-transform: uppercase;
-    border: 1px solid #e7ab3c;
+    border: 1px solid #ffa500;
     position: absolute;
     right: 0;
     top: 0;

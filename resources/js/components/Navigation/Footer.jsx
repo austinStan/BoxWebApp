@@ -83,7 +83,7 @@ export default function Footer() {
                                 Get E-mail updates about our latest shop and
                                 special offers.
                             </p>
-                            <form action="#" class="subscribe-form">
+                            <form action="#" className="subscribe-form">
                                 <input
                                     type="text"
                                     placeholder="Enter Your Mail"

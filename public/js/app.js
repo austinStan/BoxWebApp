@@ -94983,7 +94983,9 @@ function extend() {
 
 var map = {
 	"./Index": "./resources/js/Pages/Index.jsx",
-	"./Index.jsx": "./resources/js/Pages/Index.jsx"
+	"./Index.jsx": "./resources/js/Pages/Index.jsx",
+	"./Layout": "./resources/js/Pages/Layout.jsx",
+	"./Layout.jsx": "./resources/js/Pages/Layout.jsx"
 };
 
 
@@ -95017,7 +95019,39 @@ webpackContext.id = "./resources/js/Pages sync recursive ^\\.\\/.*$";
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "default", function() { return Index; });
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
+/* harmony import */ var _Layout__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./Layout */ "./resources/js/Pages/Layout.jsx");
+
+
+
+var Index = function Index(_ref) {
+  var fname = _ref.fname,
+      lname = _ref.lname;
+  return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react__WEBPACK_IMPORTED_MODULE_0___default.a.Fragment, null, fname, " ", lname);
+};
+
+Index.layout = function (page) {
+  return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_Layout__WEBPACK_IMPORTED_MODULE_1__["default"], {
+    children: page,
+    title: "Index | Box Online Shopping"
+  });
+};
+
+/* harmony default export */ __webpack_exports__["default"] = (Index);
+
+/***/ }),
+
+/***/ "./resources/js/Pages/Layout.jsx":
+/*!***************************************!*\
+  !*** ./resources/js/Pages/Layout.jsx ***!
+  \***************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "default", function() { return Layout; });
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
 /* harmony import */ var _fortawesome_fontawesome_free_css_all_min_css__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @fortawesome/fontawesome-free/css/all.min.css */ "./node_modules/@fortawesome/fontawesome-free/css/all.min.css");
@@ -95026,16 +95060,33 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var bootstrap_css_only_css_bootstrap_min_css__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(bootstrap_css_only_css_bootstrap_min_css__WEBPACK_IMPORTED_MODULE_2__);
 /* harmony import */ var mdbreact_dist_css_mdb_css__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! mdbreact/dist/css/mdb.css */ "./node_modules/mdbreact/dist/css/mdb.css");
 /* harmony import */ var mdbreact_dist_css_mdb_css__WEBPACK_IMPORTED_MODULE_3___default = /*#__PURE__*/__webpack_require__.n(mdbreact_dist_css_mdb_css__WEBPACK_IMPORTED_MODULE_3__);
-/* harmony import */ var _components_Layouts_Header__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ../components/Layouts/Header */ "./resources/js/components/Layouts/Header.jsx");
-/* harmony import */ var _components_Layouts_Footer__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ../components/Layouts/Footer */ "./resources/js/components/Layouts/Footer.jsx");
+/* harmony import */ var _components_Navigation_Header__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ../components/Navigation/Header */ "./resources/js/components/Navigation/Header.jsx");
+/* harmony import */ var _components_Navigation_Footer__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ../components/Navigation/Footer */ "./resources/js/components/Navigation/Footer.jsx");
+ //import { InertiaLink } from '@inertiajs/inertia-react'
 
 
 
 
 
 
-function Index() {
-  return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react__WEBPACK_IMPORTED_MODULE_0___default.a.Fragment, null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_components_Layouts_Header__WEBPACK_IMPORTED_MODULE_4__["default"], null), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", null, "IM A BODY"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_components_Layouts_Footer__WEBPACK_IMPORTED_MODULE_5__["default"], null));
+function Layout(_ref) {
+  var title = _ref.title,
+      children = _ref.children;
+  Object(react__WEBPACK_IMPORTED_MODULE_0__["useEffect"])(function () {
+    document.title = title;
+  }, [title]);
+  return (
+    /*#__PURE__*/
+    // <main>
+    //   <header>
+    //     <InertiaLink href="/">Home</InertiaLink>
+    //     <InertiaLink href="/about">About</InertiaLink>
+    //     <InertiaLink href="/contact">Contact</InertiaLink>
+    //   </header>
+    //   <article>{children}</article>
+    // </main>
+    react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react__WEBPACK_IMPORTED_MODULE_0___default.a.Fragment, null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_components_Navigation_Header__WEBPACK_IMPORTED_MODULE_4__["default"], null), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", null, children), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_components_Navigation_Footer__WEBPACK_IMPORTED_MODULE_5__["default"], null))
+  );
 }
 
 /***/ }),
@@ -95127,10 +95178,10 @@ window.axios.defaults.headers.common['X-Requested-With'] = 'XMLHttpRequest';
 
 /***/ }),
 
-/***/ "./resources/js/components/Layouts/Footer.jsx":
-/*!****************************************************!*\
-  !*** ./resources/js/components/Layouts/Footer.jsx ***!
-  \****************************************************/
+/***/ "./resources/js/components/Navigation/Footer.jsx":
+/*!*******************************************************!*\
+  !*** ./resources/js/components/Navigation/Footer.jsx ***!
+  \*******************************************************/
 /*! exports provided: default */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
@@ -95212,7 +95263,7 @@ function Footer() {
     className: "newslatter-item"
   }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("h5", null, "Join Our Newsletter Now"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("p", null, "Get E-mail updates about our latest shop and special offers."), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("form", {
     action: "#",
-    "class": "subscribe-form"
+    className: "subscribe-form"
   }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("input", {
     type: "text",
     placeholder: "Enter Your Mail"
@@ -95223,10 +95274,10 @@ function Footer() {
 
 /***/ }),
 
-/***/ "./resources/js/components/Layouts/Header.jsx":
-/*!****************************************************!*\
-  !*** ./resources/js/components/Layouts/Header.jsx ***!
-  \****************************************************/
+/***/ "./resources/js/components/Navigation/Header.jsx":
+/*!*******************************************************!*\
+  !*** ./resources/js/components/Navigation/Header.jsx ***!
+  \*******************************************************/
 /*! exports provided: default */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 

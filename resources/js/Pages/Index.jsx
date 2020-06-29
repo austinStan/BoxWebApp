@@ -1,16 +1,20 @@
 import React from "react";
-import "@fortawesome/fontawesome-free/css/all.min.css";
-import "bootstrap-css-only/css/bootstrap.min.css";
-import "mdbreact/dist/css/mdb.css";
-import Header from "../components/Layouts/Header";
-import Footer from "../components/Layouts/Footer";
+import Layout from './Layout'
 
-export default function Index() {
+
+
+const Index = ({fname,lname}) => {
     return (
         <>
-        <Header />
+        {/* <Header />
        <div>IM A BODY</div> 
-        <Footer />
+        <Footer /> */}
+        {fname} {lname}
         </>
     );
 }
+Index.layout = page => (
+    <Layout children={page} title="Index | Box Online Shopping" />
+);
+
+export default Index;
