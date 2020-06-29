@@ -9,6 +9,7 @@ export default function Index() {
     return (
         <>
         <Header />
+       <div>IM A BODY</div> 
         <Footer />
         </>
     );

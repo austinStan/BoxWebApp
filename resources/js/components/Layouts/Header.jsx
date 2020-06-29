@@ -1,5 +1,5 @@
 import React from "react";
-import { MDBIcon, MDBCol } from "mdbreact";
+import { MDBIcon } from "mdbreact";
 
 export default function Header() {
     return (
@@ -9,8 +9,8 @@ export default function Header() {
                     <a href="#">
                         <img
                             src="images/logo/logo.png"
-                            height="55px"
-                            width="85px"
+                            height="50px"
+                            width="75px"
                             alt="image"
                             className="logo"
                         />
@@ -86,7 +86,7 @@ export default function Header() {
                                     </li>
                                     <li className="cart-icon">
                                         <a href="#">
-                                            <MDBIcon icon="shopping-cart" />{" "}
+                                            <MDBIcon icon="shopping-cart" />
                                             Cart
                                         </a>
                                     </li>
@@ -121,74 +121,68 @@ export default function Header() {
                                         >
                                             <ul className="menu dropdown-menu">
                                                 <li>
-                                                    <a href="#" className='dropdown-item'>fashion</a>
+                                                    <a href="#" className='dropdown-item'><MDBIcon icon="tshirt" />fashion</a>
 
                                                     <div className="megadrop">
+                                                        <h2>Mens Collection</h2>
                                                         <div className="col">
-                                                            <h3>Title</h3>
+                                                            <h3>T-shirts </h3>
                                                             <ul>
                                                                 <li>
                                                                     <a href="#">
-                                                                        Sub-menu
-                                                                        1
+                                                                        Polo 
                                                                     </a>
                                                                 </li>
                                                                 <li>
                                                                     <a href="#">
-                                                                        Sub-menu
-                                                                        2
+                                                                        office shirts
                                                                     </a>
                                                                 </li>
                                                                 <li>
                                                                     <a href="#">
-                                                                        Sub-menu
-                                                                        3
+                                                                       button shirts
                                                                     </a>
                                                                 </li>
                                                             </ul>
                                                         </div>
                                                         <div className="col">
-                                                            <h3>Title</h3>
+                                                            <h3>Sweaters</h3>
                                                             <ul>
                                                                 <li>
                                                                     <a href="#">
-                                                                        Sub-menu
-                                                                        1
+                                                                       v-neck
+                                                                    
                                                                     </a>
                                                                 </li>
                                                                 <li>
                                                                     <a href="#">
-                                                                        Sub-menu
-                                                                        2
+                                                                       crew neck
                                                                     </a>
                                                                 </li>
                                                                 <li>
                                                                     <a href="#">
-                                                                        Sub-menu
-                                                                        3
+                                                                       turtle neck
                                                                     </a>
                                                                 </li>
                                                             </ul>
                                                         </div>
                                                         <div className="col">
-                                                            <h3>Title</h3>
+                                                            <h3>Pants</h3>
                                                             <ul>
                                                                 <li>
                                                                     <a href="#">
-                                                                        Sub-menu
-                                                                        1
+                                                                        Kaki
                                                                     </a>
                                                                 </li>
                                                                 <li>
                                                                     <a href="#">
-                                                                        Sub-menu
-                                                                        2
+                                                                        Suit pants
                                                                     </a>
                                                                 </li>
                                                                 <li>
                                                                     <a href="#">
-                                                                        Sub-menu
-                                                                        3
+                                                                        sweat pants
+                                                                        
                                                                     </a>
                                                                 </li>
                                                             </ul>
@@ -197,16 +191,16 @@ export default function Header() {
                                                 </li>
 
                                                 <li>
-                                                    <a href="#" className='dropdown-item'>Cars</a>
+                                                    <a href="#" className='dropdown-item'><MDBIcon icon="car-alt" />Cars</a>
                                                     <div className="megadrop"></div>
                                                 </li>
 
                                                 <li>
-                                                    <a href="#" className='dropdown-item'>food</a>
+                                                    <a href="#" className='dropdown-item'><MDBIcon icon="hamburger" />food</a>
                                                     <div className="megadrop"></div>
                                                 </li>
                                                 <li>
-                                                    <a href="#" className='dropdown-item'>livestock</a>
+                                                    <a href="#" className='dropdown-item'><MDBIcon icon="paw" />livestock</a>
                                                     <div className="megadrop"></div>
                                                 </li>
                                             </ul>
