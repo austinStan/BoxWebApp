@@ -101,68 +101,189 @@ export default function Header() {
                             className="collapse navbar-collapse"
                             id="navbarNavDropdown"
                         >
-                            <div className='container'>
-                            <ul className="navbar-nav">
-                                <li className="nav-item">
-                                    <a className="nav-link" href="#">
-                                        Home
-                                    </a>
-                                </li>
-                                <li className="nav-item">
-                                    <a className="nav-link" href="#">
-                                        About Us
-                                    </a>
-                                </li>
-                                <li className="nav-item">
-                                    <a className="nav-link" href="#">
-                                        Contacts
-                                    </a>
-                                </li>
-                                <li className="nav-item">
-                                    <a className="nav-link" href="#">
-                                        FAQs
-                                    </a>
-                                </li>
-                                <li className="nav-item dropdown">
-                                    <a
-                                        className="nav-link dropdown-toggle"
-                                        href="#"
-                                        id="navbarDropdownMenuLink"
-                                        role="button"
-                                        data-toggle="dropdown"
-                                        aria-haspopup="true"
-                                        aria-expanded="false"
-                                    >
-                                        Pages
-                                    </a>
-                                    <div
-                                        className="dropdown-menu"
-                                        aria-labelledby="navbarDropdownMenuLink"
-                                    >
-                                        <a className="dropdown-item" href="#">
-                                            Register
+                            <div className="container">
+                                <ul className="navbar-nav">
+                                    <li className="nav-item dropdown">
+                                        <a
+                                            className="nav-link dropdown-toggle"
+                                            href="#"
+                                            id="navbarDropdownMenuLink"
+                                            role="button"
+                                            data-toggle="dropdown"
+                                            aria-haspopup="true"
+                                            aria-expanded="false"
+                                        >
+                                            Shop
                                         </a>
-                                        <a className="dropdown-item" href="#">
-                                            Login
+                                        <div
+                                            className="menu-container"
+                                            aria-labelledby="navbarDropdownMenuLink"
+                                        >
+                                            <ul className="menu dropdown-menu">
+                                                <li>
+                                                    <a href="#" className='dropdown-item'>fashion</a>
+
+                                                    <div className="megadrop">
+                                                        <div className="col">
+                                                            <h3>Title</h3>
+                                                            <ul>
+                                                                <li>
+                                                                    <a href="#">
+                                                                        Sub-menu
+                                                                        1
+                                                                    </a>
+                                                                </li>
+                                                                <li>
+                                                                    <a href="#">
+                                                                        Sub-menu
+                                                                        2
+                                                                    </a>
+                                                                </li>
+                                                                <li>
+                                                                    <a href="#">
+                                                                        Sub-menu
+                                                                        3
+                                                                    </a>
+                                                                </li>
+                                                            </ul>
+                                                        </div>
+                                                        <div className="col">
+                                                            <h3>Title</h3>
+                                                            <ul>
+                                                                <li>
+                                                                    <a href="#">
+                                                                        Sub-menu
+                                                                        1
+                                                                    </a>
+                                                                </li>
+                                                                <li>
+                                                                    <a href="#">
+                                                                        Sub-menu
+                                                                        2
+                                                                    </a>
+                                                                </li>
+                                                                <li>
+                                                                    <a href="#">
+                                                                        Sub-menu
+                                                                        3
+                                                                    </a>
+                                                                </li>
+                                                            </ul>
+                                                        </div>
+                                                        <div className="col">
+                                                            <h3>Title</h3>
+                                                            <ul>
+                                                                <li>
+                                                                    <a href="#">
+                                                                        Sub-menu
+                                                                        1
+                                                                    </a>
+                                                                </li>
+                                                                <li>
+                                                                    <a href="#">
+                                                                        Sub-menu
+                                                                        2
+                                                                    </a>
+                                                                </li>
+                                                                <li>
+                                                                    <a href="#">
+                                                                        Sub-menu
+                                                                        3
+                                                                    </a>
+                                                                </li>
+                                                            </ul>
+                                                        </div>
+                                                    </div>
+                                                </li>
+
+                                                <li>
+                                                    <a href="#" className='dropdown-item'>Cars</a>
+                                                    <div className="megadrop"></div>
+                                                </li>
+
+                                                <li>
+                                                    <a href="#" className='dropdown-item'>food</a>
+                                                    <div className="megadrop"></div>
+                                                </li>
+                                                <li>
+                                                    <a href="#" className='dropdown-item'>livestock</a>
+                                                    <div className="megadrop"></div>
+                                                </li>
+                                            </ul>
+                                        </div>
+                                    </li>
+                                    <li className="nav-item">
+                                        <a className="nav-link" href="#">
+                                            Home
                                         </a>
-                                        <a className="dropdown-item" href="#">
-                                            FAQS
+                                    </li>
+                                    <li className="nav-item">
+                                        <a className="nav-link" href="#">
+                                            About Us
                                         </a>
-                                        <a className="dropdown-item" href="#">
-                                            Shopping Cart
+                                    </li>
+                                    <li className="nav-item">
+                                        <a className="nav-link" href="#">
+                                            Contacts
                                         </a>
-                                        <a className="dropdown-item" href="#">
-                                            Wishlist
+                                    </li>
+                                    <li className="nav-item">
+                                        <a className="nav-link" href="#">
+                                            FAQs
                                         </a>
-                                    </div>
-                                </li>
-                            </ul>
+                                    </li>
+                                    <li className="nav-item dropdown">
+                                        <a
+                                            className="nav-link dropdown-toggle"
+                                            href="#"
+                                            id="navbarDropdownMenuLink"
+                                            role="button"
+                                            data-toggle="dropdown"
+                                            aria-haspopup="true"
+                                            aria-expanded="false"
+                                        >
+                                            Pages
+                                        </a>
+                                        <div
+                                            className="dropdown-menu"
+                                            aria-labelledby="navbarDropdownMenuLink"
+                                        >
+                                            <a
+                                                className="dropdown-item"
+                                                href="#"
+                                            >
+                                                Register
+                                            </a>
+                                            <a
+                                                className="dropdown-item"
+                                                href="#"
+                                            >
+                                                Login
+                                            </a>
+                                            <a
+                                                className="dropdown-item"
+                                                href="#"
+                                            >
+                                                FAQS
+                                            </a>
+                                            <a
+                                                className="dropdown-item"
+                                                href="#"
+                                            >
+                                                Shopping Cart
+                                            </a>
+                                            <a
+                                                className="dropdown-item"
+                                                href="#"
+                                            >
+                                                Wishlist
+                                            </a>
+                                        </div>
+                                    </li>
+                                </ul>
                             </div>
                         </div>
                     </nav>
-                </div>
-                <div className='products'>
-                    Hello world
                 </div>
             </header>
         </>
