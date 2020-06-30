@@ -1,12 +1,13 @@
 import React from "react";
 import Layout from "./Layout";
 import Carousel from "../components/Carousel";
+import Item2 from '../components/Item2';
 
 const Welcome = () => {
     return (
         <div className='bg-white'>
             <Carousel />
-            <section className="deal-of-week set-bg spad" data-setbg="img/time-bg.jpg">
+            <section className="deal-of-week set-bg spad">
             <div className="container">
                 <div className="col-lg-6 text-center">
                     <div className="section-title">
@@ -18,22 +19,8 @@ const Welcome = () => {
                             adipisicing elit{" "}
                         </p>
                         <div className="product-price">
-                            $35.00
+                            55,000 shs
                             <span>/ HanBag</span>
-                        </div>
-                    </div>
-                    <div className="countdown-timer" id="countdown">
-                        <div className="cd-item">
-                            <span>29</span> <p>Days</p>{" "}
-                        </div>
-                        <div className="cd-item">
-                            <span>05</span> <p>Hrs</p>{" "}
-                        </div>
-                        <div className="cd-item">
-                            <span>01</span> <p>Mins</p>{" "}
-                        </div>
-                        <div className="cd-item">
-                            <span>18</span> <p>Secs</p>{" "}
                         </div>
                     </div>
                     <a href="#" className="primary-btn">
@@ -42,6 +29,10 @@ const Welcome = () => {
                 </div>
             </div>
             </section>
+            <div>
+            <Item2/>
+            </div>
+           
         </div>
     );
 };

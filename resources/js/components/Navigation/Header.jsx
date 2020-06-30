@@ -264,12 +264,6 @@ export default function Header() {
                                                 className="dropdown-item"
                                                 href="#"
                                             >
-                                                FAQS
-                                            </InertiaLink>
-                                            <InertiaLink
-                                                className="dropdown-item"
-                                                href="#"
-                                            >
                                                 Shopping Cart
                                             </InertiaLink>
                                             <InertiaLink
