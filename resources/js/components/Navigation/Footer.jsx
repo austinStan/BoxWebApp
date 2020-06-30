@@ -1,5 +1,6 @@
 import React from "react";
 import { MDBIcon } from "mdbreact";
+import { InertiaLink } from "@inertiajs/inertia-react";
 
 export default function Footer() {
     return (
@@ -9,14 +10,14 @@ export default function Footer() {
                     <div className="col-lg-3">
                         <div className="footer-left">
                             <div className="footer-logo">
-                                <a href="#">
+                                <InertiaLink href="#">
                                     <img
                                         src="images/logo/logo.png"
                                         height="50px"
                                         width="60px"
                                         alt="logo"
                                     />
-                                </a>
+                                </InertiaLink>
                                 <span>Box Online shopping</span>
                             </div>
 
@@ -26,18 +27,18 @@ export default function Footer() {
                                 <li>Email: austinstan24@gmail.com</li>
                             </ul>
                             <div className="footer-social">
-                                <a href="#">
+                                <InertiaLink href="#">
                                     <MDBIcon fab icon="facebook" />
-                                </a>
-                                <a href="#">
+                                </InertiaLink>
+                                <InertiaLink href="#">
                                     <MDBIcon fab icon="whatsapp" />
-                                </a>
-                                <a href="#">
+                                </InertiaLink>
+                                <InertiaLink href="#">
                                     <MDBIcon fab icon="twitter" />
-                                </a>
-                                <a href="#">
+                                </InertiaLink>
+                                <InertiaLink href="#">
                                     <MDBIcon fab icon="instagram" />
-                                </a>
+                                </InertiaLink>
                             </div>
                         </div>
                     </div>
@@ -46,13 +47,13 @@ export default function Footer() {
                             <h5>Information</h5>
                             <ul>
                                 <li>
-                                    <a href="#">About Us</a>
+                                    <InertiaLink href="#">About Us</InertiaLink>
                                 </li>
                                 <li>
-                                    <a href="#">Contact Us</a>
+                                    <InertiaLink href="#">Contact Us</InertiaLink>
                                 </li>
                                 <li>
-                                    <a href="#">Blog details</a>
+                                    <InertiaLink href="#">Blog details</InertiaLink>
                                 </li>
                             </ul>
                         </div>
@@ -62,16 +63,16 @@ export default function Footer() {
                             <h5>My Account</h5>
                             <ul>
                                 <li>
-                                    <a href="#">My Account</a>
+                                    <InertiaLink href="#">My Account</InertiaLink>
                                 </li>
                                 <li>
-                                    <a href="#">Contact</a>
+                                    <InertiaLink href="#">Contact</InertiaLink>
                                 </li>
                                 <li>
-                                    <a href="#">Shopping Cart</a>
+                                    <InertiaLink  href="#">Shopping Cart</InertiaLink>
                                 </li>
                                 <li>
-                                    <a href="#">Shop</a>
+                                    <InertiaLink href="#">Shop</InertiaLink>
                                 </li>
                             </ul>
                         </div>

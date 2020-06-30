@@ -10,9 +10,15 @@ body{
 .header-top{
     display:flex;
     border-bottom: 1px solid #E5E5E5;
+    
 } 
 .header-section {
     background-color: #696969 !important;
+    background-image: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)),url('../images/bgimages/start.jpg');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover; 
+   
 }
 .header-top .ht-left .mail-service {
     font-size: 16px;
@@ -59,6 +65,10 @@ body{
     padding-top: 30px;
 }
 
+.header-top .ht-right .register a:hover{
+    color:orange;
+}
+
 .signup-panel{
     color: #ffffff;
     font-size: 14px;
@@ -83,6 +93,9 @@ body{
 .header-top .ht-right .top-social a {
    color:#ffffff;
    padding:8px;
+}
+.header-top .ht-right .top-social a:hover{
+    color:#ffa500;   
 }
 
 .inner-header {
@@ -201,7 +214,7 @@ ul, ol {
 }
 
 .nav-item  .bg-dark{
-   background: #484848 !important;
+   border-color:#fff;
 }
 .nav-item .container {
     width: 100%;
@@ -461,4 +474,113 @@ margin-bottom: 30px;
     top: 0;
     padding: 13px 20px 12px;
     cursor: pointer;
+}
+
+.carousel-inner {
+    max-height: 400px;
+ }
+ .carousel-inner .img {
+    max-height: 350px;    
+}
+
+.section-title{
+    margin-bottom:40px;
+    text-align:center;
+}
+
+.section-title h2 {
+    color: #252525;
+    font-size: 36px;
+    font-weight: 700;
+    margin-bottom: 38px;
+    position: relative;
+}
+
+.section-title h2:before {
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: -14px;
+    width: 80px;
+    height: 3px;
+    background: #e7ab3c;
+    content: "";
+    margin: 0 auto;
+}
+
+.section-title p {
+    color: #6e6e6e;
+}
+
+.section-title .product-price {
+    font-size: 24px;
+    font-weight: 700;
+    color: #e7ab3c;
+}
+
+.section-title .product-price span {
+    font-size: 16px;
+    font-weight: 400;
+    color: #636363;
+}
+
+.countdown-timer{
+    text-align:center;
+    margin-bottom:50px;
+}
+.countdown-timer .cd-item{
+    display:inline-block;
+    background:#ffffff;
+    margin-right:35px;
+    padding:10px 14px;
+    border-radius:5px;
+}
+.countdown-timer .cd-item {
+	display: inline-block;
+	background: #ffffff;
+	margin-right: 35px;
+	padding: 10px 14px;
+	border-radius: 5px;
+}
+
+.countdown-timer .cd-item:last-child {
+	margin-right: 0;
+}
+
+.countdown-timer .cd-item span {
+	color: #e7ab3c;
+	font-weight: 700;
+	line-height: 40px;
+	font-size: 36px;
+}
+
+.countdown-timer .cd-item p {
+	font-size: 16px;
+	color: #b2b2b2;
+	margin-bottom: 0;
+	text-transform: uppercase;
+	letter-spacing: 1.5px;
+}
+
+
+.primary-btn {
+	display: inline-block;
+	font-size: 14px;
+	font-weight: 700;
+	padding: 12px 30px;
+	color: #ffffff;
+	background: #e7ab3c;
+	text-transform: uppercase;
+}
+.deal-of-week {
+	padding-top: 80px;
+	padding-bottom: 80px;
+	margin-left: 65px;
+	margin-right: 65px;
+}
+
+.set-bg {
+	background-repeat: no-repeat;
+	background-size: cover;
+	background-position: top center;
 }
