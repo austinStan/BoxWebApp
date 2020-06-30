@@ -15,6 +15,7 @@ require('./bootstrap');
 //require('./components/Example');
 
 
+
 import { InertiaApp } from '@inertiajs/inertia-react'
 import React from 'react'
 import { render } from 'react-dom'
@@ -28,3 +29,4 @@ render(
   />,
   app
 )
+

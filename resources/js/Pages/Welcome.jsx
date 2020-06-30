@@ -1,12 +1,14 @@
 import React from "react";
 import Layout from "./Layout";
-import Carousel from "../components/Carousel";
-import Item2 from '../components/Item2';
+import Carousel from "../components/Advertisement";
+import NewProducts from "../components/NewProducts";
 
 const Welcome = () => {
     return (
-        <div className='bg-white'>
+        <div className='bg-white'> 
+            <section className='carousel-order'>
             <Carousel />
+            </section>
             <section className="deal-of-week set-bg spad">
             <div className="container">
                 <div className="col-lg-6 text-center">
@@ -29,9 +31,11 @@ const Welcome = () => {
                 </div>
             </div>
             </section>
-            <div>
-            <Item2/>
-            </div>
+            <section className='products'>
+                <NewProducts/>
+            </section>
+            
+           
            
         </div>
     );

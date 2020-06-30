@@ -10,6 +10,7 @@ body{
 .header-top{
     display:flex;
     border-bottom: 1px solid #E5E5E5;
+    height:80px;
     
 } 
 .header-section {
@@ -18,6 +19,7 @@ body{
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover; 
+   
    
 }
 .header-top .ht-left .mail-service {
@@ -99,8 +101,9 @@ body{
 }
 
 .inner-header {
-    padding: 39px 0;
-    background-color:#ffa500;
+    padding: 39px 10px;
+    background-color: #ffa500;
+    height: 100px;
 }
 
 .inner-header .advanced-search {
@@ -381,6 +384,7 @@ ul, ol {
     flex-wrap: wrap;
     margin-right: -15px;
     margin-left: -15px;
+    margin-top: -15px;
 }
 
 .footer-left{
@@ -482,7 +486,9 @@ margin-bottom: 30px;
  .carousel-inner .img {
     max-height: 350px;    
 }
-
+.carousel-order{
+    margin-top:10px;
+}
 .section-title{
     margin-bottom:40px;
     text-align:center;
@@ -538,18 +544,94 @@ margin-bottom: 30px;
 	padding-top: 80px;
 	padding-bottom: 80px;
 	margin-left: 65px;
-	margin-right: 65px;
+    margin-right: 65px;
 }
 
 .set-bg {
     background-image: url(../images/bgimages/time-bg.jpg);
 	background-repeat: no-repeat;
 	background-size: cover;
-	background-position: top center;
+    background-position: top center;
 }
 
 .spad {
 	padding-top: 80px;
     padding-bottom: 80px;
     margin-top: 50px;
+    margin-left:200px;
+    margin-right:200px;
 }
+/*products*/
+.products{
+    padding-left: 200px;
+    padding-top: 40px;
+    padding-right: 200px;
+}
+ 
+
+.products .view {
+    position: relative;
+    overflow: hidden;
+    cursor: default;
+    background-color:#636363;
+    color:#fff;
+    font-size: 14px;
+    font-weight: 900;
+    height: 40px;
+}
+
+.view {
+    position: relative;
+    overflow: hidden;
+    cursor: default;
+    height:80px;
+}
+
+
+
+
+
+
+
+
+
+
+
+.swiper-container {
+    width: 100%;
+    height: 300px;
+    margin: 20px auto;
+  }
+  .swiper-slide {
+    text-align: center;
+    font-size: 18px;
+    background: #fff;
+  
+    /* Center slide text vertically */
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: -webkit-flex;
+    display: flex;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    -webkit-justify-content: center;
+    justify-content: center;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    -webkit-align-items: center;
+    align-items: center;
+  }
+  .append-buttons {
+    text-align: center;
+    margin-top: 20px;
+  }
+  .append-buttons a {
+    display: inline-block;
+    border: 1px solid #007aff;
+    color: #007aff;
+    text-decoration: none;
+    padding: 4px 10px;
+    border-radius: 4px;
+    margin: 0 10px;
+    font-size: 13px;
+  }
