@@ -541,11 +541,12 @@ margin-bottom: 30px;
 }
 
 .deal-of-week {
-	padding-top: 80px;
-	padding-bottom: 80px;
+	padding-top: 120px;
+	padding-bottom: 120px;
 	margin-left: 65px;
     margin-right: 65px;
 }
+
 
 .set-bg {
     background-image: url(../images/bgimages/time-bg.jpg);
@@ -567,27 +568,45 @@ margin-bottom: 30px;
     padding-top: 40px;
     padding-right: 200px;
 }
- 
 
-.products .view {
+.products .brand-new {
     position: relative;
     overflow: hidden;
     cursor: default;
-    background-color:#636363;
-    color:#fff;
-    font-size: 14px;
-    font-weight: 900;
-    height: 40px;
+    background-color: #FCE7BB;
+    margin-left: auto;
+    margin-right: auto;
+    max-width: 1184px;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    min-height: 48px;
+    flex-wrap: nowrap;
+    align-items: center;
+    height: 0;
+    padding-left: 16px;
+    padding-right: 16px;
 }
+.brand-new h2{
+    font-size: 1.25rem;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    font-weight: 500;
+    overflow: hidden;
+    padding-left: 0;
+    padding-right:0;
+    max-width: 100%;
+    flex-grow: 1;
+    margin: 0;
+ }
 
-.view {
+/*carousel*/
+ .view {
     position: relative;
     overflow: hidden;
     cursor: default;
-    height:80px;
+    height: 98px;
 }
-
-
 
 
 
@@ -635,3 +654,31 @@ margin-bottom: 30px;
     margin: 0 10px;
     font-size: 13px;
   }
+
+
+  .product-item{
+    margin-bottom: 26px;
+  }
+
+  .product-item .product-body{
+    overflow: hidden;
+    position: relative;
+  }
+
+  .product-item .product-body .img-fluid{
+    display: block;
+    width: auto;
+    min-width: 100%;
+    vertical-align: middle;
+    border-style: none;
+  }
+  .product-item .product-body .sale {
+    color: #ffffff;
+    font-size: 10px;
+    background: #76BC42;
+    position: absolute;
+    left: 0;
+    top: 20px;
+    padding: 5px 10px;
+    text-transform: uppercase;
+}

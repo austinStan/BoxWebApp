@@ -32,8 +32,8 @@ export default function NewProducts() {
     };
     return (
         <div className="card">
-            <div className="view overlay">
-                <h3>New Products</h3>
+            <div className="row brand-new overlay">
+                <h2>Brand New Products</h2>
             </div>
             <div className="card-body">
                 <Carousel
@@ -74,7 +74,21 @@ export default function NewProducts() {
                         </MDBCol>
                     </div>
                     <div>
-                    <MDBCol style={{ maxWidth: "22rem" }}>
+                        <MDBCol style={{ maxWidth: "22rem" }}>
+                            <MDBCard className="product-item">
+                                <MDBCardBody className="product-body">
+                                    <MDBCardImage
+                                        className="img-fluid"
+                                        src="images/imagescarousel/man-1.jpg"
+                                        waves
+                                    />
+                                    <div className="sale">Sale</div>
+                                </MDBCardBody>
+                            </MDBCard>
+                        </MDBCol>
+                    </div>
+                    <div>
+                        <MDBCol style={{ maxWidth: "22rem" }}>
                             <MDBCard>
                                 <MDBCardImage
                                     className="img-fluid"
@@ -94,7 +108,7 @@ export default function NewProducts() {
                         </MDBCol>
                     </div>
                     <div>
-                    <MDBCol style={{ maxWidth: "22rem" }}>
+                        <MDBCol style={{ maxWidth: "22rem" }}>
                             <MDBCard>
                                 <MDBCardImage
                                     className="img-fluid"
@@ -114,7 +128,7 @@ export default function NewProducts() {
                         </MDBCol>
                     </div>
                     <div>
-                    <MDBCol style={{ maxWidth: "22rem" }}>
+                        <MDBCol style={{ maxWidth: "22rem" }}>
                             <MDBCard>
                                 <MDBCardImage
                                     className="img-fluid"
@@ -134,7 +148,7 @@ export default function NewProducts() {
                         </MDBCol>
                     </div>
                     <div>
-                    <MDBCol style={{ maxWidth: "22rem" }}>
+                        <MDBCol style={{ maxWidth: "22rem" }}>
                             <MDBCard>
                                 <MDBCardImage
                                     className="img-fluid"
@@ -154,7 +168,7 @@ export default function NewProducts() {
                         </MDBCol>
                     </div>
                     <div>
-                    <MDBCol style={{ maxWidth: "22rem" }}>
+                        <MDBCol style={{ maxWidth: "22rem" }}>
                             <MDBCard>
                                 <MDBCardImage
                                     className="img-fluid"
@@ -174,7 +188,7 @@ export default function NewProducts() {
                         </MDBCol>
                     </div>
                     <div>
-                    <MDBCol style={{ maxWidth: "22rem" }}>
+                        <MDBCol style={{ maxWidth: "22rem" }}>
                             <MDBCard>
                                 <MDBCardImage
                                     className="img-fluid"
@@ -194,7 +208,7 @@ export default function NewProducts() {
                         </MDBCol>
                     </div>
                     <div>
-                    <MDBCol style={{ maxWidth: "22rem" }}>
+                        <MDBCol style={{ maxWidth: "22rem" }}>
                             <MDBCard>
                                 <MDBCardImage
                                     className="img-fluid"
@@ -214,7 +228,7 @@ export default function NewProducts() {
                         </MDBCol>
                     </div>
                     <div>
-                    <MDBCol style={{ maxWidth: "22rem" }}>
+                        <MDBCol style={{ maxWidth: "22rem" }}>
                             <MDBCard>
                                 <MDBCardImage
                                     className="img-fluid"
@@ -234,7 +248,7 @@ export default function NewProducts() {
                         </MDBCol>
                     </div>
                     <div>
-                    <MDBCol style={{ maxWidth: "22rem" }}>
+                        <MDBCol style={{ maxWidth: "22rem" }}>
                             <MDBCard>
                                 <MDBCardImage
                                     className="img-fluid"
@@ -254,7 +268,7 @@ export default function NewProducts() {
                         </MDBCol>
                     </div>
                     <div>
-                    <MDBCol style={{ maxWidth: "22rem" }}>
+                        <MDBCol style={{ maxWidth: "22rem" }}>
                             <MDBCard>
                                 <MDBCardImage
                                     className="img-fluid"
@@ -274,7 +288,7 @@ export default function NewProducts() {
                         </MDBCol>
                     </div>
                     <div>
-                    <MDBCol style={{ maxWidth: "22rem" }}>
+                        <MDBCol style={{ maxWidth: "22rem" }}>
                             <MDBCard>
                                 <MDBCardImage
                                     className="img-fluid"
@@ -294,7 +308,7 @@ export default function NewProducts() {
                         </MDBCol>
                     </div>
                     <div>
-                    <MDBCol style={{ maxWidth: "22rem" }}>
+                        <MDBCol style={{ maxWidth: "22rem" }}>
                             <MDBCard>
                                 <MDBCardImage
                                     className="img-fluid"
@@ -314,27 +328,7 @@ export default function NewProducts() {
                         </MDBCol>
                     </div>
                     <div>
-                    <MDBCol style={{ maxWidth: "22rem" }}>
-                            <MDBCard>
-                                <MDBCardImage
-                                    className="img-fluid"
-                                    src="https://mdbootstrap.com/img/Mockups/Lightbox/Thumbnail/img%20(67).jpg"
-                                    waves
-                                />
-                                <MDBCardBody>
-                                    <MDBCardTitle>Card title</MDBCardTitle>
-                                    <MDBCardText>
-                                        Some quick example text to build on the
-                                        card title and make up the bulk of the
-                                        card's content.
-                                    </MDBCardText>
-                                    <MDBBtn href="#">Click</MDBBtn>
-                                </MDBCardBody>
-                            </MDBCard>
-                        </MDBCol>
-                    </div>
-                    <div>
-                    <MDBCol style={{ maxWidth: "22rem" }}>
+                        <MDBCol style={{ maxWidth: "22rem" }}>
                             <MDBCard>
                                 <MDBCardImage
                                     className="img-fluid"
