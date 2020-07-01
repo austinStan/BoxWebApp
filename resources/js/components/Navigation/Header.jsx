@@ -1,6 +1,6 @@
 import React from "react";
 import { MDBIcon } from "mdbreact";
-import { InertiaLink } from '@inertiajs/inertia-react'
+import { InertiaLink } from "@inertiajs/inertia-react";
 
 export default function Header() {
     return (
@@ -56,22 +56,18 @@ export default function Header() {
                 <div className="container">
                     <div className="inner-header">
                         <div className="row">
-                            <div className="col-lg-7 col-md-7">
-                                <div className="advanced-search">
-                                    <div className="dropdown">
+                            <div className="col-lg-7 col-md-7 ">
+                                <div className="input-group">
+                                    <input
+                                        type="text"
+                                        className="form-control"
+                                        placeholder="What do you need?"
+                                    />
+                                    <div className="input-group-append mb-5">
                                         <button
-                                            href="#"
-                                            className="category-btn"
+                                            className="btn btn-secondary btn-search"
+                                            type="button"
                                         >
-                                            BOX SEARCH
-                                        </button>
-                                    </div>
-                                    <div className="input-group">
-                                        <input
-                                            type="text"
-                                            placeholder="What do you need?"
-                                        />
-                                        <button type="button">
                                             <i className="fa fa-search"></i>
                                         </button>
                                     </div>
@@ -114,7 +110,7 @@ export default function Header() {
                                             aria-haspopup="true"
                                             aria-expanded="false"
                                         >
-                                          Box Shop
+                                            Box Shop
                                         </InertiaLink>
                                         <div
                                             className="menu-container"
@@ -122,7 +118,13 @@ export default function Header() {
                                         >
                                             <ul className="menu dropdown-menu">
                                                 <li>
-                                                    <InertiaLink href="#" className='dropdown-item'><MDBIcon icon="tshirt" />fashion</InertiaLink>
+                                                    <InertiaLink
+                                                        href="#"
+                                                        className="dropdown-item"
+                                                    >
+                                                        <MDBIcon icon="tshirt" />
+                                                        fashion
+                                                    </InertiaLink>
 
                                                     <div className="megadrop">
                                                         <h2>Mens Collection</h2>
@@ -131,17 +133,19 @@ export default function Header() {
                                                             <ul>
                                                                 <li>
                                                                     <InertiaLink href="#">
-                                                                        Polo 
+                                                                        Polo
                                                                     </InertiaLink>
                                                                 </li>
                                                                 <li>
                                                                     <InertiaLink href="#">
-                                                                        office shirts
+                                                                        office
+                                                                        shirts
                                                                     </InertiaLink>
                                                                 </li>
                                                                 <li>
                                                                     <InertiaLink href="#">
-                                                                       button shirts
+                                                                        button
+                                                                        shirts
                                                                     </InertiaLink>
                                                                 </li>
                                                             </ul>
@@ -151,18 +155,19 @@ export default function Header() {
                                                             <ul>
                                                                 <li>
                                                                     <InertiaLink href="#">
-                                                                       v-neck
-                                                                    
+                                                                        v-neck
                                                                     </InertiaLink>
                                                                 </li>
                                                                 <li>
                                                                     <InertiaLink href="#">
-                                                                       crew neck
+                                                                        crew
+                                                                        neck
                                                                     </InertiaLink>
                                                                 </li>
                                                                 <li>
                                                                     <InertiaLink href="#">
-                                                                       turtle neck
+                                                                        turtle
+                                                                        neck
                                                                     </InertiaLink>
                                                                 </li>
                                                             </ul>
@@ -177,13 +182,14 @@ export default function Header() {
                                                                 </li>
                                                                 <li>
                                                                     <InertiaLink href="#">
-                                                                        Suit pants
+                                                                        Suit
+                                                                        pants
                                                                     </InertiaLink>
                                                                 </li>
                                                                 <li>
                                                                     <InertiaLink href="#">
-                                                                        sweat pants
-                                                                        
+                                                                        sweat
+                                                                        pants
                                                                     </InertiaLink>
                                                                 </li>
                                                             </ul>
@@ -192,43 +198,76 @@ export default function Header() {
                                                 </li>
 
                                                 <li>
-                                                    <InertiaLink href="#" className='dropdown-item'><MDBIcon icon="car-alt" />Cars</InertiaLink>
+                                                    <InertiaLink
+                                                        href="#"
+                                                        className="dropdown-item"
+                                                    >
+                                                        <MDBIcon icon="car-alt" />
+                                                        Cars
+                                                    </InertiaLink>
                                                     <div className="megadrop"></div>
                                                 </li>
 
                                                 <li>
-                                                    <InertiaLink href="#" className='dropdown-item'><MDBIcon icon="hamburger" />food</InertiaLink>
+                                                    <InertiaLink
+                                                        href="#"
+                                                        className="dropdown-item"
+                                                    >
+                                                        <MDBIcon icon="hamburger" />
+                                                        food
+                                                    </InertiaLink>
                                                     <div className="megadrop"></div>
                                                 </li>
                                                 <li>
-                                                    <InertiaLink href="#" className='dropdown-item'><MDBIcon icon="paw" />livestock</InertiaLink>
+                                                    <InertiaLink
+                                                        href="#"
+                                                        className="dropdown-item"
+                                                    >
+                                                        <MDBIcon icon="paw" />
+                                                        livestock
+                                                    </InertiaLink>
                                                     <div className="megadrop"></div>
                                                 </li>
                                             </ul>
                                         </div>
                                     </li>
                                     <li className="nav-item">
-                                        <InertiaLink className="nav-link" href="#">
+                                        <InertiaLink
+                                            className="nav-link"
+                                            href="#"
+                                        >
                                             Home
                                         </InertiaLink>
                                     </li>
                                     <li className="nav-item">
-                                        <InertiaLink className="nav-link" href="#">
+                                        <InertiaLink
+                                            className="nav-link"
+                                            href="#"
+                                        >
                                             About Us
                                         </InertiaLink>
                                     </li>
                                     <li className="nav-item">
-                                        <InertiaLink className="nav-link" href="#">
+                                        <InertiaLink
+                                            className="nav-link"
+                                            href="#"
+                                        >
                                             Contacts
                                         </InertiaLink>
                                     </li>
-                                        <li className="nav-item">
-                                        <InertiaLink className="nav-link" href="#">
+                                    <li className="nav-item">
+                                        <InertiaLink
+                                            className="nav-link"
+                                            href="#"
+                                        >
                                             Testimonials
                                         </InertiaLink>
                                     </li>
                                     <li className="nav-item">
-                                        <InertiaLink className="nav-link" href="#">
+                                        <InertiaLink
+                                            className="nav-link"
+                                            href="#"
+                                        >
                                             FAQs
                                         </InertiaLink>
                                     </li>
