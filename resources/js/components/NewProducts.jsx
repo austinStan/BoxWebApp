@@ -29,7 +29,7 @@ export default function NewProducts() {
     };
     return (
         <div className="card new-products">
-            <div className="row brand-new overlay">
+            <div className="brand-new overlay">
                 <h2>Brand New Products</h2>
             </div>
             <div className="card-body">
@@ -37,7 +37,7 @@ export default function NewProducts() {
                     partialVisible={true}
                     swipeable={false}
                     draggable={true}
-                    showDots={true}
+                    showDots={false}
                     responsive={responsive}
                     ssr={true}
                     infinite={false}
