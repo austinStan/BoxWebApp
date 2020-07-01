@@ -10,7 +10,7 @@ const Welcome = () => {
             <section className='carousel-order'>
             <Carousel />
             </section>
-            <section className="deal-of-week set-bg spad">
+            <section className="set-bg">
             <div className="container">
                 <div className="col-lg-6 text-center">
                     <div className="section-title">

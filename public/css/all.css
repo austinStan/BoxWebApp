@@ -490,24 +490,15 @@ span {
     text-transform: uppercase;
 }
 
-.deal-of-week {
-    padding-top: 120px;
-    padding-bottom: 120px;
-    margin-left: 65px;
-    margin-right: 65px;
-}
 
 .set-bg {
     background-image: url(../images/bgimages/time-bg.jpg);
     background-repeat: no-repeat;
     background-size: cover;
     background-position: top center;
-}
-
-.spad {
-    padding-top: 80px;
-    padding-bottom: 80px;
-    margin-top: 50px;
+    padding-top: 10px;
+    padding-bottom: 17px;
+    margin-top: 30px;
     margin-left: 200px;
     margin-right: 200px;
 }
