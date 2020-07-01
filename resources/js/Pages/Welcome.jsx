@@ -2,6 +2,7 @@ import React from "react";
 import Layout from "./Layout";
 import Carousel from "../components/Advertisement";
 import NewProducts from "../components/NewProducts";
+import Fashion from "../components/Fashion";
 
 const Welcome = () => {
     return (
@@ -33,6 +34,9 @@ const Welcome = () => {
             </section>
             <section className='products'>
                 <NewProducts/>
+            </section>
+            <section className='fashion'>
+                <Fashion/>
             </section>
             
            

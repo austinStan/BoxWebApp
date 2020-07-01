@@ -270,6 +270,12 @@ export default function Header() {
                                                 className="dropdown-item"
                                                 href="#"
                                             >
+                                                Chat Room
+                                            </InertiaLink>
+                                            <InertiaLink
+                                                className="dropdown-item"
+                                                href="#"
+                                            >
                                                 Wishlist
                                             </InertiaLink>
                                         </div>

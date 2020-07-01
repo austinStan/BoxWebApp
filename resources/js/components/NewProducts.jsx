@@ -2,12 +2,9 @@ import React from "react";
 import Carousel from "react-multi-carousel";
 import "react-multi-carousel/lib/styles.css";
 import {
-    MDBBtn,
     MDBCard,
     MDBCardBody,
     MDBCardImage,
-    MDBCardTitle,
-    MDBCardText,
     MDBCol
 } from "mdbreact";
 
@@ -31,14 +28,14 @@ export default function NewProducts() {
         }
     };
     return (
-        <div className="card">
+        <div className="card new-products">
             <div className="row brand-new overlay">
                 <h2>Brand New Products</h2>
             </div>
             <div className="card-body">
                 <Carousel
                     partialVisible={true}
-                    swipeable={true}
+                    swipeable={false}
                     draggable={true}
                     showDots={true}
                     responsive={responsive}
@@ -53,22 +50,47 @@ export default function NewProducts() {
                     dotListClass="custom-dot-list-style"
                     itemClass="carousel-item-padding-40-px"
                 >
+                   
                     <div>
                         <MDBCol style={{ maxWidth: "22rem" }}>
-                            <MDBCard>
-                                <MDBCardImage
-                                    className="img-fluid"
-                                    src="https://mdbootstrap.com/img/Mockups/Lightbox/Thumbnail/img%20(67).jpg"
-                                    waves
-                                />
-                                <MDBCardBody>
-                                    <MDBCardTitle>Card title</MDBCardTitle>
-                                    <MDBCardText>
-                                        Some quick example text to build on the
-                                        card title and make up the bulk of the
-                                        card's content.
-                                    </MDBCardText>
-                                    <MDBBtn href="#">Click</MDBBtn>
+                            <MDBCard className="product-item">
+                                <MDBCardBody className="product-body">
+                                    <MDBCardImage
+                                        className="img-fluid"
+                                        src="images/imagescarousel/product-4.jpg"
+                                        waves
+                                    />
+                                    <div className="sale">Sale</div>
+                                    <div className="pi-text">
+                                        <div className="catagory-name"> Scurf</div>
+                                        <a href="#">
+                                            <h5>SGS scuffs</h5>
+                                        </a>
+                                        <div className="product-price">UGX 22.000</div>
+                                        <div className="tag_dsct">23%</div>
+                                    </div>
+                                </MDBCardBody>
+                            </MDBCard>
+                        </MDBCol>
+                    </div>
+                    <div>
+                        <MDBCol style={{ maxWidth: "22rem" }}>
+                            <MDBCard className="product-item">
+                                <MDBCardBody className="product-body">
+                                    <MDBCardImage
+                                        className="img-fluid"
+                                        src="images/imagescarousel/product-6.jpg"
+                                        waves
+                                    />
+                                    <div className="sale">Sale</div>
+                                    <div className="pi-text">
+                                        <div className="catagory-name">Sweater</div>
+                                        <a href="#">
+                                            <h5>Knit Sweaters</h5>
+                                        </a>
+                                        <div className="product-price">UGX 60.000</div>
+                                        <div className="tag_dsct">15%</div>
+                                    </div>
                                 </MDBCardBody>
                             </MDBCard>
                         </MDBCol>
@@ -83,266 +105,80 @@ export default function NewProducts() {
                                         waves
                                     />
                                     <div className="sale">Sale</div>
+                                    <div className="pi-text">
+                                        <div className="catagory-name"> Bag</div>
+                                        <a href="#">
+                                            <h5>Guangzhou Bag</h5>
+                                        </a>
+                                        <div className="product-price">UGX 49.000</div>
+                                        <div className="tag_dsct">13%</div>
+                                    </div>
                                 </MDBCardBody>
                             </MDBCard>
                         </MDBCol>
                     </div>
                     <div>
                         <MDBCol style={{ maxWidth: "22rem" }}>
-                            <MDBCard>
-                                <MDBCardImage
-                                    className="img-fluid"
-                                    src="https://mdbootstrap.com/img/Mockups/Lightbox/Thumbnail/img%20(67).jpg"
-                                    waves
-                                />
-                                <MDBCardBody>
-                                    <MDBCardTitle>Card title</MDBCardTitle>
-                                    <MDBCardText>
-                                        Some quick example text to build on the
-                                        card title and make up the bulk of the
-                                        card's content.
-                                    </MDBCardText>
-                                    <MDBBtn href="#">Click</MDBBtn>
+                            <MDBCard className="product-item">
+                                <MDBCardBody className="product-body">
+                                    <MDBCardImage
+                                        className="img-fluid"
+                                        src="images/imagescarousel/man-2.jpg"
+                                        waves
+                                    />
+                                    <div className="sale">sale</div>
+                                    <div className="pi-text">
+                                        <div className="catagory-name">shoes</div>
+                                        <a href="#">
+                                            <h5>global footwear</h5>
+                                        </a>
+                                        <div className="product-price">UGX 85.000</div>
+                                        <div className="tag_dsct">30%</div>
+                                    </div>
                                 </MDBCardBody>
                             </MDBCard>
                         </MDBCol>
                     </div>
                     <div>
                         <MDBCol style={{ maxWidth: "22rem" }}>
-                            <MDBCard>
-                                <MDBCardImage
-                                    className="img-fluid"
-                                    src="https://mdbootstrap.com/img/Mockups/Lightbox/Thumbnail/img%20(67).jpg"
-                                    waves
-                                />
-                                <MDBCardBody>
-                                    <MDBCardTitle>Card title</MDBCardTitle>
-                                    <MDBCardText>
-                                        Some quick example text to build on the
-                                        card title and make up the bulk of the
-                                        card's content.
-                                    </MDBCardText>
-                                    <MDBBtn href="#">Click</MDBBtn>
+                            <MDBCard className="product-item">
+                                <MDBCardBody className="product-body">
+                                    <MDBCardImage
+                                        className="img-fluid"
+                                        src="images/imagescarousel/man-3.jpg"
+                                        waves
+                                    />
+                                    <div className="sale">Sale</div>
+                                    <div className="pi-text">
+                                        <div className="catagory-name">Jacket</div>
+                                        <a href="#">
+                                            <h5>Guangzhou Jacket</h5>
+                                        </a>
+                                        <div className="product-price">UGX 90.000</div>
+                                        <div className="tag_dsct">12%</div>
+                                    </div>
                                 </MDBCardBody>
                             </MDBCard>
                         </MDBCol>
                     </div>
                     <div>
                         <MDBCol style={{ maxWidth: "22rem" }}>
-                            <MDBCard>
-                                <MDBCardImage
-                                    className="img-fluid"
-                                    src="https://mdbootstrap.com/img/Mockups/Lightbox/Thumbnail/img%20(67).jpg"
-                                    waves
-                                />
-                                <MDBCardBody>
-                                    <MDBCardTitle>Card title</MDBCardTitle>
-                                    <MDBCardText>
-                                        Some quick example text to build on the
-                                        card title and make up the bulk of the
-                                        card's content.
-                                    </MDBCardText>
-                                    <MDBBtn href="#">Click</MDBBtn>
-                                </MDBCardBody>
-                            </MDBCard>
-                        </MDBCol>
-                    </div>
-                    <div>
-                        <MDBCol style={{ maxWidth: "22rem" }}>
-                            <MDBCard>
-                                <MDBCardImage
-                                    className="img-fluid"
-                                    src="https://mdbootstrap.com/img/Mockups/Lightbox/Thumbnail/img%20(67).jpg"
-                                    waves
-                                />
-                                <MDBCardBody>
-                                    <MDBCardTitle>Card title</MDBCardTitle>
-                                    <MDBCardText>
-                                        Some quick example text to build on the
-                                        card title and make up the bulk of the
-                                        card's content.
-                                    </MDBCardText>
-                                    <MDBBtn href="#">Click</MDBBtn>
-                                </MDBCardBody>
-                            </MDBCard>
-                        </MDBCol>
-                    </div>
-                    <div>
-                        <MDBCol style={{ maxWidth: "22rem" }}>
-                            <MDBCard>
-                                <MDBCardImage
-                                    className="img-fluid"
-                                    src="https://mdbootstrap.com/img/Mockups/Lightbox/Thumbnail/img%20(67).jpg"
-                                    waves
-                                />
-                                <MDBCardBody>
-                                    <MDBCardTitle>Card title</MDBCardTitle>
-                                    <MDBCardText>
-                                        Some quick example text to build on the
-                                        card title and make up the bulk of the
-                                        card's content.
-                                    </MDBCardText>
-                                    <MDBBtn href="#">Click</MDBBtn>
-                                </MDBCardBody>
-                            </MDBCard>
-                        </MDBCol>
-                    </div>
-                    <div>
-                        <MDBCol style={{ maxWidth: "22rem" }}>
-                            <MDBCard>
-                                <MDBCardImage
-                                    className="img-fluid"
-                                    src="https://mdbootstrap.com/img/Mockups/Lightbox/Thumbnail/img%20(67).jpg"
-                                    waves
-                                />
-                                <MDBCardBody>
-                                    <MDBCardTitle>Card title</MDBCardTitle>
-                                    <MDBCardText>
-                                        Some quick example text to build on the
-                                        card title and make up the bulk of the
-                                        card's content.
-                                    </MDBCardText>
-                                    <MDBBtn href="#">Click</MDBBtn>
-                                </MDBCardBody>
-                            </MDBCard>
-                        </MDBCol>
-                    </div>
-                    <div>
-                        <MDBCol style={{ maxWidth: "22rem" }}>
-                            <MDBCard>
-                                <MDBCardImage
-                                    className="img-fluid"
-                                    src="https://mdbootstrap.com/img/Mockups/Lightbox/Thumbnail/img%20(67).jpg"
-                                    waves
-                                />
-                                <MDBCardBody>
-                                    <MDBCardTitle>Card title</MDBCardTitle>
-                                    <MDBCardText>
-                                        Some quick example text to build on the
-                                        card title and make up the bulk of the
-                                        card's content.
-                                    </MDBCardText>
-                                    <MDBBtn href="#">Click</MDBBtn>
-                                </MDBCardBody>
-                            </MDBCard>
-                        </MDBCol>
-                    </div>
-                    <div>
-                        <MDBCol style={{ maxWidth: "22rem" }}>
-                            <MDBCard>
-                                <MDBCardImage
-                                    className="img-fluid"
-                                    src="https://mdbootstrap.com/img/Mockups/Lightbox/Thumbnail/img%20(67).jpg"
-                                    waves
-                                />
-                                <MDBCardBody>
-                                    <MDBCardTitle>Card title</MDBCardTitle>
-                                    <MDBCardText>
-                                        Some quick example text to build on the
-                                        card title and make up the bulk of the
-                                        card's content.
-                                    </MDBCardText>
-                                    <MDBBtn href="#">Click</MDBBtn>
-                                </MDBCardBody>
-                            </MDBCard>
-                        </MDBCol>
-                    </div>
-                    <div>
-                        <MDBCol style={{ maxWidth: "22rem" }}>
-                            <MDBCard>
-                                <MDBCardImage
-                                    className="img-fluid"
-                                    src="https://mdbootstrap.com/img/Mockups/Lightbox/Thumbnail/img%20(67).jpg"
-                                    waves
-                                />
-                                <MDBCardBody>
-                                    <MDBCardTitle>Card title</MDBCardTitle>
-                                    <MDBCardText>
-                                        Some quick example text to build on the
-                                        card title and make up the bulk of the
-                                        card's content.
-                                    </MDBCardText>
-                                    <MDBBtn href="#">Click</MDBBtn>
-                                </MDBCardBody>
-                            </MDBCard>
-                        </MDBCol>
-                    </div>
-                    <div>
-                        <MDBCol style={{ maxWidth: "22rem" }}>
-                            <MDBCard>
-                                <MDBCardImage
-                                    className="img-fluid"
-                                    src="https://mdbootstrap.com/img/Mockups/Lightbox/Thumbnail/img%20(67).jpg"
-                                    waves
-                                />
-                                <MDBCardBody>
-                                    <MDBCardTitle>Card title</MDBCardTitle>
-                                    <MDBCardText>
-                                        Some quick example text to build on the
-                                        card title and make up the bulk of the
-                                        card's content.
-                                    </MDBCardText>
-                                    <MDBBtn href="#">Click</MDBBtn>
-                                </MDBCardBody>
-                            </MDBCard>
-                        </MDBCol>
-                    </div>
-                    <div>
-                        <MDBCol style={{ maxWidth: "22rem" }}>
-                            <MDBCard>
-                                <MDBCardImage
-                                    className="img-fluid"
-                                    src="https://mdbootstrap.com/img/Mockups/Lightbox/Thumbnail/img%20(67).jpg"
-                                    waves
-                                />
-                                <MDBCardBody>
-                                    <MDBCardTitle>Card title</MDBCardTitle>
-                                    <MDBCardText>
-                                        Some quick example text to build on the
-                                        card title and make up the bulk of the
-                                        card's content.
-                                    </MDBCardText>
-                                    <MDBBtn href="#">Click</MDBBtn>
-                                </MDBCardBody>
-                            </MDBCard>
-                        </MDBCol>
-                    </div>
-                    <div>
-                        <MDBCol style={{ maxWidth: "22rem" }}>
-                            <MDBCard>
-                                <MDBCardImage
-                                    className="img-fluid"
-                                    src="https://mdbootstrap.com/img/Mockups/Lightbox/Thumbnail/img%20(67).jpg"
-                                    waves
-                                />
-                                <MDBCardBody>
-                                    <MDBCardTitle>Card title</MDBCardTitle>
-                                    <MDBCardText>
-                                        Some quick example text to build on the
-                                        card title and make up the bulk of the
-                                        card's content.
-                                    </MDBCardText>
-                                    <MDBBtn href="#">Click</MDBBtn>
-                                </MDBCardBody>
-                            </MDBCard>
-                        </MDBCol>
-                    </div>
-                    <div>
-                        <MDBCol style={{ maxWidth: "22rem" }}>
-                            <MDBCard>
-                                <MDBCardImage
-                                    className="img-fluid"
-                                    src="https://mdbootstrap.com/img/Mockups/Lightbox/Thumbnail/img%20(67).jpg"
-                                    waves
-                                />
-                                <MDBCardBody>
-                                    <MDBCardTitle>Card title</MDBCardTitle>
-                                    <MDBCardText>
-                                        Some quick example text to build on the
-                                        card title and make up the bulk of the
-                                        card's content.
-                                    </MDBCardText>
-                                    <MDBBtn href="#">Click</MDBBtn>
+                            <MDBCard className="product-item">
+                                <MDBCardBody className="product-body">
+                                    <MDBCardImage
+                                        className="img-fluid"
+                                        src="images/imagescarousel/man-4.jpg"
+                                        waves
+                                    />
+                                    <div className="sale">Sale</div>
+                                    <div className="pi-text">
+                                        <div className="catagory-name">Jacket</div>
+                                        <a href="#">
+                                            <h5>Jean Jacket</h5>
+                                        </a>
+                                        <div className="product-price">UGX 56.000</div>
+                                        <div className="tag_dsct">10%</div>
+                                    </div>
                                 </MDBCardBody>
                             </MDBCard>
                         </MDBCol>
