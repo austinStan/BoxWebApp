@@ -50,7 +50,7 @@ export default function NewProducts() {
                     dotListClass="custom-dot-list-style"
                     itemClass="carousel-item-padding-40-px"
                 >
-                   
+                  
                     <div>
                         <MDBCol style={{ maxWidth: "14rem" }}>
                             <MDBCard className="product-item">
@@ -140,6 +140,91 @@ export default function NewProducts() {
                         </MDBCol>
                     </div>
                     <div>
+                        <MDBCol style={{ maxWidth: "14rem" }}>
+                            <MDBCard className="product-item">
+                                <MDBCardBody className="product-body">
+                                    <MDBCardImage
+                                        className="img-fluid"
+                                        src="images/imagescarousel/man-4.jpg"
+                                        waves
+                                    />
+                                    <div className="sale">On Sale</div>
+                                    <div className="tag_dsct">10%</div>
+                                </MDBCardBody>
+                                <div className="name">Saraya Toilet Seat Sanitizer - 60ml</div>
+                                <div className="product-price">UGX 22.000</div>
+                            </MDBCard>
+                        </MDBCol>
+                    </div>
+                    <div>
+                        <MDBCol style={{ maxWidth: "14rem" }}>
+                            <MDBCard className="product-item">
+                                <MDBCardBody className="product-body">
+                                    <MDBCardImage
+                                        className="img-fluid"
+                                        src="images/imagescarousel/man-4.jpg"
+                                        waves
+                                    />
+                                    <div className="sale">On Sale</div>
+                                    <div className="tag_dsct">10%</div>
+                                </MDBCardBody>
+                                <div className="name">Saraya Toilet Seat Sanitizer - 60ml</div>
+                                <div className="product-price">UGX 22.000</div>
+                            </MDBCard>
+                        </MDBCol>
+                    </div>
+                    <div>
+                        <MDBCol style={{ maxWidth: "14rem" }}>
+                            <MDBCard className="product-item">
+                                <MDBCardBody className="product-body">
+                                    <MDBCardImage
+                                        className="img-fluid"
+                                        src="images/imagescarousel/man-4.jpg"
+                                        waves
+                                    />
+                                    <div className="sale">On Sale</div>
+                                    <div className="tag_dsct">10%</div>
+                                </MDBCardBody>
+                                <div className="name">Saraya Toilet Seat Sanitizer - 60ml</div>
+                                <div className="product-price">UGX 22.000</div>
+                            </MDBCard>
+                        </MDBCol>
+                    </div>
+                    <div>
+                        <MDBCol style={{ maxWidth: "14rem" }}>
+                            <MDBCard className="product-item">
+                                <MDBCardBody className="product-body">
+                                    <MDBCardImage
+                                        className="img-fluid"
+                                        src="images/imagescarousel/man-4.jpg"
+                                        waves
+                                    />
+                                    <div className="sale">On Sale</div>
+                                    <div className="tag_dsct">10%</div>
+                                </MDBCardBody>
+                                <div className="name">Saraya Toilet Seat Sanitizer - 60ml</div>
+                                <div className="product-price">UGX 22.000</div>
+                            </MDBCard>
+                        </MDBCol>
+                    </div>
+                    <div>
+                        <MDBCol style={{ maxWidth: "14rem" }}>
+                            <MDBCard className="product-item">
+                                <MDBCardBody className="product-body">
+                                    <MDBCardImage
+                                        className="img-fluid"
+                                        src="images/imagescarousel/man-4.jpg"
+                                        waves
+                                    />
+                                    <div className="sale">On Sale</div>
+                                    <div className="tag_dsct">10%</div>
+                                </MDBCardBody>
+                                <div className="name">Saraya Toilet Seat Sanitizer - 60ml</div>
+                                <div className="product-price">UGX 22.000</div>
+                            </MDBCard>
+                        </MDBCol>
+                    </div>
+                        <div>
                         <MDBCol style={{ maxWidth: "14rem" }}>
                             <MDBCard className="product-item">
                                 <MDBCardBody className="product-body">
