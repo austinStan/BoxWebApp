@@ -52,7 +52,7 @@ export default function NewProducts() {
                 >
                    
                     <div>
-                        <MDBCol style={{ maxWidth: "22rem" }}>
+                        <MDBCol style={{ maxWidth: "14rem" }}>
                             <MDBCard className="product-item">
                                 <MDBCardBody className="product-body">
                                     <MDBCardImage
@@ -60,21 +60,16 @@ export default function NewProducts() {
                                         src="images/imagescarousel/product-4.jpg"
                                         waves
                                     />
-                                    <div className="sale">Sale</div>
-                                    <div className="pi-text">
-                                        <div className="catagory-name"> Scurf</div>
-                                        <a href="#">
-                                            <h5>SGS scuffs</h5>
-                                        </a>
-                                        <div className="product-price">UGX 22.000</div>
-                                        <div className="tag_dsct">23%</div>
-                                    </div>
+                                    <div className="sale">On Sale</div>
+                                    <div className="tag_dsct">23%</div>
                                 </MDBCardBody>
+                                <div className="name">Saraya Toilet Seat Sanitizer - 60ml</div>
+                                <div className="product-price">UGX 22.000</div>
                             </MDBCard>
                         </MDBCol>
                     </div>
                     <div>
-                        <MDBCol style={{ maxWidth: "22rem" }}>
+                        <MDBCol style={{ maxWidth: "14rem" }}>
                             <MDBCard className="product-item">
                                 <MDBCardBody className="product-body">
                                     <MDBCardImage
@@ -82,21 +77,17 @@ export default function NewProducts() {
                                         src="images/imagescarousel/product-6.jpg"
                                         waves
                                     />
-                                    <div className="sale">Sale</div>
-                                    <div className="pi-text">
-                                        <div className="catagory-name">Sweater</div>
-                                        <a href="#">
-                                            <h5>Knit Sweaters</h5>
-                                        </a>
-                                        <div className="product-price">UGX 60.000</div>
-                                        <div className="tag_dsct">15%</div>
-                                    </div>
+                                    <div className="sale">On Sale</div>
+                                    <div className="tag_dsct">15%</div>
+                                
                                 </MDBCardBody>
+                                <div className="name">Saraya Toilet Seat Sanitizer - 60ml</div>
+                                <div className="product-price">UGX 22.000</div>
                             </MDBCard>
                         </MDBCol>
                     </div>
                     <div>
-                        <MDBCol style={{ maxWidth: "22rem" }}>
+                        <MDBCol style={{ maxWidth: "14rem" }}>
                             <MDBCard className="product-item">
                                 <MDBCardBody className="product-body">
                                     <MDBCardImage
@@ -104,21 +95,16 @@ export default function NewProducts() {
                                         src="images/imagescarousel/man-1.jpg"
                                         waves
                                     />
-                                    <div className="sale">Sale</div>
-                                    <div className="pi-text">
-                                        <div className="catagory-name"> Bag</div>
-                                        <a href="#">
-                                            <h5>Guangzhou Bag</h5>
-                                        </a>
-                                        <div className="product-price">UGX 49.000</div>
-                                        <div className="tag_dsct">13%</div>
-                                    </div>
+                                    <div className="sale">On Sale</div>
+                                    <div className="tag_dsct">13%</div>
                                 </MDBCardBody>
+                                <div className="name">Saraya Toilet Seat Sanitizer - 60ml</div>
+                                <div className="product-price">UGX 22.000</div>
                             </MDBCard>
                         </MDBCol>
                     </div>
                     <div>
-                        <MDBCol style={{ maxWidth: "22rem" }}>
+                        <MDBCol style={{ maxWidth: "14rem" }}>
                             <MDBCard className="product-item">
                                 <MDBCardBody className="product-body">
                                     <MDBCardImage
@@ -126,21 +112,17 @@ export default function NewProducts() {
                                         src="images/imagescarousel/man-2.jpg"
                                         waves
                                     />
-                                    <div className="sale">sale</div>
-                                    <div className="pi-text">
-                                        <div className="catagory-name">shoes</div>
-                                        <a href="#">
-                                            <h5>global footwear</h5>
-                                        </a>
-                                        <div className="product-price">UGX 85.000</div>
-                                        <div className="tag_dsct">30%</div>
-                                    </div>
+                                    <div className="sale">On Sale</div>
+                                    <div className="tag_dsct">30%</div>
+                                    
                                 </MDBCardBody>
+                                <div className="name">Saraya Toilet Seat Sanitizer - 60ml</div>
+                                <div className="product-price">UGX 22.000</div>
                             </MDBCard>
                         </MDBCol>
                     </div>
                     <div>
-                        <MDBCol style={{ maxWidth: "22rem" }}>
+                        <MDBCol style={{ maxWidth: "14rem" }}>
                             <MDBCard className="product-item">
                                 <MDBCardBody className="product-body">
                                     <MDBCardImage
@@ -148,21 +130,17 @@ export default function NewProducts() {
                                         src="images/imagescarousel/man-3.jpg"
                                         waves
                                     />
-                                    <div className="sale">Sale</div>
-                                    <div className="pi-text">
-                                        <div className="catagory-name">Jacket</div>
-                                        <a href="#">
-                                            <h5>Guangzhou Jacket</h5>
-                                        </a>
-                                        <div className="product-price">UGX 90.000</div>
-                                        <div className="tag_dsct">12%</div>
-                                    </div>
+                                    <div className="sale">On Sale</div>
+                                    <div className="tag_dsct">12%</div>
+                                    
                                 </MDBCardBody>
+                                <div className="name">Saraya Toilet Seat Sanitizer - 60ml</div>
+                                <div className="product-price">UGX 22.000</div>
                             </MDBCard>
                         </MDBCol>
                     </div>
                     <div>
-                        <MDBCol style={{ maxWidth: "22rem" }}>
+                        <MDBCol style={{ maxWidth: "14rem" }}>
                             <MDBCard className="product-item">
                                 <MDBCardBody className="product-body">
                                     <MDBCardImage
@@ -170,16 +148,11 @@ export default function NewProducts() {
                                         src="images/imagescarousel/man-4.jpg"
                                         waves
                                     />
-                                    <div className="sale">Sale</div>
-                                    <div className="pi-text">
-                                        <div className="catagory-name">Jacket</div>
-                                        <a href="#">
-                                            <h5>Jean Jacket</h5>
-                                        </a>
-                                        <div className="product-price">UGX 56.000</div>
-                                        <div className="tag_dsct">10%</div>
-                                    </div>
+                                    <div className="sale">On Sale</div>
+                                    <div className="tag_dsct">10%</div>
                                 </MDBCardBody>
+                                <div className="name">Saraya Toilet Seat Sanitizer - 60ml</div>
+                                <div className="product-price">UGX 22.000</div>
                             </MDBCard>
                         </MDBCol>
                     </div>
