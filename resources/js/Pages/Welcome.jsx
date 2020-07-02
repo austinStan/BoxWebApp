@@ -4,6 +4,7 @@ import Carousel from "../components/Advertisement";
 import NewProducts from "../components/NewProducts";
 import Fashion from "../components/Fashion";
 import Food from "../components/Food";
+import Cars from '../components/Cars';
 
 const Welcome = () => {
     return (
@@ -42,9 +43,9 @@ const Welcome = () => {
             <section className='fashion'>
                 <Fashion/>
             </section>
-            
-           
-           
+            <section className='cars'>
+                <Cars/>
+            </section>
         </div>
     );
 };

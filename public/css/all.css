@@ -505,9 +505,9 @@ span {
 /*products*/
 .products {
     padding-left: 200px;
-    padding-top: 40px;
+    padding-top: 30px;
     padding-right: 200px;
-    padding-bottom: 40px;
+    padding-bottom: 10px;
 }
 
 .products .brand-new {
@@ -632,7 +632,7 @@ span {
 
 .food {
     padding-left: 200px;
-    padding-top: 40px;
+    padding-top: 30px;
     padding-right: 200px;
     padding-bottom: 40px;
 }
@@ -645,6 +645,7 @@ span {
     height: 0;
     min-height: 48px;
     flex-wrap: nowrap;
+    color:#fff;
     align-items: center;
     justify-content: space-between;
 }
@@ -790,6 +791,7 @@ span {
     flex-wrap: nowrap;
     align-items: center;
     justify-content: space-between;
+    color:#fff;
 }
 
 .fsw h2 {
@@ -911,3 +913,149 @@ span {
     fill: #282828;
     padding-left: 5px;
 }
+
+
+/*cars */
+
+.cars{
+    padding-left: 200px;
+    padding-top: 30px;
+    padding-right: 200px;
+    padding-bottom: 40px;
+
+}
+
+.cars .kkl {
+    background: #FF6347;
+    padding-left: 16px;
+    padding-right: 16px;
+    height: 0;
+    min-height: 48px;
+    flex-wrap: nowrap;
+    align-items: center;
+    justify-content: space-between;
+    color:#fff;
+}
+
+.kkl h2 {
+    font-size: 1.25rem;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    font-weight: 500;
+    overflow: hidden;
+    padding-left: 0;
+    padding-right: 0;
+    max-width: 100%;
+    flex-grow: 1;
+    margin: 0;
+    padding: 0;
+    padding-top: 10px;
+}
+.keq .fd{
+    padding-left: 4px;
+    padding-right: 4px;
+    position: relative;
+    overflow: hidden;
+
+}
+
+.fd .fd-item{
+    padding-bottom: 4px;
+    padding-top: 4px;
+    margin-left: auto;
+    margin-right: auto;
+    max-width: 1184px;
+    width: 100%;
+    flex-wrap: wrap;
+    flex: 0 1 auto;
+    display: flex;
+}
+
+.fd .fd-item a{
+    width: calc(16.66667% - 8px);
+    line-height: 1;
+    margin: 4px;
+    padding-left: 0;
+    padding-bottom: 8px;
+    padding-right: 0;
+    overflow: hidden;
+    background-color: #fff;
+    border-radius: 4px;
+    position: relative;
+    flex: 0 1 auto;
+}
+
+.fd .fd-item a img{
+    height: auto;
+    width: 100%;
+    display: block;
+    border-style: none;
+    
+}
+ .fd-item a .name{
+    font-size: .875rem;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    padding-left: 8px;
+    padding-bottom: 4px;
+    padding-right: 8px;
+    padding-top: 8px;
+    overflow: hidden;
+    color: black;
+   
+}
+
+.fd-item a .prc{
+    padding-bottom: 16px;
+    font-size: 1rem;
+    text-align: left;
+    font-weight: 500;
+    padding-left: 8px;
+    padding-right: 8px;
+    padding-top: 4px;
+    direction: ltr;
+    color:black;
+}
+
+.kkl .cfs{
+    justify-content: flex-end;
+    flex-shrink: 0;
+    display: flex;
+    padding-left: 0;
+    padding-right: 0;
+    flex: 0 1 auto;
+    direction: ltr;
+    -webkit-font-smoothing: antialiased;
+    font-size: .875rem;
+    font-family:"Segoe UI","Helvetica Neue",Arial,sans-serif;
+    color: #282828;
+}
+.kkl .cfs .view-cars{
+    text-transform: uppercase;
+    font-weight: 500;
+    padding-bottom: 4px;
+    padding-top: 4px;
+    align-items: center;
+    display: flex;
+    text-decoration: none;
+    background-color: rgba(0,0,0,0);
+    color: inherit;
+    direction: ltr;
+    -webkit-font-smoothing: antialiased;
+    font-size: .875rem;
+    font-family:"Segoe UI","Helvetica Neue",Arial,sans-serif;
+    position: relative;
+    bottom: 20px;
+    color:#fff;
+}
+.kkl .cfs a:hover{
+    color:black;
+}
+
+ .view-cars i{
+    fill: #282828;
+    padding-left: 5px;
+}
+
+
+
