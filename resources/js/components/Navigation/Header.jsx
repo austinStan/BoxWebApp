@@ -94,6 +94,17 @@ export default function Header() {
                 </div>
                 <div className="nav-item">
                     <nav className="navbar navbar-expand-lg navbar-light bg-dark">
+                        <button
+                            className="navbar-toggler sm-toggler"
+                            type="button"
+                            data-toggle="collapse"
+                            data-target="#navbarNavDropdown"
+                            aria-controls="navbarNav"
+                            aria-expanded="false"
+                            aria-label="Toggle navigation"
+                        >
+                            <span className="navbar-toggler-icon "></span>
+                        </button>
                         <div
                             className="collapse navbar-collapse"
                             id="navbarNavDropdown"
