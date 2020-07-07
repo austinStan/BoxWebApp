@@ -1,0 +1,17 @@
+.logo{
+    max-width: 100%;
+    height: auto;
+}
+ .logo h4{
+     font-size: 20px;
+     font-family: "Roboto";
+     line-height: 1.5;
+ }
+ .header-area .main-header .menu-wrapper .main-menu ul li.hot::before {
+      background: #3299CC !important;
+
+ }    
+
+ nav>ul>li> a:hover{
+     color: #3299CC!important;
+ }
