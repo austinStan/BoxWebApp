@@ -1,46 +1,44 @@
 /* Header Start*/
-.logo{
+.logo {
     max-width: 100%;
     height: auto;
 }
- .logo h4{
-     font-size: 20px;
-     font-family: "Roboto";
-     line-height: 1.5;
- }
- .header-area .main-header .menu-wrapper .main-menu ul li.hot::before {
-      background: #3299CC !important;
+.logo h4 {
+    font-size: 20px;
+    font-family: "Roboto";
+    line-height: 1.5;
+}
+.header-area .main-header .menu-wrapper .main-menu ul li.hot::before {
+    background: #3299cc !important;
+}
 
- }    
+nav > ul > li > a:hover {
+    color: #3299cc !important;
+}
 
- nav>ul>li> a:hover{
-     color: #3299CC!important;
- }
-
- .header-area .main-header .menu-wrapper .main-menu ul li:hover>a {
-    color: #3299CC!important;;
+.header-area .main-header .menu-wrapper .main-menu ul li:hover > a {
+    color: #3299cc !important;
 }
 
 .header-area .main-header .menu-wrapper .main-menu ul ul.submenu {
-    border-top: 3px solid #3299CC!important;
+    border-top: 3px solid #3299cc !important;
 }
 
 .header-area .main-header .menu-wrapper .main-menu ul ul.submenu::before {
-    border-color: transparent transparent #3299CC transparent !important;
+    border-color: transparent transparent #3299cc transparent !important;
 }
 
-.header-right{
+.header-right {
     padding-right: 43px;
 }
 
-.header-right ul li span:hover{
-    color:#3299CC !important
+.header-right ul li span:hover {
+    color: #3299cc !important;
 }
 
-.search{
+.search {
     width: 50%;
     margin: 2px auto;
-    
 }
 .search .form-control {
     padding-left: 0.375rem;
@@ -49,28 +47,52 @@
     right: 80px;
     z-index: -1;
     cursor: pointer;
-
 }
-.input-group-append .search-btn{
-    background: #3299CC!important;
+.input-group-append .search-btn {
+    background: #3299cc !important;
     position: relative;
     right: 80px;
-    padding:15px;
+    padding: 15px;
     margin-bottom: 20px;
-    border-top-right-radius:5px ;
-    border-bottom-right-radius:5px ;
+    border-top-right-radius: 5px;
+    border-bottom-right-radius: 5px;
 }
-.input-group-append .search-btn i{
+.input-group-append .search-btn i {
     line-height: 0;
 }
 /*Header End */
-
 
 /* body */
 .slider-area .hero__caption h1 {
     font-size: 80px !important;
     font-weight: 700;
-    line-height: 1.0 !important;
+    line-height: 1 !important;
+}
+.single-new-pro .product-caption span {
+    color: #3299cc !important;
 }
 
+.hero-btn::before {
+    background: #3299cc !important;
+}
+
+#owl-demo .item {
+    margin: 3px;
+}
+#owl-demo .item img {
+    display: block;
+    width: 100%;
+    height: auto;
+}
+.view-btn1{
+  background:#3299cc !important;
+}
 /*end of body*/
+
+/* Start of footer */
+
+#scrollUp {
+    background: #3299cc !important;
+}
+
+/*End of Footer */

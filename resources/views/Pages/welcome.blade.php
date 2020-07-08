@@ -13,7 +13,7 @@
                   <div class="col-xl-8 col-lg-8 col-md-8 col-sm-8">
                       <div class="hero__caption">
                           <h1 data-animation="fadeInLeft" data-delay=".4s" data-duration="2000ms">100% money-back guarantee. Free returns!</h1>
-                          <p data-animation="fadeInLeft" data-delay=".7s" data-duration="2000ms">Just Spend $50 and Get Free Shipping</p>
+                          {{-- <p data-animation="fadeInLeft" data-delay=".7s" data-duration="2000ms">Just Spend $50 and Get Free Shipping</p> --}}
                           <!-- Hero-btn -->
                           <div class="hero__btn" data-animation="fadeInLeft" data-delay=".8s" data-duration="2000ms">
                               <a href="industries.html" class="btn hero-btn">Shop Now</a>
@@ -35,7 +35,7 @@
                   <div class="col-xl-8 col-lg-8 col-md-8 col-sm-8">
                       <div class="hero__caption">
                           <h1 data-animation="fadeInLeft" data-delay=".4s" data-duration="2000ms">100% money-back guarantee.Free returns!</h1>
-                          <p data-animation="fadeInLeft" data-delay=".7s" data-duration="2000ms">Just Spend $50 and Get Free Shipping</p>
+                          {{-- <p data-animation="fadeInLeft" data-delay=".7s" data-duration="2000ms">Just Spend $50 and Get Free Shipping</p> --}}
                           <!-- Hero-btn -->
                           <div class="hero__btn" data-animation="fadeInLeft" data-delay=".8s" data-duration="2000ms">
                               <a href="industries.html" class="btn hero-btn">Shop Now</a>
@@ -60,7 +60,7 @@
       <div class="row">
           <div class="col-xl-12">
               <div class="section-tittle mb-70">
-                  <h2>Box Products Grid</h2>
+                  <h2>Products Grid</h2>
               </div>
           </div>
       </div>
@@ -68,37 +68,73 @@
           <div class="col-xl-4 col-lg-4 col-md-6 col-sm-6">
               <div class="single-new-pro mb-30 text-center">
                   <div class="product-img">
-                      <img src="assets/img/gallery/new_product1.png" alt="">
+                      <img src="assets/img/gallery/apartment.png" alt="">
                   </div>
                   <div class="product-caption">
-                      <h3><a href="product_details.html">Thermo Ball Etip Gloves</a></h3>
-                      <span>$ 45,743</span>
+                      <h3><a href="product_details.html">Bukoto Apartments</a></h3>
+                      <span>UGX 1.5M monthly</span>
                   </div>
               </div>
           </div>
           <div class="col-xl-4 col-lg-4 col-md-6 col-sm-6">
               <div class="single-new-pro mb-30 text-center">
                   <div class="product-img">
-                      <img src="assets/img/gallery/new_product2.png" alt="">
+                      <img src="assets/img/gallery/cow.png" alt="">
                   </div>
                   <div class="product-caption">
-                      <h3><a href="product_details.html">Thermo Ball Etip Gloves</a></h3>
-                      <span>$ 45,743</span>
+                      <h3><a href="product_details.html">Beaf Cow</a></h3>
+                      <span>UGX 1.3M</span>
                   </div>
               </div>
           </div>
           <div class="col-xl-4 col-lg-4 col-md-6 col-sm-6">
               <div class="single-new-pro mb-30 text-center">
                   <div class="product-img">
-                      <img src="assets/img/gallery/new_product3.png" alt="">
+                      <img src="assets/img/gallery/fridge.png" alt="">
                   </div>
                   <div class="product-caption">
-                      <h3><a href="product_details.html">Thermo Ball Etip Gloves</a></h3>
-                      <span>$ 45,743</span>
+                      <h3><a href="product_details.html">Samsung Fridge</a></h3>
+                      <span>UGX 1.6M</span>
                   </div>
               </div>
           </div>
       </div>
+
+      <div class="row">
+        <div class="col-xl-4 col-lg-4 col-md-6 col-sm-6">
+            <div class="single-new-pro mb-30 text-center">
+                <div class="product-img">
+                    <img src="assets/img/gallery/truck.png" alt="">
+                </div>
+                <div class="product-caption">
+                    <h3><a href="product_details.html">Xente Trucks</a></h3>
+                    <span>UGX 30.5M</span>
+                </div>
+            </div>
+        </div>
+        <div class="col-xl-4 col-lg-4 col-md-6 col-sm-6">
+            <div class="single-new-pro mb-30 text-center">
+                <div class="product-img">
+                    <img src="assets/img/gallery/antique.png" alt="">
+                </div>
+                <div class="product-caption">
+                    <h3><a href="product_details.html">Antique Board</a></h3>
+                    <span>UGX 4.3M</span>
+                </div>
+            </div>
+        </div>
+        <div class="col-xl-4 col-lg-4 col-md-6 col-sm-6">
+            <div class="single-new-pro mb-30 text-center">
+                <div class="product-img">
+                    <img src="assets/img/gallery/iphone.png" alt="">
+                </div>
+                <div class="product-caption">
+                    <h3><a href="product_details.html">IPhone 6</a></h3>
+                    <span>UGX 3.6M</span>
+                </div>
+            </div>
+        </div>
+    </div>
   </div>
 </section>
 <!--  New Product End -->
@@ -108,24 +144,24 @@
       <div class="row">
           <div class="col-xl-6 col-lg-4 col-md-6 col-sm-6">
               <div class="single-gallery mb-30">
-                  <div class="gallery-img big-img" style="background-image: url(assets/img/gallery/gallery1.png);"></div>
+                  <div class="gallery-img big-img" style="background-image: url(assets/img/gallery/booth.png);"></div>
               </div>
           </div>
           <div class="col-xl-3 col-lg-4 col-md-6 col-sm-6">
               <div class="single-gallery mb-30">
-                  <div class="gallery-img big-img" style="background-image: url(assets/img/gallery/gallery2.png);"></div>
+                  <div class="gallery-img big-img" style="background-image: url(assets/img/gallery/coca.jpg);"></div>
               </div>
           </div>
           <div class="col-xl-3 col-lg-4 col-md-12">
               <div class="row">
                   <div class="col-xl-12 col-lg-12 col-md-6 col-sm-6">
                       <div class="single-gallery mb-30">
-                          <div class="gallery-img small-img" style="background-image: url(assets/img/gallery/gallery3.png);"></div>
+                          <div class="gallery-img small-img" style="background-image: url(assets/img/gallery/benz3.png);"></div>
                       </div>
                   </div>
                   <div class="col-xl-12 col-lg-12  col-md-6 col-sm-6">
                       <div class="single-gallery mb-30">
-                          <div class="gallery-img small-img" style="background-image: url(assets/img/gallery/gallery4.png);"></div>
+                          <div class="gallery-img small-img" style="background-image: url(assets/img/gallery/air.png);"></div>
                       </div>
                   </div>
               </div>
@@ -142,119 +178,32 @@
       <div class="row justify-content-center">
           <div class="col-xl-7 col-lg-8 col-md-10">
               <div class="section-tittle mb-70 text-center">
-                  <h2>Box Hottest Offers</h2>
-                  <p>Consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Quis ipsum suspendisse ultrices gravida.</p>
+                  <h2>Brand New Offers</h2>
+                  {{-- <p>Consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Quis ipsum suspendisse ultrices gravida.</p> --}}
               </div>
           </div>
       </div>
       <div class="row">
-          <div class="col-xl-4 col-lg-4 col-md-6 col-sm-6">
-              <div class="single-popular-items mb-50 text-center">
-                  <div class="popular-img">
-                      <img src="assets/img/gallery/popular1.png" alt="">
-                      <div class="img-cap">
-                          <span>Add to cart</span>
-                      </div>
-                      <div class="favorit-items">
-                          <span class="flaticon-heart"></span>
-                      </div>
-                  </div>
-                  <div class="popular-caption">
-                      <h3><a href="product_details.html">Thermo Ball Etip Gloves</a></h3>
-                      <span>$ 45,743</span>
-                  </div>
+          {{-- <div class="col-xl-4 col-lg-4 col-md-6 col-sm-6"> --}}
+            {{-- <div class="single-popular-items mb-50 text-center"> --}}
+            <div id="owl-demo" class="owl-carousel owl-theme">
+          
+                <div class="item"><img src="assets/img/gallery/benz3.png" alt="Owl Image"/></div>
+                <div class="item"><img src="assets/img/gallery/benz3.png" alt="Owl Image"/></div>
+                <div class="item"><img src="assets/img/gallery/benz3.png" alt="Owl Image"/></div>
+                <div class="item"><img src="assets/img/gallery/benz3.png" alt="Owl Image"/></div>
+                <div class="item"><img src="assets/img/gallery/benz3.png" alt="Owl Image"/></div>
+                <div class="item"><img src="assets/img/gallery/benz3.png" alt="Owl Image"/></div>
+                <div class="item"><img src="assets/img/gallery/benz3.png" alt="Owl Image"/></div>
+                <div class="item"><img src="assets/img/gallery/benz3.png" alt="Owl Image"/></div> 
               </div>
-          </div>
-          <div class="col-xl-4 col-lg-4 col-md-6 col-sm-6">
-              <div class="single-popular-items mb-50 text-center">
-                  <div class="popular-img">
-                      <img src="assets/img/gallery/popular2.png" alt="">
-                      <div class="img-cap">
-                          <span>Add to cart</span>
-                      </div>
-                      <div class="favorit-items">
-                          <span class="flaticon-heart"></span>
-                      </div>
-                  </div>
-                  <div class="popular-caption">
-                      <h3><a href="product_details.html">Thermo Ball Etip Gloves</a></h3>
-                      <span>$ 45,743</span>
-                  </div>
-              </div>
-          </div>
-          <div class="col-xl-4 col-lg-4 col-md-6 col-sm-6">
-              <div class="single-popular-items mb-50 text-center">
-                  <div class="popular-img">
-                      <img src="assets/img/gallery/popular3.png" alt="">
-                      <div class="img-cap">
-                          <span>Add to cart</span>
-                      </div>
-                      <div class="favorit-items">
-                          <span class="flaticon-heart"></span>
-                      </div>
-                  </div>
-                  <div class="popular-caption">
-                      <h3><a href="product_details.html">Thermo Ball Etip Gloves</a></h3>
-                      <span>$ 45,743</span>
-                  </div>
-              </div>
-          </div>
-          <div class="col-xl-4 col-lg-4 col-md-6 col-sm-6">
-              <div class="single-popular-items mb-50 text-center">
-                  <div class="popular-img">
-                      <img src="assets/img/gallery/popular4.png" alt="">
-                      <div class="img-cap">
-                          <span>Add to cart</span>
-                      </div>
-                      <div class="favorit-items">
-                          <span class="flaticon-heart"></span>
-                      </div>
-                  </div>
-                  <div class="popular-caption">
-                      <h3><a href="product_details.html">Thermo Ball Etip Gloves</a></h3>
-                      <span>$ 45,743</span>
-                  </div>
-              </div>
-          </div>
-          <div class="col-xl-4 col-lg-4 col-md-6 col-sm-6">
-              <div class="single-popular-items mb-50 text-center">
-                  <div class="popular-img">
-                      <img src="assets/img/gallery/popular5.png" alt="">
-                      <div class="img-cap">
-                          <span>Add to cart</span>
-                      </div>
-                      <div class="favorit-items">
-                          <span class="flaticon-heart"></span>
-                      </div>
-                  </div>
-                  <div class="popular-caption">
-                      <h3><a href="product_details.html">Thermo Ball Etip Gloves</a></h3>
-                      <span>$ 45,743</span>
-                  </div>
-              </div>
-          </div>
-          <div class="col-xl-4 col-lg-4 col-md-6 col-sm-6">
-              <div class="single-popular-items mb-50 text-center">
-                  <div class="popular-img">
-                      <img src="assets/img/gallery/popular6.png" alt="">
-                      <div class="img-cap">
-                          <span>Add to cart</span>
-                      </div>
-                      <div class="favorit-items">
-                          <span class="flaticon-heart"></span>
-                      </div>
-                  </div>
-                  <div class="popular-caption">
-                      <h3><a href="product_details.html">Thermo Ball Etip Gloves</a></h3>
-                      <span>$ 45,743</span>
-                  </div>
-              </div>
-          </div>
+            {{-- </div> --}}
+          {{-- </div> --}}
       </div>
       <!-- Button -->
-      <div class="row justify-content-center">
+     <div class="row justify-content-center">
           <div class="room-btn pt-70">
-              <a href="catagori.html" class="btn view-btn1">View More Products</a>
+              <a href="catagori.html" class="btn view-btn1">SHOP NOW</a>
           </div>
       </div>
   </div>
@@ -263,20 +212,7 @@
 <!--? Video Area Start -->
 <div class="video-area">
   <div class="container-fluid">
-      <div class="row align-items-center">
-          <div class="col-lg-12">
-          <div class="video-wrap">
-              <div class="play-btn "><a class="popup-video" href="https://www.youtube.com/watch?v=KMc6DyEJp04"><i class="fas fa-play"></i></a></div>
-          </div>
-          </div>
-      </div>
-      <!-- Arrow -->
-      <div class="thumb-content-box">
-          <div class="thumb-content">
-              <h3>Next Video</h3>
-              <a href="#"> <i class="flaticon-arrow"></i></a>
-          </div>
-      </div>
+     
   </div>
 </div>
 <!-- Video Area End -->

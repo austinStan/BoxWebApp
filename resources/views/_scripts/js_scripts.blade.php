@@ -1,6 +1,7 @@
 <script src="./assets/js/vendor/modernizr-3.5.0.min.js"></script>
 <!-- Jquery, Popper, Bootstrap -->
 <script src="./assets/js/vendor/jquery-1.12.4.min.js"></script>
+
 <script src="./assets/js/popper.min.js"></script>
 <script src="./assets/js/bootstrap.min.js"></script>
 <!-- Jquery Mobile Menu -->
@@ -30,3 +31,39 @@
 <!-- Jquery Plugins, main Jquery -->	
 <script src="./assets/js/plugins.js"></script>
 <script src="./assets/js/main.js"></script>
+
+<script>
+$(document).ready(function() {
+ 
+    $("#owl-demo").owlCarousel({
+
+        autoplay: 3000, //Set AutoPlay to 3 seconds
+        // loop:true,
+        // items : 4,
+        // itemsDesktop : [1199,3],
+        // itemsDesktopSmall : [979,3],
+        margin:10,
+        responsiveClass:true,
+        responsive:{
+            0:{
+                items:1,
+                nav:true,
+                loop:true
+            },
+            600:{
+                items:2,
+                nav:false,
+                loop:true
+            },
+            1000:{
+                items:3,
+                animateOut: 'slideOutDown',
+                animateIn: 'flipInX',
+                nav:true,
+                loop:true
+            }
+        }
+    });
+   
+  });
+</script>
