@@ -210,16 +210,16 @@
 </div>
 <!-- Popular Items End -->
 <!--? Video Area Start -->
-<div class="video-area">
+{{-- <div class="video-area">
   <div class="container-fluid">
      
   </div>
-</div>
+</div> --}}
 <!-- Video Area End -->
 <!--? Watch Choice  Start-->
-<div class="watch-area section-padding30">
-  <div class="container">
-      <div class="row align-items-center justify-content-between padding-130">
+{{-- <div class="watch-area section-padding30">
+  <div class="container"> --}}
+      {{-- <div class="row align-items-center justify-content-between padding-130">
           <div class="col-lg-5 col-md-6">
               <div class="watch-details mb-40">
                   <h2>Watch of Choice</h2>
@@ -246,9 +246,9 @@
                   <a href="shop.html" class="btn">Show Watches</a>
               </div>
           </div>
-      </div>
-  </div>
-</div>
+      </div> --}}
+  {{-- </div>
+</div> --}}
 <!-- Watch Choice  End-->
 <!--? Shop Method Start-->
 <div class="shop-method-area">

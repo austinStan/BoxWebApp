@@ -58,6 +58,9 @@
                 <div class="col-12">
                     <div class="mobile_menu d-block d-lg-none"></div>
                 </div>
+                <div class='bg-primary'>
+                   @include('_partials.megamenu')
+                </div>
             </div>
         </div>
     </div>
