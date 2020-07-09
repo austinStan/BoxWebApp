@@ -11,21 +11,9 @@
                     <div class="main-menu d-none d-lg-block">
                         <nav>                                                
                             <ul id="navigation">  
-                                <li><a href="#">shop</a>
-                                    <ul class="submenu">
-                                        <li><a href="#">Land</a></li>
-                                        <li><a href="#">Houses</a></li>
-                                        <li><a href="#">Building Materials</a></li>
-                                        <li><a href="#">Livestock</a></li>
-                                    </ul>
-                                </li>
                                 <li><a href="#">Home</a></li>
                                 <li><a href="#">About Us</a></li>
                                 <li class="hot"><a href="#">Latest</a>
-                                    <ul class="submenu">
-                                        <li><a href="shop.html"> Product list</a></li>
-                                        <li><a href="product_details.html"> Product Details</a></li>
-                                    </ul>
                                 </li>
                                 <li><a href="#">Find Store</a></li>
                                 <li><a href="#">Testimonials</a></li>
@@ -53,12 +41,20 @@
                           </button>
                         </div>
                       </div>
+                      {{-- <div class="follow-us">
+                        <ul class="pull-right">
+                            <li><a href="#"><i class="fab fa-facebook-f"></i></a></li>
+                            <li><a href="#"><i class="fab fa-whatsapp"></i></a></li>
+                            <li><a href="#"><i class="fab fa-twitter"></i></a></li>
+                            <li><a href="#"><i class="fab fa-instagram"></i></a></li>
+                          </ul>
+                      </div> --}}
                 </div>
                 <!-- Mobile Menu -->
                 <div class="col-12">
                     <div class="mobile_menu d-block d-lg-none"></div>
                 </div>
-                <div class='bg-primary'>
+                <div class='mega-menu'>
                    @include('_partials.megamenu')
                 </div>
             </div>
