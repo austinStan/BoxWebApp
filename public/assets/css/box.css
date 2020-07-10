@@ -42,112 +42,137 @@ nav > ul > li > a:hover {
     justify-content: space-between;
     flex-wrap: wrap;
     align-items: center;
-    
 }
 .search .input-group {
-    width:75%;
+    width: 75%;
 }
 .input-group-append .search-btn {
-    background: #3299cc !important; 
+    background: #3299cc !important;
     padding-top: 20px;
     padding-bottom: 0px;
     border-top-right-radius: 5px;
     border-bottom-right-radius: 5px;
 }
- .input-group-append .search-btn i {
-   position: relative;
-   bottom:10px;
-   font-size: 14px;
-}
-/* .search .follow-us{
+.input-group-append .search-btn i {
     position: relative;
-    bottom: 35px;
-    left:150%;
-} */
-/* Megamenu Start */
-.main-header .mega-menu{
-  position: relative;
-  bottom :10px;
-  right:10px;
+    bottom: 10px;
+    font-size: 14px;
 }
-.navbar{
+.follow-us {
+    margin-right: 5px;
+}
+ .follow-us ul {
+    display: flex;
+    padding-right: 18px;
+    padding-top: 15px;
+    padding-bottom: 15px;
+}
+ .follow-us ul li {
+    font-size: 14px;
+    display: inline-block;
+    padding-left: 12px;
+     /* margin-left: 15px;  */
+}
+ .follow-us ul li{
+    font-weight: 400;
+    font-family: "Roboto";
+    line-height: 1;
+    font-size: 14px;
+
+}
+.follow-us ul li a i {
+    color: #141517;
+}
+ .follow-us ul li a i:hover{
+    color:#3299cc;
+}
+/* Megamenu Start */
+.main-header .mega-menu {
+    position: relative;
+    bottom: 10px;
+    right: 10px;
+}
+.navbar {
     background: #fff;
     padding-top: 20px;
     padding-bottom: 0;
     box-shadow: 1px 3px 4px 0 #adadad33;
     margin-bottom: 5px;
-  
 }
 .navbar-light .navbar-brand {
-    color: #2196F3;
-   
+    color: #2196f3;
 }
 .navbar-light .navbar-nav .nav-link {
     color: #141517;
 }
-.navbar-light .navbar-brand:focus, .navbar-light .navbar-brand:hover {
+.navbar-light .navbar-brand:focus,
+.navbar-light .navbar-brand:hover {
     color: #3299cc;
 }
-.navbar-light .navbar-nav .nav-link:focus, .navbar-light .navbar-nav .nav-link:hover {
+.navbar-light .navbar-nav .nav-link:focus,
+.navbar-light .navbar-nav .nav-link:hover {
     color: #3299cc;
 }
-.navbar-light .navbar-nav .nav-link{
+.navbar-light .navbar-nav .nav-link {
     transition: 0.6s;
     padding-left: 24px;
     padding-right: 24px;
-    font-size: 16px;
-    font-family: "Josefin Sans",sans-serif;
+    font-size: 14px;
+    font-family: "Josefin Sans", sans-serif;
     color: #141517;
-    font-weight: 600;
+    font-weight: 500;
     /* padding: 41px 21px; */
     text-transform: capitalize;
     display: block;
 }
-.navbar-light .navbar-nav .nav-link:focus, .navbar-light .navbar-nav .nav-link:hover{
+.navbar-light .navbar-nav .nav-link:focus,
+.navbar-light .navbar-nav .nav-link:hover {
     transition: 0.6s;
 }
-.dropdown-item:focus, .dropdown-item:hover {
-   color: #fff;
-   text-decoration: none;
-   background-color: #3299cc!important;
+.dropdown-item:focus,
+.dropdown-item:hover {
+    color: #fff;
+    text-decoration: none;
+    background-color: #3299cc !important;
 }
-.sm-menu{
-   border-radius: 0px;
-   border: 0px;
-   top: 97%;
-   box-shadow: rgba(173, 173, 173, 0.2) 1px 3px 4px 0px;
+.sm-menu {
+    border-radius: 0px;
+    border: 0px;
+    top: 97%;
+    box-shadow: rgba(173, 173, 173, 0.2) 1px 3px 4px 0px;
 }
 .dropdown-item {
-   color: #3c3c3c;
-       font-size: 14px;
+    color: #3c3c3c;
+    font-size: 14px;
 }
-.dropdown-item.active, .dropdown-item:active {
-   color: #fff;
-   text-decoration: none;
-   background-color: #2196F3;
+.dropdown-item.active,
+.dropdown-item:active {
+    color: #fff;
+    text-decoration: none;
+    background-color: #2196f3;
 }
-.navbar-toggler{
-   outline: none !important;
+.navbar-toggler {
+    outline: none !important;
 }
-.navbar-tog{
-   color: #1ebdc2;
+.navbar-tog {
+    color: #1ebdc2;
 }
 .megamenu-li {
-   position: static;
+    position: static;
 }
 
 .megamenu {
-   position: absolute;
-   width: 100%;
-   left: 0;
-   right: 0;
-   padding: 15px;
+    position: absolute;
+    width: 100%;
+    left: 0;
+    right: 0;
+    padding: 15px;
 }
-.megamenu h6{
-   margin-left: 21px;
+.megamenu h6 {
+    margin-left: 21px;
 }
-.megamenu i{
-   width: 20px;
+.megamenu i {
+    width: 20px;
 }
 /*MegaMenu End */
 
@@ -175,8 +200,8 @@ nav > ul > li > a:hover {
     width: 100%;
     height: auto;
 }
-.view-btn1{
-  background:#3299cc !important;
+.view-btn1 {
+    background: #3299cc !important;
 }
 /*end of body*/
 
@@ -189,9 +214,9 @@ nav > ul > li > a:hover {
     background: #3299cc !important;
 }
 .footer-area .footer-tittle ul li a:hover {
-    color:#3299cc !important;
+    color: #3299cc !important;
 }
-.footer-copy-right .footer-social a i:hover{
-    color:#3299cc !important
+.footer-copy-right .footer-social a i:hover {
+    color: #3299cc !important;
 }
 /*End of Footer */

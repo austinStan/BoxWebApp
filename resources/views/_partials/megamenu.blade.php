@@ -32,38 +32,37 @@
                 <div class="col-sm-6 col-lg-3 border-right mb-4">
                   <h6>Arcs</h6>
                   <a class="dropdown-item" href="#"
-                    ><i class="fab fa-magento"></i> Magento Development</a
+                    ><i class="fab fa-magento"></i>40X50 hectares-Masaka</a
                   >
                   <a class="dropdown-item" href="#"
-                    ><i class="fab fa-magento"></i> Magento 2 Migration</a
+                    ><i class="fab fa-magento"></i>100X50 hectares-Mubende</a
                   >
                   <a class="dropdown-item" href="#"
-                    ><i class="fab fa-magento"></i> Odoo ERP</a
+                    ><i class="fab fa-magento"></i>30X50 hectares-Lugazi</a
                   >
                   <a class="dropdown-item" href="#"
-                    ><i class="fab fa-magento"></i> Mobile Commerce</a
+                    ><i class="fab fa-magento"></i> 240X50 hectares-Bukomansimbi</a
                   >
                   <a class="dropdown-item" href="#"
-                    ><i class="fab fa-magento"></i> CRM for Commerce</a
+                    ><i class="fab fa-magento"></i>240X50 hectares-Fort Portal</a
                   >
                 </div>
                 <div class="col-sm-6 col-lg-3 border-right mb-4">
                   <h6>Plots</h6>
                   <a class="dropdown-item" href="#"
-                    ><i class="fab fa-php"></i> PHP Website Development</a
+                    ><i class="fas fa-circle"></i>14X13 Ntinda</a
                   >
                   <a class="dropdown-item" href="#"
-                    ><i class="fas fa-circle"></i> Phalcon Development</a
+                    ><i class="fas fa-circle"></i>13X14 Mukono</a
                   >
                   <a class="dropdown-item" href="#"
-                    ><i class="fab fa-laravel"></i> Laravel Development</a
+                    ><i class="fas fa-circle"></i>13X14 Kawempe</a
                   >
                   <a class="dropdown-item" href="#"
-                    ><i class="fab fa-wordpress-simple"></i> WordPress
-                    Development</a
+                    ><i class="fas fa-circle"></i>13X14 Mpigi</a
                   >
                   <a class="dropdown-item" href="#"
-                    ><i class="fab fa-php"></i> Symfony Development</a
+                    ><i class="fas fa-circle"></i>13X14 Matuga</a
                   >
                  </div>
                 <!-- <div class="col-sm-6 col-lg-3 border-right mb-4">
@@ -205,9 +204,9 @@
               >
                 <div class="row">
                   <div class="col-sm-6 col-lg-3 border-right mb-4">
-                    <h6>Arcs</h6>
+                    <h6>Buying</h6>
                     <a class="dropdown-item" href="#"
-                      ><i class="fab fa-magento"></i> Magento Development</a
+                      ><i class="fab fa-magento"></i>3bedrooms and 2Living Rooms-Wakiso</a
                     >
                     <a class="dropdown-item" href="#"
                       ><i class="fab fa-magento"></i> Magento 2 Migration</a
@@ -676,60 +675,6 @@
                                            </div>
                                           </div>
                                       </li>
-                                      <li class="nav-item dropdown megamenu-li dmenu">
-                                          <a
-                                            class="nav-link dropdown-toggle"
-                                            href=""
-                                            id="dropdown01"
-                                            data-toggle="dropdown"
-                                            aria-haspopup="true"
-                                            aria-expanded="false"
-                                            >Land</a
-                                          >
-                                          <div
-                                            class="dropdown-menu megamenu sm-menu border-top"
-                                            aria-labelledby="dropdown01"
-                                          >
-                                            <div class="row">
-                                              <div class="col-sm-6 col-lg-3 border-right mb-4">
-                                                <h6>Arcs</h6>
-                                                <a class="dropdown-item" href="#"
-                                                  ><i class="fab fa-magento"></i> Magento Development</a
-                                                >
-                                                <a class="dropdown-item" href="#"
-                                                  ><i class="fab fa-magento"></i> Magento 2 Migration</a
-                                                >
-                                                <a class="dropdown-item" href="#"
-                                                  ><i class="fab fa-magento"></i> Odoo ERP</a
-                                                >
-                                                <a class="dropdown-item" href="#"
-                                                  ><i class="fab fa-magento"></i> Mobile Commerce</a
-                                                >
-                                                <a class="dropdown-item" href="#"
-                                                  ><i class="fab fa-magento"></i> CRM for Commerce</a
-                                                >
-                                              </div>
-                                              <div class="col-sm-6 col-lg-3 border-right mb-4">
-                                                <h6>Plots</h6>
-                                                <a class="dropdown-item" href="#"
-                                                  ><i class="fab fa-php"></i> PHP Website Development</a
-                                                >
-                                                <a class="dropdown-item" href="#"
-                                                  ><i class="fas fa-circle"></i> Phalcon Development</a
-                                                >
-                                                <a class="dropdown-item" href="#"
-                                                  ><i class="fab fa-laravel"></i> Laravel Development</a
-                                                >
-                                                <a class="dropdown-item" href="#"
-                                                  ><i class="fab fa-wordpress-simple"></i> WordPress
-                                                  Development</a
-                                                >
-                                                <a class="dropdown-item" href="#"
-                                                  ><i class="fab fa-php"></i> Symfony Development</a
-                                                >
-                                               </div>
-                                              </div>
-                                          </li>
                                           <li class="nav-item dropdown megamenu-li dmenu">
                                               <a
                                                 class="nav-link dropdown-toggle"
