@@ -1,12 +1,13 @@
 <!doctype html>
 <html class="no-js" lang="zxx">
+
 <head>
     <meta charset="utf-8">
     <meta http-equiv="x-ua-compatible" content="ie=edge">
     <title>BOX | eSHOP</title>
     <meta name="description" content="">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-     @include('_scripts.css_scripts')
+    @include('_scripts.css_scripts')
 </head>
 
 <body>
@@ -20,10 +21,10 @@
     </header>
     <main>
         <!--? slider Area Start -->
-       @yield('welcome')
+        @yield('welcome')
     </main>
     <footer>
-       @include('_partials.footer')
+        @include('_partials.footer')
     </footer>
     <!--? Search model Begin -->
     <div class="search-model-box">
@@ -38,6 +39,7 @@
 
     <!-- JS here -->
 
-   @include('_scripts.js_scripts')
+    @include('_scripts.js_scripts')
 </body>
+
 </html>
