@@ -4,10 +4,7 @@
             <div class="menu-wrapper pb-1 ">
                 <!-- Logo -->
                 <div class="logo">
-                    {{-- <a href="index.html"><img src="assets/img/logo/boxlogo.png" alt=""></a> --}}
-                    <a href="index.html">
-                        <h4>BOX</h4>
-                    </a>
+                    <a href="index.html"><img src="assets/img/logo/Box.png" height="58px" width="70px" alt=""></a>
                 </div>
                 <!-- Main-menu -->
                 <div class="main-menu d-none d-lg-block">
@@ -17,8 +14,7 @@
                             <li><a href="#">About Us</a></li>
                             <li class="hot"><a href="#">Latest</a>
                             </li>
-                            <li><a href="#">Find Store</a></li>
-                            <li><a href="#">Testimonials</a></li>
+                            <li><a href="#">Reviews</a></li>
                             <li><a href="#">FAQS</a></li>
                             <li><a href="#">Contact Us</a></li>
                         </ul>
@@ -30,7 +26,9 @@
                         <li>
                             <a href="#"><span class="flaticon-user">Login</span></a>
                         </li>
-                        <li><a href="#"><span class="flaticon-shopping-cart">trolley</span></a> </li>
+                        <li><a href="#"><span class="flaticon-heart">Wishlist</span></a> </li>
+                        <li><a href="#"><span class="flaticon-shopping-cart">Cart</span></a> </li>
+                        
                     </ul>
                 </div>
             </div>

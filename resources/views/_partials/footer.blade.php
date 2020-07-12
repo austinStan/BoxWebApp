@@ -7,8 +7,7 @@
                     <div class="single-footer-caption mb-30">
                         <!-- logo -->
                         <div class="footer-logo">
-                            {{-- <a href="index.html"><img src="assets/img/logo/logo2_footer.png" alt=""></a> --}}
-                            <h4>BOX</h4>
+                            <a href="index.html"><img src="assets/img/logo/Box.png" height="58px" width="70px" alt=""></a>
                         </div>
                         <div class="footer-tittle">
                             <div class="footer-pera">

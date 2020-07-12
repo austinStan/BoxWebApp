@@ -9,23 +9,20 @@
     line-height: 1.5;
 }
 .header-area .main-header .menu-wrapper .main-menu ul li.hot::before {
-    background: #3299cc !important;
+    background: #ec0002 !important;
 }
 
 nav > ul > li > a:hover {
-    color: #3299cc !important;
+    color: #ec0002 !important;
 }
 
 .header-area .main-header .menu-wrapper .main-menu ul li:hover > a {
-    color: #3299cc !important;
+    color: #ec0002 !important;
 }
 
-.header-area .main-header .menu-wrapper .main-menu ul ul.submenu {
-    border-top: 3px solid #3299cc !important;
-}
-
-.header-area .main-header .menu-wrapper .main-menu ul ul.submenu::before {
-    border-color: transparent transparent #3299cc transparent !important;
+.header-area .main-header .menu-wrapper .header-right span {
+    font-size: 15px !important;
+    padding: 31px 6px !important;
 }
 
 .header-right {
@@ -33,7 +30,7 @@ nav > ul > li > a:hover {
 }
 
 .header-right ul li span:hover {
-    color: #3299cc !important;
+    color: #ec0002  !important;
 }
 
 .search {
@@ -46,10 +43,11 @@ nav > ul > li > a:hover {
     margin-bottom: -10px;
 }
 .search .input-group {
-    width: 75%;
+    width: 90%;
+    padding-left: 90px;
 }
 .input-group-append .search-btn {
-    background: #3299cc !important;
+    background: #ec0002  !important;
     padding-top: 20px;
     padding-bottom: 0px;
     border-top-right-radius: 5px;
@@ -65,7 +63,7 @@ nav > ul > li > a:hover {
 }
  .follow-us ul {
     display: flex;
-    padding-right: 18px;
+    padding-right: 40px;
     padding-top: 15px;
     padding-bottom: 15px;
 }
@@ -83,10 +81,12 @@ nav > ul > li > a:hover {
 
 }
 .follow-us ul li a i {
-    color: #141517;
+    color:black;
+    height:24px;
+    width:18px;
 }
  .follow-us ul li a i:hover{
-    color:#3299cc;
+    color:#ec0002 ;
 }
 /* Megamenu Start */
 .main-header .mega-menu {
@@ -109,11 +109,11 @@ nav > ul > li > a:hover {
 }
 .navbar-light .navbar-brand:focus,
 .navbar-light .navbar-brand:hover {
-    color: #3299cc;
+    color: #ec0002;
 }
 .navbar-light .navbar-nav .nav-link:focus,
 .navbar-light .navbar-nav .nav-link:hover {
-    color: #3299cc;
+    color: #ec0002 ;
 }
 .navbar-light .navbar-nav .nav-link {
     transition: 0.6s;
@@ -135,7 +135,7 @@ nav > ul > li > a:hover {
 .dropdown-item:hover {
     color: #fff;
     text-decoration: none;
-    background-color: #3299cc !important;
+    background-color: #fe0a24 !important;
 }
 .sm-menu {
     border-radius: 0px;
@@ -151,7 +151,7 @@ nav > ul > li > a:hover {
 .dropdown-item:active {
     color: #fff;
     text-decoration: none;
-    background-color: #2196f3;
+    background-color: #ec0002;
 }
 .navbar-toggler {
     outline: none !important;
@@ -187,11 +187,11 @@ nav > ul > li > a:hover {
     line-height: 1 !important;
 }
 .single-new-pro .product-caption span {
-    color: #3299cc !important;
+    color: #ec0002 !important;
 }
 
 .hero-btn::before {
-    background: #3299cc !important;
+    background: #ec0002 !important;
 }
 
 #owl-demo .item {
@@ -203,22 +203,22 @@ nav > ul > li > a:hover {
     height: auto;
 }
 .view-btn1 {
-    background: #3299cc !important;
+    background: #ec0002 !important;
 }
 /*end of body*/
 
 /* Start of footer */
 
 #scrollUp {
-    background: #3299cc !important;
+    background: #ec0002 !important;
 }
 .shop-method-area .method-wrapper {
-    background: #3299cc !important;
+    background: #ec0002 !important;
 }
 .footer-area .footer-tittle ul li a:hover {
-    color: #3299cc !important;
+    color: #ec0002 !important;
 }
 .footer-copy-right .footer-social a i:hover {
-    color: #3299cc !important;
+    color: #ec0002 !important;
 }
 /*End of Footer */

@@ -29,7 +29,7 @@
               aria-labelledby="dropdown01"
             >
               <div class="row">
-                <div class="col-sm-6 col-lg-3 border-right mb-4">
+                <div class="col-sm-6 col-lg-6 border-right mb-4">
                   <h6>Arcs</h6>
                   <a class="dropdown-item" href="#"
                     ><i class="fab fa-magento"></i>40X50 hectares-Masaka</a
@@ -47,7 +47,7 @@
                     ><i class="fab fa-magento"></i>240X50 hectares-Fort Portal</a
                   >
                 </div>
-                <div class="col-sm-6 col-lg-3 border-right mb-4">
+                <div class="col-sm-6 col-lg-6 border-right mb-4">
                   <h6>Plots</h6>
                   <a class="dropdown-item" href="#"
                     ><i class="fas fa-circle"></i>14X13 Ntinda</a
@@ -203,41 +203,40 @@
                 aria-labelledby="dropdown01"
               >
                 <div class="row">
-                  <div class="col-sm-6 col-lg-3 border-right mb-4">
+                  <div class="col-sm-6 col-lg-6 border-right mb-4">
                     <h6>Buying</h6>
                     <a class="dropdown-item" href="#"
                       ><i class="fab fa-magento"></i>3bedrooms and 2Living Rooms-Wakiso</a
                     >
                     <a class="dropdown-item" href="#"
-                      ><i class="fab fa-magento"></i> Magento 2 Migration</a
+                      ><i class="fab fa-magento"></i>2bedrooms and 1Living Rooms-Ntinda</a
                     >
                     <a class="dropdown-item" href="#"
-                      ><i class="fab fa-magento"></i> Odoo ERP</a
+                      ><i class="fab fa-magento"></i>2bedrooms and 2Living Rooms-Mpigi</a
                     >
                     <a class="dropdown-item" href="#"
-                      ><i class="fab fa-magento"></i> Mobile Commerce</a
+                      ><i class="fab fa-magento"></i>1bedrooms and 2Living Rooms-Wakiso</a
                     >
                     <a class="dropdown-item" href="#"
-                      ><i class="fab fa-magento"></i> CRM for Commerce</a
+                      ><i class="fab fa-magento"></i>3bedrooms and 2Living Rooms-Mubende</a
                     >
                   </div>
-                  <div class="col-sm-6 col-lg-3 border-right mb-4">
-                    <h6>Plots</h6>
+                  <div class="col-sm-6 col-lg-6 border-right mb-4">
+                    <h6>Selling</h6>
                     <a class="dropdown-item" href="#"
-                      ><i class="fab fa-php"></i> PHP Website Development</a
+                      ><i class="fab fa-php"></i>3bedrooms and 2Living Rooms-Luzira</a
                     >
                     <a class="dropdown-item" href="#"
-                      ><i class="fas fa-circle"></i> Phalcon Development</a
+                      ><i class="fas fa-circle"></i>3bedrooms and 2Living Rooms-Lugazi</a
                     >
                     <a class="dropdown-item" href="#"
-                      ><i class="fab fa-laravel"></i> Laravel Development</a
+                      ><i class="fab fa-laravel"></i>3bedrooms and 2Living Rooms-Mpigi</a
                     >
                     <a class="dropdown-item" href="#"
-                      ><i class="fab fa-wordpress-simple"></i> WordPress
-                      Development</a
+                      ><i class="fab fa-wordpress-simple"></i>3bedrooms and 2Living Rooms-Luweero</a
                     >
                     <a class="dropdown-item" href="#"
-                      ><i class="fab fa-php"></i> Symfony Development</a
+                      ><i class="fab fa-php"></i>3bedrooms and 2Living Rooms-kampala</a
                     >
                    </div>
                   </div>
@@ -259,40 +258,60 @@
               >
                 <div class="row">
                   <div class="col-sm-6 col-lg-3 border-right mb-4">
-                    <h6>Arcs</h6>
+                    <h6>Paint</h6>
                     <a class="dropdown-item" href="#"
-                      ><i class="fab fa-magento"></i> Magento Development</a
+                      ><i class="fab fa-magento"></i>Rico</a
                     >
                     <a class="dropdown-item" href="#"
-                      ><i class="fab fa-magento"></i> Magento 2 Migration</a
+                      ><i class="fab fa-magento"></i>Regal</a
                     >
                     <a class="dropdown-item" href="#"
-                      ><i class="fab fa-magento"></i> Odoo ERP</a
+                      ><i class="fab fa-magento"></i>kansai</a
                     >
                     <a class="dropdown-item" href="#"
-                      ><i class="fab fa-magento"></i> Mobile Commerce</a
+                      ><i class="fab fa-magento"></i>Basco</a
                     >
                     <a class="dropdown-item" href="#"
-                      ><i class="fab fa-magento"></i> CRM for Commerce</a
+                      ><i class="fab fa-magento"></i>Seweco</a
                     >
                   </div>
                   <div class="col-sm-6 col-lg-3 border-right mb-4">
-                    <h6>Plots</h6>
+                    <h6>Electrical Cables</h6>
                     <a class="dropdown-item" href="#"
-                      ><i class="fab fa-php"></i> PHP Website Development</a
+                      ><i class="fab fa-php"></i>single core cables</a
                     >
                     <a class="dropdown-item" href="#"
-                      ><i class="fas fa-circle"></i> Phalcon Development</a
+                      ><i class="fas fa-circle"></i>twin flat cables</a
                     >
                     <a class="dropdown-item" href="#"
-                      ><i class="fab fa-laravel"></i> Laravel Development</a
+                      ><i class="fab fa-laravel"></i>welding cables</a
                     >
                     <a class="dropdown-item" href="#"
-                      ><i class="fab fa-wordpress-simple"></i> WordPress
-                      Development</a
+                      ><i class="fab fa-wordpress-simple"></i>earth wires</a
                     >
                     <a class="dropdown-item" href="#"
-                      ><i class="fab fa-php"></i> Symfony Development</a
+                      ><i class="fab fa-php"></i>core</a
+                    >
+                   </div>
+                   <div class="col-sm-6 col-lg-3 border-right mb-4">
+                    <h6>Bricks</h6>
+                   <a class="dropdown-item" href="{{ route('bricks')}}"
+                      ><i class="fab fa-php"></i>Fire bricks</a
+                    >
+                    <a class="dropdown-item" href="#"
+                      ><i class="fas fa-circle"></i>half bricks</a
+                    >
+                    <a class="dropdown-item" href="#"
+                      ><i class="fab fa-laravel"></i>Quary Tiles</a
+                    >
+                   </div>
+                   <div class="col-sm-6 col-lg-3 border-right mb-4">
+                    <h6>Sand</h6>
+                    <a class="dropdown-item" href="#"
+                      ><i class="fab fa-php"></i>white sand</a
+                    >
+                    <a class="dropdown-item" href="#"
+                      ><i class="fas fa-circle"></i>brown sand</a
                     >
                    </div>
                   </div>

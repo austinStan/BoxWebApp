@@ -2,8 +2,8 @@
     <div class="preloader-inner position-relative">
         <div class="preloader-circle"></div>
         <div class="preloader-img pere-text">
-            {{-- <img src="assets/img/logo/boxlogo.png" height='80px' width='24px' alt=""> --}}
-            BOX
+            <img src="assets/img/logo/Box.png" height="50px" width="50px" alt="">
+          
         </div>
     </div>
 </div>
