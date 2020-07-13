@@ -10,7 +10,7 @@
                 <div class="main-menu d-none d-lg-block">
                     <nav>
                         <ul id="navigation">
-                            <li><a href="#">Home</a></li>
+                            <li><a href="{{route('home')}}">Home</a></li>
                             <li><a href="#">About Us</a></li>
                             <li class="hot"><a href="#">Latest</a>
                             </li>

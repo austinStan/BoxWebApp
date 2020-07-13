@@ -29,7 +29,7 @@
               aria-labelledby="dropdown01"
             >
               <div class="row">
-                <div class="col-sm-6 col-lg-6 border-right mb-4">
+                <div class="col-sm-6 col-lg-3  mb-4">
                   <h6>Arcs</h6>
                   <a class="dropdown-item" href="#"
                     ><i class="fab fa-magento"></i>40X50 hectares-Masaka</a
@@ -41,10 +41,33 @@
                     ><i class="fab fa-magento"></i>30X50 hectares-Lugazi</a
                   >
                   <a class="dropdown-item" href="#"
-                    ><i class="fab fa-magento"></i> 240X50 hectares-Bukomansimbi</a
+                    ><i class="fab fa-magento"></i>240X50 hectares-Bukomansimbi</a
                   >
                   <a class="dropdown-item" href="#"
                     ><i class="fab fa-magento"></i>240X50 hectares-Fort Portal</a
+                  >
+                  <a class="dropdown-item" href="#"
+                  ><i class="fab fa-magento"></i>240X50 hectares-Fort Portal</a
+                  >
+                </div>
+                <div class="col-sm-6 col-lg-3 border-right mb-4 mt-4">
+                  <a class="dropdown-item" href="#"
+                    ><i class="fab fa-magento"></i>40X50 hectares-Masaka</a
+                  >
+                  <a class="dropdown-item" href="#"
+                    ><i class="fab fa-magento"></i>100X50 hectares-Mubende</a
+                  >
+                  <a class="dropdown-item" href="#"
+                    ><i class="fab fa-magento"></i>30X50 hectares-Lugazi</a
+                  >
+                  <a class="dropdown-item" href="#"
+                    ><i class="fab fa-magento"></i>240X50 hectares-Bukomansimbi</a
+                  >
+                  <a class="dropdown-item" href="#"
+                    ><i class="fab fa-magento"></i>240X50 hectares-Fort Portal</a
+                  >
+                  <a class="dropdown-item" href="#"
+                  ><i class="fab fa-magento"></i>240X50 hectares-Fort Portal</a
                   >
                 </div>
                 <div class="col-sm-6 col-lg-6 border-right mb-4">
@@ -295,7 +318,7 @@
                    </div>
                    <div class="col-sm-6 col-lg-3 border-right mb-4">
                     <h6>Bricks</h6>
-                   <a class="dropdown-item" href="{{ route('bricks')}}"
+                   <a class="dropdown-item" href="{{route('bricks')}}"
                       ><i class="fab fa-php"></i>Fire bricks</a
                     >
                     <a class="dropdown-item" href="#"

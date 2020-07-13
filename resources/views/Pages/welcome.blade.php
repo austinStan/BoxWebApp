@@ -1,9 +1,9 @@
 <!-- Stored in resources/views/child.blade.php -->
 
 @extends('master.master')
-@section('title', 'welcome')
+@section('title', 'Welcome')
 
-@section('welcome')
+@section('content')
 <div class="slider-area ">
     <div class="slider-active">
         <!-- Single Slider -->

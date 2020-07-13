@@ -4,24 +4,19 @@
 <head>
     <meta charset="utf-8">
     <meta http-equiv="x-ua-compatible" content="ie=edge">
-    <title>BOX | eSHOP</title>
+    <title>BOX | @yield('title') </title>
     <meta name="description" content="">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     @include('_scripts.css_scripts')
 </head>
 
 <body>
-
-    <div id="preloader-active">
-        @include('_partials.preloader')
-    </div>
-    </div>
     <header>
         @include('_partials.header')
     </header>
     <main>
         <!--? slider Area Start -->
-        @yield('welcome')
+        @yield('content')
     </main>
     <footer>
         @include('_partials.footer')

@@ -1,9 +1,10 @@
 @extends('master.master')
 @section('title', 'Bricks')
 
-@section('bricks')
-
+@section('content')
+<div>
 <h1>hello world</h1>
+</div>
 {{-- <div className="card allfoods">
     <div className="food-item overlay">
         <h2>Food Stuff</h2>

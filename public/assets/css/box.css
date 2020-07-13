@@ -43,8 +43,8 @@ nav > ul > li > a:hover {
     margin-bottom: -10px;
 }
 .search .input-group {
-    width: 90%;
-    padding-left: 90px;
+    width: 600px;
+    padding-left: 80px;
 }
 .input-group-append .search-btn {
     background: #ec0002  !important;
