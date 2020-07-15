@@ -57,6 +57,7 @@ nav > ul > li > a:hover {
     position: relative;
     bottom: 10px;
     font-size: 14px;
+    color: #fff;
 }
 .follow-us {
     margin-right: 5px;

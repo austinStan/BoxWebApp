@@ -16,6 +16,6 @@ Auth::routes();
 
 Route::get('/','WelcomeController@index')->name('home');
 // Route::get('/home', 'HomeController@index')->name('home');
-Route::get('/bricks','BrickController@index')->name('bricks');
-Route::get('/sands','SandController@index')->name('sand');
+Route::get('/masaka','LandController@getMasaka')->name('masaka');
+// Route::get('/sands','SandController@index')->name('sand');
 

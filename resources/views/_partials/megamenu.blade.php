@@ -30,64 +30,89 @@
             >
               <div class="row">
                 <div class="col-sm-6 col-lg-3  mb-4">
-                  <h6>Arcs</h6>
-                  <a class="dropdown-item" href="#"
-                    ><i class="fab fa-magento"></i>40X50 hectares-Masaka</a
+                  <h5>Acres</h5>
+                  <h6>Locations</h6>
+                  <a class="dropdown-item" href="{{route('masaka')}}"
+                    ><i class="	fab fa-buromobelexperte"></i>Masaka</a
                   >
                   <a class="dropdown-item" href="#"
-                    ><i class="fab fa-magento"></i>100X50 hectares-Mubende</a
+                    ><i class="	fab fa-buromobelexperte"></i>Mubende</a
                   >
                   <a class="dropdown-item" href="#"
-                    ><i class="fab fa-magento"></i>30X50 hectares-Lugazi</a
+                    ><i class="	fab fa-buromobelexperte"></i>Mukono</a
                   >
                   <a class="dropdown-item" href="#"
-                    ><i class="fab fa-magento"></i>240X50 hectares-Bukomansimbi</a
+                    ><i class="	fab fa-buromobelexperte"></i>Kawempe</a
                   >
                   <a class="dropdown-item" href="#"
-                    ><i class="fab fa-magento"></i>240X50 hectares-Fort Portal</a
+                    ><i class="	fab fa-buromobelexperte"></i>Fort Portal</a
                   >
                   <a class="dropdown-item" href="#"
-                  ><i class="fab fa-magento"></i>240X50 hectares-Fort Portal</a
+                  ><i class="	fab fa-buromobelexperte"></i>Gulu</a
                   >
                 </div>
                 <div class="col-sm-6 col-lg-3 border-right mb-4 mt-4">
                   <a class="dropdown-item" href="#"
-                    ><i class="fab fa-magento"></i>40X50 hectares-Masaka</a
+                    ><i class="	fab fa-buromobelexperte"></i>Nebbi</a
                   >
                   <a class="dropdown-item" href="#"
-                    ><i class="fab fa-magento"></i>100X50 hectares-Mubende</a
+                    ><i class="	fab fa-buromobelexperte"></i>Arua</a
                   >
                   <a class="dropdown-item" href="#"
-                    ><i class="fab fa-magento"></i>30X50 hectares-Lugazi</a
+                    ><i class="	fab fa-buromobelexperte"></i>Mbarara</a
                   >
                   <a class="dropdown-item" href="#"
-                    ><i class="fab fa-magento"></i>240X50 hectares-Bukomansimbi</a
+                    ><i class="	fab fa-buromobelexperte"></i>Mbale</a
                   >
                   <a class="dropdown-item" href="#"
-                    ><i class="fab fa-magento"></i>240X50 hectares-Fort Portal</a
+                    ><i class="	fab fa-buromobelexperte"></i>Fort Portal</a
                   >
                   <a class="dropdown-item" href="#"
-                  ><i class="fab fa-magento"></i>240X50 hectares-Fort Portal</a
+                  ><i class="	fab fa-buromobelexperte"></i>Kampala</a
                   >
                 </div>
-                <div class="col-sm-6 col-lg-6 border-right mb-4">
-                  <h6>Plots</h6>
+                <div class="col-sm-6 col-lg-3 mb-4">
+                  <h5>Plots</h5>
+                  <h6>Locations</h6>
                   <a class="dropdown-item" href="#"
-                    ><i class="fas fa-circle"></i>14X13 Ntinda</a
+                    ><i class="	fab fa-microsoft"></i>Ntinda</a
                   >
                   <a class="dropdown-item" href="#"
-                    ><i class="fas fa-circle"></i>13X14 Mukono</a
+                    ><i class="	fab fa-microsoft"></i>Mukono</a
                   >
                   <a class="dropdown-item" href="#"
-                    ><i class="fas fa-circle"></i>13X14 Kawempe</a
+                    ><i class="	fab fa-microsoft"></i>Kawempe</a
                   >
                   <a class="dropdown-item" href="#"
-                    ><i class="fas fa-circle"></i>13X14 Mpigi</a
+                    ><i class="	fab fa-microsoft"></i>Mpigi</a
                   >
                   <a class="dropdown-item" href="#"
-                    ><i class="fas fa-circle"></i>13X14 Matuga</a
+                    ><i class="	fab fa-microsoft"></i>Matuga</a
                   >
+                  <a class="dropdown-item" href="#"
+                  ><i class="	fab fa-microsoft"></i>Lira</a
+                >
                  </div>
+                 <div class="col-sm-6 col-lg-3  mb-4 mt-4">
+                  <a class="dropdown-item" href="#"
+                    ><i class="		fab fa-microsoft"></i> Gulu</a
+                  >
+                  <a class="dropdown-item" href="#"
+                    ><i class="		fab fa-microsoft"></i> Arua</a
+                  >
+                  <a class="dropdown-item" href="#"
+                    ><i class="		fab fa-microsoft"></i> Nakapiriti</a
+                  >
+                  <a class="dropdown-item" href="#"
+                    ><i class="		fab fa-microsoft"></i>Mbale</a
+                  >
+                  <a class="dropdown-item" href="#"
+                    ><i class="		fab fa-microsoft"></i>Fort Portal</a
+                  >
+                  <a class="dropdown-item" href="#"
+                  ><i class="		fab fa-microsoft"></i>Mbarara</a
+                  >
+                </div>
                 <!-- <div class="col-sm-6 col-lg-3 border-right mb-4">
                   <h6>Mobile</h6>
                   <a class="dropdown-item" href="#"
@@ -318,7 +343,7 @@
                    </div>
                    <div class="col-sm-6 col-lg-3 border-right mb-4">
                     <h6>Bricks</h6>
-                   <a class="dropdown-item" href="{{route('bricks')}}"
+                   <a class="dropdown-item" href="#"
                       ><i class="fab fa-php"></i>Fire bricks</a
                     >
                     <a class="dropdown-item" href="#"

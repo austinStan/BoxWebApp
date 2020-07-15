@@ -1,5 +1,6 @@
 <div class="header-area">
-    <div class="main-header header-sticky">
+  {{-- header-sticky --}}
+  <div class="main-header "> 
         <div class="container-fluid">
             <div class="menu-wrapper pb-1 ">
                 <!-- Logo -->
