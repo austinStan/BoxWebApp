@@ -18,7 +18,8 @@
      background-clip: border-box;
      border: 1px solid rgba(0, 0, 0, 0.1);
      border-radius: 0.10rem;
-     margin-top: 10px
+	 margin-top: 10px;
+	 height: 90%;
  }
 
  .card-product-grid:hover {
@@ -146,6 +147,7 @@
 
 .update-btn{
 	background: #0099CC!important;
+	padding: 20px 2px !important;
 }
 
 .btn-group .arrow-btn {
@@ -158,6 +160,9 @@
 
 .btn-group .arrow-btn::before {
 	background: #fff !important;
+}
+.found-number{
+	color:red!important;
 }
 
  /*Start of trending products */
@@ -314,15 +319,28 @@ h2::after {
 	margin: 10px;        
 }
 .breadcrumb-item a {
-	color:#0099CC!important;
+	color:#000 !important;
 }
 /* Style to change separator  */
 .breadcrumb-item + .breadcrumb-item::before {
 	content: ">";
 }
 .breadcrumb {
-    background-color: lightgoldenrodyellow !important;
+    background-color:#fff !important;
+}
+.breadcrumb>.active {
+    color:#000 !important;
 }
   /*End of BreadCrumb*/
 
 
+/* Alert css */
+
+.box-offer {
+	color: white !important;
+    background-color: red !important;
+    border-color: red !important;
+}
+
+
+/* end of alert css*/

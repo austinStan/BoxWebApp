@@ -1,11 +1,4 @@
-<div class="bs-example">
-    <nav>
-        <ol class="breadcrumb">
-            <li class="breadcrumb-item"><a href="{{route('home')}}">Home</a></li>
-            <li class="breadcrumb-item active">Land</li>
-        </ol>
-    </nav>
-</div>
+
 <div class="row mb-5">
     <div class="col-12">
         <div class="dropdown text-md-left text-center float-md-left mb-3 mt-3 mt-md-0 mb-md-0">
@@ -47,8 +40,7 @@
                     src="assets/img/Land/masaka.jpg" height='358px' width='228px'></a>
             <figcaption class="info-wrap">
                 <div class="row">
-                    <div class="col-md-8"> <a href="#" class="title" data-abc="true">50 acres in Namuyimba Town
-                            Masaka</a> </div>
+                    <div class="col-md-8"> <a href="#" class="title" data-abc="true">50 acres in Namuyimba</a> </div>
                     <div class="col-md-4">
                         <div class="rating text-right"> <i class="fa fa-star"></i> <i class="fa fa-star"></i> <i
                                 class="fa fa-star"></i> </div>
@@ -82,8 +74,7 @@
                     src="assets/img/Land/masaka.jpg" height='358px' width='228px'></a>
             <figcaption class="info-wrap">
                 <div class="row">
-                    <div class="col-md-8"> <a href="#" class="title" data-abc="true">200 acres in Kyoteera Town
-                            Masaka</a> </div>
+                    <div class="col-md-8"> <a href="#" class="title" data-abc="true">200 acres in Kyoteera Town</a> </div>
                     <div class="col-md-4">
                         <div class="rating text-right"> <i class="fa fa-star"></i> <i class="fa fa-star"></i> <i
                                 class="fa fa-star"></i> </div>

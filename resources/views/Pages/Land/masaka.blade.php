@@ -5,21 +5,28 @@
 @endsection
 @section('content')
 <div class='container'>
-	<div class="alert alert-info alert-dismissible fade show m-2">
+	<div class="alert alert-info alert-dismissible fade show m-2 box-offer">
 		<div class="well well-lg offer-box text-center">
-			Today's Offer : &nbsp; <span class="glyphicon glyphicon-cog"></span>&nbsp;40 % off on purchase of $ 2,000
+			Today's Box Offers : &nbsp; <span class="glyphicon glyphicon-cog"></span>&nbsp;40 % off on purchase of UGX 500,000
 			and above till 24 dec !
 		</div>
 		<button type="button" class="close" data-dismiss="alert">&times;</button>
 	</div>
+	<div class="bs-example">
+		<nav>
+			<ol class="breadcrumb">
+				<li class="breadcrumb-item"><a href="{{route('home')}}">Home</a></li>
+				<li class="breadcrumb-item">Land</li>
+				<li class="breadcrumb-item active">Masaka</li>
+			</ol>
+		</nav>
+	</div>
 	<div class='row'>
-		<div class='col-md-4 pl-5'>
+		<div class='col-md-2'>
 			@include('_partials.masaka.filter')
 		</div>
-		<div class='col-md-8'>
-			<div class='container'>
+		<div class='col-md-10'>
 				@include('_partials.masaka.items')
-			</div>
 		</div>
 	</div>
 	<div class='row mt-5'>
