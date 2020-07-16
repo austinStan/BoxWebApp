@@ -1,7 +1,6 @@
 <script src="./assets/js/vendor/modernizr-3.5.0.min.js"></script>
 <!-- Jquery, Popper, Bootstrap -->
-<script src="./assets/js/vendor/jquery-1.12.4.min.js"></script>
-
+<script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
 <script src="./assets/js/popper.min.js"></script>
 <script src="./assets/js/bootstrap.min.js"></script>
 <!-- Jquery Mobile Menu -->
@@ -32,6 +31,8 @@
 <script src="./assets/js/plugins.js"></script>
 <script src="./assets/js/main.js"></script>
 
+<!-- MDB plugins -->	
+{{-- <script src="./assets/js/mdb.min.js"></script> --}}
 <script>
 $(document).ready(function() {
  
@@ -66,24 +67,4 @@ $(document).ready(function() {
     });
    
   });
-/*  megamenu start script */
-  $(document).ready(function () {
-        $('.navbar-light .dmenu').hover(function () {
-                $(this).find('.sm-menu').first().stop(true, true).slideDown(150);
-            }, function () {
-                $(this).find('.sm-menu').first().stop(true, true).slideUp(105)
-            });
-        }); 
-         
-            $(document).ready(function() {
-            $(".megamenu").on("click", function(e) {
-                e.stopPropagation();
-            });
-    });
-/*  megamenu end script */
-
-
-
-
-
 </script>

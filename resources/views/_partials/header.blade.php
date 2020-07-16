@@ -1,5 +1,4 @@
 <div class="header-area">
-  {{-- header-sticky --}}
   <div class="main-header "> 
         <div class="container-fluid">
             <div class="menu-wrapper pb-1 ">

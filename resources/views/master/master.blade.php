@@ -7,7 +7,8 @@
     <title>BOX | @yield('title') </title>
     <meta name="description" content="">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    @include('_scripts.css_scripts')
+    {{-- @include('_scripts.css_scripts') --}}
+     @yield('assets')
 </head>
 
 <body>
@@ -30,11 +31,8 @@
             </form>
         </div>
     </div>
-    <!-- Search model end -->
-
-    <!-- JS here -->
-
-    @include('_scripts.js_scripts')
+    
+    @yield('scripts')
 </body>
 
 </html>
