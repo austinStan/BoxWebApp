@@ -120,11 +120,10 @@ nav > ul > li > a:hover {
     transition: 0.6s;
     padding-left: 24px;
     padding-right: 24px;
-    font-size: 14px;
+    font-size: 16px;
     font-family: "Josefin Sans", sans-serif;
     color: #141517;
     font-weight: 500;
-    /* padding: 41px 21px; */
     text-transform: capitalize;
     display: block;
 }

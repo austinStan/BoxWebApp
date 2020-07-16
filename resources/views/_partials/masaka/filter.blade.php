@@ -48,10 +48,8 @@
     <div class="divider mt-5 mb-5 border-bottom border-secondary"></div>
     <h6 class="text-uppercase mt-5 mb-3 font-weight-bold">Price</h6>
     <div class="price-filter-control">
-        <input type="number" class="form-control w-100 pull-left mb-2" value="10000000" id="price-min-control">
-        <input type="number" class="form-control w-100 pull-right" value="1500000000" id="price-max-control">
+        <input type="number" class="form-control w-100 pull-left mb-2" value="1000000" step='500000'id="price-min-control">
+        <input type="number" class="form-control w-100 pull-right" value="10000000000" step ='500000'id="price-max-control">
     </div>
-    <input id="ex2" type="text" class="slider " value="50,150" data-slider-min="10" data-slider-max="200"
-        data-slider-step="5" data-slider-value="[50,150]" data-value="50,150" style="display: none;">
     <div class="divider mt-5 mb-5 border-bottom border-secondary"></div>
     <a href="#" class="btn btn-lg btn-block btn-primary mt-3 update-btn">Update Results</a>

@@ -47,7 +47,7 @@
                     </div>
                 </div>
             </figcaption>
-            <div class="bottom-wrap"> <a href="#" class="btn btn-primary float-right" data-abc="true"> Buy now </a>
+            <div class="bottom-wrap"> <a href="#" class="btn btn-primary float-right buy-now" data-abc="true"> Buy now </a>
                 <div class="price-wrap"> <span class="price h5">UGX 7M</span> </div>
             </div>
         </figure>
@@ -64,7 +64,7 @@
                     </div>
                 </div>
             </figcaption>
-            <div class="bottom-wrap"> <a href="#" class="btn btn-primary float-right" data-abc="true"> Buy now </a>
+            <div class="bottom-wrap"> <a href="#" class="btn btn-primary float-right buy-now" data-abc="true"> Buy now </a>
                 <div class="price-wrap"> <span class="price h5">UGX 25M</span> </div>
             </div>
         </figure>
@@ -81,7 +81,7 @@
                     </div>
                 </div>
             </figcaption>
-            <div class="bottom-wrap"> <a href="#" class="btn btn-primary float-right" data-abc="true"> Buy now </a>
+            <div class="bottom-wrap"> <a href="#" class="btn btn-primary float-right buy-now" data-abc="true"> Buy now </a>
                 <div class="price-wrap"> <span class="price h5">UGX 47M</span> </div>
             </div>
         </figure>
@@ -98,7 +98,7 @@
                     </div>
                 </div>
             </figcaption>
-            <div class="bottom-wrap"> <a href="#" class="btn btn-primary float-right" data-abc="true"> Buy now </a>
+            <div class="bottom-wrap"> <a href="#" class="btn btn-primary float-right buy-now" data-abc="true"> Buy now </a>
                 <div class="price-wrap"> <span class="price h5">UGX 107M</span> </div>
             </div>
         </figure>
@@ -116,7 +116,7 @@
                     </div>
                 </div>
             </figcaption>
-            <div class="bottom-wrap"> <a href="#" class="btn btn-primary float-right" data-abc="true"> Buy now </a>
+            <div class="bottom-wrap"> <a href="#" class="btn btn-primary float-right buy-now" data-abc="true"> Buy now </a>
                 <div class="price-wrap"> <span class="price h5">UGX 107M</span> </div>
             </div>
         </figure>
@@ -134,7 +134,7 @@
                     </div>
                 </div>
             </figcaption>
-            <div class="bottom-wrap"> <a href="#" class="btn btn-primary float-right" data-abc="true"> Buy now </a>
+            <div class="bottom-wrap"> <a href="#" class="btn btn-primary float-right buy-now" data-abc="true"> Buy now </a>
                 <div class="price-wrap"> <span class="price h5">UGX 27M</span> </div>
             </div>
         </figure>

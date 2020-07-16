@@ -164,7 +164,9 @@
 .found-number{
 	color:red!important;
 }
-
+.buy-now{
+padding: 20px 20px !important;
+}
  /*Start of trending products */
  h2 {
 	color: #000;

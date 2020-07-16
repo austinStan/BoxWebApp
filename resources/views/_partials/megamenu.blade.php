@@ -254,37 +254,37 @@
                   <div class="col-sm-6 col-lg-6 border-right mb-4">
                     <h6>Buying</h6>
                     <a class="dropdown-item" href="#"
-                      ><i class="fab fa-magento"></i>3bedrooms and 2Living Rooms-Wakiso</a
+                      ><i class="fas fa-building"></i>3 bedrooms-Wakiso</a
                     >
                     <a class="dropdown-item" href="#"
-                      ><i class="fab fa-magento"></i>2bedrooms and 1Living Rooms-Ntinda</a
+                      ><i class="fas fa-building"></i>2bedrooms-Ntinda</a
                     >
                     <a class="dropdown-item" href="#"
-                      ><i class="fab fa-magento"></i>2bedrooms and 2Living Rooms-Mpigi</a
+                      ><i class="fas fa-building"></i>5bedrooms-Mpigi</a
                     >
                     <a class="dropdown-item" href="#"
-                      ><i class="fab fa-magento"></i>1bedrooms and 2Living Rooms-Wakiso</a
+                      ><i class="fas fa-building"></i>1bedroom-Gulu</a
                     >
                     <a class="dropdown-item" href="#"
-                      ><i class="fab fa-magento"></i>3bedrooms and 2Living Rooms-Mubende</a
+                      ><i class="fas fa-building"></i>3bedrooms-Mubende</a
                     >
                   </div>
                   <div class="col-sm-6 col-lg-6 border-right mb-4">
                     <h6>Selling</h6>
                     <a class="dropdown-item" href="#"
-                      ><i class="fab fa-php"></i>3bedrooms and 2Living Rooms-Luzira</a
+                      ><i class="	fas fa-building"></i>3bedrooms-Luzira</a
                     >
                     <a class="dropdown-item" href="#"
-                      ><i class="fas fa-circle"></i>3bedrooms and 2Living Rooms-Lugazi</a
+                      ><i class="	fas fa-building"></i>3bedrooms-Lugazi</a
                     >
                     <a class="dropdown-item" href="#"
-                      ><i class="fab fa-laravel"></i>3bedrooms and 2Living Rooms-Mpigi</a
+                      ><i class="	fas fa-building"></i>3bedrooms-Mpigi</a
                     >
                     <a class="dropdown-item" href="#"
-                      ><i class="fab fa-wordpress-simple"></i>3bedrooms and 2Living Rooms-Luweero</a
+                      ><i class="	fas fa-building"></i>3bedrooms-Luweero</a
                     >
                     <a class="dropdown-item" href="#"
-                      ><i class="fab fa-php"></i>3bedrooms and 2Living Rooms-kampala</a
+                      ><i class="	fas fa-building"></i>3bedrooms-kampala</a
                     >
                    </div>
                   </div>
