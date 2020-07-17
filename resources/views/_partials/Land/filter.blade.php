@@ -1,5 +1,5 @@
-
-    <h3 class="mt-0 mb-5">Found <span class="text-primary found-number">6</span></h3>
+{{-- 
+    <h3 class="mt-0 mb-5">Results <span class="text-primary found-number">6</span></h3> --}}
     <h6 class="text-uppercase font-weight-bold mb-3">Categories</h6>
     <div class="mt-2 mb-2 pl-2">
         <div class="custom-control custom-checkbox">

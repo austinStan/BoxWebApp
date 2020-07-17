@@ -253,7 +253,7 @@
                 <div class="row">
                   <div class="col-sm-6 col-lg-6 border-right mb-4">
                     <h6>Buying</h6>
-                    <a class="dropdown-item" href="#"
+                  <a class="dropdown-item" href="{{route('wakiso')}}"
                       ><i class="fas fa-building"></i>3 bedrooms-Wakiso</a
                     >
                     <a class="dropdown-item" href="#"

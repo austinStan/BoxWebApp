@@ -5,13 +5,13 @@
 @endsection
 @section('content')
 <div class='container'>
-	<div class="alert alert-info alert-dismissible fade show m-2 box-offer">
+	{{-- <div class="alert alert-info alert-dismissible fade show m-2 box-offer">
 		<div class="well well-lg offer-box text-center">
 			Today's Box Offers : &nbsp; <span class="glyphicon glyphicon-cog"></span>&nbsp;40 % off on purchase of UGX 500,000
 			and above till 24 dec !
 		</div>
 		<button type="button" class="close" data-dismiss="alert">&times;</button>
-	</div>
+	</div> --}}
 	<div class="bs-example">
 		<nav>
 			<ol class="breadcrumb">
@@ -23,10 +23,10 @@
 	</div>
 	<div class='row'>
 		<div class='col-md-2'>
-			@include('_partials.masaka.filter')
+			@include('_partials.Land.filter')
 		</div>
 		<div class='col-md-10'>
-				@include('_partials.masaka.items')
+				@include('_partials.Land.items')
 		</div>
 	</div>
 	<div class='row mt-5'>

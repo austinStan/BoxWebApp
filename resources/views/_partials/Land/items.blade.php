@@ -1,4 +1,4 @@
-
+<div><h1>Acres of Land on Sale </h1></div>
 <div class="row mb-5">
     <div class="col-12">
         <div class="dropdown text-md-left text-center float-md-left mb-3 mt-3 mt-md-0 mb-md-0">
@@ -13,12 +13,12 @@
                 <a class="dropdown-item" href="#">Best Selling</a>
             </div>
         </div>
-        <div class="btn-group float-md-right ml-3">
+        {{-- <div class="btn-group float-md-right ml-3">
             <button type="button" class="btn btn-lg btn-light  arrow-btn "> <span class="fa fa-arrow-left "></span>
             </button>
             <button type="button" class="btn btn-lg btn-light  arrow-btn "> <span class="fa fa-arrow-right"></span>
             </button>
-        </div>
+        </div> --}}
         <div class="dropdown float-right">
             <label class="mr-2">View:</label>
             <a class="btn btn-lg btn-light dropdown-toggle view-btn" data-toggle="dropdown" role="button"
