@@ -251,7 +251,7 @@
                 aria-labelledby="dropdown01"
               >
                 <div class="row">
-                  <div class="col-sm-6 col-lg-6 border-right mb-4">
+                  <div class="col-sm-6 col-lg-3 border-right mb-4">
                     <h6>Buying</h6>
                   <a class="dropdown-item" href="{{route('wakiso')}}"
                       ><i class="fas fa-building"></i>3 bedrooms-Wakiso</a
@@ -305,63 +305,61 @@
                 aria-labelledby="dropdown01"
               >
                 <div class="row">
-                  <div class="col-sm-6 col-lg-3 border-right mb-4">
-                    <h6>Paint</h6>
-                    <a class="dropdown-item" href="#"
-                      ><i class="fab fa-magento"></i>Rico</a
-                    >
-                    <a class="dropdown-item" href="#"
-                      ><i class="fab fa-magento"></i>Regal</a
-                    >
-                    <a class="dropdown-item" href="#"
-                      ><i class="fab fa-magento"></i>kansai</a
-                    >
-                    <a class="dropdown-item" href="#"
-                      ><i class="fab fa-magento"></i>Basco</a
-                    >
-                    <a class="dropdown-item" href="#"
-                      ><i class="fab fa-magento"></i>Seweco</a
-                    >
-                  </div>
-                  <div class="col-sm-6 col-lg-3 border-right mb-4">
-                    <h6>Electrical Cables</h6>
-                    <a class="dropdown-item" href="#"
-                      ><i class="fab fa-php"></i>single core cables</a
-                    >
-                    <a class="dropdown-item" href="#"
-                      ><i class="fas fa-circle"></i>twin flat cables</a
-                    >
-                    <a class="dropdown-item" href="#"
-                      ><i class="fab fa-laravel"></i>welding cables</a
-                    >
-                    <a class="dropdown-item" href="#"
-                      ><i class="fab fa-wordpress-simple"></i>earth wires</a
-                    >
-                    <a class="dropdown-item" href="#"
-                      ><i class="fab fa-php"></i>core</a
-                    >
-                   </div>
-                   <div class="col-sm-6 col-lg-3 border-right mb-4">
-                    <h6>Bricks</h6>
-                   <a class="dropdown-item" href="#"
-                      ><i class="fab fa-php"></i>Fire bricks</a
-                    >
-                    <a class="dropdown-item" href="#"
-                      ><i class="fas fa-circle"></i>half bricks</a
-                    >
-                    <a class="dropdown-item" href="#"
-                      ><i class="fab fa-laravel"></i>Quary Tiles</a
-                    >
-                   </div>
-                   <div class="col-sm-6 col-lg-3 border-right mb-4">
+                  <div class="col-sm-6 col-lg-3 border-right mb-4 mt-4">
                     <h6>Sand</h6>
-                    <a class="dropdown-item" href="#"
-                      ><i class="fab fa-php"></i>white sand</a
+                    <a class="dropdown-item" href="{{route('sand')}}"
+                      ><i class="fab fa-magento"></i>White Sand</a
                     >
                     <a class="dropdown-item" href="#"
-                      ><i class="fas fa-circle"></i>brown sand</a
+                      ><i class="fab fa-magento"></i>Brown Sand</a
                     >
-                   </div>
+
+                    <h6 class='mt-2'>Bricks</h6>
+                    <a class="dropdown-item" href="{{route('bricks')}}"
+                      ><i class="fab fa-magento"></i>Fire Bricks</a
+                    >
+                    <a class="dropdown-item" href="#"
+                      ><i class="fab fa-magento"></i>Half Bricks</a
+                    >
+                    <a class="dropdown-item" href="#"
+                    ><i class="fab fa-magento"></i>Concrete Bricks</a
+                  >
+                  <h6 class='mt-2'>Tiles</h6>
+                  <a class="dropdown-item" href="#"
+                    ><i class="fab fa-magento"></i>Bathroom  Tiles</a
+                  >
+                  <a class="dropdown-item" href="#"
+                    ><i class="fab fa-magento"></i>Kitchen Tiles</a
+                  >
+                  <a class="dropdown-item" href="#"
+                  ><i class="fab fa-magento"></i>Floor Tiles</a
+                > 
+                <a class="dropdown-item" href="#"
+                ><i class="fab fa-magento"></i>Outdoor Tiles</a
+              > 
+                  </div>
+                  <div class="col-sm-3 col-lg-3 border-right mb-4 mt-4">
+                    <h6>Cement</h6>
+                    <a class="dropdown-item" href="#"
+                      ><i class="fab fa-magento"></i>White Cement</a
+                    >
+                    <a class="dropdown-item" href="#"
+                      ><i class="fab fa-magento"></i>Low Heat Cement</a
+                    >
+                    <a class="dropdown-item" href="#"
+                    ><i class="fab fa-magento"></i>Expansive Cement</a
+                  >
+                  <a class="dropdown-item" href="#"
+                  ><i class="fab fa-magento"></i>Hydrographic Cement</a
+                >  
+                <h6 class="mt-2">Roofing</h6>
+                <a class="dropdown-item" href="#"
+                  ><i class="fab fa-magento"></i>Roofing Tools</a
+                >
+                <a class="dropdown-item" href="#"
+                  ><i class="fab fa-magento"></i>Iron Sheets</a
+                >    
+                  </div>
                   </div>
               </li>
               <li class="nav-item dropdown megamenu-li dmenu">
@@ -380,41 +378,28 @@
                   >
                     <div class="row">
                       <div class="col-sm-6 col-lg-3 border-right mb-4">
-                        <h6>Arcs</h6>
+                        <h6>Doors and Windows</h6>
                         <a class="dropdown-item" href="#"
-                          ><i class="fab fa-magento"></i> Magento Development</a
+                          ><i class="fab fa-magento"></i>Interior Doors</a
                         >
                         <a class="dropdown-item" href="#"
-                          ><i class="fab fa-magento"></i> Magento 2 Migration</a
+                          ><i class="fab fa-magento"></i>Bathroom windows</a
                         >
                         <a class="dropdown-item" href="#"
-                          ><i class="fab fa-magento"></i> Odoo ERP</a
+                          ><i class="fab fa-magento"></i>Window Frames</a
                         >
                         <a class="dropdown-item" href="#"
-                          ><i class="fab fa-magento"></i> Mobile Commerce</a
-                        >
-                        <a class="dropdown-item" href="#"
-                          ><i class="fab fa-magento"></i> CRM for Commerce</a
+                          ><i class="fab fa-magento"></i>Window Wells</a
                         >
                       </div>
                       <div class="col-sm-6 col-lg-3 border-right mb-4">
-                        <h6>Plots</h6>
+                        <h6 class="mt-2">Paint</h6>
                         <a class="dropdown-item" href="#"
-                          ><i class="fab fa-php"></i> PHP Website Development</a
+                          ><i class="fab fa-magento"></i>Water Paint</a
                         >
                         <a class="dropdown-item" href="#"
-                          ><i class="fas fa-circle"></i> Phalcon Development</a
-                        >
-                        <a class="dropdown-item" href="#"
-                          ><i class="fab fa-laravel"></i> Laravel Development</a
-                        >
-                        <a class="dropdown-item" href="#"
-                          ><i class="fab fa-wordpress-simple"></i> WordPress
-                          Development</a
-                        >
-                        <a class="dropdown-item" href="#"
-                          ><i class="fab fa-php"></i> Symfony Development</a
-                        >
+                          ><i class="fab fa-magento"></i>Oil Cement</a
+                        > 
                        </div>
                       </div>
                   </li>
@@ -426,7 +411,7 @@
                         data-toggle="dropdown"
                         aria-haspopup="true"
                         aria-expanded="false"
-                        >Electricals</a
+                        >Wiring and Cabling</a
                       >
                       <div
                         class="dropdown-menu megamenu sm-menu border-top"

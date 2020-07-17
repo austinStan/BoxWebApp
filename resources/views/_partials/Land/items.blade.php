@@ -1,4 +1,4 @@
-<div><h1>Acres of Land on Sale </h1></div>
+<div><h1> Land  Acres</h1></div>
 <div class="row mb-5">
     <div class="col-12">
         <div class="dropdown text-md-left text-center float-md-left mb-3 mt-3 mt-md-0 mb-md-0">

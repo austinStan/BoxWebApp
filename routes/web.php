@@ -22,3 +22,6 @@ Route::get('/masaka','LandController@getMasaka')->name('masaka');
 //Houses routes
 Route::get('/wakiso','HouseController@getWakiso')->name('wakiso');
 
+//BuildingMaterials Routes
+Route::get('/sand','BuildingMaterialsController@getSand')->name('sand');
+Route::get('/bricks','BuildingMaterialsController@getBricks')->name('bricks');

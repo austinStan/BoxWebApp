@@ -386,4 +386,146 @@ h2::after {
 }
 
 
+
+
+
 /*end of houses css */
+
+
+/*Start of Sand */
+.mt-100 {
+    margin-top: 100px
+}
+
+.product-wrapper,
+.product-img {
+    overflow: hidden;
+    position: relative
+}
+
+.mb-45 {
+    margin-bottom: 45px
+}
+
+.product-action {
+    bottom: 0px;
+    left: 0;
+    opacity: 0;
+    position: absolute;
+    right: 0;
+    text-align: center;
+    transition: all 0.6s ease 0s
+}
+
+.product-wrapper {
+    border-radius: 10px
+}
+
+.product-img>span {
+    background-color: #fff;
+    box-shadow: 0 0 8px 1.7px rgba(0, 0, 0, 0.06);
+    color: #333;
+    display: inline-block;
+    font-size: 12px;
+    font-weight: 500;
+    left: 20px;
+    letter-spacing: 1px;
+    padding: 3px 12px;
+    position: absolute;
+    text-align: center;
+    text-transform: uppercase;
+    top: 20px
+}
+
+.product-action-style {
+    background-color: #fff;
+    box-shadow: 0 0 8px 1.7px rgba(0, 0, 0, 0.06);
+    display: inline-block;
+    padding: 16px 2px 12px
+}
+
+.product-action-style>a {
+    color: #979797;
+    line-height: 1;
+    padding: 0 21px;
+    position: relative
+}
+
+.product-action-style>a.action-plus {
+    font-size: 18px
+}
+
+.product-wrapper:hover .product-action {
+    bottom: 20px;
+    opacity: 1
+}
+
+
+
+/*end of Sand */
+
+
+/*start of brown sand */
+.card {
+    position: relative;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    min-width: 0;
+    word-wrap: break-word;
+    background-color: #fff;
+    background-clip: border-box;
+    border: 1px solid rgba(0, 0, 0, .125);
+    border-radius: .1875rem
+}
+
+.card-img-actions {
+    position: relative
+}
+
+.card-body {
+    -ms-flex: 1 1 auto;
+    flex: 1 1 auto;
+    padding: 1.25rem;
+    text-align: center
+}
+
+.card-img {
+    width: 350px
+}
+
+.star {
+    color: red
+}
+
+.bg-cart {
+    background-color: orange;
+    color: #fff
+}
+
+.bg-cart:hover {
+    color: #fff
+}
+
+.bg-buy {
+    background-color: green;
+    color: #fff;
+    padding-right: 29px
+}
+
+.bg-buy:hover {
+    color: #fff
+}
+
+a {
+    text-decoration: none !important
+}
+
+.sand-btn{
+    padding: 16px 28px !important;
+}
+
+
+
+/*end of brown sand*/

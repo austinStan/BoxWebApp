@@ -86,7 +86,7 @@
             <a href="#" class="btn btn-lg btn-block btn-primary mt-3 update-btn">Update Results</a>        
         </div>
         <div class='col-md-9'>
-            <div><h1>Houses For Sale</h1></div>
+            <div><h1>Houses On Sale</h1></div>
             <div class="row mb-5">
                 <div class="col-12">
                     <div class="dropdown text-md-left text-center float-md-left mb-3 mt-3 mt-md-0 mb-md-0">
