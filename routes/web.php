@@ -16,15 +16,6 @@ use Illuminate\Support\Facades\Route;
 Auth::routes();
 
 
-//Login and Logout Routes
-Route::get('/customer/login','Auth\LoginController@showLoginForm')->name('login');  
-Route::post('/customer/login','Auth\LoginController@logout')->name('logout');  
-
-//Registration Routes
-Route::get('/customer/register','Auth\RegisterController@showRegistrationForm')->name('register');  
-Route::post('/customer/register','Auth\RegisterController@register');
-
-
 Route::get('/', function () {
    return view('Pages.home');
 });

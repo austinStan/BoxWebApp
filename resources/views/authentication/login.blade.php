@@ -719,25 +719,39 @@
                 <div class="r-customer">
                     <h5>Registered Customer</h5>
                     <p>If you have an account with us, please log in.</p>
-                    <form action="{{route('login')}}" method="POST">
+                    <form method="POST" action="{{route('login')}}" >
+                        @csrf
                         <div class="emal">
-                            <label>Email address</label>
-                            <input type="text" name="eml">
+                            <label for='email' >Email address</label>
+                            <input id ='email' type="email" class="@error('email') is-invalid @enderror" value="{{ old('email') }}" name="email" required>
+                            @error('email')
+                            <span class="invalid-feedback" role="alert">
+                                <strong>{{ $message }}</strong>
+                            </span>
+                        @enderror
                         </div>
                         <div class="pass">
-                            <label>Password</label>
-                            <input type="text" name="pass">
+                            <label for="password">Password</label>
+                            <input id="password" class="@error('password') is-invalid @enderror" name="password" type="password" required>
+                            @error('password')
+                            <span class="invalid-feedback" role="alert">
+                                <strong>{{ $message }}</strong>
+                            </span>
+                        @enderror
                         </div>
                         <div class="d-flex justify-content-between nam-btm">
                             <div>
-                                <input type="checkbox" name="rememberme" id="rmme">
-                                <label for="rmme">Remember Me</label>
+                                <input type="checkbox" name="remember" id="remember" {{ old('remember') ? 'checked' : '' }}>
+                                <label for="remember">Remember Me</label>
                             </div>
                             <div>
+
+                                @if (Route::has('password.request'))
                                 <a href="">Lost your password?</a>
+                                @endif
                             </div>
                         </div>
-                        <button type="button" name="button">Log In</button>
+                        <button type="submit" name="button">Log In</button>
                     </form>
                 </div>
             </div>
