@@ -713,37 +713,64 @@
                     <div class="row">
                         <div class="col-md-12">
                             <label for="first_name">First Name*</label>
-                            <input id='first_name' type="text"  class="@error('first_name') is-invalid @enderror" name="first_name" value="{{old('first_name')}}" placeholder="Your first name">
+                            <input id='first_name' type="text" class="@error('first_name') is-invalid @enderror"
+                                name="first_name" value="{{old('first_name')}}" placeholder="Your first name">
                             @error('first_name')
                             <span class="invalid-feedback" role="alert">
                                 <strong>{{ $message }}</strong>
                             </span>
-                        @enderror
-                        </div>
-                        <div class="col-md-12">
-                            <label>Last Name*</label>
-                            <input type="text" name="last_name" placeholder="Your Last name">
-                        </div>
-                        <div class="col-md-12">
-                            <label>Email Address*</label>
-                            <input type="text" name="email" placeholder="Your email address">
-                        </div>
-                        <div class="col-md-12">
-                            <label for="phone_number">Phone Number*</label>
-                            <input  id="phone_number" type="text" class=" @error('phone_number') is-invalid @enderror"  name="phone_number" placeholder="Your phone number">
-                            @error('phone_number')
-                                    <span class="invalid-feedback" role="alert">
-                                    <strong>{{ $message }}</strong>
-                                    </span>
                             @enderror
                         </div>
                         <div class="col-md-12">
-                            <label>Password*</label>
-                            <input type="password" name="password" placeholder="Password should be more than 6 character" >
+                            <label for="last_name">Last Name*</label>
+                            <input id='last_name' type="text" class="@error('last_name') is-invalid @enderror"
+                                name="last_name" value="{{old('last_name')}}" placeholder="Your Last name">
+                            @error('last_name')
+                            <span class="invalid-feedback" role="alert">
+                                <strong>{{ $message }}</strong>
+                            </span>
+                            @enderror
                         </div>
                         <div class="col-md-12">
-                            <label>Confirm Password*</label>
-                            <input type="password" name="password_confirmation" placeholder="Confirm your password">
+                            <label for="email">Email Address*</label>
+                            <input id='email' class="@error('email') is-invalid @enderror" type="text" name="email"
+                                value="{{old('email')}}" placeholder="Your email address">
+                            @error('email')
+                            <span class="invalid-feedback" role="alert">
+                                <strong>{{ $message }}</strong>
+                            </span>
+                            @enderror
+                        </div>
+                        <div class="col-md-12">
+                            <label for="phone_number">Phone Number*</label>
+                            <input id="phone_number" type="text" class=" @error('phone_number') is-invalid @enderror"
+                                value="{{old('phone_number')}}" name="phone_number" placeholder="Your phone number">
+                            @error('phone_number')
+                            <span class="invalid-feedback" role="alert">
+                                <strong>{{ $message }}</strong>
+                            </span>
+                            @enderror
+                        </div>
+                        <div class="col-md-12">
+                            <label for="password">Password*</label>
+                            <input id="password" type="password" class=" @error('password') is-invalid @enderror"
+                                name="password" placeholder="Password should be atleast 8 character" required>
+                            @error('password')
+                            <span class="invalid-feedback" role="alert">
+                                <strong>{{ $message }}</strong>
+                            </span>
+                            @enderror
+                        </div>
+                        <div class="col-md-12">
+                            <label for="password_confirmation">Confirm Password*</label>
+                            <input id="password_confirmation" type="password"
+                                class=" @error('password_confirmation') is-invalid @enderror"
+                                name="password_confirmation" placeholder="Confirm your password" required>
+                            @error('password_confirmation')
+                            <span class="invalid-feedback" role="alert">
+                                <strong>{{ $message }}</strong>
+                            </span>
+                            @enderror
                         </div>
                         {{-- <div class="col-md-7">
                             <div>

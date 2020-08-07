@@ -709,15 +709,17 @@
             <div class="col-md-6">
                 <div class="n-customer">
                     <h5>New Customer</h5>
-                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptatem est eum earum eius dolores, alias modi aut officia quo perferendis id aspernatur neque provident quas, quidem libero veritatis voluptatum illum!</p>
-                <a href="{{route('register')}}">Create an Account</a>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptatem est eum earum eius dolores,
+                        alias modi aut officia quo perferendis id aspernatur neque provident quas, quidem libero
+                        veritatis voluptatum illum!</p>
+                    <a href="{{route('register')}}">Create an Account</a>
                 </div>
             </div>
             <div class="col-md-6">
                 <div class="r-customer">
                     <h5>Registered Customer</h5>
                     <p>If you have an account with us, please log in.</p>
-                    <form action="#">
+                    <form action="{{route('login')}}" method="POST">
                         <div class="emal">
                             <label>Email address</label>
                             <input type="text" name="eml">

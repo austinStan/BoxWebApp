@@ -30,10 +30,25 @@
                 <div class="col-lg-6 col-md-8">
                     <div class="top-right text-right">
                         <ul class="list-unstyled list-inline">
-                            <li class="list-inline-item"><a href=""><i class="fa fa-user"></i> Account</a></li>
+                            @guest
+                            <li class="list-inline-item"><a href="{{route('register')}}"><i
+                                        class="fa fa-user"></i>Register</a></li>
                             <li class="list-inline-item"><a href=""><i class="fa fa-heart"></i> Wishlist</a></li>
                             <li class="list-inline-item"><a href=""><i class="fa fa-share-square"></i>Checkout</a></li>
-                        <li class="list-inline-item"><a href="{{route('login')}}"><i class="fa fa-lock"></i>Login</a></li>
+                            <li class="list-inline-item"><a href="{{route('login')}}"><i
+                                        class="fa fa-lock"></i>Login</a></li>
+                            @else
+                            <li class="list-inline-item"><a href="#" class="text-success">Hi
+                                    {{Auth::user()->first_name}}</a></li>
+                            <li class="list-inline-item"><a href=""><i class="fa fa-heart"></i> Wishlist</a></li>
+                            <li class="list-inline-item"><a href=""><i class="fa fa-share-square"></i>Checkout</a></li>
+                            <li class="list-inline-item"><a href="{{route('logout')}}" onclick="event.preventDefault();
+                            document.getElementById('logout-form').submit();"><i class="fa fa-lock"></i>
+                                    Logout</a></li>
+                            @endguest
+                            <form id="logout-form" action="{{ route('logout') }}" method="POST" style="display: none;">
+                                @csrf
+                            </form>
                         </ul>
                     </div>
                 </div>
@@ -389,7 +404,7 @@
                                         <div class="col-md-4">
                                             <div class="smartphone">
                                                 <h6>PIPES</h6>
-                                            <a href="{{route('pipes-fitting')}}">- Pipes & Tubings</a>
+                                                <a href="{{route('pipes-fitting')}}">- Pipes & Tubings</a>
                                                 <a href="">- Pipe Fittings </a>
                                                 <a href="">- Pumps & Accessories</a>
                                                 <a href="">- Supply Lines & Connectors</a>
@@ -511,7 +526,7 @@
                                         <div class="col-md-4">
                                             <div class="smartphone">
                                                 <h6>SERVICE APARTMENTS</h6>
-                                            <a href="{{route('service-apartments')}}">- Dina Apartments</a>
+                                                <a href="{{route('service-apartments')}}">- Dina Apartments</a>
                                                 <a href="">- kampala Boulverd suites</a>
                                                 <a href="">- Natra Apartments</a>
                                                 <a href="">- Selina Apartments </a>
