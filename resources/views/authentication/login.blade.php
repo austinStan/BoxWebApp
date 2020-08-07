@@ -733,6 +733,7 @@
                         <div class="pass">
                             <label for="password">Password</label>
                             <input id="password" class="@error('password') is-invalid @enderror" name="password" type="password" required>
+                            <i id="pass-status" class="fa fa-eye fa-1x" style="position:relative; left:95%; bottom:50px;" onClick="viewPassword()" aria-hidden="true"></i>
                             @error('password')
                             <span class="invalid-feedback" role="alert">
                                 <strong>{{ $message }}</strong>
@@ -832,4 +833,20 @@
 </section> --}}
 <!-- End Brand area 2 -->
 
+<script>
+   function viewPassword(){
+    var passwordInput = document.getElementById('password');
+    var passStatus = document.getElementById('pass-status');
+        if (passwordInput.type == 'password')
+        {
+            passwordInput.type='text';
+            passStatus.className='fa fa-eye-slash';
+        }
+        else
+        {
+            passwordInput.type='password';
+            passStatus.className='fa fa-eye';
+        }
+   }
+    </script>
 @endsection
