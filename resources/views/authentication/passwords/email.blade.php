@@ -3,7 +3,7 @@
 @section('title', 'Login')
 
 @section('content')
-<!-- Top Bar 2 -->
+
 @include('_partials.scrollable')
 <!-- End Top Bar 2 -->
 <!-- Logo Area 2 -->
@@ -688,8 +688,14 @@
             <div class="col-md-6">
                 <div class="r-customer">
                     <h5>Registered Customer</h5>
-                    <p>If you have an account with us, please log in.</p>
-                    <form method="POST" action="{{route('login')}}" >
+                    <p>Forgot your password?  please fill in your email.</p>
+                    <div class="card-body">
+                        @if (session('status'))
+                            <div class="alert alert-success" role="alert">
+                                {{ session('status') }}
+                            </div>
+                        @endif
+                    <form method="POST" action="{{ route('password.email') }}" >
                         @csrf
                         <div class="emal">
                             <label for='email' >Email address</label>
@@ -700,29 +706,7 @@
                             </span>
                         @enderror
                         </div>
-                        <div class="pass">
-                            <label for="password">Password</label>
-                            <input id="password" class="@error('password') is-invalid @enderror" name="password" type="password" required>
-                            <i id="pass-status" class="fa fa-eye fa-1x" style="position:relative; left:95%; bottom:50px;" onClick="viewPassword()" aria-hidden="true"></i>
-                            @error('password')
-                            <span class="invalid-feedback" role="alert">
-                                <strong>{{ $message }}</strong>
-                            </span>
-                        @enderror
-                        </div>
-                        <div class="d-flex justify-content-between nam-btm">
-                            <div>
-                                <input type="checkbox" name="remember" id="remember" {{ old('remember') ? 'checked' : '' }}>
-                                <label for="remember">Remember Me</label>
-                            </div>
-                            <div>
-
-                                @if (Route::has('password.request'))
-                                <a href="{{ route('password.request') }}">Lost your password?</a>
-                                @endif
-                            </div>
-                        </div>
-                        <button type="submit" name="button">Log In</button>
+                        <button type="submit" name="button" style="background:#5677fc; !important; margin-left:0%;">Send Password Reset Link</button>
                     </form>
                 </div>
             </div>
