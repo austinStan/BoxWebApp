@@ -1,9 +1,9 @@
 @extends('Pages.index')
 
-@section('title', 'Password Reset Email Form')
+@section('title', 'Password Reset')
 
 @section('content')
-
+<!-- Top Bar 2 -->
 @include('_partials.scrollable')
 <!-- End Top Bar 2 -->
 <!-- Logo Area 2 -->
@@ -688,25 +688,41 @@
             <div class="col-md-6">
                 <div class="r-customer">
                     <h5>Registered Customer</h5>
-                    <p>Forgot your password?  please fill in your email.</p>
-                    <div class="card-body">
-                        @if (session('status'))
-                            <div class="alert alert-success" role="alert">
-                                {{ session('status') }}
-                            </div>
-                        @endif
-                    <form method="POST" action="{{ route('password.email') }}" >
+                    <p>If you have an account with us, please log in.</p>
+                    <form method="POST" action="{{route('password.update')}}">
                         @csrf
+                        <input type="hidden" name="token" value="{{ $token }}">
                         <div class="emal">
-                            <label for='email' >Email address</label>
-                            <input id ='email' type="email" class="@error('email') is-invalid @enderror" value="{{ old('email') }}" name="email" required>
+                            <label for='email'>Email address</label>
+                            <input id='email' type="email" class="@error('email') is-invalid @enderror"
+                                value="{{ $email ?? old('email') }}" name="email" required>
                             @error('email')
                             <span class="invalid-feedback" role="alert">
                                 <strong>{{ $message }}</strong>
                             </span>
-                        @enderror
+                            @enderror
                         </div>
-                        <button type="submit" name="button" style="background:#5677fc; !important; margin-left:0%;">Send Password Reset Link</button>
+                        <div class="pass">
+                            <label for="password">Password</label>
+                            <input id="password" class="@error('password') is-invalid @enderror" name="password"
+                                type="password" required>
+                            <i id="pass-status" class="fa fa-eye fa-1x"
+                                style="position:relative; left:95%; bottom:50px;" onClick="viewPassword()"
+                                aria-hidden="true"></i>
+                            @error('password')
+                            <span class="invalid-feedback" role="alert">
+                                <strong>{{ $message }}</strong>
+                            </span>
+                            @enderror
+                        </div>
+                        <div class="pass">
+                            <label for="password-confirm">Confirm Password</label>
+                            <input id="password-confirm" type='password' name="password_confirmation" required>
+                            <i id="pass-status" class="fa fa-eye fa-1x"
+                                style="position:relative; left:95%; bottom:50px;" onClick="viewPasswordConfirmation()"
+                                aria-hidden="true"></i>
+                        </div>
+                        <button type="submit" name="button">Reset Password</button>
                     </form>
                 </div>
             </div>
@@ -788,7 +804,7 @@
 <!-- End Brand area 2 -->
 
 <script>
-   function viewPassword(){
+    function viewPassword(){
     var passwordInput = document.getElementById('password');
     var passStatus = document.getElementById('pass-status');
         if (passwordInput.type == 'password')
@@ -802,5 +818,19 @@
             passStatus.className='fa fa-eye';
         }
    }
-    </script>
+   function viewPasswordConfirmation(){
+    var passwordInput = document.getElementById('password');
+    var passStatus = document.getElementById('pass-status');
+        if (passwordInput.type == 'password')
+        {
+            passwordInput.type='text';
+            passStatus.className='fa fa-eye-slash';
+        }
+        else
+        {
+            passwordInput.type='password';
+            passStatus.className='fa fa-eye';
+        }
+   }
+</script>
 @endsection

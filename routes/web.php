@@ -133,3 +133,9 @@ Route::prefix('electrical-wirings')->group(function () {
       Route::get('baby/outfit','Clothings\BabyController@index')->name('outfit');
     
 });
+
+//Voyager routes
+
+Route::group(['prefix' => 'admin'], function () {
+    Voyager::routes();
+});

@@ -38,10 +38,8 @@
                             <li class="list-inline-item"><a href="{{route('login')}}"><i
                                         class="fa fa-lock"></i>Login</a></li>
                             @else
-                            <li class="list-inline-item"><a href="#" class="text-primary">Hi
-                                    {{Auth::user()->first_name}}</a></li>
-                            <li class="list-inline-item"><a href=""><i class="fa fa-heart"></i> Wishlist</a></li>
-                            <li class="list-inline-item"><a href=""><i class="fa fa-share-square"></i>Checkout</a></li>
+                            <li class="list-inline-item"><a href="#" class="text-danger" style="font-size:15px;";>Hi
+                                    {{Auth::user()->first_name}} </a></li>
                             <li class="list-inline-item"><a href="{{route('logout')}}" onclick="event.preventDefault();
                             document.getElementById('logout-form').submit();"><i class="fa fa-lock"></i>
                                     Logout</a></li>

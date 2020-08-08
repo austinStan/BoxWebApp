@@ -716,9 +716,8 @@
                                 <label for="remember">Remember Me</label>
                             </div>
                             <div>
-
                                 @if (Route::has('password.request'))
-                                <a href="{{ route('password.request') }}">Lost your password?</a>
+                                <a href="{{ route('password.request') }}">Forgot your password?</a>
                                 @endif
                             </div>
                         </div>

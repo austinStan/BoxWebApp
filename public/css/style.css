@@ -7661,7 +7661,7 @@ input:focus, textarea:focus {
 .login .r-customer form button {
   font-size: 15px;
   color: #fff;
-  background: #e45151;
+  background: #5677fc;
   padding: 10px 25px;
   font-weight: 600;
   border: none;
@@ -7672,7 +7672,7 @@ input:focus, textarea:focus {
 }
 
 .login .r-customer form button:hover {
-  background: #5677fc;
+  background: #e45151;
 }
 
 /* =======================================
