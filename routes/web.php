@@ -16,9 +16,7 @@ use Illuminate\Support\Facades\Route;
 Auth::routes();
 
 
-Route::get('/', function () {
-   return view('Pages.home');
-});
+Route::get('/', 'HomeController@index');
 
 
  Route::prefix('land')->group(function () {
