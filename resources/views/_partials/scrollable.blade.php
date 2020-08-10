@@ -7,8 +7,9 @@
                         <ul class="header_social">
                             <li><a href="#"><i class="fa fa-facebook"></i></a></li>
                             <li><a href="#"><i class="fa fa-twitter"></i></a></li>
-                            <li><a href="#"><i class="fa fa-whatsapp"></i></a></li>
                             <li><a href="#"><i class="fa fa-instagram"></i></a></li>
+                            <li><i class="fa fa-whatsapp px-2 "></i>+256 (785) 18 9296</li>
+                           
                         </ul>
                     </div>
                     <div class="call-us">

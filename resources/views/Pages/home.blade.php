@@ -21,8 +21,8 @@
                             <ul class="header_social">
                                 <li><a href="#"><i class="fa fa-facebook"></i></a></li>
                                 <li><a href="#"><i class="fa fa-twitter"></i></a></li>
-                                <li><a href="#"><i class="fa fa-whatsapp"></i></a></li>
                                 <li><a href="#"><i class="fa fa-instagram"></i></a></li>
+                                <li><i class="fa fa-whatsapp px-2 "></i>+256 (785) 18 9296</li>       
                             </ul>
                         </div>
                     </div>
@@ -38,7 +38,7 @@
                             <li class="list-inline-item"><a href="{{route('login')}}"><i
                                         class="fa fa-lock"></i>Login</a></li>
                             @else
-                            <li class="list-inline-item"><a href="#" class="text-danger" style="font-size:15px;";>Hi
+                            <li class="list-inline-item"><a href="#" class="text-danger" style="font-size:15px;">Hi
                                     {{Auth::user()->first_name}} </a></li>
                             <li class="list-inline-item"><a href="{{route('logout')}}" onclick="event.preventDefault();
                             document.getElementById('logout-form').submit();"><i class="fa fa-lock"></i>
