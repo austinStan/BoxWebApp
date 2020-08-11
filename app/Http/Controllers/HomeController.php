@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use TCG\Voyager\Models\Category;
 
 class HomeController extends Controller
 {
@@ -11,10 +12,10 @@ class HomeController extends Controller
      *
      * @return void
      */
-    public function __construct()
-    {
-        $this->middleware('guest');
-    }
+    // public function __construct()
+    // {
+    //     // $this->middleware('guest');
+    // }
 
     /**
      * Show the application dashboard.
@@ -23,6 +24,10 @@ class HomeController extends Controller
      */
     public function index()
     {
-        return view('Pages.home');
+        $categories=Category::whereNull('parent_id')->get();
+
+        // dd($categories);
+
+        return view('Pages.home',['categories'=>$categories]);
     }
 }
