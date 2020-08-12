@@ -223,11 +223,13 @@
                             @foreach($categories as $parent_category)
                             <li><a href="">{{$parent_category->name}}<i class="fa fa-angle-right"></i></a>
                                 <?php $children= TCG\Voyager\Models\Category::where('parent_id',$parent_category->id)->get();
+
                                 ?>
                                 @if($children->isNotEmpty())
-                                @foreach($children as $child)
+
                                 <div class="mega-menu">
-                                    <div class="row">
+                                    <div class="row ">
+                                        @foreach($children as $child)
                                         <div class="col-md-4">
                                             <div class="smartphone">
                                                 <h6>{{$child->name}}</h6>
@@ -237,12 +239,12 @@
                                                 @foreach($grandchild as $g)
                                                 <a href="#">{{$g->name}}</a>
                                                 @endforeach
-                                                @endif
+                                                @endif   
                                             </div>
                                         </div>
+                                        @endforeach
                                     </div>
                                 </div>
-                                @endforeach
                             </li>
                             @endif
                             @endforeach
