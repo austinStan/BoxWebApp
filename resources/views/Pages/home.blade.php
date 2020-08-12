@@ -220,9 +220,9 @@
                     <div class="menu-widget">
                         <p><i class="fa fa-bars"></i>All Categories</p>
                         <ul class="list-unstyled">
-                            @foreach($categories as $parent_category)
-                            <li><a href="">{{$parent_category->name}}<i class="fa fa-angle-right"></i></a>
-                                <?php $children= TCG\Voyager\Models\Category::where('parent_id',$parent_category->id)->get();
+                            @foreach($categories as $category)
+                            <li><a href="{{route('products.index',['category_id'=>$category->id])}}">{{$category->name}}<i class="fa fa-angle-right"></i></a>
+                                <?php $children= TCG\Voyager\Models\Category::where('parent_id',$category->id)->get();
 
                                 ?>
                                 @if($children->isNotEmpty())
@@ -232,12 +232,12 @@
                                         @foreach($children as $child)
                                         <div class="col-md-4">
                                             <div class="smartphone">
-                                            <a href='{{route('products.index',['category_id']=>$category->id)}}'><h6>{{$child->name}}</h6></a>
+                                            <a href='{{route('products.index',['category_id'=>$child->id])}}'><h6>{{$child->name}}</h6></a>
                                                 <?php $grandchild= TCG\Voyager\Models\Category::where('parent_id',$child->id)->get();
                                              ?>
                                                 @if($grandchild->isNotEmpty())
-                                                @foreach($grandchild as $g)
-                                                <a href="#">{{$g->name}}</a>
+                                                @foreach($grandchild as $gc)
+                                                <a href="{{route('products.index',['category_id'=>$gc->id])}}">{{$gc->name}}</a>
                                                 @endforeach
                                                 @endif   
                                             </div>

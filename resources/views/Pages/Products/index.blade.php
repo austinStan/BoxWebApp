@@ -116,7 +116,7 @@
                                     <div class="col-md-4">
                                         <div class="smartphone">
                                             <h6> ACRES</h6>
-                                            <a href="{{route('masaka')}}">- Masaka</a>
+                                            <a href="#">- Masaka</a>
                                             <a href="">- Mukono</a>
                                             <a href="">- Mpigi</a>
                                             <a href="">- Gulu</a>
