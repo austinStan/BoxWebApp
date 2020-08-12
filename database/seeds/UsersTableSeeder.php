@@ -28,7 +28,7 @@ class UsersTableSeeder extends Seeder
                 'phone_number' => 759189296,
                 'email_verified_at' => NULL,
                 'password' => '$2y$10$6a2gYzYUmeAH5hIhhgnaGOPA.wo43mWZzGel8YTfcBZaREEj.x1AS',
-                'remember_token' => 'QrBBTri6DwFY6jMw3c6y2d8nS9uQN027JN0nvUymorVxGwu9lAWOOe1MOB2F',
+                'remember_token' => '9gCiP9YKIXs31SJ9FoE9nlA35rUcvDJoiFVitiIZT2qfN5NJmFd8EhynpMbc',
                 'settings' => NULL,
                 'created_at' => '2020-08-07 17:38:32',
                 'updated_at' => '2020-08-08 16:43:00',

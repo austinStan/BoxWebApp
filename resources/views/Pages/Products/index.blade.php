@@ -1,6 +1,6 @@
 @extends('Pages.index')
 
-@section('title', 'Land')
+@section('title', $categoryName)
 
 @section('content')
 <!-- Top Bar 2 -->
@@ -662,8 +662,8 @@
                 <div class="breadcrumb-box text-center">
                     <ul class="list-unstyled list-inline">
                         <li class="list-inline-item"><a href="">Home</a></li>
-                        <li class="list-inline-item"><span>||</span><a href="">Land</a></li>
-                        <li class="list-inline-item"><span>||</span>Masaka</li>
+                    <li class="list-inline-item"><span>||</span><a href="">{{$categoryName}}</a></li>
+                        {{-- <li class="list-inline-item"><span>||</span>Masaka</li> --}}
                     </ul>
                 </div>
             </div>
