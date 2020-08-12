@@ -1002,7 +1002,8 @@
                                         </div>
                                         <div class="img-content d-flex justify-content-between">
                                             <div>
-                                                <ul class="list-unstyled list-inline fav">
+                                                <ul class="list-unstyled list-inli
+                                                ne fav">
                                                     <li class="list-inline-item"><i class="fa fa-star"></i></li>
                                                     <li class="list-inline-item"><i class="fa fa-star"></i></li>
                                                     <li class="list-inline-item"><i class="fa fa-star"></i></li>
