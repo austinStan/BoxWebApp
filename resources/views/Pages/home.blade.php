@@ -232,7 +232,7 @@
                                         @foreach($children as $child)
                                         <div class="col-md-4">
                                             <div class="smartphone">
-                                                <h6>{{$child->name}}</h6>
+                                            <a href='{{route('products.index',['category_id']=>$category->id)}}'><h6>{{$child->name}}</h6></a>
                                                 <?php $grandchild= TCG\Voyager\Models\Category::where('parent_id',$child->id)->get();
                                              ?>
                                                 @if($grandchild->isNotEmpty())

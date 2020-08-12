@@ -42,10 +42,30 @@ class CategoriesTableSeeder extends Seeder
                 'id' => 5,
                 'parent_id' => 4,
                 'order' => 1,
-                'name' => '50-100',
-                'slug' => '50-100',
+                'name' => '50-100 acres',
+                'slug' => '50-100a',
                 'created_at' => '2020-08-10 17:44:53',
-                'updated_at' => '2020-08-10 17:44:53',
+                'updated_at' => '2020-08-12 16:37:41',
+            ),
+            3 => 
+            array (
+                'id' => 7,
+                'parent_id' => 3,
+                'order' => 1,
+                'name' => 'Plots',
+                'slug' => 'plots',
+                'created_at' => '2020-08-12 16:37:54',
+                'updated_at' => '2020-08-12 16:37:54',
+            ),
+            4 => 
+            array (
+                'id' => 8,
+                'parent_id' => 7,
+                'order' => 1,
+                'name' => '50x100 meters',
+                'slug' => '50x100m',
+                'created_at' => '2020-08-12 16:38:22',
+                'updated_at' => '2020-08-12 16:38:22',
             ),
         ));
         
