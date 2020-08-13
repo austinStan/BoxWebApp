@@ -347,43 +347,43 @@ class PermissionsTableSeeder extends Seeder
             ),
             41 => 
             array (
-                'id' => 42,
+                'id' => 47,
                 'key' => 'browse_products',
                 'table_name' => 'products',
-                'created_at' => '2020-08-12 17:01:52',
-                'updated_at' => '2020-08-12 17:01:52',
+                'created_at' => '2020-08-13 15:58:53',
+                'updated_at' => '2020-08-13 15:58:53',
             ),
             42 => 
             array (
-                'id' => 43,
+                'id' => 48,
                 'key' => 'read_products',
                 'table_name' => 'products',
-                'created_at' => '2020-08-12 17:01:52',
-                'updated_at' => '2020-08-12 17:01:52',
+                'created_at' => '2020-08-13 15:58:53',
+                'updated_at' => '2020-08-13 15:58:53',
             ),
             43 => 
             array (
-                'id' => 44,
+                'id' => 49,
                 'key' => 'edit_products',
                 'table_name' => 'products',
-                'created_at' => '2020-08-12 17:01:52',
-                'updated_at' => '2020-08-12 17:01:52',
+                'created_at' => '2020-08-13 15:58:53',
+                'updated_at' => '2020-08-13 15:58:53',
             ),
             44 => 
             array (
-                'id' => 45,
+                'id' => 50,
                 'key' => 'add_products',
                 'table_name' => 'products',
-                'created_at' => '2020-08-12 17:01:52',
-                'updated_at' => '2020-08-12 17:01:52',
+                'created_at' => '2020-08-13 15:58:53',
+                'updated_at' => '2020-08-13 15:58:53',
             ),
             45 => 
             array (
-                'id' => 46,
+                'id' => 51,
                 'key' => 'delete_products',
                 'table_name' => 'products',
-                'created_at' => '2020-08-12 17:01:52',
-                'updated_at' => '2020-08-12 17:01:52',
+                'created_at' => '2020-08-13 15:58:53',
+                'updated_at' => '2020-08-13 15:58:53',
             ),
         ));
         

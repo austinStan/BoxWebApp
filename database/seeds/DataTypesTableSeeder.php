@@ -127,7 +127,7 @@ class DataTypesTableSeeder extends Seeder
             ),
             6 => 
             array (
-                'id' => 7,
+                'id' => 8,
                 'name' => 'products',
                 'slug' => 'products',
                 'display_name_singular' => 'Product',
@@ -139,9 +139,9 @@ class DataTypesTableSeeder extends Seeder
                 'description' => NULL,
                 'generate_permissions' => 1,
                 'server_side' => 0,
-                'details' => '{"order_column":null,"order_display_column":null,"order_direction":"asc","default_search_key":null,"scope":null}',
-                'created_at' => '2020-08-12 17:01:52',
-                'updated_at' => '2020-08-12 19:15:20',
+                'details' => '{"order_column":null,"order_display_column":null,"order_direction":"asc","default_search_key":null}',
+                'created_at' => '2020-08-13 15:58:53',
+                'updated_at' => '2020-08-13 15:58:53',
             ),
         ));
         

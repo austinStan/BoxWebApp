@@ -21,7 +21,7 @@ class ProductController extends Controller
         if ($categoryId) {
             $category = Category::find($categoryId);
             $categoryName = ucfirst($category->name);
-            $products = $category->allProducts();
+            $products = $category->products;
         } else {
             $products = Product::take(10)->get();
         }

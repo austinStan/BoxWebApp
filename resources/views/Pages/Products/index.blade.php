@@ -662,8 +662,7 @@
                 <div class="breadcrumb-box text-center">
                     <ul class="list-unstyled list-inline">
                         <li class="list-inline-item"><a href="">Home</a></li>
-                    <li class="list-inline-item"><span>||</span><a href="">{{$categoryName}}</a></li>
-                        {{-- <li class="list-inline-item"><span>||</span>Masaka</li> --}}
+                       <li class="list-inline-item"><span>||</span><a href="">{{$categoryName}}</a></li>
                     </ul>
                 </div>
             </div>
@@ -980,14 +979,17 @@
                     <!-- Tab panes -->
                     <div class="tab-content">
                         <div class="tab-pane fade show active" id="grid" role="tabpanel">
+                           
                             <div class="row">
+                                @foreach($products as $product)
                                 <div class="col-lg-4 col-md-6">
                                     <div class="tab-item">
                                         <div class="tab-img">
-                                            <img class="main-img img-fluid" src="{{asset('images/Land/land.png')}}"
+                                            <img class="main-img img-fluid" src="{{asset('storage/'.$product->image)}}"
                                                 alt="">
-                                            <img class="sec-img img-fluid" src="{{asset('images/Land/land.png')}}"
-                                                alt="">
+                                                <span class="sale">Sale</span>
+                                            {{-- <img class="sec-img img-fluid" src="{{asset('images/Land/land.png')}}"
+                                                alt=""> --}}
                                             <div class="layer-box">
                                                 <a href="" class="it-comp" data-toggle="tooltip" data-placement="left"
                                                     title="Compare"><img src="{{asset('images/it-comp.png')}}"
@@ -998,7 +1000,7 @@
                                             </div>
                                         </div>
                                         <div class="tab-heading">
-                                            <p><a href="">2sq miles Senyi,Buikwe District</a></p>
+                                        <p><a href="">{{$product->name}}</a></p>
                                         </div>
                                         <div class="img-content d-flex justify-content-between">
                                             <div>
@@ -1010,9 +1012,9 @@
                                                     <li class="list-inline-item"><i class="fa fa-star"></i></li>
                                                     <li class="list-inline-item"><i class="fa fa-star-o"></i></li>
                                                 </ul>
-                                                <ul class="list-unstyled list-inline price">
-                                                    <li class="list-inline-item">7M</li>
-                                                    <li class="list-inline-item">12M</li>
+                                                <ul class="list-unstyled list-inline">
+                                                <li class="list-inline-item">UGX {{$product->price}}</li>
+                                                    {{-- <li class="list-inline-item">12M</li> --}}
                                                 </ul>
                                             </div>
                                             <div>
@@ -1023,7 +1025,8 @@
                                         </div>
                                     </div>
                                 </div>
-                                <div class="col-lg-4 col-md-6">
+                                @endforeach
+                                {{-- <div class="col-lg-4 col-md-6">
                                     <div class="tab-item">
                                         <div class="tab-img">
                                             <img class="main-img img-fluid" src="{{asset('images/Land/land.png')}}"
@@ -1353,32 +1356,33 @@
                                             </div>
                                         </div>
                                     </div>
-                                </div>
+                                </div> --}}
                             </div>
                         </div>
                         <div class="tab-pane fade" id="list" role="tabpanel">
                             <div class="row">
+                                @foreach($products as $product)
                                 <div class="col-lg-12 col-md-6">
                                     <div class="tab-item2">
                                         <div class="row">
                                             <div class="col-lg-4 col-md-12">
                                                 <div class="tab-img">
-                                                    <img class="main-img img-fluid"
-                                                        src="{{asset('images/Land/land.png')}}" alt="">
-                                                    <img class="sec-img img-fluid"
-                                                        src="{{asset('images/Land/land.png')}}" alt="">
-                                                    <span class="sale">Sale</span>
+                                                    <img class="main-img img-fluid" src="{{asset('storage/'.$product->image)}}"
+                                                        alt="">
+                                                    {{-- <img class="sec-img img-fluid" src="{{asset('storage/'.$product->image)}}"
+                                                        alt=""> --}}
+                                                        <span class="sale">Sale</span>
                                                 </div>
                                             </div>
                                             <div class="col-lg-8 col-md-12">
                                                 <div class="item-heading d-flex justify-content-between">
                                                     <div class="item-top">
                                                         <ul class="list-unstyled list-inline cate">
-                                                            <li class="list-inline-item"><a href="#">Home Appliance,</a>
+                                                        <li class="list-inline-item"><a href="#">{{$product->name}}</a>
                                                             </li>
-                                                            <li class="list-inline-item"><a href="#">Smart Led</a></li>
+                                                           
                                                         </ul>
-                                                        <p><a href="">Samsung Smart Led Tv 42"</a></p>
+                                                    <p><a href="">{{$product->location}}</a></p>
                                                         <ul class="list-unstyled list-inline fav">
                                                             <li class="list-inline-item"><i class="fa fa-star"></i></li>
                                                             <li class="list-inline-item"><i class="fa fa-star"></i></li>
@@ -1389,73 +1393,13 @@
                                                         </ul>
                                                     </div>
                                                     <div class="item-price">
-                                                        <ul class="list-unstyled list-inline price">
-                                                            <li class="list-inline-item">$120.00</li>
-                                                            <li class="list-inline-item">$150.00</li>
+                                                        <ul class="list-unstyled list-inline ">
+                                                            <li class="list-inline-item">UGX {{$product->price}}</li>
                                                         </ul>
                                                     </div>
                                                 </div>
                                                 <div class="item-content">
-                                                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quidem
-                                                        atque dolores aliquid culpa maiores beatae est quod officia
-                                                        veniam fugit? Molestiae, illum voluptatibus nisi error
-                                                        recusandae cum expedita. Laborum, expedita!</p>
-                                                    <a href="" class="it-cart"><span class="it-img"><img
-                                                                src="{{asset('images/it-cart.png')}}"
-                                                                alt=""></span><span class="it-title">Add To
-                                                            Cart</span></a>
-                                                    <a href="" class="it-fav" data-toggle="tooltip" data-placement="top"
-                                                        title="Favourite"><img src="{{asset('images/it-fav.png')}}"
-                                                            alt=""></a>
-                                                    <a href="" class="it-comp" data-toggle="tooltip"
-                                                        data-placement="top" title="Compare"><img
-                                                            src="{{asset('images/it-comp.png')}}" alt=""></a>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="col-lg-12 col-md-6">
-                                    <div class="tab-item2">
-                                        <div class="row">
-                                            <div class="col-lg-4 col-md-12">
-                                                <div class="tab-img">
-                                                    <img class="main-img img-fluid" src="{{asset('images/tab-2.png')}}"
-                                                        alt="">
-                                                    <img class="sec-img img-fluid" src="{{asset('images/tab-16.png')}}"
-                                                        alt="">
-                                                </div>
-                                            </div>
-                                            <div class="col-lg-8 col-md-12">
-                                                <div class="item-heading d-flex justify-content-between">
-                                                    <div class="item-top">
-                                                        <ul class="list-unstyled list-inline cate">
-                                                            <li class="list-inline-item"><a href="#">Home Appliance,</a>
-                                                            </li>
-                                                            <li class="list-inline-item"><a href="#">Smart Led</a></li>
-                                                        </ul>
-                                                        <p><a href="">Samsung Smart Led Tv 42"</a></p>
-                                                        <ul class="list-unstyled list-inline fav">
-                                                            <li class="list-inline-item"><i class="fa fa-star"></i></li>
-                                                            <li class="list-inline-item"><i class="fa fa-star"></i></li>
-                                                            <li class="list-inline-item"><i class="fa fa-star"></i></li>
-                                                            <li class="list-inline-item"><i class="fa fa-star"></i></li>
-                                                            <li class="list-inline-item"><i class="fa fa-star-o"></i>
-                                                            </li>
-                                                        </ul>
-                                                    </div>
-                                                    <div class="item-price">
-                                                        <ul class="list-unstyled list-inline price">
-                                                            <li class="list-inline-item">$120.00</li>
-                                                            <li class="list-inline-item">$150.00</li>
-                                                        </ul>
-                                                    </div>
-                                                </div>
-                                                <div class="item-content">
-                                                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quidem
-                                                        atque dolores aliquid culpa maiores beatae est quod officia
-                                                        veniam fugit? Molestiae, illum voluptatibus nisi error
-                                                        recusandae cum expedita. Laborum, expedita!</p>
+                                                <p>{{$product->description}}</p>
                                                     <a href="" class="it-cart"><span class="it-img"><img
                                                                 src="images/it-cart.png" alt=""></span><span
                                                             class="it-title">Add To Cart</span></a>
@@ -1470,119 +1414,7 @@
                                         </div>
                                     </div>
                                 </div>
-                                <div class="col-lg-12 col-md-6">
-                                    <div class="tab-item2">
-                                        <div class="row">
-                                            <div class="col-lg-4 col-md-12">
-                                                <div class="tab-img">
-                                                    <img class="main-img img-fluid" src="{{asset('images/tab-3.png')}}"
-                                                        alt="">
-                                                    <img class="sec-img img-fluid" src="{{asset('images/tab-16.png')}}"
-                                                        alt="">
-                                                    <span class="new">New</span>
-                                                </div>
-                                            </div>
-                                            <div class="col-lg-8 col-md-12">
-                                                <div class="item-heading d-flex justify-content-between">
-                                                    <div class="item-top">
-                                                        <ul class="list-unstyled list-inline cate">
-                                                            <li class="list-inline-item"><a href="#">Home Appliance,</a>
-                                                            </li>
-                                                            <li class="list-inline-item"><a href="#">Smart Led</a></li>
-                                                        </ul>
-                                                        <p><a href="">Samsung Smart Led Tv 42"</a></p>
-                                                        <ul class="list-unstyled list-inline fav">
-                                                            <li class="list-inline-item"><i class="fa fa-star"></i></li>
-                                                            <li class="list-inline-item"><i class="fa fa-star"></i></li>
-                                                            <li class="list-inline-item"><i class="fa fa-star"></i></li>
-                                                            <li class="list-inline-item"><i class="fa fa-star"></i></li>
-                                                            <li class="list-inline-item"><i class="fa fa-star-o"></i>
-                                                            </li>
-                                                        </ul>
-                                                    </div>
-                                                    <div class="item-price">
-                                                        <ul class="list-unstyled list-inline price">
-                                                            <li class="list-inline-item">$120.00</li>
-                                                            <li class="list-inline-item">$150.00</li>
-                                                        </ul>
-                                                    </div>
-                                                </div>
-                                                <div class="item-content">
-                                                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quidem
-                                                        atque dolores aliquid culpa maiores beatae est quod officia
-                                                        veniam fugit? Molestiae, illum voluptatibus nisi error
-                                                        recusandae cum expedita. Laborum, expedita!</p>
-                                                    <a href="" class="it-cart"><span class="it-img"><img
-                                                                src="{{asset('images/it-cart.png')}}"
-                                                                alt=""></span><span class="it-title">Add To
-                                                            Cart</span></a>
-                                                    <a href="" class="it-fav" data-toggle="tooltip" data-placement="top"
-                                                        title="Favourite"><img src="{{asset('images/it-fav.png')}}"
-                                                            alt=""></a>
-                                                    <a href="" class="it-comp" data-toggle="tooltip"
-                                                        data-placement="top" title="Compare"><img
-                                                            src="{{asset('images/it-comp.png')}}" alt=""></a>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="col-lg-12 col-md-6">
-                                    <div class="tab-item2">
-                                        <div class="row">
-                                            <div class="col-lg-4 col-md-12">
-                                                <div class="tab-img">
-                                                    <img class="main-img img-fluid" src="{{asset('images/tab-4.png')}}"
-                                                        alt="">
-                                                    <img class="sec-img img-fluid" src="{{asset('images/tab-16.png')}}"
-                                                        alt="">
-                                                </div>
-                                            </div>
-                                            <div class="col-lg-8 col-md-12">
-                                                <div class="item-heading d-flex justify-content-between">
-                                                    <div class="item-top">
-                                                        <ul class="list-unstyled list-inline cate">
-                                                            <li class="list-inline-item"><a href="#">Home Appliance,</a>
-                                                            </li>
-                                                            <li class="list-inline-item"><a href="#">Smart Led</a></li>
-                                                        </ul>
-                                                        <p><a href="">Samsung Smart Led Tv 42"</a></p>
-                                                        <ul class="list-unstyled list-inline fav">
-                                                            <li class="list-inline-item"><i class="fa fa-star"></i></li>
-                                                            <li class="list-inline-item"><i class="fa fa-star"></i></li>
-                                                            <li class="list-inline-item"><i class="fa fa-star"></i></li>
-                                                            <li class="list-inline-item"><i class="fa fa-star"></i></li>
-                                                            <li class="list-inline-item"><i class="fa fa-star-o"></i>
-                                                            </li>
-                                                        </ul>
-                                                    </div>
-                                                    <div class="item-price">
-                                                        <ul class="list-unstyled list-inline price">
-                                                            <li class="list-inline-item">$120.00</li>
-                                                            <li class="list-inline-item">$150.00</li>
-                                                        </ul>
-                                                    </div>
-                                                </div>
-                                                <div class="item-content">
-                                                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quidem
-                                                        atque dolores aliquid culpa maiores beatae est quod officia
-                                                        veniam fugit? Molestiae, illum voluptatibus nisi error
-                                                        recusandae cum expedita. Laborum, expedita!</p>
-                                                    <a href="" class="it-cart"><span class="it-img"><img
-                                                                src="{{asset('images/it-cart.png')}}"
-                                                                alt=""></span><span class="it-title">Add To
-                                                            Cart</span></a>
-                                                    <a href="" class="it-fav" data-toggle="tooltip" data-placement="top"
-                                                        title="Favourite"><img src="{{asset('images/it-fav.png')}}"
-                                                            alt=""></a>
-                                                    <a href="" class="it-comp" data-toggle="tooltip"
-                                                        data-placement="top" title="Compare"><img
-                                                            src="{{asset('images/it-comp.png')}}" alt=""></a>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
+                                @endforeach
                             </div>
                         </div>
                     </div>
