@@ -16,6 +16,19 @@ class ProductsTableSeeder extends Seeder
 
         \DB::table('products')->delete();
         
+        \DB::table('products')->insert(array (
+            0 => 
+            array (
+                'id' => 51,
+                'name' => '60 acres in Mpigi, Central Uganda',
+                'slug' => 'land-1',
+                'description' => 'Located along mpindi rd in Ruhindi subcounty.24km along masaka rd',
+                'image' => 'products/August2020/rMgUChSrrNKacclMtzzy.png',
+                'price' => 50000000,
+                'created_at' => '2020-08-13 16:16:21',
+                'updated_at' => '2020-08-13 16:16:21',
+            ),
+        ));
         
         
     }

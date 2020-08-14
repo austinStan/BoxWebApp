@@ -19,35 +19,19 @@ class UsersTableSeeder extends Seeder
         \DB::table('users')->insert(array (
             0 => 
             array (
-                'id' => 1,
-                'role_id' => 1,
-                'first_name' => 'Austin',
-                'last_name' => 'Stanley',
-                'email' => 'austinstan24@gmail.com',
-                'avatar' => 'users/default.png',
-                'phone_number' => 759189296,
-                'email_verified_at' => NULL,
-                'password' => '$2y$10$6a2gYzYUmeAH5hIhhgnaGOPA.wo43mWZzGel8YTfcBZaREEj.x1AS',
-                'remember_token' => 'jq6nnb46GQeXC7z10I0im8vKemuEojYHbNuNLEahxqKvE830DZuPwWaE17RH',
-                'settings' => NULL,
-                'created_at' => '2020-08-07 17:38:32',
-                'updated_at' => '2020-08-08 16:43:00',
-            ),
-            1 => 
-            array (
-                'id' => 3,
-                'role_id' => 2,
-                'first_name' => 'Diane',
-                'last_name' => 'Stanley',
+                'id' => 4,
+                'role_id' => NULL,
+                'first_name' => 'customer-2',
+                'last_name' => 'customer-2',
                 'email' => 'austinstanleybi@gmail.com',
                 'avatar' => 'users/default.png',
                 'phone_number' => 759189296,
                 'email_verified_at' => NULL,
-                'password' => '$2y$10$zJfPRs95Jkl6L2CDGmHZbOtjtVIuMrcEu6ei/km0Hn1pF0sTq6PVa',
-                'remember_token' => 'ULu3cKT8c9IQOqk4TESfsQCNRhrWw999DUXbTFBAV2KWfqAB9ZB0ZiCVtgml',
+                'password' => '$2y$10$xXHQvSd2zjWp2UwoYNqvo.QG.XpHfHm70X5ITQ.Uv9Srdbfp93KQK',
+                'remember_token' => NULL,
                 'settings' => NULL,
-                'created_at' => '2020-08-08 19:21:07',
-                'updated_at' => '2020-08-08 19:21:07',
+                'created_at' => '2020-08-13 16:57:42',
+                'updated_at' => '2020-08-13 16:57:42',
             ),
         ));
         

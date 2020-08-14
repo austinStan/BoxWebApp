@@ -385,6 +385,46 @@ class PermissionsTableSeeder extends Seeder
                 'created_at' => '2020-08-13 15:58:53',
                 'updated_at' => '2020-08-13 15:58:53',
             ),
+            46 => 
+            array (
+                'id' => 52,
+                'key' => 'browse_admins',
+                'table_name' => 'admins',
+                'created_at' => '2020-08-13 16:46:49',
+                'updated_at' => '2020-08-13 16:46:49',
+            ),
+            47 => 
+            array (
+                'id' => 53,
+                'key' => 'read_admins',
+                'table_name' => 'admins',
+                'created_at' => '2020-08-13 16:46:49',
+                'updated_at' => '2020-08-13 16:46:49',
+            ),
+            48 => 
+            array (
+                'id' => 54,
+                'key' => 'edit_admins',
+                'table_name' => 'admins',
+                'created_at' => '2020-08-13 16:46:49',
+                'updated_at' => '2020-08-13 16:46:49',
+            ),
+            49 => 
+            array (
+                'id' => 55,
+                'key' => 'add_admins',
+                'table_name' => 'admins',
+                'created_at' => '2020-08-13 16:46:49',
+                'updated_at' => '2020-08-13 16:46:49',
+            ),
+            50 => 
+            array (
+                'id' => 56,
+                'key' => 'delete_admins',
+                'table_name' => 'admins',
+                'created_at' => '2020-08-13 16:46:49',
+                'updated_at' => '2020-08-13 16:46:49',
+            ),
         ));
         
         

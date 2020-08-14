@@ -143,6 +143,24 @@ class DataTypesTableSeeder extends Seeder
                 'created_at' => '2020-08-13 15:58:53',
                 'updated_at' => '2020-08-13 15:58:53',
             ),
+            7 => 
+            array (
+                'id' => 9,
+                'name' => 'admins',
+                'slug' => 'admins',
+                'display_name_singular' => 'Admin',
+                'display_name_plural' => 'Admins',
+                'icon' => 'voyager-person',
+                'model_name' => 'App\\Admin',
+                'policy_name' => NULL,
+                'controller' => NULL,
+                'description' => NULL,
+                'generate_permissions' => 1,
+                'server_side' => 0,
+                'details' => '{"order_column":null,"order_display_column":null,"order_direction":"asc","default_search_key":null,"scope":null}',
+                'created_at' => '2020-08-13 16:46:49',
+                'updated_at' => '2020-08-13 17:00:08',
+            ),
         ));
         
         
