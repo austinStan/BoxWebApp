@@ -30,6 +30,19 @@ class AdminsTableSeeder extends Seeder
                 'created_at' => '2020-08-13 16:42:00',
                 'updated_at' => '2020-08-13 17:02:05',
             ),
+            1 => 
+            array (
+                'id' => 2,
+                'role_id' => 2,
+                'name' => 'Sales Manager',
+                'email' => 'dianesasiimwe@gmail.com',
+                'avatar' => 'admins/August2020/bXcVbAz2egiFTnnirI3w.jpg',
+                'password' => 'password',
+                'remember_token' => NULL,
+                'settings' => NULL,
+                'created_at' => '2020-08-14 10:11:41',
+                'updated_at' => '2020-08-14 10:11:41',
+            ),
         ));
         
         

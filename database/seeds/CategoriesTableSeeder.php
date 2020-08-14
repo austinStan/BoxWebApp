@@ -67,6 +67,96 @@ class CategoriesTableSeeder extends Seeder
                 'created_at' => '2020-08-12 16:38:22',
                 'updated_at' => '2020-08-12 16:38:22',
             ),
+            5 => 
+            array (
+                'id' => 9,
+                'parent_id' => NULL,
+                'order' => 1,
+                'name' => 'Houses',
+                'slug' => 'houses',
+                'created_at' => '2020-08-13 17:15:47',
+                'updated_at' => '2020-08-13 17:15:47',
+            ),
+            6 => 
+            array (
+                'id' => 10,
+                'parent_id' => NULL,
+                'order' => 1,
+                'name' => 'Building Materials',
+                'slug' => 'building-materials',
+                'created_at' => '2020-08-13 17:15:58',
+                'updated_at' => '2020-08-13 17:15:58',
+            ),
+            7 => 
+            array (
+                'id' => 11,
+                'parent_id' => NULL,
+                'order' => 1,
+                'name' => 'Plumbing Tools',
+                'slug' => 'plumbing-tools',
+                'created_at' => '2020-08-13 17:16:15',
+                'updated_at' => '2020-08-13 17:16:15',
+            ),
+            8 => 
+            array (
+                'id' => 12,
+                'parent_id' => NULL,
+                'order' => 1,
+                'name' => 'Electricals and Wirings',
+                'slug' => 'electricals-and-wirings',
+                'created_at' => '2020-08-13 17:16:26',
+                'updated_at' => '2020-08-13 17:16:26',
+            ),
+            9 => 
+            array (
+                'id' => 13,
+                'parent_id' => NULL,
+                'order' => 1,
+                'name' => 'Livestock',
+                'slug' => 'livestock',
+                'created_at' => '2020-08-13 17:16:38',
+                'updated_at' => '2020-08-13 17:16:38',
+            ),
+            10 => 
+            array (
+                'id' => 14,
+                'parent_id' => NULL,
+                'order' => 1,
+                'name' => 'Apartments',
+                'slug' => 'apartments',
+                'created_at' => '2020-08-14 10:32:38',
+                'updated_at' => '2020-08-14 10:32:38',
+            ),
+            11 => 
+            array (
+                'id' => 15,
+                'parent_id' => NULL,
+                'order' => 1,
+                'name' => 'Vehicles',
+                'slug' => 'vehicles',
+                'created_at' => '2020-08-14 10:34:39',
+                'updated_at' => '2020-08-14 10:34:39',
+            ),
+            12 => 
+            array (
+                'id' => 16,
+                'parent_id' => NULL,
+                'order' => 1,
+                'name' => 'Groceries',
+                'slug' => 'groceries',
+                'created_at' => '2020-08-14 10:34:48',
+                'updated_at' => '2020-08-14 10:34:48',
+            ),
+            13 => 
+            array (
+                'id' => 17,
+                'parent_id' => NULL,
+                'order' => 1,
+                'name' => 'Services',
+                'slug' => 'services',
+                'created_at' => '2020-08-14 10:34:56',
+                'updated_at' => '2020-08-14 10:34:56',
+            ),
         ));
         
         
