@@ -42,10 +42,10 @@ class CategoriesTableSeeder extends Seeder
                 'id' => 5,
                 'parent_id' => 4,
                 'order' => 1,
-                'name' => '50-100 acres',
-                'slug' => '50-100a',
+                'name' => '0-100 acres',
+                'slug' => '0-100-acres',
                 'created_at' => '2020-08-10 17:44:53',
-                'updated_at' => '2020-08-12 16:37:41',
+                'updated_at' => '2020-08-14 11:24:12',
             ),
             3 => 
             array (
@@ -156,6 +156,86 @@ class CategoriesTableSeeder extends Seeder
                 'slug' => 'services',
                 'created_at' => '2020-08-14 10:34:56',
                 'updated_at' => '2020-08-14 10:34:56',
+            ),
+            14 => 
+            array (
+                'id' => 18,
+                'parent_id' => 4,
+                'order' => 1,
+                'name' => '200-300 acres',
+                'slug' => '200-300-acres',
+                'created_at' => '2020-08-14 10:42:31',
+                'updated_at' => '2020-08-14 10:42:31',
+            ),
+            15 => 
+            array (
+                'id' => 19,
+                'parent_id' => 4,
+                'order' => 1,
+                'name' => '300-400 acres',
+                'slug' => '300-400-acres',
+                'created_at' => '2020-08-14 10:42:53',
+                'updated_at' => '2020-08-14 10:42:53',
+            ),
+            16 => 
+            array (
+                'id' => 20,
+                'parent_id' => 4,
+                'order' => 1,
+                'name' => '400-500 acres',
+                'slug' => '400-500-acres',
+                'created_at' => '2020-08-14 10:43:06',
+                'updated_at' => '2020-08-14 10:43:15',
+            ),
+            17 => 
+            array (
+                'id' => 21,
+                'parent_id' => 4,
+                'order' => 2,
+                'name' => '100-200 acres',
+                'slug' => '100-200-acres',
+                'created_at' => '2020-08-14 10:44:29',
+                'updated_at' => '2020-08-14 10:46:12',
+            ),
+            18 => 
+            array (
+                'id' => 22,
+                'parent_id' => 7,
+                'order' => 1,
+                'name' => '150X300 meters',
+                'slug' => '150x300-meters',
+                'created_at' => '2020-08-14 10:51:39',
+                'updated_at' => '2020-08-14 10:51:39',
+            ),
+            19 => 
+            array (
+                'id' => 23,
+                'parent_id' => 7,
+                'order' => 1,
+                'name' => '300X400 meters',
+                'slug' => '300x400-meters',
+                'created_at' => '2020-08-14 10:52:03',
+                'updated_at' => '2020-08-14 10:52:03',
+            ),
+            20 => 
+            array (
+                'id' => 24,
+                'parent_id' => 7,
+                'order' => 1,
+                'name' => '400X500 meters',
+                'slug' => '400x500-meters',
+                'created_at' => '2020-08-14 10:52:25',
+                'updated_at' => '2020-08-14 10:52:25',
+            ),
+            21 => 
+            array (
+                'id' => 25,
+                'parent_id' => 7,
+                'order' => 1,
+                'name' => '500X800 meters',
+                'slug' => '500x800-meters',
+                'created_at' => '2020-08-14 10:52:53',
+                'updated_at' => '2020-08-14 10:52:53',
             ),
         ));
         

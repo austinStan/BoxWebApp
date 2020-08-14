@@ -39,6 +39,28 @@ class ProductsTableSeeder extends Seeder
                 'created_at' => '2020-08-13 17:12:24',
                 'updated_at' => '2020-08-13 17:12:24',
             ),
+            2 => 
+            array (
+                'id' => 53,
+                'name' => '2square miles of acres at Senyu Buikwe District',
+                'slug' => 'land-3',
+                'description' => 'Letters of administration under process.each acres is sold at 7million',
+                'image' => 'products/August2020/L2R3zdFK2wz08aUrjAM9.png',
+                'price' => 700000000,
+                'created_at' => '2020-08-14 11:13:00',
+                'updated_at' => '2020-08-14 11:15:49',
+            ),
+            3 => 
+            array (
+                'id' => 54,
+                'name' => '30 acres at Mabira Kinoni Village',
+                'slug' => 'land-4',
+                'description' => 'Located at mabira kinoni village on block 308,plot16',
+                'image' => 'products/August2020/v4TaTr81W7oxOlSfvrjm.png',
+                'price' => 20000000,
+                'created_at' => '2020-08-14 11:28:00',
+                'updated_at' => '2020-08-14 11:34:14',
+            ),
         ));
         
         
