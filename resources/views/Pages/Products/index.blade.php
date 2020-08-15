@@ -1088,16 +1088,20 @@
                             </div>
                         </div>
                     </div>
+                    {{ $product->links() }}
                     <div class="pagination-box text-center">
                         <ul class="list-unstyled list-inline">
-                            <li class="list-inline-item"><a href="">1</a></li>
-                            <li class="list-inline-item"><a href="">2</a></li>
+                            <li class="list-inline-item">
+
+                           
+                            </li>
+                            {{-- <li class="list-inline-item"><a href="">2</a></li>
                             <li class="active list-inline-item"><a href="">3</a></li>
                             <li class="list-inline-item"><a href="">4</a></li>
                             <li class="list-inline-item"><a href="">...</a></li>
                             <li class="list-inline-item"><a href="">12</a></li>
                             <li class="list-inline-item"><a href=""><i class="fa fa-angle-right"></i></a></li>
-                            <li class="list-inline-item"><a href=""><i class="fa fa-angle-double-right"></i></a></li>
+                            <li class="list-inline-item"><a href=""><i class="fa fa-angle-double-right"></i></a></li> --}}
                         </ul>
                     </div>
                 </div>
