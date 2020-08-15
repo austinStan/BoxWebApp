@@ -226,7 +226,6 @@
 
                                 ?>
                                 @if($children->isNotEmpty())
-
                                 <div class="mega-menu">
                                     <div class="row ">
                                         @foreach($children as $child)

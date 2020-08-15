@@ -21,11 +21,10 @@ class ProductController extends Controller
         if ($categoryId) {
             $category = Category::find($categoryId);
             $categoryName = ucfirst($category->name);
-            $products = $category->products;
+            $products = $category->products()->paginate(6);
         } else {
-            $products = Product::take(10)->get();
+            $products = Product::paginate(6);
         }
-
         return view('Pages.Products.index', compact('products', 'categoryName'));
     }
 

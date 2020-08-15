@@ -662,7 +662,7 @@
                 <div class="breadcrumb-box text-center">
                     <ul class="list-unstyled list-inline">
                         <li class="list-inline-item"><a href="">Home</a></li>
-                       <li class="list-inline-item"><span>||</span><a href="">{{$categoryName}}</a></li>
+                        <li class="list-inline-item"><span>||</span><a href="">{{$categoryName}}</a></li>
                     </ul>
                 </div>
             </div>
@@ -937,7 +937,7 @@
                             </div>
                         </div> --}}
                 <div class="add-box">
-                    <a href=""><img src="{{asset('images/s-banner2.jpg')}}" alt="" class="img-fluid"></a>
+                    <a href=""><img src="{{asset('images/banners/try.png')}}" alt="" class="img-fluid"></a>
                 </div>
             </div>
             <div class="col-md-9">
@@ -979,17 +979,17 @@
                     <!-- Tab panes -->
                     <div class="tab-content">
                         <div class="tab-pane fade show active" id="grid" role="tabpanel">
-                           
+
                             <div class="row">
                                 @foreach($products as $product)
                                 <div class="col-lg-4 col-md-6">
                                     <div class="tab-item">
                                         <div class="tab-img">
                                             <img class="main-img img-fluid" src="{{asset('storage/'.$product->image)}}"
-                                                alt="">
-                                                <span class="sale">Sale</span>
+                                                height='650px' width='700px' alt="">
+                                            <span class="sale">Sale</span>
                                             {{-- <img class="sec-img img-fluid" src="{{asset('images/Land/land.png')}}"
-                                                alt=""> --}}
+                                            alt=""> --}}
                                             <div class="layer-box">
                                                 <a href="" class="it-comp" data-toggle="tooltip" data-placement="left"
                                                     title="Compare"><img src="{{asset('images/it-comp.png')}}"
@@ -1000,7 +1000,7 @@
                                             </div>
                                         </div>
                                         <div class="tab-heading">
-                                        <p><a href="">{{$product->name}}</a></p>
+                                            <p><a href="">{{$product->name}}</a></p>
                                         </div>
                                         <div class="img-content d-flex justify-content-between">
                                             <div>
@@ -1013,7 +1013,7 @@
                                                     <li class="list-inline-item"><i class="fa fa-star-o"></i></li>
                                                 </ul>
                                                 <ul class="list-unstyled list-inline">
-                                                <li class="list-inline-item">UGX {{$product->price}}</li>
+                                                    <li class="list-inline-item">UGX {{$product->price}}</li>
                                                     {{-- <li class="list-inline-item">12M</li> --}}
                                                 </ul>
                                             </div>
@@ -1026,7 +1026,7 @@
                                     </div>
                                 </div>
                                 @endforeach
-                               
+
                             </div>
                         </div>
                         <div class="tab-pane fade" id="list" role="tabpanel">
@@ -1037,22 +1037,24 @@
                                         <div class="row">
                                             <div class="col-lg-4 col-md-12">
                                                 <div class="tab-img">
-                                                    <img class="main-img img-fluid" src="{{asset('storage/'.$product->image)}}"
-                                                        alt="">
+                                                    <img class="main-img img-fluid"
+                                                        src="{{asset('storage/'.$product->image)}}" height='650px'
+                                                        wdth='700px' alt="">
                                                     {{-- <img class="sec-img img-fluid" src="{{asset('storage/'.$product->image)}}"
-                                                        alt=""> --}}
-                                                        <span class="sale">Sale</span>
+                                                    alt=""> --}}
+                                                    <span class="sale">Sale</span>
                                                 </div>
                                             </div>
                                             <div class="col-lg-8 col-md-12">
                                                 <div class="item-heading d-flex justify-content-between">
                                                     <div class="item-top">
                                                         <ul class="list-unstyled list-inline cate">
-                                                        <li class="list-inline-item"><a href="#">{{$product->name}}</a>
+                                                            <li class="list-inline-item"><a
+                                                                    href="#">{{$product->name}}</a>
                                                             </li>
-                                                           
+
                                                         </ul>
-                                                    <p><a href="">{{$product->location}}</a></p>
+                                                        <p><a href="">{{$product->location}}</a></p>
                                                         <ul class="list-unstyled list-inline fav">
                                                             <li class="list-inline-item"><i class="fa fa-star"></i></li>
                                                             <li class="list-inline-item"><i class="fa fa-star"></i></li>
@@ -1069,7 +1071,7 @@
                                                     </div>
                                                 </div>
                                                 <div class="item-content">
-                                                <p>{{$product->description}}</p>
+                                                    <p>{{$product->description}}</p>
                                                     <a href="" class="it-cart"><span class="it-img"><img
                                                                 src="images/it-cart.png" alt=""></span><span
                                                             class="it-title">Add To Cart</span></a>
@@ -1088,21 +1090,8 @@
                             </div>
                         </div>
                     </div>
-                    {{ $product->links() }}
-                    <div class="pagination-box text-center">
-                        <ul class="list-unstyled list-inline">
-                            <li class="list-inline-item">
-
-                           
-                            </li>
-                            {{-- <li class="list-inline-item"><a href="">2</a></li>
-                            <li class="active list-inline-item"><a href="">3</a></li>
-                            <li class="list-inline-item"><a href="">4</a></li>
-                            <li class="list-inline-item"><a href="">...</a></li>
-                            <li class="list-inline-item"><a href="">12</a></li>
-                            <li class="list-inline-item"><a href=""><i class="fa fa-angle-right"></i></a></li>
-                            <li class="list-inline-item"><a href=""><i class="fa fa-angle-double-right"></i></a></li> --}}
-                        </ul>
+                    <div class="d-flex justify-content-center">
+                        {{ $products->appends(request()->input())->links()}}
                     </div>
                 </div>
             </div>
