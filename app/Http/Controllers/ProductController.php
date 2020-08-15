@@ -18,14 +18,17 @@ class ProductController extends Controller
         $categoryId = request('category_id');
         $categoryName = null;
 
+        $categories=Category::whereNull('parent_id')->get();
+
         if ($categoryId) {
             $category = Category::find($categoryId);
             $categoryName = ucfirst($category->name);
             $products = $category->products()->paginate(6);
+            
         } else {
             $products = Product::paginate(6);
         }
-        return view('Pages.Products.index', compact('products', 'categoryName'));
+        return view('Pages.Products.index', compact('products', 'categoryName','categories'));
     }
 
     /**
