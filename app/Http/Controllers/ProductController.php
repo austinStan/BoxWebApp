@@ -16,7 +16,7 @@ class ProductController extends Controller
     public function index()
     {
         $categoryId = request('category_id');
-        $categoryName = null;
+        $categoryName = 'featured products';
 
         $categories=Category::whereNull('parent_id')->get();
 

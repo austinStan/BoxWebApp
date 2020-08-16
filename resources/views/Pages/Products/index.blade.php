@@ -108,7 +108,7 @@
         <div class="row">
             <div class="col-lg-3 col-md-0">
                 <div class="sidemenu">
-                    <p>All Categories <i class="fa fa-bars"></i></p>
+                    <p><a href="{{route('products.index')}}" class='text-white'>All Categories <i class="fa fa-bars"></i></a></p>
                     <ul class="list-unstyled gt-menu">
                         @foreach($categories as $category)
                         <li><a href="{{route('products.index',['category_id'=>$category->id])}}">{{$category->name}}<i class="fa fa-angle-right"></i></a>

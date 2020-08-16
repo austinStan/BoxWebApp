@@ -218,10 +218,11 @@
             <div class="row">
                 <div class="col-lg-3 col-md-0">
                     <div class="menu-widget">
-                        <p><i class="fa fa-bars"></i>All Categories</p>
+                        <p><a href="{{route('products.index')}}" class='text-white'><i class="fa fa-bars"></i>All Categories</a></p>
                         <ul class="list-unstyled">
                             @foreach($categories as $category)
-                            <li><a href="{{route('products.index',['category_id'=>$category->id])}}">{{$category->name}}<i class="fa fa-angle-right"></i></a>
+                            <li><a href="{{route('products.index',['category_id'=>$category->id])}}">{{$category->name}}<i
+                                        class="fa fa-angle-right"></i></a>
                                 <?php $children= TCG\Voyager\Models\Category::where('parent_id',$category->id)->get();
 
                                 ?>
@@ -231,14 +232,17 @@
                                         @foreach($children as $child)
                                         <div class="col-md-4">
                                             <div class="smartphone">
-                                            <a href='{{route('products.index',['category_id'=>$child->id])}}'><h6>{{$child->name}}</h6></a>
+                                                <a href='{{route('products.index',['category_id'=>$child->id])}}'>
+                                                    <h6>{{$child->name}}</h6>
+                                                </a>
                                                 <?php $grandchild= TCG\Voyager\Models\Category::where('parent_id',$child->id)->get();
                                              ?>
                                                 @if($grandchild->isNotEmpty())
                                                 @foreach($grandchild as $gc)
-                                                <a href="{{route('products.index',['category_id'=>$gc->id])}}">{{$gc->name}}</a>
+                                                <a
+                                                    href="{{route('products.index',['category_id'=>$gc->id])}}">{{$gc->name}}</a>
                                                 @endforeach
-                                                @endif   
+                                                @endif
                                             </div>
                                         </div>
                                         @endforeach
@@ -247,476 +251,67 @@
                             </li>
                             @endif
                             @endforeach
-
-                            {{-- <li><a href=""><span class='fa fa-home pr-3'></span>Houses<i
-                                        class="fa fa-angle-right"></i></a>
-                                <div class="mega-menu">
-                                    <div class="row">
-                                        <div class="col-md-4">
-                                            <div class="smartphone">
-                                                <h6>On Sale</h6>
-                                                <a href="{{route('wakiso')}}">- 3 bedrooms,Wakiso </a>
-                            <a href="">- 4 bedrooms,Mpigi</a>
-                            <a href="">- 5 bedrooms,Entebbe</a>
-                            <a href="">- 2 bedrooms,Gulu</a>
-                            <a href="">- 1 bedrooms,Kampala</a>
-                            <a href="">- 3 bedrooms,Wakiso </a>
-                            <a href="">- 4 bedrooms,Mpigi</a>
-                            <a href="">- 5 bedrooms,Entebbe</a>
-                            <a href="">- 2 bedrooms,Gulu</a>
-                            <a href="">- 1 bedrooms,Kampala</a>
-                    </div>
-
-                </div>
-                <div class="col-md-4">
-                    <div class="tablet pt-4">
-                        <a href="">- 4 bedrooms,Mpigi</a>
-                        <a href="">- 5 bedrooms,Entebbe</a>
-                        <a href="">- 2 bedrooms,Gulu</a>
-                        <a href="">- 1 bedrooms,Kampala</a>
-                        <a href="">- 3 bedrooms,Wakiso </a>
-                        <a href="">- 4 bedrooms,Mpigi</a>
-                        <a href="">- 5 bedrooms,Entebbe</a>
-                        <a href="">- 2 bedrooms,Gulu</a>
-                        <a href="">- 1 bedrooms,Kampala</a>
+                        </ul>
                     </div>
                 </div>
-                <div class="col-md-4 pt-4">
-                    <div class="accesories">
-                        <a href="">- 1 bedrooms,Kampala</a>
-                        <a href="">- 3 bedrooms,Wakiso </a>
-                        <a href="">- 4 bedrooms,Mpigi</a>
-                        <a href="">- 5 bedrooms,Entebbe</a>
-                        <a href="">- 2 bedrooms,Gulu</a>
-                        <a href="">- 1 bedrooms,Kampala</a>
-                    </div>
-
-                </div>
-            </div>
-        </div>
-        </li> --}}
-        {{-- <li><a href=""><span class="fa fa-cloud pr-3"></span>Building Materials<i
-                                        class="fa fa-angle-right"></i></a>
-                                <div class="mega-menu">
-                                    <div class="row">
-                                        <div class="col-md-4">
-                                            <div class="smartphone">
-                                                <h6>SAND</h6>
-                                                <a href="{{route('lakesand')}}">- Lake Sand</a>
-        <a href="{{route('riversand')}}">- River Sand </a>
-        </div>
-        <div class="smartphone">
-            <h6>BRICKS</h6>
-            <a href="{{route('firebricks')}}">- Fire Bricks</a>
-            <a href="{{route('halfbricks')}}">- Half Bricks </a>
-            <a href="{{route('concretebricks')}}">- Concrete Bricks </a>
-        </div>
-        <div class="smartphone">
-            <h6>FLOOR&TILES</h6>
-            <a href="{{route('stair-edging')}}">- Stair-Edging</a>
-            <a href="{{route('carpet-trim')}}">- Carpet Trims</a>
-            <a href="{{route('floor-runner')}}">- Floor runners </a>
-            <a href="">- Tile Edging </a>
-        </div>
-        </div>
-        <div class="col-md-4">
-            <div class="tablet">
-                <h6>CEMENT</h6>
-                <a href="{{route('hima-cement')}}">- Hima</a>
-                <a href="">- Tororo</a>
-                <a href="">- Kampala</a>
-            </div>
-            <div class="tablet">
-                <h6>ROOFING</h6>
-                <a href="{{route('roofing-tools')}}">- Roofing Tools</a>
-                <a href="{{route('iron-sheets')}}">- Iron Sheets</a>
-                <a href="">- Wood Fasteners</a>
-            </div>
-            <div class="tablet">
-                <h6>DOORS & WINDOWS</h6>
-                <a href="{{route('interior-doors')}}">- Interior Doors</a>
-                <a href="">- Panic and Exit Door</a>
-                <a href="">- Glass Sheets</a>
-                <a href="">- Folding Doors & Hardware</a>
-            </div>
-        </div>
-        <div class="col-md-4">
-            <div class="f-phone">
-                <h6>GUTTERS</h6>
-                <a href=" {{route('guttering-tools')}}">- Guttering Tools</a>
-                <a href="">- Splash Blocks</a>
-                <a href="">- Gutter Guards</a>
-            </div>
-            <div class="accesories">
-                <h6>PAINT</h6>
-                <a href="">- Spray Paints</a>
-                <a href="">- Sand Paper & Abrasives</a>
-                <a href="">- Brushes</a>
-                <a href="">- Ladders & Scaffolding</a>
-            </div>
-            <div class="accesories">
-                <h6>DOMESTIC HARDWARE</h6>
-                <a href="">- Locks & Accessories</a>
-                <a href="">- Fasteners</a>
-                <a href="">- Hinges</a>
-            </div>
-        </div>
-        </div>
-        </div>
-        </li>
-        {{-- <li><a href=""><span class="fa fa-wrench pr-3"></span>Plumbing Tools<i --}}
-        {{-- class="fa fa-angle-right"></i></a> --}}
-        {{-- <div class="mega-menu">
-                                    <div class="row">
-                                        <div class="col-md-4">
-                                            <div class="smartphone">
-                                                <h6>PIPES</h6>
-                                                <a href="{{route('pipes-fitting')}}">- Pipes & Tubings</a>
-        <a href="">- Pipe Fittings </a>
-        <a href="">- Pumps & Accessories</a>
-        <a href="">- Supply Lines & Connectors</a>
-
-        </div>
-        <div class="smartphone">
-
-            <h6>METALS</h6>
-            <a href="{{route('iron-bars')}}">-Iron Bars</a>
-            <a href="">-Square Steel</a>
-            <a href="">-Hollow Section </a>
-            <a href="">-Millwork </a>
-            <a href="">-Mild Steel Plates </a>
-        </div>
-
-        </div>
-        <div class="col-md-4">
-            <div class="tablet">
-                <h6>LAUNDARY & BATHROOMS</h6>
-                <a href="{{route('bathrooms')}}">- Bathrooms</a>
-                <a href="">- Valves & Parts</a>
-                <a href="">- Shower Parts</a>
-                <a href="">- Shower Doors</a>
-                <a href="">- Laundry Tubs </a>
-            </div>
-            <div class="smartphone">
-                <h6>MACHINES</h6>
-                <a href="{{route('washing-machines')}}">- Washing Machines</a>
-                <a href="">- Water Heaters</a>
-                <a href="">- Water Filters </a>
-                <a href="">- Garbage Disposals</a>
-            </div>
-
-        </div>
-        <div class="col-md-4">
-            <div class="f-phone">
-                <h6>TOILETS</h6>
-                <a href="{{route('toilets')}}">- Toilet & Urinals</a>
-                <a href="">- Toilet & Seats</a>
-                <a href="">- Toilet &Parts</a>
-                <a href="">- Sceptic Tanks</a>
-                <a href="">- Drain Fittings</a>
-            </div>
-        </div>
-        </div>
-
-        </div>
-        </li>
-        <li><a href=""><span class="fa fa-cogs pr-3"></span>Electricals and Wiring<i class="fa fa-angle-right"></i></a>
-            <div class="mega-menu">
-                <div class="row">
-                    <div class="col-md-4">
-                        <div class="smartphone">
-                            <h6>LIGHTINGS</h6>
-                            <a href="{{route('garden-lightings')}}">- Garden Lightings</a>
-                            <a href="">- Interior Light Fixtures</a>
-                            <a href="">- Outdoor Lightings Fixtures</a>
-                            <a href="">- Energy Saver Lights</a>
-                            <a href="">- Switches</a>
-                        </div>
-                    </div>
-                    <div class="col-md-4">
-                        <div class="tablet">
-                            <h6>WIRES & CABLES</h6>
-                            <a href="{{route('cables')}}">- Flexible Flat Cables</a>
-                            <a href="">- PVC wires</a>
-                            <a href="">- Single Core Flexible Cables</a>
-                            <a href="">- Multi-core Flexible Cable</a>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </li>
-        <li><a href=""><span class="fa fa-tags pr-3"></span>Livestock<i class="fa fa-angle-right"></i></a>
-            <div class="mega-menu">
-                <div class="row">
-                    <div class="col-md-4">
-                        <div class="smartphone">
-                            <h6>COWS</h6>
-                            <a href="{{route('ankole-longhorned')}}">- Ankole Long-Horns</a>
-                            <a href="">- Fresians</a>
-                            <a href="">- Kigezi Cattle</a>
-                        </div>
-                        <div class="smartphone">
-                            <h6>GOATS</h6>
-                            <a href="{{route('alphine-goats')}}">-Alphine Goats </a>
-                            <a href="">- Mubende Goats</a>
-                            <a href="">- Kigezi Goats</a>
-                            <a href="">- Sebei Goats</a>
-                        </div>
-                    </div>
-                    <div class="col-md-4">
-                        <div class="tablet">
-                            <h6>PIGS</h6>
-                            <a href="{{route('weaners')}}">- Weaners</a>
-                            <a href="">- Growers</a>
-                            <a href="">- Fatteners</a>
-                            <a href="">- Sows</a>
-                        </div>
-                    </div>
-                    <div class="col-md-4">
-                        <div class="accesories">
-                            <h6>POULTRY</h6>
-                            <a href="{{route('chicken')}}">- Chicken</a>
-                            <a href="">- Turkeys</a>
-                            <a href="">- Ducks</a>
-                            <a href="">- Pigeons</a>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </li> --}}
-        {{-- <li><a href=""><span class="fa fa-building-o pr-3"></span>Apartments<i
-                                        class="fa fa-angle-right"></i></a>
-                                <div class="mega-menu">
-                                    <div class="row">
-                                        <div class="col-md-4">
-                                            <div class="smartphone">
-                                                <h6>SERVICE APARTMENTS</h6>
-                                                <a href="{{route('service-apartments')}}">- Dina Apartments</a>
-        <a href="">- kampala Boulverd suites</a>
-        <a href="">- Natra Apartments</a>
-        <a href="">- Selina Apartments </a>
-        </div>
-        </div>
-        <div class="col-md-4">
-            <div class="tablet">
-                <h6>HOTELS</h6>
-                <a href="{{route('hotels')}}">- Serena Hotel</a>
-                <a href="">- Speke Resort</a>
-                <a href="">- Hotel Africana</a>
-                <a href="">- North Dakota Suites</a>
-            </div>
-        </div>
-        </div>
-        </div>
-        </li>
-        <li><a href=""><span class="fa fa-car pr-3"></span>Vehicles<i class="fa fa-angle-right"></i></a>
-            <div class="mega-menu">
-                <div class="row">
-                    <div class="col-md-4">
-                        <div class="smartphone">
-                            <h6>LUXURY</h6>
-                            <a href="{{route('luxury')}}">- Toyoto Harrier</a>
-                            <a href="">- Ipsums</a>
-                            <a href="">- Poshe</a>
-                            <a href="">- BMW</a>
-                            <a href="">- BMW</a>
-                            <a href="">- BMW</a>
-                            <a href="">- BMW</a>
-                            <a href="">- BMW</a>
-                        </div>
-                    </div>
-                    <div class="col-md-4">
-                        <div class="tablet">
-                            <h6>COMMERCIALS</h6>
-                            <a href="{{route('commercial')}}">- PickUps</a>
-                            <a href="">- Buses</a>
-                            <a href="">- Taxi</a>
-                            <a href="">- Lorries</a>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </li>
-        <li><a href=""><span class="fa fa-apple pr-3"></span>Groceries<i class="fa fa-angle-right"></i></a>
-            <div class="mega-menu">
-                <div class="row">
-                    <div class="col-md-4">
-                        <div class="smartphone">
-                            <h6>FRUITS</h6>
-                            <a href="{{route('mangoes')}}">- Mangoes</a>
-                            <a href="">- Apples</a>
-                            <a href="">- Avacoda</a>
-                            <a href="">- pears</a>
-                            <a href="">- Watermelon</a>
-                        </div>
-                    </div>
-                    <div class="col-md-4">
-                        <div class="tablet">
-                            <h6>VEGETABLES</h6>
-                            <a href="{{route('carrots')}}">- Carrots</a>
-                            <a href="">- Greens</a>
-                            <a href="">- cabbages</a>
-                        </div>
-                        <div class="f-phone">
-                            <h6>DAIRY</h6>
-                            <a href="{{route('milk')}}">- Milk</a>
-                            <a href="">- Cheese</a>
-                            <a href="">- Butter</a>
-                        </div>
-                    </div>
-                    <div class="col-md-4">
-                        <div class="f-phone">
-                            <h6>PROCESSED</h6>
-                            <a href="{{route('sugar')}}">- Sugar</a>
-                            <a href="">- Salt</a>
-                            <a href="">- Soap</a>
-                        </div>
-                    </div>
-
-                </div>
-            </div>
-        </li>
-        <li><a href=""><img src="images/w-cloth.png" alt="">Clothings<i class="fa fa-angle-right"></i></a>
-            <div class="mega-menu">
-                <div class="row">
-                    <div class="col-md-4">
-                        <div class="smartphone">
-                            <h6>Men's Clothing</h6>
-                            <a href="{{route('shirts')}}">- Shirts</a>
-                            <a href="">- Suits</a>
-                            <a href="">- Shorts</a>
-                            <a href="">- Trousers</a>
-                            <a href="">- Boxers</a>
-                            <a href="">- Trousers</a>
-                            <a href="">- Boxers</a>
-                            <a href="">- Trousers</a>
-                            <a href="">- Boxers</a>
-                        </div>
-                    </div>
-                    <div class="col-md-4">
-                        <div class="tablet">
-                            <h6>Women's Clothing</h6>
-                            <a href="{{route('shoes')}}">- Shoes</a>
-                            <a href="">- Leggings</a>
-                            <a href="">- Jackets</a>
-                            <a href="">- Pants</a>
-                        </div>
-                    </div>
-                    <div class="col-md-4">
-                        <div class="accesories">
-                            <h6>BABY CLOTHINGS</h6>
-                            <a href="{{route('outfit')}}">- Outfits </a>
-                            <a href="">- Beddings</a>
-                            <a href="">- Pants</a>
-                            <a href="">- Shorts</a>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </li>
-        <li><a href=""><span class="fa fa-users pr-3"></span>Services<i class="fa fa-angle-right"></i></a>
-            <div class="mega-menu">
-                <div class="row">
-                    <div class="col-md-4">
-                        <div class="smartphone">
-                            <h6>PLUMBING</h6>
-                            <a href="">- Plenco Plumbing Companies</a>
-                            <a href="">- NK plumbers</a>
-                            <a href="">- Master Plumbers</a>
-                        </div>
-                        <div class="f-phone">
-                            <h6>CLEANERS</h6>
-                            <a href="">- 7 star cleaning services </a>
-                            <a href="">- Jow cleaning services</a>
-                            <a href="">- Fresh Look Limited</a>
-                        </div>
-                        <div class="f-phone">
-                            <h6>PAINTERS</h6>
-                            <a href="">- 7 star cleaning services </a>
-                            <a href="">- Jow cleaning services</a>
-                        </div>
-                    </div>
-                    <div class="col-md-4">
-                        <div class="tablet">
-                            <h6>ELECTRICIANS</h6>
-                            <a href="">- Omega Electricians</a>
-                            <a href="">- Sure Power</a>
-                            <a href="">- China International Water</a>
-                        </div>
-                    </div>
-                    <div class="col-md-4">
-                        <div class="accesories">
-                            <h6>CONSTRUCTION</h6>
-                            <a href="">- Mutoni Construction Ltd</a>
-                            <a href="">- Ultracon Overseas</a>
-                            <a href="">- Pearl Engineering Ltd</a>
-                            <a href="">- Prism Construction</a>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </li> --}}
-        </ul>
-        </div>
-        </div>
-        <div class="col-lg-9 col-md-12 padding-fix-l20">
-            <div class="owl-carousel owl-slider">
-                <div class="slider-item slider-item1">
-                    <img src="{{asset('images/banners/girl.png')}}" alt="" class="img1 wow fadeInRight effect"
-                        width='564px' height='376px' data-wow-duration="1s" data-wow-delay="0s">
-                    <div class="slider-box">
-                        <div class="slider-table">
-                            <div class="slider-tablecell">
-                                <div class="wow fadeInUp effect" data-wow-duration="1.2s" data-wow-delay="0.5s">
-                                    <h5>Big Sale</h5>
+                <div class="col-lg-9 col-md-12 padding-fix-l20">
+                    <div class="owl-carousel owl-slider">
+                        <div class="slider-item slider-item1">
+                            <img src="{{asset('images/banners/girl.png')}}" alt="" class="img1 wow fadeInRight effect"
+                                width='564px' height='376px' data-wow-duration="1s" data-wow-delay="0s">
+                            <div class="slider-box">
+                                <div class="slider-table">
+                                    <div class="slider-tablecell">
+                                        <div class="wow fadeInUp effect" data-wow-duration="1.2s" data-wow-delay="0.5s">
+                                            <h5>Big Sale</h5>
+                                        </div>
+                                        <div class="wow fadeInUp effect" data-wow-duration="1.2s" data-wow-delay="0.6s">
+                                            <h2>New Product Collection</h2>
+                                        </div>
+                                        <div class="wow fadeInUp effect" data-wow-duration="1.2s" data-wow-delay="0.7s">
+                                            <p>Save Up To 25% Off</p>
+                                        </div>
+                                        <div class="wow fadeInUp effect" data-wow-duration="1.2s" data-wow-delay="0.8s">
+                                            <a href="#">Shop Now</a>
+                                        </div>
+                                    </div>
                                 </div>
-                                <div class="wow fadeInUp effect" data-wow-duration="1.2s" data-wow-delay="0.6s">
-                                    <h2>New Product Collection</h2>
-                                </div>
-                                <div class="wow fadeInUp effect" data-wow-duration="1.2s" data-wow-delay="0.7s">
-                                    <p>Save Up To 25% Off</p>
-                                </div>
-                                <div class="wow fadeInUp effect" data-wow-duration="1.2s" data-wow-delay="0.8s">
-                                    <a href="#">Shop Now</a>
+                            </div>
+                        </div>
+                        <div class="slider-item slider-item2">
+                            <img src="{{asset('images/banners/girl2.png')}}" alt="" class="img2 wow fadeInRight effect"
+                                width='564px' height='376px' data-wow-duration="1s" data-wow-delay="0s">
+                            <div class="slider-box">
+                                <div class="slider-table">
+                                    <div class="slider-tablecell text-right">
+                                        <div class="wow fadeInUp effect" data-wow-duration="1.2s" data-wow-delay="0.5s">
+                                            <h5>Home Appliance</h5>
+                                        </div>
+                                        <div class="wow fadeInUp effect" data-wow-duration="1.2s" data-wow-delay="0.6s">
+                                            <h2>Top Quality Products</h2>
+                                        </div>
+                                        <div class="wow fadeInUp effect" data-wow-duration="1.2s" data-wow-delay="0.7s">
+                                            <p>Save Up To 50% Off</p>
+                                        </div>
+                                        <div class="wow fadeInUp effect" data-wow-duration="1.2s" data-wow-delay="0.8s">
+                                            <a href="#">Shop Now</a>
+                                        </div>
+                                    </div>
                                 </div>
                             </div>
                         </div>
                     </div>
-                </div>
-                <div class="slider-item slider-item2">
-                    <img src="{{asset('images/banners/girl2.png')}}" alt="" class="img2 wow fadeInRight effect"
-                        width='564px' height='376px' data-wow-duration="1s" data-wow-delay="0s">
-                    <div class="slider-box">
-                        <div class="slider-table">
-                            <div class="slider-tablecell text-right">
-                                <div class="wow fadeInUp effect" data-wow-duration="1.2s" data-wow-delay="0.5s">
-                                    <h5>Home Appliance</h5>
-                                </div>
-                                <div class="wow fadeInUp effect" data-wow-duration="1.2s" data-wow-delay="0.6s">
-                                    <h2>Top Quality Products</h2>
-                                </div>
-                                <div class="wow fadeInUp effect" data-wow-duration="1.2s" data-wow-delay="0.7s">
-                                    <p>Save Up To 50% Off</p>
-                                </div>
-                                <div class="wow fadeInUp effect" data-wow-duration="1.2s" data-wow-delay="0.8s">
-                                    <a href="#">Shop Now</a>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            {{-- <div class="slider-btm-box d-flex justify-content-around">
+                    {{-- <div class="slider-btm-box d-flex justify-content-around">
                             <div class="single-box mr-20">
                                 <a href=""><img src="{{asset('images/sb-1.png')}}" alt="" class="img-fluid"></a>
-        </div>
-        <div class="single-box mr-20">
-            <a href=""><img src="{{asset('images/sb-2.png')}}" alt="" class="img-fluid"></a>
-        </div>
-        <div class="single-box">
-            <a href=""><img src="{{asset('images/sb-3.png')}}" alt="" class="img-fluid"></a>
-        </div>
-        </div> --}}
+                </div>
+                <div class="single-box mr-20">
+                    <a href=""><img src="{{asset('images/sb-2.png')}}" alt="" class="img-fluid"></a>
+                </div>
+                <div class="single-box">
+                    <a href=""><img src="{{asset('images/sb-3.png')}}" alt="" class="img-fluid"></a>
+                </div>
+            </div> --}}
         </div>
         </div>
         </div>

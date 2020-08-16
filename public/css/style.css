@@ -2320,7 +2320,7 @@ input:focus, textarea:focus {
   font-weight: 700;
 }
 
-.slider-area .menu-widget p i {
+.slider-area .menu-widget p  i {
   font-size: 14px;
   margin-right: 10px;
 }
