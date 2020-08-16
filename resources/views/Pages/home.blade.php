@@ -61,7 +61,7 @@
             <div class="row">
                 <div class="col-md-3">
                     <div class="logo">
-                        <a href=""><img src="images/box.png" alt="" height='65px' width='160px'></a>
+                        <a href=""><img src={{asset("images/box.png")}} alt="" height='60px' width='150px'></a>
                     </div>
                 </div>
                 <div class="col-md-5 padding-fix">
@@ -74,7 +74,7 @@
                     <div class="carts-area d-flex">
                         <div class="call-box d-flex">
                             <div class="call-ico">
-                                <img src="images/call.png" alt="">
+                                <i class="fa fa-phone fa-2x p-2"></i>
                             </div>
                             <div class="call-content">
                                 <span>Call Us</span>
