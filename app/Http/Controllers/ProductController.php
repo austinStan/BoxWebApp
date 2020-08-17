@@ -16,7 +16,7 @@ class ProductController extends Controller
     public function index()
     {
         $categoryId = request('category_id');
-        $categoryName = 'featured products';
+        $categoryName = 'all products';
 
         $categories=Category::whereNull('parent_id')->get();
 
@@ -26,7 +26,7 @@ class ProductController extends Controller
             $products = $category->products()->paginate(6);
             
         } else {
-            $products = Product::paginate(6);
+            $products = Product::inRandomOrder()->paginate(6);
         }
         return view('Pages.Products.index', compact('products', 'categoryName','categories'));
     }

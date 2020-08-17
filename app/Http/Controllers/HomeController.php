@@ -28,8 +28,10 @@ class HomeController extends Controller
        
         $categories=Category::whereNull('parent_id')->get();
 
-        $products = Product::inRandomOrder()->take(7)->get();    
+        $products = Product::inRandomOrder()->take(10)->get();  
+        
+        $latest_products=Product::latest()->take(10)->get();
 
-        return view('Pages.home',compact('categories','products'));
+        return view('Pages.home',compact('categories','products','latest_products'));
     }
 }

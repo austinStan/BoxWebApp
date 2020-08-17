@@ -2814,7 +2814,7 @@ input:focus, textarea:focus {
 }
 
 .service-area .service-box .sr-img {
-  background: #5677fc;
+  background: #ec0002;
   padding: 18px;
   -webkit-border-radius: 50%;
   -moz-border-radius: 50%;
@@ -4025,7 +4025,7 @@ input:focus, textarea:focus {
 .product-area .nw-ltr .nw-box form button {
   width: 100%;
   height: 35px;
-  background: #e45151;
+  background: #ec0002;
   color: #fff;
   border: none;
   -webkit-border-radius: 30px;

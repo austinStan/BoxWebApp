@@ -313,11 +313,52 @@
                     <a href=""><img src="{{asset('images/sb-3.png')}}" alt="" class="img-fluid"></a>
                 </div>
             </div> --}}
+            
         </div>
         </div>
         </div>
     </section>
     <!-- End Slider Area -->
+
+    <section class="service-area">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-4">
+                    <div class="service-box d-flex">
+                        <div class="sr-img">
+                            <img src="images/service-1.png" alt="">
+                        </div>
+                        <div class="">
+                            <h6>Free Shipping</h6>
+                            <p>Instant.Guaranteed.Safe</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="service-box d-flex">
+                        <div class="sr-img">
+                            <img src="images/service-2.png" alt="">
+                        </div>
+                        <div class="">
+                            <h6>Money Back Guarantee</h6>
+                            <p>100% Sure On Box</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="service-box d-flex">
+                        <div class="sr-img">
+                            <img src="images/service-3.png" alt="">
+                        </div>
+                        <div class="">
+                            <h6>Secure Payment</h6>
+                            <p>Through Mobile Money Transaction</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
 
     <!-- Product Area-->
     <section class="product-area">
@@ -779,8 +820,7 @@
                                     <!-- Nav tabs -->
                                     <ul class="nav nav-tabs" role="tablist">
                                         <li class="nav-item">
-                                            <a class="nav-link active" data-toggle="tab"
-                                                href="{{route('products.index')}}">All</a>
+                                        <a class="nav-link active" data-toggle="tab" href="{{route('products.index')}}">All</a>
                                         </li>
                                     </ul>
                                 </div>
@@ -792,17 +832,18 @@
                                             <div class="tab-item">
                                                 <div class="tab-heading">
                                                     <ul class="list-unstyled list-inline">
-                                                        <li class="list-inline-item"><a href="#"></a></li>
+                                                    <li class="list-inline-item"><a href="#"></a></li>
                                                         {{-- <li class="list-inline-item"><a href="#">Smart Led</a></li> --}}
                                                     </ul>
-                                                    <p><a href="">{{$product->name}}</a></p>
+                                                <p><a href="">{{$product->name}}</a></p>
                                                 </div>
                                                 <div class="tab-img">
                                                     <img class="main-img img-fluid"
-                                                        src="{{asset('storage/'.$product->image)}}" alt="">
+                                                        src="{{asset('storage/'.$product->image)}}"
+                                                        alt="">
                                                     {{-- <img class="sec-img img-fluid"
                                                         src="{{asset('images/BuildingMaterials/Roofing/RoofingTools/handtool.png')}}"
-                                                    alt=""> --}}
+                                                        alt=""> --}}
                                                     <div class="layer-box">
                                                         <a href="" class="it-comp" data-toggle="tooltip"
                                                             data-placement="left" title="Compare"><img
@@ -823,7 +864,7 @@
                                                             </li>
                                                         </ul>
                                                         <ul class="list-unstyled list-inline ">
-                                                            <li class="list-inline-item">{{$product->price}}</li>
+                                                        <li class="list-inline-item">UGX {{$product->price}}</li>
                                                             {{-- <li class="list-inline-item">$150.00</li> --}}
                                                         </ul>
                                                     </div>
@@ -840,444 +881,337 @@
                                 </div>
                             </div>
                         </div>
-                    </div>
-                </div>
-                <div class="col-md-12 padding-fix-l20">
-                    <div class="row">
-                        <div class="col-md-6">
-                            <div class="banner">
-                                <a href="#"><img src="{{asset('images/banners/banner-sale.png')}}" alt=""
+                        <div class="col-md-12 padding-fix-l20">
+                            <div class="row">
+                                <div class="col-md-6">
+                                    <div class="banner">
+                                        <a href="#"><img src="{{asset('images/banners/banner-sale.png')}}" alt=""
+                                                class="img-fluid"></a>
+                                    </div>
+                                </div>
+                                <div class="col-md-6">
+                                    <div class="banner">
+                                        <a href="#"><img src="{{asset('images/banners/banner1.png')}}" alt=""
+                                                class="img-fluid"></a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-12 padding-fix-l20">
+                            <div class="new-product">
+                                <div class="sec-title">
+                                    <h5>Brand New Product</h5>
+                                </div>
+                                <div class="new-slider owl-carousel">
+                                      @foreach($latest_products as $latest)
+                                    <div class="new-item">
+                                        <div class="tab-heading">
+                                            {{-- <ul class="list-unstyled list-inline">
+                                                <li class="list-inline-item"><a href="#"></a></li>
+                                                {{-- <li class="list-inline-item"><a href="#">Smart Led</a></li> --}}
+                                            {{-- </ul> --}}
+                                        <p><a href="">{{$latest->name}}</a></p>
+                                        </div>
+                                        <div class="new-img">
+                                            <img class="main-img img-fluid"
+                                                 src="{{asset('storage/'.$latest->image)}}" alt="">
+                                             {{-- <img class="sec-img img-fluid"
+                                                src="{{asset('images/newproducts/cement.png')}}" alt=""> --}}
+                                            <div class="layer-box">
+                                                <a href="" class="it-comp" data-toggle="tooltip" data-placement="left"
+                                                    title="Compare"><img src="images/it-comp.png" alt=""></a>
+                                                <a href="" class="it-fav" data-toggle="tooltip" data-placement="left"
+                                                    title="Favourite"><img src="images/it-fav.png" alt=""></a>
+                                            </div>
+                                        </div>
+                                        <div class="img-content d-flex justify-content-between">
+                                            <div>
+                                                <ul class="list-unstyled list-inline fav">
+                                                    <li class="list-inline-item"><i class="fa fa-star"></i></li>
+                                                    <li class="list-inline-item"><i class="fa fa-star"></i></li>
+                                                    <li class="list-inline-item"><i class="fa fa-star"></i></li>
+                                                    <li class="list-inline-item"><i class="fa fa-star"></i></li>
+                                                    <li class="list-inline-item"><i class="fa fa-star-o"></i></li>
+                                                </ul>
+                                                <ul class="list-unstyled list-inline">
+                                                <li class="list-inline-item">UGX {{$latest->price}}</li>
+                                                    {{-- <li class="list-inline-item">$150.00</li> --}}
+                                                </ul>
+                                            </div>
+                                            <div>
+                                                <a href="" data-toggle="tooltip" data-placement="top"
+                                                    title="Add to Cart"><img src="images/it-cart.png" alt=""></a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    @endforeach
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-12 padding-fix-l20">
+                            <div class="banner-two">
+                                <a href="#"><img src="{{asset('images/banners/banner-box.png')}}" alt=""
                                         class="img-fluid"></a>
                             </div>
                         </div>
-                        <div class="col-md-6">
-                            <div class="banner">
-                                <a href="#"><img src="{{asset('images/banners/banner1.png')}}" alt=""
-                                        class="img-fluid"></a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-md-12 padding-fix-l20">
-                    <div class="new-product">
-                        <div class="sec-title">
-                            <h5>New Product</h5>
-                        </div>
-                        <div class="new-slider owl-carousel">
-                            <div class="new-item">
-                                <div class="tab-heading">
-                                    <ul class="list-unstyled list-inline">
-                                        <li class="list-inline-item"><a href="#">Roofing Tools</a></li>
-                                        {{-- <li class="list-inline-item"><a href="#">Smart Led</a></li> --}}
-                                    </ul>
-                                    <p><a href="">Electric Hand Tool</a></p>
+                        <div class="col-md-12 padding-fix-l20">
+                            <div class="top-slr">
+                                <div class="sec-title">
+                                    <h5>Top Seller</h5>
                                 </div>
-                                <div class="new-img">
-                                    <img class="main-img img-fluid" src="{{asset('images/newproducts/handtool.png')}}"
-                                        alt="">
-                                    <img class="sec-img img-fluid" src="{{asset('images/newproducts/handtool.png')}}"
-                                        alt="">
-                                    <div class="layer-box">
-                                        <a href="" class="it-comp" data-toggle="tooltip" data-placement="left"
-                                            title="Compare"><img src="images/it-comp.png" alt=""></a>
-                                        <a href="" class="it-fav" data-toggle="tooltip" data-placement="left"
-                                            title="Favourite"><img src="images/it-fav.png" alt=""></a>
+                                <div class="slr-slider owl-carousel">
+                                    <div class="slr-items">
+                                        <div class="slr-box d-flex">
+                                            <div class="slr-img">
+                                                <a href="#"><img src="{{asset('images/topseller/100c.png')}}"
+                                                        alt=""></a>
+                                            </div>
+                                            <div class="slr-content">
+                                                <p><a href="">Fresian Breed</a></p>
+                                                <ul class="list-unstyled list-inline fav">
+                                                    <li class="list-inline-item"><i class="fa fa-star"></i></li>
+                                                    <li class="list-inline-item"><i class="fa fa-star"></i></li>
+                                                    <li class="list-inline-item"><i class="fa fa-star"></i></li>
+                                                    <li class="list-inline-item"><i class="fa fa-star"></i></li>
+                                                    <li class="list-inline-item"><i class="fa fa-star-o"></i></li>
+                                                </ul>
+                                                <ul class="list-unstyled list-inline">
+                                                    <li class="list-inline-item">UGX 2M</li>
+                                                    {{-- <li class="list-inline-item">$150.00</li> --}}
+                                                </ul>
+                                            </div>
+                                        </div>
+                                        <div class="slr-box d-flex">
+                                            <div class="slr-img">
+                                                <a href="#"><img src="{{asset('images/topseller/toprated3.png')}}"
+                                                        alt=""></a>
+                                            </div>
+                                            <div class="slr-content">
+                                                <p><a href="">Alphine Goat Breed</a></p>
+                                                <ul class="list-unstyled list-inline fav">
+                                                    <li class="list-inline-item"><i class="fa fa-star"></i></li>
+                                                    <li class="list-inline-item"><i class="fa fa-star"></i></li>
+                                                    <li class="list-inline-item"><i class="fa fa-star"></i></li>
+                                                    <li class="list-inline-item"><i class="fa fa-star"></i></li>
+                                                    <li class="list-inline-item"><i class="fa fa-star-o"></i></li>
+                                                </ul>
+                                                <ul class="list-unstyled list-inline ">
+                                                    <li class="list-inline-item">UGX 90,000</li>
+                                                    {{-- <li class="list-inline-item">$150.00</li> --}}
+                                                </ul>
+                                            </div>
+                                        </div>
+                                        <div class="slr-box d-flex">
+                                            <div class="slr-img">
+                                                <a href="#"><img src="{{asset('images/topseller/topseller.png')}}"
+                                                        alt=""></a>
+                                            </div>
+                                            <div class="slr-content">
+                                                <p><a href="">Landrace pig breeds</a></p>
+                                                <ul class="list-unstyled list-inline fav">
+                                                    <li class="list-inline-item"><i class="fa fa-star"></i></li>
+                                                    <li class="list-inline-item"><i class="fa fa-star"></i></li>
+                                                    <li class="list-inline-item"><i class="fa fa-star"></i></li>
+                                                    <li class="list-inline-item"><i class="fa fa-star"></i></li>
+                                                    <li class="list-inline-item"><i class="fa fa-star-o"></i></li>
+                                                </ul>
+                                                <ul class="list-unstyled list-inline">
+                                                    <li class="list-inline-item">UGX 200,000</li>
+                                                    {{-- <li class="list-inline-item">$150.00</li> --}}
+                                                </ul>
+                                            </div>
+                                        </div>
                                     </div>
-                                </div>
-                                <div class="img-content d-flex justify-content-between">
-                                    <div>
-                                        <ul class="list-unstyled list-inline fav">
-                                            <li class="list-inline-item"><i class="fa fa-star"></i></li>
-                                            <li class="list-inline-item"><i class="fa fa-star"></i></li>
-                                            <li class="list-inline-item"><i class="fa fa-star"></i></li>
-                                            <li class="list-inline-item"><i class="fa fa-star"></i></li>
-                                            <li class="list-inline-item"><i class="fa fa-star-o"></i></li>
-                                        </ul>
-                                        <ul class="list-unstyled list-inline ">
-                                            <li class="list-inline-item">UGX 90,000</li>
-                                            {{-- <li class="list-inline-item">$150.00</li> --}}
-                                        </ul>
+                                    <div class="slr-items">
+                                        <div class="slr-box d-flex">
+                                            <div class="slr-img">
+                                                <a href="#"><img src="{{asset('images/topseller/safari.png')}}"
+                                                        alt=""></a>
+                                            </div>
+                                            <div class="slr-content">
+                                                <p><a href="">Family Safari Vehicle</a></p>
+                                                <ul class="list-unstyled list-inline fav">
+                                                    <li class="list-inline-item"><i class="fa fa-star"></i></li>
+                                                    <li class="list-inline-item"><i class="fa fa-star"></i></li>
+                                                    <li class="list-inline-item"><i class="fa fa-star"></i></li>
+                                                    <li class="list-inline-item"><i class="fa fa-star"></i></li>
+                                                    <li class="list-inline-item"><i class="fa fa-star-o"></i></li>
+                                                </ul>
+                                                <ul class="list-unstyled list-inline ">
+                                                    <li class="list-inline-item">UGX 50M</li>
+                                                    {{-- <li class="list-inline-item">$150.00</li> --}}
+                                                </ul>
+                                            </div>
+                                        </div>
+                                        <div class="slr-box d-flex">
+                                            <div class="slr-img">
+                                                <a href="#"><img src="{{asset('images/topseller/interior.png')}}"
+                                                        alt=""></a>
+                                            </div>
+                                            <div class="slr-content">
+                                                <p><a href="">Interior Furniture Door</a></p>
+                                                <ul class="list-unstyled list-inline fav">
+                                                    <li class="list-inline-item"><i class="fa fa-star"></i></li>
+                                                    <li class="list-inline-item"><i class="fa fa-star"></i></li>
+                                                    <li class="list-inline-item"><i class="fa fa-star"></i></li>
+                                                    <li class="list-inline-item"><i class="fa fa-star"></i></li>
+                                                    <li class="list-inline-item"><i class="fa fa-star-o"></i></li>
+                                                </ul>
+                                                <ul class="list-unstyled list-inline ">
+                                                    <li class="list-inline-item">UGX 120,000</li>
+                                                    {{-- <li class="list-inline-item">$150.00</li> --}}
+                                                </ul>
+                                            </div>
+                                        </div>
+                                        <div class="slr-box d-flex">
+                                            <div class="slr-img">
+                                                <a href="#"><img src="{{asset('images/topseller/100w.png')}}"
+                                                        alt=""></a>
+                                            </div>
+                                            <div class="slr-content">
+                                                <p><a href="">Aluminium Window</a></p>
+                                                <ul class="list-unstyled list-inline fav">
+                                                    <li class="list-inline-item"><i class="fa fa-star"></i></li>
+                                                    <li class="list-inline-item"><i class="fa fa-star"></i></li>
+                                                    <li class="list-inline-item"><i class="fa fa-star"></i></li>
+                                                    <li class="list-inline-item"><i class="fa fa-star"></i></li>
+                                                    <li class="list-inline-item"><i class="fa fa-star-o"></i></li>
+                                                </ul>
+                                                <ul class="list-unstyled list-inline ">
+                                                    <li class="list-inline-item">UGX 200,000</li>
+                                                    {{-- <li class="list-inline-item">$150.00</li> --}}
+                                                </ul>
+                                            </div>
+                                        </div>
                                     </div>
-                                    <div>
-                                        <a href="" data-toggle="tooltip" data-placement="top" title="Add to Cart"><img
-                                                src="images/it-cart.png" alt=""></a>
+                                    <div class="slr-items">
+                                        <div class="slr-box d-flex">
+                                            <div class="slr-img">
+                                                <a href="#"><img src="{{asset('images/topseller/100h.png')}}"
+                                                        alt=""></a>
+                                            </div>
+                                            <div class="slr-content">
+                                                <p><a href="">3 bedrooms, mukono town</a></p>
+                                                <ul class="list-unstyled list-inline fav">
+                                                    <li class="list-inline-item"><i class="fa fa-star"></i></li>
+                                                    <li class="list-inline-item"><i class="fa fa-star"></i></li>
+                                                    <li class="list-inline-item"><i class="fa fa-star"></i></li>
+                                                    <li class="list-inline-item"><i class="fa fa-star"></i></li>
+                                                    <li class="list-inline-item"><i class="fa fa-star-o"></i></li>
+                                                </ul>
+                                                <ul class="list-unstyled list-inline ">
+                                                    <li class="list-inline-item">UGX 60M</li>
+                                                    {{-- <li class="list-inline-item">$150.00</li> --}}
+                                                </ul>
+                                            </div>
+                                        </div>
+                                        <div class="slr-box d-flex">
+                                            <div class="slr-img">
+                                                <a href="#"><img src="{{asset('images/topseller/topseller2.png')}}"
+                                                        alt=""></a>
+                                            </div>
+                                            <div class="slr-content">
+                                                <p><a href="">4 bedrooms Kanjokya Street</a></p>
+                                                <ul class="list-unstyled list-inline fav">
+                                                    <li class="list-inline-item"><i class="fa fa-star"></i></li>
+                                                    <li class="list-inline-item"><i class="fa fa-star"></i></li>
+                                                    <li class="list-inline-item"><i class="fa fa-star"></i></li>
+                                                    <li class="list-inline-item"><i class="fa fa-star"></i></li>
+                                                    <li class="list-inline-item"><i class="fa fa-star-o"></i></li>
+                                                </ul>
+                                                <ul class="list-unstyled list-inline">
+                                                    <li class="list-inline-item">UGX 80M</li>
+                                                    {{-- <li class="list-inline-item">$150.00</li> --}}
+                                                </ul>
+                                            </div>
+                                        </div>
+                                        <div class="slr-box d-flex">
+                                            <div class="slr-img">
+                                                <a href="#"><img src="{{asset('images/topseller/topseller3.png')}}"
+                                                        alt=""></a>
+                                            </div>
+                                            <div class="slr-content">
+                                                <p><a href="">4 bedrooms Nansana,Wakiso</a></p>
+                                                <ul class="list-unstyled list-inline fav">
+                                                    <li class="list-inline-item"><i class="fa fa-star"></i></li>
+                                                    <li class="list-inline-item"><i class="fa fa-star"></i></li>
+                                                    <li class="list-inline-item"><i class="fa fa-star"></i></li>
+                                                    <li class="list-inline-item"><i class="fa fa-star"></i></li>
+                                                    <li class="list-inline-item"><i class="fa fa-star-o"></i></li>
+                                                </ul>
+                                                <ul class="list-unstyled list-inline ">
+                                                    <li class="list-inline-item">UGX 50M</li>
+                                                    {{-- <li class="list-inline-item">$150.00</li> --}}
+                                                </ul>
+                                            </div>
+                                        </div>
                                     </div>
-                                </div>
-                            </div>
-                            <div class="new-item">
-                                <div class="tab-heading">
-                                    <ul class="list-unstyled list-inline">
-                                        <li class="list-inline-item"><a href="#">vehicles</a></li>
-                                        {{-- <li class="list-inline-item"><a href="#">Smart Led</a></li> --}}
-                                    </ul>
-                                    <p><a href="">Toyota </a></p>
-                                </div>
-                                <div class="new-img">
-                                    <img class="main-img img-fluid" src="{{asset('images/newproducts/toyota.png')}}"
-                                        alt="">
-                                    <img class="sec-img img-fluid" src="{{asset('images/newproducts/toyota.png')}}"
-                                        alt="">
-                                    <div class="layer-box">
-                                        <a href="" class="it-comp" data-toggle="tooltip" data-placement="left"
-                                            title="Compare"><img src="images/it-comp.png" alt=""></a>
-                                        <a href="" class="it-fav" data-toggle="tooltip" data-placement="left"
-                                            title="Favourite"><img src="images/it-fav.png" alt=""></a>
-                                    </div>
-                                </div>
-                                <div class="img-content d-flex justify-content-between">
-                                    <div>
-                                        <ul class="list-unstyled list-inline fav">
-                                            <li class="list-inline-item"><i class="fa fa-star"></i></li>
-                                            <li class="list-inline-item"><i class="fa fa-star"></i></li>
-                                            <li class="list-inline-item"><i class="fa fa-star"></i></li>
-                                            <li class="list-inline-item"><i class="fa fa-star"></i></li>
-                                            <li class="list-inline-item"><i class="fa fa-star-o"></i></li>
-                                        </ul>
-                                        <ul class="list-unstyled list-inline">
-                                            <li class="list-inline-item">UGX 50M</li>
-                                            {{-- <li class="list-inline-item">$150.00</li> --}}
-                                        </ul>
-                                    </div>
-                                    <div>
-                                        <a href="" data-toggle="tooltip" data-placement="top" title="Add to Cart"><img
-                                                src="images/it-cart.png" alt=""></a>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="new-item">
-                                <div class="tab-heading">
-                                    <ul class="list-unstyled list-inline">
-                                        <li class="list-inline-item"><a href="#">Apartments</a></li>
-                                        {{-- <li class="list-inline-item"><a href="#">Smart Led</a></li> --}}
-                                    </ul>
-                                    <p><a href="">4 bedrooms,nsangi</a></p>
-                                </div>
-                                <div class="new-img">
-                                    <img class="main-img img-fluid" src="{{asset('images/newproducts/white.png')}}"
-                                        alt="">
-                                    <img class="sec-img img-fluid" src="{{asset('images/newproducts/white.png')}}"
-                                        alt="">
-                                    <div class="layer-box">
-                                        <a href="" class="it-comp" data-toggle="tooltip" data-placement="left"
-                                            title="Compare"><img src="images/it-comp.png" alt=""></a>
-                                        <a href="" class="it-fav" data-toggle="tooltip" data-placement="left"
-                                            title="Favourite"><img src="images/it-fav.png" alt=""></a>
-                                    </div>
-                                </div>
-                                <div class="img-content d-flex justify-content-between">
-                                    <div>
-                                        <ul class="list-unstyled list-inline fav">
-                                            <li class="list-inline-item"><i class="fa fa-star"></i></li>
-                                            <li class="list-inline-item"><i class="fa fa-star"></i></li>
-                                            <li class="list-inline-item"><i class="fa fa-star"></i></li>
-                                            <li class="list-inline-item"><i class="fa fa-star"></i></li>
-                                            <li class="list-inline-item"><i class="fa fa-star-o"></i></li>
-                                        </ul>
-                                        <ul class="list-unstyled list-inline">
-                                            <li class="list-inline-item">UGX 60M</li>
-                                            {{-- <li class="list-inline-item">$150.00</li> --}}
-                                        </ul>
-                                    </div>
-                                    <div>
-                                        <a href="" data-toggle="tooltip" data-placement="top" title="Add to Cart"><img
-                                                src="images/it-cart.png" alt=""></a>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="new-item">
-                                <div class="tab-heading">
-                                    <ul class="list-unstyled list-inline">
-                                        <li class="list-inline-item"><a href="#">Cement</a></li>
-                                        {{-- <li class="list-inline-item"><a href="#">Smart Led</a></li> --}}
-                                    </ul>
-                                    <p><a href="">Hima Cement</a></p>
-                                </div>
-                                <div class="new-img">
-                                    <img class="main-img img-fluid" src="{{asset('images/newproducts/cement.png')}}"
-                                        alt="">
-                                    <img class="sec-img img-fluid" src="{{asset('images/newproducts/cement.png')}}"
-                                        alt="">
-                                    <div class="layer-box">
-                                        <a href="" class="it-comp" data-toggle="tooltip" data-placement="left"
-                                            title="Compare"><img src="images/it-comp.png" alt=""></a>
-                                        <a href="" class="it-fav" data-toggle="tooltip" data-placement="left"
-                                            title="Favourite"><img src="images/it-fav.png" alt=""></a>
-                                    </div>
-                                </div>
-                                <div class="img-content d-flex justify-content-between">
-                                    <div>
-                                        <ul class="list-unstyled list-inline fav">
-                                            <li class="list-inline-item"><i class="fa fa-star"></i></li>
-                                            <li class="list-inline-item"><i class="fa fa-star"></i></li>
-                                            <li class="list-inline-item"><i class="fa fa-star"></i></li>
-                                            <li class="list-inline-item"><i class="fa fa-star"></i></li>
-                                            <li class="list-inline-item"><i class="fa fa-star-o"></i></li>
-                                        </ul>
-                                        <ul class="list-unstyled list-inline">
-                                            <li class="list-inline-item">UGX 35,000</li>
-                                            {{-- <li class="list-inline-item">$150.00</li> --}}
-                                        </ul>
-                                    </div>
-                                    <div>
-                                        <a href="" data-toggle="tooltip" data-placement="top" title="Add to Cart"><img
-                                                src="images/it-cart.png" alt=""></a>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-md-12 padding-fix-l20">
-                    <div class="banner-two">
-                        <a href="#"><img src="{{asset('images/banners/banner-box.png')}}" alt="" class="img-fluid"></a>
-                    </div>
-                </div>
-                <div class="col-md-12 padding-fix-l20">
-                    <div class="top-slr">
-                        <div class="sec-title">
-                            <h5>Top Seller</h5>
-                        </div>
-                        <div class="slr-slider owl-carousel">
-                            <div class="slr-items">
-                                <div class="slr-box d-flex">
-                                    <div class="slr-img">
-                                        <a href="#"><img src="{{asset('images/topseller/100c.png')}}" alt=""></a>
-                                    </div>
-                                    <div class="slr-content">
-                                        <p><a href="">Fresian Breed</a></p>
-                                        <ul class="list-unstyled list-inline fav">
-                                            <li class="list-inline-item"><i class="fa fa-star"></i></li>
-                                            <li class="list-inline-item"><i class="fa fa-star"></i></li>
-                                            <li class="list-inline-item"><i class="fa fa-star"></i></li>
-                                            <li class="list-inline-item"><i class="fa fa-star"></i></li>
-                                            <li class="list-inline-item"><i class="fa fa-star-o"></i></li>
-                                        </ul>
-                                        <ul class="list-unstyled list-inline">
-                                            <li class="list-inline-item">UGX 2M</li>
-                                            {{-- <li class="list-inline-item">$150.00</li> --}}
-                                        </ul>
-                                    </div>
-                                </div>
-                                <div class="slr-box d-flex">
-                                    <div class="slr-img">
-                                        <a href="#"><img src="{{asset('images/topseller/toprated3.png')}}" alt=""></a>
-                                    </div>
-                                    <div class="slr-content">
-                                        <p><a href="">Alphine Goat Breed</a></p>
-                                        <ul class="list-unstyled list-inline fav">
-                                            <li class="list-inline-item"><i class="fa fa-star"></i></li>
-                                            <li class="list-inline-item"><i class="fa fa-star"></i></li>
-                                            <li class="list-inline-item"><i class="fa fa-star"></i></li>
-                                            <li class="list-inline-item"><i class="fa fa-star"></i></li>
-                                            <li class="list-inline-item"><i class="fa fa-star-o"></i></li>
-                                        </ul>
-                                        <ul class="list-unstyled list-inline ">
-                                            <li class="list-inline-item">UGX 90,000</li>
-                                            {{-- <li class="list-inline-item">$150.00</li> --}}
-                                        </ul>
-                                    </div>
-                                </div>
-                                <div class="slr-box d-flex">
-                                    <div class="slr-img">
-                                        <a href="#"><img src="{{asset('images/topseller/topseller.png')}}" alt=""></a>
-                                    </div>
-                                    <div class="slr-content">
-                                        <p><a href="">Landrace pig breeds</a></p>
-                                        <ul class="list-unstyled list-inline fav">
-                                            <li class="list-inline-item"><i class="fa fa-star"></i></li>
-                                            <li class="list-inline-item"><i class="fa fa-star"></i></li>
-                                            <li class="list-inline-item"><i class="fa fa-star"></i></li>
-                                            <li class="list-inline-item"><i class="fa fa-star"></i></li>
-                                            <li class="list-inline-item"><i class="fa fa-star-o"></i></li>
-                                        </ul>
-                                        <ul class="list-unstyled list-inline">
-                                            <li class="list-inline-item">UGX 200,000</li>
-                                            {{-- <li class="list-inline-item">$150.00</li> --}}
-                                        </ul>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="slr-items">
-                                <div class="slr-box d-flex">
-                                    <div class="slr-img">
-                                        <a href="#"><img src="{{asset('images/topseller/safari.png')}}" alt=""></a>
-                                    </div>
-                                    <div class="slr-content">
-                                        <p><a href="">Family Safari Vehicle</a></p>
-                                        <ul class="list-unstyled list-inline fav">
-                                            <li class="list-inline-item"><i class="fa fa-star"></i></li>
-                                            <li class="list-inline-item"><i class="fa fa-star"></i></li>
-                                            <li class="list-inline-item"><i class="fa fa-star"></i></li>
-                                            <li class="list-inline-item"><i class="fa fa-star"></i></li>
-                                            <li class="list-inline-item"><i class="fa fa-star-o"></i></li>
-                                        </ul>
-                                        <ul class="list-unstyled list-inline ">
-                                            <li class="list-inline-item">UGX 50M</li>
-                                            {{-- <li class="list-inline-item">$150.00</li> --}}
-                                        </ul>
-                                    </div>
-                                </div>
-                                <div class="slr-box d-flex">
-                                    <div class="slr-img">
-                                        <a href="#"><img src="{{asset('images/topseller/interior.png')}}" alt=""></a>
-                                    </div>
-                                    <div class="slr-content">
-                                        <p><a href="">Interior Furniture Door</a></p>
-                                        <ul class="list-unstyled list-inline fav">
-                                            <li class="list-inline-item"><i class="fa fa-star"></i></li>
-                                            <li class="list-inline-item"><i class="fa fa-star"></i></li>
-                                            <li class="list-inline-item"><i class="fa fa-star"></i></li>
-                                            <li class="list-inline-item"><i class="fa fa-star"></i></li>
-                                            <li class="list-inline-item"><i class="fa fa-star-o"></i></li>
-                                        </ul>
-                                        <ul class="list-unstyled list-inline ">
-                                            <li class="list-inline-item">UGX 120,000</li>
-                                            {{-- <li class="list-inline-item">$150.00</li> --}}
-                                        </ul>
-                                    </div>
-                                </div>
-                                <div class="slr-box d-flex">
-                                    <div class="slr-img">
-                                        <a href="#"><img src="{{asset('images/topseller/100w.png')}}" alt=""></a>
-                                    </div>
-                                    <div class="slr-content">
-                                        <p><a href="">Aluminium Window</a></p>
-                                        <ul class="list-unstyled list-inline fav">
-                                            <li class="list-inline-item"><i class="fa fa-star"></i></li>
-                                            <li class="list-inline-item"><i class="fa fa-star"></i></li>
-                                            <li class="list-inline-item"><i class="fa fa-star"></i></li>
-                                            <li class="list-inline-item"><i class="fa fa-star"></i></li>
-                                            <li class="list-inline-item"><i class="fa fa-star-o"></i></li>
-                                        </ul>
-                                        <ul class="list-unstyled list-inline ">
-                                            <li class="list-inline-item">UGX 200,000</li>
-                                            {{-- <li class="list-inline-item">$150.00</li> --}}
-                                        </ul>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="slr-items">
-                                <div class="slr-box d-flex">
-                                    <div class="slr-img">
-                                        <a href="#"><img src="{{asset('images/topseller/100h.png')}}" alt=""></a>
-                                    </div>
-                                    <div class="slr-content">
-                                        <p><a href="">3 bedrooms, mukono town</a></p>
-                                        <ul class="list-unstyled list-inline fav">
-                                            <li class="list-inline-item"><i class="fa fa-star"></i></li>
-                                            <li class="list-inline-item"><i class="fa fa-star"></i></li>
-                                            <li class="list-inline-item"><i class="fa fa-star"></i></li>
-                                            <li class="list-inline-item"><i class="fa fa-star"></i></li>
-                                            <li class="list-inline-item"><i class="fa fa-star-o"></i></li>
-                                        </ul>
-                                        <ul class="list-unstyled list-inline ">
-                                            <li class="list-inline-item">UGX 60M</li>
-                                            {{-- <li class="list-inline-item">$150.00</li> --}}
-                                        </ul>
-                                    </div>
-                                </div>
-                                <div class="slr-box d-flex">
-                                    <div class="slr-img">
-                                        <a href="#"><img src="{{asset('images/topseller/topseller2.png')}}" alt=""></a>
-                                    </div>
-                                    <div class="slr-content">
-                                        <p><a href="">4 bedrooms Kanjokya Street</a></p>
-                                        <ul class="list-unstyled list-inline fav">
-                                            <li class="list-inline-item"><i class="fa fa-star"></i></li>
-                                            <li class="list-inline-item"><i class="fa fa-star"></i></li>
-                                            <li class="list-inline-item"><i class="fa fa-star"></i></li>
-                                            <li class="list-inline-item"><i class="fa fa-star"></i></li>
-                                            <li class="list-inline-item"><i class="fa fa-star-o"></i></li>
-                                        </ul>
-                                        <ul class="list-unstyled list-inline">
-                                            <li class="list-inline-item">UGX 80M</li>
-                                            {{-- <li class="list-inline-item">$150.00</li> --}}
-                                        </ul>
-                                    </div>
-                                </div>
-                                <div class="slr-box d-flex">
-                                    <div class="slr-img">
-                                        <a href="#"><img src="{{asset('images/topseller/topseller3.png')}}" alt=""></a>
-                                    </div>
-                                    <div class="slr-content">
-                                        <p><a href="">4 bedrooms Nansana,Wakiso</a></p>
-                                        <ul class="list-unstyled list-inline fav">
-                                            <li class="list-inline-item"><i class="fa fa-star"></i></li>
-                                            <li class="list-inline-item"><i class="fa fa-star"></i></li>
-                                            <li class="list-inline-item"><i class="fa fa-star"></i></li>
-                                            <li class="list-inline-item"><i class="fa fa-star"></i></li>
-                                            <li class="list-inline-item"><i class="fa fa-star-o"></i></li>
-                                        </ul>
-                                        <ul class="list-unstyled list-inline ">
-                                            <li class="list-inline-item">UGX 50M</li>
-                                            {{-- <li class="list-inline-item">$150.00</li> --}}
-                                        </ul>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="slr-items">
-                                <div class="slr-box d-flex">
-                                    <div class="slr-img">
-                                        <a href="#"><img src="{{asset('images/topseller/topseller4.png')}}" alt=""></a>
-                                    </div>
-                                    <div class="slr-content">
-                                        <p><a href="">Ceramic Tiles</a></p>
-                                        <ul class="list-unstyled list-inline fav">
-                                            <li class="list-inline-item"><i class="fa fa-star"></i></li>
-                                            <li class="list-inline-item"><i class="fa fa-star"></i></li>
-                                            <li class="list-inline-item"><i class="fa fa-star"></i></li>
-                                            <li class="list-inline-item"><i class="fa fa-star"></i></li>
-                                            <li class="list-inline-item"><i class="fa fa-star-o"></i></li>
-                                        </ul>
-                                        <ul class="list-unstyled list-inline">
-                                            <li class="list-inline-item">UGX 30,000 each set</li>
-                                            {{-- <li class="list-inline-item">$150.00</li> --}}
-                                        </ul>
-                                    </div>
-                                </div>
-                                <div class="slr-box d-flex">
-                                    <div class="slr-img">
-                                        <a href="#"><img src="{{asset('images/topseller/100f.png')}}" alt=""></a>
-                                    </div>
-                                    <div class="slr-content">
-                                        <p><a href="">Fire Bricks</a></p>
-                                        <ul class="list-unstyled list-inline fav">
-                                            <li class="list-inline-item"><i class="fa fa-star"></i></li>
-                                            <li class="list-inline-item"><i class="fa fa-star"></i></li>
-                                            <li class="list-inline-item"><i class="fa fa-star"></i></li>
-                                            <li class="list-inline-item"><i class="fa fa-star"></i></li>
-                                            <li class="list-inline-item"><i class="fa fa-star-o"></i></li>
-                                        </ul>
-                                        <ul class="list-unstyled list-inline">
-                                            <li class="list-inline-item">UGX 20000 each set</li>
-                                            {{-- <li class="list-inline-item">$150.00</li> --}}
-                                        </ul>
-                                    </div>
-                                </div>
-                                <div class="slr-box d-flex">
-                                    <div class="slr-img">
-                                        <a href="#"><img src="{{asset('images/topseller/topseller4.png')}}" alt=""></a>
-                                    </div>
-                                    <div class="slr-content">
-                                        <p><a href="">Raked Gutters</a></p>
-                                        <ul class="list-unstyled list-inline fav">
-                                            <li class="list-inline-item"><i class="fa fa-star"></i></li>
-                                            <li class="list-inline-item"><i class="fa fa-star"></i></li>
-                                            <li class="list-inline-item"><i class="fa fa-star"></i></li>
-                                            <li class="list-inline-item"><i class="fa fa-star"></i></li>
-                                            <li class="list-inline-item"><i class="fa fa-star-o"></i></li>
-                                        </ul>
-                                        <ul class="list-unstyled list-inline">
-                                            <li class="list-inline-item">UGX 180,000</li>
-                                            {{-- <li class="list-inline-item">$150.00</li> --}}
-                                        </ul>
+                                    <div class="slr-items">
+                                        <div class="slr-box d-flex">
+                                            <div class="slr-img">
+                                                <a href="#"><img src="{{asset('images/topseller/topseller4.png')}}"
+                                                        alt=""></a>
+                                            </div>
+                                            <div class="slr-content">
+                                                <p><a href="">Ceramic Tiles</a></p>
+                                                <ul class="list-unstyled list-inline fav">
+                                                    <li class="list-inline-item"><i class="fa fa-star"></i></li>
+                                                    <li class="list-inline-item"><i class="fa fa-star"></i></li>
+                                                    <li class="list-inline-item"><i class="fa fa-star"></i></li>
+                                                    <li class="list-inline-item"><i class="fa fa-star"></i></li>
+                                                    <li class="list-inline-item"><i class="fa fa-star-o"></i></li>
+                                                </ul>
+                                                <ul class="list-unstyled list-inline">
+                                                    <li class="list-inline-item">UGX 30,000 each set</li>
+                                                    {{-- <li class="list-inline-item">$150.00</li> --}}
+                                                </ul>
+                                            </div>
+                                        </div>
+                                        <div class="slr-box d-flex">
+                                            <div class="slr-img">
+                                                <a href="#"><img src="{{asset('images/topseller/100f.png')}}"
+                                                        alt=""></a>
+                                            </div>
+                                            <div class="slr-content">
+                                                <p><a href="">Fire Bricks</a></p>
+                                                <ul class="list-unstyled list-inline fav">
+                                                    <li class="list-inline-item"><i class="fa fa-star"></i></li>
+                                                    <li class="list-inline-item"><i class="fa fa-star"></i></li>
+                                                    <li class="list-inline-item"><i class="fa fa-star"></i></li>
+                                                    <li class="list-inline-item"><i class="fa fa-star"></i></li>
+                                                    <li class="list-inline-item"><i class="fa fa-star-o"></i></li>
+                                                </ul>
+                                                <ul class="list-unstyled list-inline">
+                                                    <li class="list-inline-item">UGX 20000 each set</li>
+                                                    {{-- <li class="list-inline-item">$150.00</li> --}}
+                                                </ul>
+                                            </div>
+                                        </div>
+                                        <div class="slr-box d-flex">
+                                            <div class="slr-img">
+                                                <a href="#"><img src="{{asset('images/topseller/topseller4.png')}}"
+                                                        alt=""></a>
+                                            </div>
+                                            <div class="slr-content">
+                                                <p><a href="">Raked Gutters</a></p>
+                                                <ul class="list-unstyled list-inline fav">
+                                                    <li class="list-inline-item"><i class="fa fa-star"></i></li>
+                                                    <li class="list-inline-item"><i class="fa fa-star"></i></li>
+                                                    <li class="list-inline-item"><i class="fa fa-star"></i></li>
+                                                    <li class="list-inline-item"><i class="fa fa-star"></i></li>
+                                                    <li class="list-inline-item"><i class="fa fa-star-o"></i></li>
+                                                </ul>
+                                                <ul class="list-unstyled list-inline">
+                                                    <li class="list-inline-item">UGX 180,000</li>
+                                                    {{-- <li class="list-inline-item">$150.00</li> --}}
+                                                </ul>
+                                            </div>
+                                        </div>
                                     </div>
                                 </div>
                             </div>
                         </div>
-                    </div>
-                </div>
-                {{-- <div class="col-md-12 padding-fix-l20">
+                        {{-- <div class="col-md-12 padding-fix-l20">
                                 <div class="hm-blog">
                                     <div class="sec-title">
                                         <h5>Latest News</h5>
@@ -1338,9 +1272,9 @@
                                     </div>
                                 </div>
                             </div> --}}
-            </div>
-        </div>
-        {{-- <div class="col-md-12">
+                    </div>
+                </div>
+                {{-- <div class="col-md-12">
                         <div class="tp-bnd owl-carousel">
                             <div class="bnd-items">
                                 <a href="#"><img src="images/brand-01.png" alt="" class="img-fluid"></a>
@@ -1365,7 +1299,7 @@
                             </div>
                         </div>
                     </div> --}}
-        </div>
+            </div>
         </div>
     </section>
     <!-- End Product Area -->
