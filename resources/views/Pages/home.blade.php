@@ -218,7 +218,8 @@
             <div class="row">
                 <div class="col-lg-3 col-md-0">
                     <div class="menu-widget">
-                        <p><a href="{{route('products.index')}}" class='text-white'><i class="fa fa-bars"></i>All Categories</a></p>
+                        <p><a href="{{route('products.index')}}" class='text-white'><i class="fa fa-bars"></i>All
+                                Categories</a></p>
                         <ul class="list-unstyled">
                             @foreach($categories as $category)
                             <li><a href="{{route('products.index',['category_id'=>$category->id])}}">{{$category->name}}<i
@@ -773,85 +774,41 @@
                             <div class="ftr-product">
                                 <div class="tab-box d-flex justify-content-between">
                                     <div class="sec-title">
-                                        <h5>Feature Product</h5>
+                                        <h5>Featured Product</h5>
                                     </div>
                                     <!-- Nav tabs -->
                                     <ul class="nav nav-tabs" role="tablist">
                                         <li class="nav-item">
-                                            <a class="nav-link active" data-toggle="tab" href="#all">All</a>
+                                        <a class="nav-link active" data-toggle="tab" href="{{route('products.index')}}">All</a>
                                         </li>
+                                        @foreach($main_categories as $main_category)
                                         <li class="nav-item">
-                                            <a class="nav-link" data-toggle="tab" href="#elec">Land</a>
+                                            <a class="nav-link" data-toggle="tab"
+                                                href="#elec">{{$main_category->name}}</a>
                                         </li>
-                                        <li class="nav-item">
-                                            <a class="nav-link" data-toggle="tab" href="#smart">Houses</a>
-                                        </li>
-                                        <li class="nav-item">
-                                            <a class="nav-link" data-toggle="tab" href="#shoe">Building Materials</a>
-                                        </li>
+                                        @endforeach
                                     </ul>
                                 </div>
                                 <!-- Tab panes -->
                                 <div class="tab-content">
                                     <div class="tab-pane fade show active" id="all" role="tabpanel">
                                         <div class="tab-slider owl-carousel">
+                                            @foreach($products as $product)
                                             <div class="tab-item">
                                                 <div class="tab-heading">
                                                     <ul class="list-unstyled list-inline">
-                                                        <li class="list-inline-item"><a href="#">Land</a></li>
-                                                        {{-- <li class="list-inline-item"><a href="#"></a></li> --}}
-                                                    </ul>
-                                                    <p><a href="">30 acres in Kajjansi,Mukono</a></p>
-                                                </div>
-                                                <div class="tab-img">
-                                                    <img class="main-img img-fluid"
-                                                        src="{{asset('images/Land/land-p.png')}}" alt="">
-                                                    <img class="sec-img img-fluid"
-                                                        src="{{asset('images/Land/land-p.png')}}" alt="">
-                                                    <div class="layer-box">
-                                                        <a href="" class="it-comp" data-toggle="tooltip"
-                                                            data-placement="left" title="Compare"><img
-                                                                src="images/it-comp.png" alt=""></a>
-                                                        <a href="" class="it-fav" data-toggle="tooltip"
-                                                            data-placement="left" title="Favourite"><img
-                                                                src="images/it-fav.png" alt=""></a>
-                                                    </div>
-                                                </div>
-                                                <div class="img-content d-flex justify-content-between">
-                                                    <div>
-                                                        <ul class="list-unstyled list-inline fav">
-                                                            <li class="list-inline-item"><i class="fa fa-star"></i></li>
-                                                            <li class="list-inline-item"><i class="fa fa-star"></i></li>
-                                                            <li class="list-inline-item"><i class="fa fa-star"></i></li>
-                                                            <li class="list-inline-item"><i class="fa fa-star"></i></li>
-                                                            <li class="list-inline-item"><i class="fa fa-star-o"></i>
-                                                            </li>
-                                                        </ul>
-                                                        <ul class="list-unstyled list-inline">
-                                                            <li class="list-inline-item">UGX 4M</li>
-                                                        </ul>
-                                                    </div>
-                                                    <div>
-                                                        <a href="" data-toggle="tooltip" data-placement="top"
-                                                            title="Add to Cart"><img src="images/it-cart.png"
-                                                                alt=""></a>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                            <div class="tab-item">
-                                                <div class="tab-heading">
-                                                    <ul class="list-unstyled list-inline">
-                                                        <li class="list-inline-item"><a href="#">House</a></li>
+                                                    <li class="list-inline-item"><a href="#">{{$categoryName}}</a></li>
                                                         {{-- <li class="list-inline-item"><a href="#">Smart Led</a></li> --}}
                                                     </ul>
-                                                    <p><a href="">4 bedrooms,Entebbe</a></p>
+                                                <p><a href="">{{$product->name}}</a></p>
                                                 </div>
                                                 <div class="tab-img">
                                                     <img class="main-img img-fluid"
-                                                        src="{{asset('images/Houses/beach.png')}}" alt="">
-                                                    <img class="sec-img img-fluid"
-                                                        src="{{asset('images/Houses/beach.png')}}" alt="">
-                                                    <span class="sale">Sale</span>
+                                                        src="{{asset('storage/'.$product->image)}}"
+                                                        alt="">
+                                                    {{-- <img class="sec-img img-fluid"
+                                                        src="{{asset('images/BuildingMaterials/Roofing/RoofingTools/handtool.png')}}"
+                                                        alt=""> --}}
                                                     <div class="layer-box">
                                                         <a href="" class="it-comp" data-toggle="tooltip"
                                                             data-placement="left" title="Compare"><img
@@ -872,7 +829,7 @@
                                                             </li>
                                                         </ul>
                                                         <ul class="list-unstyled list-inline ">
-                                                            <li class="list-inline-item">UGX 200M</li>
+                                                        <li class="list-inline-item">{{$product->price}}</li>
                                                             {{-- <li class="list-inline-item">$150.00</li> --}}
                                                         </ul>
                                                     </div>
@@ -883,96 +840,7 @@
                                                     </div>
                                                 </div>
                                             </div>
-                                            <div class="tab-item">
-                                                <div class="tab-heading">
-                                                    <ul class="list-unstyled list-inline">
-                                                        <li class="list-inline-item"><a href="#">Plumbing Tools</a></li>
-                                                        {{-- <li class="list-inline-item"><a href="#">Smart Led</a></li> --}}
-                                                    </ul>
-                                                    <p><a href="">12m water pipe</a></p>
-                                                </div>
-                                                <div class="tab-img">
-                                                    <img class="main-img img-fluid"
-                                                        src="{{asset('images/PlumbingTools/Pipes/pipes.png')}}" alt="">
-                                                    <img class="sec-img img-fluid"
-                                                        src="{{asset('images/PlumbingTools/Pipes/pipes.png')}}" alt="">
-                                                    <div class="layer-box">
-                                                        <a href="" class="it-comp" data-toggle="tooltip"
-                                                            data-placement="left" title="Compare"><img
-                                                                src="images/it-comp.png" alt=""></a>
-                                                        <a href="" class="it-fav" data-toggle="tooltip"
-                                                            data-placement="left" title="Favourite"><img
-                                                                src="images/it-fav.png" alt=""></a>
-                                                    </div>
-                                                </div>
-                                                <div class="img-content d-flex justify-content-between">
-                                                    <div>
-                                                        <ul class="list-unstyled list-inline fav">
-                                                            <li class="list-inline-item"><i class="fa fa-star"></i></li>
-                                                            <li class="list-inline-item"><i class="fa fa-star"></i></li>
-                                                            <li class="list-inline-item"><i class="fa fa-star"></i></li>
-                                                            <li class="list-inline-item"><i class="fa fa-star"></i></li>
-                                                            <li class="list-inline-item"><i class="fa fa-star-o"></i>
-                                                            </li>
-                                                        </ul>
-                                                        <ul class="list-unstyled list-inline">
-                                                            <li class="list-inline-item">UGX 400,000</li>
-                                                            {{-- <li class="list-inline-item">$150.00</li> --}}
-                                                        </ul>
-                                                    </div>
-                                                    <div>
-                                                        <a href="" data-toggle="tooltip" data-placement="top"
-                                                            title="Add to Cart"><img src="images/it-cart.png"
-                                                                alt=""></a>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                            <div class="tab-item">
-                                                <div class="tab-heading">
-                                                    <ul class="list-unstyled list-inline">
-                                                        <li class="list-inline-item"><a href="#">Roofing Tools</a></li>
-                                                        {{-- <li class="list-inline-item"><a href="#">Smart Led</a></li> --}}
-                                                    </ul>
-                                                    <p><a href="">Electric Hand Tool</a></p>
-                                                </div>
-                                                <div class="tab-img">
-                                                    <img class="main-img img-fluid"
-                                                        src="{{asset('images/BuildingMaterials/Roofing/RoofingTools/handtool.png')}}"
-                                                        alt="">
-                                                    <img class="sec-img img-fluid"
-                                                        src="{{asset('images/BuildingMaterials/Roofing/RoofingTools/handtool.png')}}"
-                                                        alt="">
-                                                    <div class="layer-box">
-                                                        <a href="" class="it-comp" data-toggle="tooltip"
-                                                            data-placement="left" title="Compare"><img
-                                                                src="images/it-comp.png" alt=""></a>
-                                                        <a href="" class="it-fav" data-toggle="tooltip"
-                                                            data-placement="left" title="Favourite"><img
-                                                                src="images/it-fav.png" alt=""></a>
-                                                    </div>
-                                                </div>
-                                                <div class="img-content d-flex justify-content-between">
-                                                    <div>
-                                                        <ul class="list-unstyled list-inline fav">
-                                                            <li class="list-inline-item"><i class="fa fa-star"></i></li>
-                                                            <li class="list-inline-item"><i class="fa fa-star"></i></li>
-                                                            <li class="list-inline-item"><i class="fa fa-star"></i></li>
-                                                            <li class="list-inline-item"><i class="fa fa-star"></i></li>
-                                                            <li class="list-inline-item"><i class="fa fa-star-o"></i>
-                                                            </li>
-                                                        </ul>
-                                                        <ul class="list-unstyled list-inline ">
-                                                            <li class="list-inline-item">UGX 450,000</li>
-                                                            {{-- <li class="list-inline-item">$150.00</li> --}}
-                                                        </ul>
-                                                    </div>
-                                                    <div>
-                                                        <a href="" data-toggle="tooltip" data-placement="top"
-                                                            title="Add to Cart"><img src="images/it-cart.png"
-                                                                alt=""></a>
-                                                    </div>
-                                                </div>
-                                            </div>
+                                            @endforeach
                                         </div>
                                     </div>
                                     <div class="tab-pane fade" id="elec" role="tabpanel">

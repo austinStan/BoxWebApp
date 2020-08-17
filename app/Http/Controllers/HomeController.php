@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use TCG\Voyager\Models\Category;
+use App\Product;
 
 class HomeController extends Controller
 {
@@ -24,10 +25,16 @@ class HomeController extends Controller
      */
     public function index()
     {
+       
+    
         $categories=Category::whereNull('parent_id')->get();
 
-        // dd($categories);
+        $main_categories=Category::whereNull('parent_id')->take(3)->get();
+  
+        $products = Product::inRandomOrder()->take(7)->get();
 
-        return view('Pages.home',['categories'=>$categories]);
+
+
+        return view('Pages.home',compact('categories','main_categories','products'));
     }
 }

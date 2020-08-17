@@ -6,5 +6,8 @@ use Illuminate\Database\Eloquent\Model;
 
 class Product extends Model
 {
-    //
+    public function category()
+    {
+        return $this->belongsToMany('App\Category', 'products_categories');
+    }
 }
