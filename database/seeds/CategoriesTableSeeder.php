@@ -142,20 +142,20 @@ class CategoriesTableSeeder extends Seeder
                 'id' => 16,
                 'parent_id' => NULL,
                 'order' => 1,
-                'name' => 'Groceries',
-                'slug' => 'groceries',
+                'name' => 'Clothing',
+                'slug' => 'clothing',
                 'created_at' => '2020-08-14 10:34:48',
-                'updated_at' => '2020-08-14 10:34:48',
+                'updated_at' => '2020-08-15 16:41:47',
             ),
             13 => 
             array (
                 'id' => 17,
                 'parent_id' => NULL,
                 'order' => 1,
-                'name' => 'Services',
-                'slug' => 'services',
+                'name' => 'Groceries',
+                'slug' => 'groceries',
                 'created_at' => '2020-08-14 10:34:56',
-                'updated_at' => '2020-08-14 10:34:56',
+                'updated_at' => '2020-08-15 16:42:49',
             ),
             14 => 
             array (
@@ -910,22 +910,482 @@ class CategoriesTableSeeder extends Seeder
             89 => 
             array (
                 'id' => 97,
-                'parent_id' => 16,
+                'parent_id' => 17,
                 'order' => 1,
                 'name' => 'fruits',
                 'slug' => 'fruits',
                 'created_at' => '2020-08-15 00:26:10',
-                'updated_at' => '2020-08-15 00:26:10',
+                'updated_at' => '2020-08-15 16:43:44',
             ),
             90 => 
             array (
                 'id' => 98,
-                'parent_id' => 16,
+                'parent_id' => 17,
                 'order' => 1,
                 'name' => 'vegetables',
                 'slug' => 'vegetables',
                 'created_at' => '2020-08-15 00:26:32',
-                'updated_at' => '2020-08-15 00:26:32',
+                'updated_at' => '2020-08-15 16:44:02',
+            ),
+            91 => 
+            array (
+                'id' => 99,
+                'parent_id' => 84,
+                'order' => 1,
+                'name' => 'wire accessories',
+                'slug' => 'wire-accessories',
+                'created_at' => '2020-08-15 16:15:04',
+                'updated_at' => '2020-08-15 16:16:13',
+            ),
+            92 => 
+            array (
+                'id' => 101,
+                'parent_id' => 84,
+                'order' => 1,
+                'name' => 'cable accessories',
+                'slug' => 'cable-accessories',
+                'created_at' => '2020-08-15 16:16:53',
+                'updated_at' => '2020-08-15 16:16:53',
+            ),
+            93 => 
+            array (
+                'id' => 102,
+                'parent_id' => 85,
+                'order' => 1,
+                'name' => 'garden lightings',
+                'slug' => 'garden-lightings',
+                'created_at' => '2020-08-15 16:17:43',
+                'updated_at' => '2020-08-15 16:17:43',
+            ),
+            94 => 
+            array (
+                'id' => 103,
+                'parent_id' => 85,
+                'order' => 1,
+                'name' => 'interior lightings',
+                'slug' => 'interior-lightings',
+                'created_at' => '2020-08-15 16:18:00',
+                'updated_at' => '2020-08-15 16:18:00',
+            ),
+            95 => 
+            array (
+                'id' => 104,
+                'parent_id' => 85,
+                'order' => 1,
+                'name' => 'switches',
+                'slug' => 'switches',
+                'created_at' => '2020-08-15 16:18:14',
+                'updated_at' => '2020-08-15 16:18:14',
+            ),
+            96 => 
+            array (
+                'id' => 105,
+                'parent_id' => 85,
+                'order' => 1,
+                'name' => 'energy saver lightings',
+                'slug' => 'energy-saver-lightings',
+                'created_at' => '2020-08-15 16:18:44',
+                'updated_at' => '2020-08-15 16:18:44',
+            ),
+            97 => 
+            array (
+                'id' => 106,
+                'parent_id' => 93,
+                'order' => 1,
+                'name' => 'dina apartments',
+                'slug' => 'dina-apartments',
+                'created_at' => '2020-08-15 16:19:30',
+                'updated_at' => '2020-08-15 16:19:30',
+            ),
+            98 => 
+            array (
+                'id' => 107,
+                'parent_id' => 93,
+                'order' => 1,
+                'name' => 'selina apartments',
+                'slug' => 'selina-apartments',
+                'created_at' => '2020-08-15 16:19:47',
+                'updated_at' => '2020-08-15 16:19:47',
+            ),
+            99 => 
+            array (
+                'id' => 108,
+                'parent_id' => 93,
+                'order' => 1,
+                'name' => 'boulverd apartments',
+                'slug' => 'boulverd-apartments',
+                'created_at' => '2020-08-15 16:20:18',
+                'updated_at' => '2020-08-15 16:20:18',
+            ),
+            100 => 
+            array (
+                'id' => 109,
+                'parent_id' => 94,
+                'order' => 1,
+                'name' => 'serena hotel',
+                'slug' => 'serena-hotel',
+                'created_at' => '2020-08-15 16:20:55',
+                'updated_at' => '2020-08-15 16:20:55',
+            ),
+            101 => 
+            array (
+                'id' => 110,
+                'parent_id' => 94,
+                'order' => 1,
+                'name' => 'hotel africana',
+                'slug' => 'hotel-africana',
+                'created_at' => '2020-08-15 16:21:21',
+                'updated_at' => '2020-08-15 16:21:21',
+            ),
+            102 => 
+            array (
+                'id' => 111,
+                'parent_id' => 94,
+                'order' => 1,
+                'name' => 'fang fang',
+                'slug' => 'fang-fang',
+                'created_at' => '2020-08-15 16:21:51',
+                'updated_at' => '2020-08-15 16:21:51',
+            ),
+            103 => 
+            array (
+                'id' => 112,
+                'parent_id' => 95,
+                'order' => 1,
+                'name' => 'toyota harrier',
+                'slug' => 'toyota-harrier',
+                'created_at' => '2020-08-15 16:23:38',
+                'updated_at' => '2020-08-15 20:01:43',
+            ),
+            104 => 
+            array (
+                'id' => 113,
+                'parent_id' => 95,
+                'order' => 1,
+                'name' => 'nissan',
+                'slug' => 'nissan',
+                'created_at' => '2020-08-15 16:23:57',
+                'updated_at' => '2020-08-15 16:23:57',
+            ),
+            105 => 
+            array (
+                'id' => 114,
+                'parent_id' => 95,
+                'order' => 1,
+                'name' => 'poshe',
+                'slug' => 'poshe',
+                'created_at' => '2020-08-15 16:24:11',
+                'updated_at' => '2020-08-15 16:24:11',
+            ),
+            106 => 
+            array (
+                'id' => 115,
+                'parent_id' => 96,
+                'order' => 1,
+                'name' => 'trucks',
+                'slug' => 'trucks',
+                'created_at' => '2020-08-15 16:25:55',
+                'updated_at' => '2020-08-15 16:25:55',
+            ),
+            107 => 
+            array (
+                'id' => 116,
+                'parent_id' => 96,
+                'order' => 1,
+                'name' => 'pickups',
+                'slug' => 'pickups',
+                'created_at' => '2020-08-15 16:26:09',
+                'updated_at' => '2020-08-15 16:26:09',
+            ),
+            108 => 
+            array (
+                'id' => 117,
+                'parent_id' => 97,
+                'order' => 1,
+                'name' => 'mangoes',
+                'slug' => 'mangoes',
+                'created_at' => '2020-08-15 16:28:04',
+                'updated_at' => '2020-08-15 16:28:04',
+            ),
+            109 => 
+            array (
+                'id' => 118,
+                'parent_id' => 97,
+                'order' => 1,
+                'name' => 'water melons',
+                'slug' => 'water-melons',
+                'created_at' => '2020-08-15 16:28:26',
+                'updated_at' => '2020-08-15 16:28:26',
+            ),
+            110 => 
+            array (
+                'id' => 119,
+                'parent_id' => 98,
+                'order' => 1,
+                'name' => 'carrots',
+                'slug' => 'carrots',
+                'created_at' => '2020-08-15 16:31:55',
+                'updated_at' => '2020-08-15 16:31:55',
+            ),
+            111 => 
+            array (
+                'id' => 120,
+                'parent_id' => 98,
+                'order' => 1,
+                'name' => 'cabbages',
+                'slug' => 'cabbages',
+                'created_at' => '2020-08-15 16:32:09',
+                'updated_at' => '2020-08-15 16:32:09',
+            ),
+            112 => 
+            array (
+                'id' => 121,
+                'parent_id' => 98,
+                'order' => 1,
+                'name' => 'greens',
+                'slug' => 'greens',
+                'created_at' => '2020-08-15 16:32:41',
+                'updated_at' => '2020-08-15 16:32:41',
+            ),
+            113 => 
+            array (
+                'id' => 122,
+                'parent_id' => 16,
+                'order' => 1,
+                'name' => 'men clothing',
+                'slug' => 'men-clothing',
+                'created_at' => '2020-08-15 16:45:12',
+                'updated_at' => '2020-08-15 16:45:12',
+            ),
+            114 => 
+            array (
+                'id' => 123,
+                'parent_id' => 16,
+                'order' => 1,
+                'name' => 'women clothing',
+                'slug' => 'women-clothing',
+                'created_at' => '2020-08-15 16:45:34',
+                'updated_at' => '2020-08-15 16:45:34',
+            ),
+            115 => 
+            array (
+                'id' => 124,
+                'parent_id' => 16,
+                'order' => 1,
+                'name' => 'baby clothing',
+                'slug' => 'baby-clothing',
+                'created_at' => '2020-08-15 16:46:03',
+                'updated_at' => '2020-08-15 16:46:03',
+            ),
+            116 => 
+            array (
+                'id' => 125,
+                'parent_id' => NULL,
+                'order' => 1,
+                'name' => 'Services',
+                'slug' => 'services',
+                'created_at' => '2020-08-15 16:46:50',
+                'updated_at' => '2020-08-15 16:46:50',
+            ),
+            117 => 
+            array (
+                'id' => 126,
+                'parent_id' => 125,
+                'order' => 1,
+                'name' => 'General Services',
+                'slug' => 'domestic-services',
+                'created_at' => '2020-08-15 16:48:03',
+                'updated_at' => '2020-08-15 16:49:54',
+            ),
+            118 => 
+            array (
+                'id' => 127,
+                'parent_id' => 126,
+                'order' => 1,
+                'name' => 'cleaning services',
+                'slug' => 'cleaning-services',
+                'created_at' => '2020-08-15 16:48:28',
+                'updated_at' => '2020-08-15 16:48:28',
+            ),
+            119 => 
+            array (
+                'id' => 128,
+                'parent_id' => 126,
+                'order' => 1,
+                'name' => 'plumbing services',
+                'slug' => 'plumbing-services',
+                'created_at' => '2020-08-15 16:48:45',
+                'updated_at' => '2020-08-15 16:48:45',
+            ),
+            120 => 
+            array (
+                'id' => 129,
+                'parent_id' => 126,
+                'order' => 1,
+                'name' => 'electricians',
+                'slug' => 'electricians',
+                'created_at' => '2020-08-15 16:49:02',
+                'updated_at' => '2020-08-15 16:49:02',
+            ),
+            121 => 
+            array (
+                'id' => 130,
+                'parent_id' => 126,
+                'order' => 1,
+                'name' => 'construction',
+                'slug' => 'construction',
+                'created_at' => '2020-08-15 16:50:58',
+                'updated_at' => '2020-08-15 16:50:58',
+            ),
+            122 => 
+            array (
+                'id' => 131,
+                'parent_id' => 122,
+                'order' => 1,
+                'name' => 'shirts',
+                'slug' => 'shirts',
+                'created_at' => '2020-08-15 17:06:43',
+                'updated_at' => '2020-08-15 17:06:43',
+            ),
+            123 => 
+            array (
+                'id' => 132,
+                'parent_id' => 122,
+                'order' => 1,
+                'name' => 'trousers',
+                'slug' => 'trousers',
+                'created_at' => '2020-08-15 17:07:03',
+                'updated_at' => '2020-08-15 17:07:03',
+            ),
+            124 => 
+            array (
+                'id' => 133,
+                'parent_id' => 122,
+                'order' => 1,
+                'name' => 'suits',
+                'slug' => 'suits',
+                'created_at' => '2020-08-15 17:07:19',
+                'updated_at' => '2020-08-15 17:07:19',
+            ),
+            125 => 
+            array (
+                'id' => 134,
+                'parent_id' => 122,
+                'order' => 1,
+                'name' => 'shoes',
+                'slug' => 'shoes',
+                'created_at' => '2020-08-15 17:07:38',
+                'updated_at' => '2020-08-15 17:07:38',
+            ),
+            126 => 
+            array (
+                'id' => 135,
+                'parent_id' => 123,
+                'order' => 1,
+                'name' => 'round neck tshirts',
+                'slug' => 'round-neck-tshirts',
+                'created_at' => '2020-08-15 17:08:20',
+                'updated_at' => '2020-08-15 17:08:20',
+            ),
+            127 => 
+            array (
+                'id' => 136,
+                'parent_id' => 123,
+                'order' => 1,
+                'name' => 'women suits',
+                'slug' => 'women-suits',
+                'created_at' => '2020-08-15 17:08:36',
+                'updated_at' => '2020-08-15 17:08:36',
+            ),
+            128 => 
+            array (
+                'id' => 138,
+                'parent_id' => 123,
+                'order' => 1,
+                'name' => 'women shoes',
+                'slug' => 'women-shoes',
+                'created_at' => '2020-08-15 17:09:25',
+                'updated_at' => '2020-08-15 17:09:25',
+            ),
+            129 => 
+            array (
+                'id' => 139,
+                'parent_id' => 124,
+                'order' => 1,
+                'name' => 'baby sheets',
+                'slug' => 'baby-sheets',
+                'created_at' => '2020-08-15 17:09:56',
+                'updated_at' => '2020-08-15 17:09:56',
+            ),
+            130 => 
+            array (
+                'id' => 140,
+                'parent_id' => 124,
+                'order' => 1,
+                'name' => 'baby tshirts',
+                'slug' => 'baby-tshirts',
+                'created_at' => '2020-08-15 17:10:12',
+                'updated_at' => '2020-08-15 17:10:12',
+            ),
+            131 => 
+            array (
+                'id' => 141,
+                'parent_id' => 124,
+                'order' => 1,
+                'name' => 'baby shorts',
+                'slug' => 'baby-shorts',
+                'created_at' => '2020-08-15 17:10:30',
+                'updated_at' => '2020-08-15 17:10:30',
+            ),
+            132 => 
+            array (
+                'id' => 142,
+                'parent_id' => 17,
+                'order' => 1,
+                'name' => 'processed',
+                'slug' => 'processed',
+                'created_at' => '2020-08-15 20:19:50',
+                'updated_at' => '2020-08-15 20:19:50',
+            ),
+            133 => 
+            array (
+                'id' => 143,
+                'parent_id' => 142,
+                'order' => 1,
+                'name' => 'sugar',
+                'slug' => 'sugar',
+                'created_at' => '2020-08-15 20:20:04',
+                'updated_at' => '2020-08-15 20:20:04',
+            ),
+            134 => 
+            array (
+                'id' => 144,
+                'parent_id' => 142,
+                'order' => 1,
+                'name' => 'salt',
+                'slug' => 'salt',
+                'created_at' => '2020-08-15 20:20:17',
+                'updated_at' => '2020-08-15 20:20:17',
+            ),
+            135 => 
+            array (
+                'id' => 145,
+                'parent_id' => 142,
+                'order' => 1,
+                'name' => 'soap',
+                'slug' => 'soap',
+                'created_at' => '2020-08-15 20:21:02',
+                'updated_at' => '2020-08-15 20:21:02',
+            ),
+            136 => 
+            array (
+                'id' => 146,
+                'parent_id' => 43,
+                'order' => 1,
+                'name' => 'construction paint',
+                'slug' => 'construction-paint',
+                'created_at' => '2020-08-16 05:25:26',
+                'updated_at' => '2020-08-16 05:25:26',
             ),
         ));
         
