@@ -1217,6 +1217,22 @@ class DataRowsTableSeeder extends Seeder
                 'details' => '{}',
                 'order' => 6,
             ),
+            75 => 
+            array (
+                'id' => 91,
+                'data_type_id' => 8,
+                'field' => 'products_group',
+                'type' => 'select_dropdown',
+                'display_name' => 'Products Group',
+                'required' => 1,
+                'browse' => 1,
+                'read' => 1,
+                'edit' => 1,
+                'add' => 1,
+                'delete' => 1,
+                'details' => '{"options":{"best seller":"best seller","top rated":"top rated","hot offer":"hot offer"}}',
+                'order' => 8,
+            ),
         ));
         
         

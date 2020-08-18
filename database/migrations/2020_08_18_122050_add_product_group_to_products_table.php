@@ -14,7 +14,7 @@ class AddProductGroupToProductsTable extends Migration
     public function up()
     {
         Schema::table('products', function (Blueprint $table) {
-            $table->enum('products_group', ['best seller', 'top rated','hot offer'])->after('price');
+            $table->enum('products_group', ['featured','best seller', 'top rated','hot offer'])->after('price');
         });
     }
 
