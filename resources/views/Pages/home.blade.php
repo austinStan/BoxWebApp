@@ -12,6 +12,15 @@
 </head>
 
 <body>
+
+        <!-- Preloader -->
+        <div class="preloader">
+            <div class="load-list">
+                <div class="load"></div>
+                <div class="load load2"></div>
+            </div>
+        </div>
+        <!-- End Preloader -->
     <section class="top-bar">
         <div class="container">
             <div class="row">
