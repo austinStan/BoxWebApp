@@ -1201,6 +1201,22 @@ class DataRowsTableSeeder extends Seeder
                 'details' => '{}',
                 'order' => 10,
             ),
+            74 => 
+            array (
+                'id' => 90,
+                'data_type_id' => 8,
+                'field' => 'images',
+                'type' => 'multiple_images',
+                'display_name' => 'Images',
+                'required' => 0,
+                'browse' => 1,
+                'read' => 1,
+                'edit' => 1,
+                'add' => 1,
+                'delete' => 1,
+                'details' => '{}',
+                'order' => 6,
+            ),
         ));
         
         

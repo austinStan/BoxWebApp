@@ -108,33 +108,37 @@
         <div class="row">
             <div class="col-lg-3 col-md-0">
                 <div class="sidemenu">
-                    <p><a href="{{route('products.index')}}" class='text-white'>All Categories <i class="fa fa-bars"></i></a></p>
+                    <p><a href="{{route('products.index')}}" class='text-white'>All Categories <i
+                                class="fa fa-bars"></i></a></p>
                     <ul class="list-unstyled gt-menu">
                         @foreach($categories as $category)
-                        <li><a href="{{route('products.index',['category_id'=>$category->id])}}">{{$category->name}}<i class="fa fa-angle-right"></i></a>
+                        <li><a href="{{route('products.index',['category_id'=>$category->id])}}">{{$category->name}}<i
+                                    class="fa fa-angle-right"></i></a>
                             <?php $children= TCG\Voyager\Models\Category::where('parent_id',$category->id)->get();
-
                             ?>
                             @if($children->isNotEmpty())
                             <div class="mega-menu">
                                 <div class="row">
-                                        @foreach($children as $child)
-                                        <div class="col-md-4">
-                                            <div class="smartphone">
-                                            <a href='{{route('products.index',['category_id'=>$child->id])}}'><h6>{{$child->name}}</h6></a>
-                                                <?php $grandchild= TCG\Voyager\Models\Category::where('parent_id',$child->id)->get();
+                                    @foreach($children as $child)
+                                    <div class="col-md-4">
+                                        <div class="smartphone">
+                                            <a href='{{route('products.index',['category_id'=>$child->id])}}'>
+                                                <h6>{{$child->name}}</h6>
+                                            </a>
+                                            <?php $grandchild= TCG\Voyager\Models\Category::where('parent_id',$child->id)->get();
                                              ?>
-                                                @if($grandchild->isNotEmpty())
-                                                @foreach($grandchild as $gc)
-                                                <a href="{{route('products.index',['category_id'=>$gc->id])}}">{{$gc->name}}</a>
-                                                @endforeach
-                                                @endif   
-                                            </div>
+                                            @if($grandchild->isNotEmpty())
+                                            @foreach($grandchild as $gc)
+                                            <a
+                                                href="{{route('products.index',['category_id'=>$gc->id])}}">{{$gc->name}}</a>
+                                            @endforeach
+                                            @endif
                                         </div>
-                                        @endforeach
+                                    </div>
+                                    @endforeach
                                 </div>
                             </div>
-                            
+
                         </li>
                         @endif
                         @endforeach
@@ -543,8 +547,11 @@
                                             <img class="main-img img-fluid" src="{{asset('storage/'.$product->image)}}"
                                                 height='650px' width='700px' alt="">
                                             <span class="sale">Sale</span>
-                                            {{-- <img class="sec-img img-fluid" src="{{asset('images/Land/land.png')}}"
-                                            alt=""> --}}
+                                            @if($product->images)
+                                            @foreach(json_decode($product->images,true) as $image)
+                                            <img class="sec-img img-fluid" src="{{asset('storage/'.$image)}}" alt="">
+                                            @endforeach
+                                            @endif
                                             <div class="layer-box">
                                                 <a href="" class="it-comp" data-toggle="tooltip" data-placement="left"
                                                     title="Compare"><img src="{{asset('images/it-comp.png')}}"
@@ -584,66 +591,7 @@
 
                             </div>
                         </div>
-                        <div class="tab-pane fade" id="list" role="tabpanel">
-                            <div class="row">
-                                @foreach($products as $product)
-                                <div class="col-lg-12 col-md-6">
-                                    <div class="tab-item2">
-                                        <div class="row">
-                                            <div class="col-lg-4 col-md-12">
-                                                <div class="tab-img">
-                                                    <img class="main-img img-fluid"
-                                                        src="{{asset('storage/'.$product->image)}}" height='650px'
-                                                        wdth='700px' alt="">
-                                                    {{-- <img class="sec-img img-fluid" src="{{asset('storage/'.$product->image)}}"
-                                                    alt=""> --}}
-                                                    <span class="sale">Sale</span>
-                                                </div>
-                                            </div>
-                                            <div class="col-lg-8 col-md-12">
-                                                <div class="item-heading d-flex justify-content-between">
-                                                    <div class="item-top">
-                                                        <ul class="list-unstyled list-inline cate">
-                                                            <li class="list-inline-item"><a
-                                                                    href="#">{{$product->name}}</a>
-                                                            </li>
 
-                                                        </ul>
-                                                        <p><a href="">{{$product->location}}</a></p>
-                                                        <ul class="list-unstyled list-inline fav">
-                                                            <li class="list-inline-item"><i class="fa fa-star"></i></li>
-                                                            <li class="list-inline-item"><i class="fa fa-star"></i></li>
-                                                            <li class="list-inline-item"><i class="fa fa-star"></i></li>
-                                                            <li class="list-inline-item"><i class="fa fa-star"></i></li>
-                                                            <li class="list-inline-item"><i class="fa fa-star-o"></i>
-                                                            </li>
-                                                        </ul>
-                                                    </div>
-                                                    <div class="item-price">
-                                                        <ul class="list-unstyled list-inline ">
-                                                            <li class="list-inline-item">UGX {{$product->price}}</li>
-                                                        </ul>
-                                                    </div>
-                                                </div>
-                                                <div class="item-content">
-                                                    <p>{{$product->description}}</p>
-                                                    <a href="" class="it-cart"><span class="it-img"><img
-                                                                src="images/it-cart.png" alt=""></span><span
-                                                            class="it-title">Add To Cart</span></a>
-                                                    <a href="" class="it-fav" data-toggle="tooltip" data-placement="top"
-                                                        title="Favourite"><img src="{{asset('images/it-fav.png')}}"
-                                                            alt=""></a>
-                                                    <a href="" class="it-comp" data-toggle="tooltip"
-                                                        data-placement="top" title="Compare"><img
-                                                            src="{{asset('images/it-comp.png')}}" alt=""></a>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                                @endforeach
-                            </div>
-                        </div>
                     </div>
                     <div class="d-flex justify-content-center">
                         {{ $products->appends(request()->input())->links()}}
