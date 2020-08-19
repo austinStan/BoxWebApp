@@ -1230,7 +1230,7 @@ class DataRowsTableSeeder extends Seeder
                 'edit' => 1,
                 'add' => 1,
                 'delete' => 1,
-                'details' => '{"options":{"best seller":"best seller","top rated":"top rated","hot offer":"hot offer"}}',
+                'details' => '{"options":{"featured":"featured","best seller":"best seller","top rated":"top rated","hot offer":"hot offer"}}',
                 'order' => 8,
             ),
         ));

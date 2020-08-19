@@ -4,7 +4,7 @@ use Illuminate\Database\Migrations\Migration;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Support\Facades\Schema;
 
-class AddProductGroupToProductsTable extends Migration
+class CreateGroupingsTable extends Migration
 {
     /**
      * Run the migrations.
@@ -13,8 +13,11 @@ class AddProductGroupToProductsTable extends Migration
      */
     public function up()
     {
-        Schema::table('products', function (Blueprint $table) {
-            $table->enum('products_group', ['featured','best seller', 'top rated','hot offer'])->after('price');
+        Schema::create('groupings', function (Blueprint $table) {
+            $table->increments('id');
+            $table->string('name')->nullable();
+            $table->string('slug')->unique();
+            $table->timestamps();
         });
     }
 
@@ -25,8 +28,6 @@ class AddProductGroupToProductsTable extends Migration
      */
     public function down()
     {
-        Schema::table('products', function (Blueprint $table) {
-            $table->dropColumn('products_group');
-        });
+        Schema::dropIfExists('groupings');
     }
 }

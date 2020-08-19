@@ -32,6 +32,11 @@ class HomeController extends Controller
         
         $latest_products=Product::latest()->take(10)->get();
 
+        // $best_seller=Product::where('products_group', 'best seller')->inRandomOrder()->get();
+
+       
+
+
         return view('Pages.home',compact('categories','products','latest_products'));
     }
 }
