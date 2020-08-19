@@ -4,7 +4,7 @@ use Illuminate\Database\Migrations\Migration;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Support\Facades\Schema;
 
-class CreateGroupingsTable extends Migration
+class AddTypesToProductsTable extends Migration
 {
     /**
      * Run the migrations.
@@ -13,11 +13,8 @@ class CreateGroupingsTable extends Migration
      */
     public function up()
     {
-        Schema::create('groupings', function (Blueprint $table) {
-            $table->increments('id');
-            $table->string('name')->nullable();
-            $table->string('slug')->unique();
-            $table->timestamps();
+        Schema::table('products', function (Blueprint $table) {
+            $table->enum('types', array('featured','top seller','top rated','best deal','hot offer'))->after('price');
         });
     }
 
@@ -28,6 +25,8 @@ class CreateGroupingsTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('groupings');
+        Schema::table('products', function (Blueprint $table) {
+            $table->dropColumn('types');
+        });
     }
 }

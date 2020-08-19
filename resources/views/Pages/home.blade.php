@@ -381,7 +381,7 @@
                                     <h6>Best Deals</h6>
                                 </div>
                                 <div class="bt-body owl-carousel">
-                                    @forelse($best_deals as $bdeals)
+                                    @forelse($best_deal as $bdeals)
                                     <div class="bt-items">
                                         <div class="bt-box d-flex">
                                             <div class="bt-img">
@@ -504,14 +504,15 @@
                                     <h6>Top Rated</h6>
                                 </div>
                                 <div class="rt-slider owl-carousel">
+                                    @foreach($top_rated as $toprated)
                                     <div class="rt-items">
                                         <div class="rt-box d-flex">
                                             <div class="rt-img">
-                                                <a href="#"><img src="{{asset('images/toprated/toprated.png')}}"
-                                                        alt=""></a>
+                                                <a href="#"><img  src="{{asset('storage/'.$toprated->image)}}"
+                                                    alt="" style="height:100px;width:100px;"></a>
                                             </div>
                                             <div class="rt-content">
-                                                <p><a href="">100 acres Mpigi </a></p>
+                                            <p><a href="">{{$toprated->name}}</a></p>
                                                 <ul class="list-unstyled list-inline fav">
                                                     <li class="list-inline-item"><i class="fa fa-star"></i></li>
                                                     <li class="list-inline-item"><i class="fa fa-star"></i></li>
@@ -520,154 +521,13 @@
                                                     <li class="list-inline-item"><i class="fa fa-star-o"></i></li>
                                                 </ul>
                                                 <ul class="list-unstyled list-inline">
-                                                    <li class="list-inline-item">UGX 160M</li>
+                                                <li class="list-inline-item">UGX {{$toprated->price}}</li>
                                                     {{-- <li class="list-inline-item">$150.00</li> --}}
                                                 </ul>
                                             </div>
-                                        </div>
-                                        <div class="rt-box d-flex">
-                                            <div class="rt-img">
-                                                <a href="#"><img src="{{asset('images/toprated/toprated2.png')}}"
-                                                        alt=""></a>
-                                            </div>
-                                            <div class="rt-content">
-                                                <p><a href="">coated Ironsheets</a></p>
-                                                <ul class="list-unstyled list-inline fav">
-                                                    <li class="list-inline-item"><i class="fa fa-star"></i></li>
-                                                    <li class="list-inline-item"><i class="fa fa-star"></i></li>
-                                                    <li class="list-inline-item"><i class="fa fa-star"></i></li>
-                                                    <li class="list-inline-item"><i class="fa fa-star"></i></li>
-                                                    <li class="list-inline-item"><i class="fa fa-star-o"></i></li>
-                                                </ul>
-                                                <ul class="list-unstyled list-inline ">
-                                                    <li class="list-inline-item">UGX 400,000</li>
-                                                    {{-- <li class="list-inline-item">$150.00</li> --}}
-                                                </ul>
-                                            </div>
-                                        </div>
-                                        <div class="rt-box d-flex">
-                                            <div class="rt-img">
-                                                <a href="#"><img src="{{asset('images/toprated/toprated3.png')}}"
-                                                        alt=""></a>
-                                            </div>
-                                            <div class="rt-content">
-                                                <p><a href="">Alphine Breed,Goats</a></p>
-                                                <ul class="list-unstyled list-inline fav">
-                                                    <li class="list-inline-item"><i class="fa fa-star"></i></li>
-                                                    <li class="list-inline-item"><i class="fa fa-star"></i></li>
-                                                    <li class="list-inline-item"><i class="fa fa-star"></i></li>
-                                                    <li class="list-inline-item"><i class="fa fa-star"></i></li>
-                                                    <li class="list-inline-item"><i class="fa fa-star-o"></i></li>
-                                                </ul>
-                                                <ul class="list-unstyled list-inline ">
-                                                    <li class="list-inline-item">UGX 90,000</li>
-                                                    {{-- <li class="list-inline-item">$150.00</li> --}}
-                                                </ul>
-                                            </div>
-                                        </div>
-                                        <div class="rt-box d-flex">
-                                            <div class="rt-img">
-                                                <a href="#"><img src="{{asset('images/toprated/toprated4.png')}}"
-                                                        alt=""></a>
-                                            </div>
-                                            <div class="rt-content">
-                                                <p><a href="">Toyota 2018</a></p>
-                                                <ul class="list-unstyled list-inline fav">
-                                                    <li class="list-inline-item"><i class="fa fa-star"></i></li>
-                                                    <li class="list-inline-item"><i class="fa fa-star"></i></li>
-                                                    <li class="list-inline-item"><i class="fa fa-star"></i></li>
-                                                    <li class="list-inline-item"><i class="fa fa-star"></i></li>
-                                                    <li class="list-inline-item"><i class="fa fa-star-o"></i></li>
-                                                </ul>
-                                                <ul class="list-unstyled list-inline ">
-                                                    <li class="list-inline-item">UGX 20M</li>
-                                                    {{-- <li class="list-inline-item">$150.00</li> --}}
-                                                </ul>
-                                            </div>
-                                        </div>
+                                        </div>      
                                     </div>
-                                    <div class="rt-items">
-                                        <div class="rt-box d-flex">
-                                            <div class="rt-img">
-                                                <a href="#"><img src="{{asset('images/toprated/toprated.png')}}"
-                                                        alt=""></a>
-                                            </div>
-                                            <div class="rt-content">
-                                                <p><a href="">100 acres Mpigi </a></p>
-                                                <ul class="list-unstyled list-inline fav">
-                                                    <li class="list-inline-item"><i class="fa fa-star"></i></li>
-                                                    <li class="list-inline-item"><i class="fa fa-star"></i></li>
-                                                    <li class="list-inline-item"><i class="fa fa-star"></i></li>
-                                                    <li class="list-inline-item"><i class="fa fa-star"></i></li>
-                                                    <li class="list-inline-item"><i class="fa fa-star-o"></i></li>
-                                                </ul>
-                                                <ul class="list-unstyled list-inline">
-                                                    <li class="list-inline-item">UGX 160M</li>
-                                                    {{-- <li class="list-inline-item">$150.00</li> --}}
-                                                </ul>
-                                            </div>
-                                        </div>
-                                        <div class="rt-box d-flex">
-                                            <div class="rt-img">
-                                                <a href="#"><img src="{{asset('images/toprated/toprated2.png')}}"
-                                                        alt=""></a>
-                                            </div>
-                                            <div class="rt-content">
-                                                <p><a href="">coated Ironsheets</a></p>
-                                                <ul class="list-unstyled list-inline fav">
-                                                    <li class="list-inline-item"><i class="fa fa-star"></i></li>
-                                                    <li class="list-inline-item"><i class="fa fa-star"></i></li>
-                                                    <li class="list-inline-item"><i class="fa fa-star"></i></li>
-                                                    <li class="list-inline-item"><i class="fa fa-star"></i></li>
-                                                    <li class="list-inline-item"><i class="fa fa-star-o"></i></li>
-                                                </ul>
-                                                <ul class="list-unstyled list-inline ">
-                                                    <li class="list-inline-item">UGX 400,000</li>
-                                                    {{-- <li class="list-inline-item">$150.00</li> --}}
-                                                </ul>
-                                            </div>
-                                        </div>
-                                        <div class="rt-box d-flex">
-                                            <div class="rt-img">
-                                                <a href="#"><img src="{{asset('images/toprated/toprated4.png')}}"
-                                                        alt=""></a>
-                                            </div>
-                                            <div class="rt-content">
-                                                <p><a href="">Toyota 2018</a></p>
-                                                <ul class="list-unstyled list-inline fav">
-                                                    <li class="list-inline-item"><i class="fa fa-star"></i></li>
-                                                    <li class="list-inline-item"><i class="fa fa-star"></i></li>
-                                                    <li class="list-inline-item"><i class="fa fa-star"></i></li>
-                                                    <li class="list-inline-item"><i class="fa fa-star"></i></li>
-                                                    <li class="list-inline-item"><i class="fa fa-star-o"></i></li>
-                                                </ul>
-                                                <ul class="list-unstyled list-inline ">
-                                                    <li class="list-inline-item">UGX 20M</li>
-                                                    {{-- <li class="list-inline-item">$150.00</li> --}}
-                                                </ul>
-                                            </div>
-                                        </div>
-                                        <div class="rt-box d-flex">
-                                            <div class="rt-img">
-                                                <a href="#"><img src="{{asset('images/toprated/toprated3.png')}}"
-                                                        alt=""></a>
-                                            </div>
-                                            <div class="rt-content">
-                                                <p><a href="">Alphine Breed,Goats</a></p>
-                                                <ul class="list-unstyled list-inline fav">
-                                                    <li class="list-inline-item"><i class="fa fa-star"></i></li>
-                                                    <li class="list-inline-item"><i class="fa fa-star"></i></li>
-                                                    <li class="list-inline-item"><i class="fa fa-star"></i></li>
-                                                    <li class="list-inline-item"><i class="fa fa-star"></i></li>
-                                                    <li class="list-inline-item"><i class="fa fa-star-o"></i></li>
-                                                </ul>
-                                                <ul class="list-unstyled list-inline ">
-                                                    <li class="list-inline-item">UGX 90,000</li>
-                                                    {{-- <li class="list-inline-item">$150.00</li> --}}
-                                                </ul>
-                                            </div>
-                                        </div>
-                                    </div>
+                                    @endforeach
                                 </div>
                             </div>
                         </div>
@@ -839,7 +699,7 @@
                                 </div>
                                
                                 <div class="slr-slider owl-carousel">
-                                    @forelse($best_seller as $bseller)
+                                    @forelse($top_seller as $bseller)
                                     <div class="slr-items">
                                         <div class="slr-box d-flex">
                                             <div class="slr-img">
