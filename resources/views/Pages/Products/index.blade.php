@@ -12,8 +12,8 @@
         <div class="row">
             <div class="col-md-3">
                 <div class="logo">
-                    <a href="{{url('/')}}"><img src="{{asset('images/box.png')}}" height='60px' width='150px'
-                            alt=""></a>
+                    <a href="{{url('/')}}"><img src={{asset("images/logo/set.png")}} alt="" width='100px' height='90px' style="border-radius:5px; padding-top:20px;">
+                            </a>
                 </div>
             </div>
             <div class="col-lg-6 col-md-7 padding-fix">
