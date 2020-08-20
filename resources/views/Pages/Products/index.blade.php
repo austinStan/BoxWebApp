@@ -12,8 +12,9 @@
         <div class="row">
             <div class="col-md-3">
                 <div class="logo">
-                    <a href="{{url('/')}}"><img src={{asset("images/logo/set.png")}} alt="" width='100px' height='90px' style="border-radius:5px; padding-top:20px;">
-                            </a>
+                    <a href="{{url('/')}}"><img src={{asset("images/logo/set.png")}} alt="" width='100px' height='90px'
+                            style="border-radius:5px; padding-top:20px;">
+                    </a>
                 </div>
             </div>
             <div class="col-lg-6 col-md-7 padding-fix">
@@ -553,9 +554,6 @@
                                             @endforeach
                                             @endif
                                             <div class="layer-box">
-                                                <a href="" class="it-comp" data-toggle="tooltip" data-placement="left"
-                                                    title="Compare"><img src="{{asset('images/it-comp.png')}}"
-                                                        alt=""></a>
                                                 <a href="" class="it-fav" data-toggle="tooltip" data-placement="left"
                                                     title="Favourite"><img src="{{asset('images/it-fav.png')}}"
                                                         alt=""></a>
@@ -591,7 +589,65 @@
 
                             </div>
                         </div>
-
+                        <div class="tab-pane fade" id="list" role="tabpanel">
+                            <div class="row">
+                                @foreach($products as $product)
+                                <div class="col-lg-12 col-md-6">
+                                    <div class="tab-item2">
+                                        <div class="row">
+                                            <div class="col-lg-4 col-md-12">
+                                                <div class="tab-img">
+                                                    <img class="main-img img-fluid"
+                                                        src="{{asset('storage/'.$product->image)}}" alt="">
+                                                    @if($product->images)
+                                                    @foreach(json_decode($product->images,true) as $image)
+                                                    <img class="sec-img img-fluid" src="{{asset('storage/'.$image)}}"
+                                                        alt="">
+                                                    @endforeach
+                                                    @endif
+                                                    <span class="sale">Sale</span>
+                                                </div>
+                                            </div>
+                                            <div class="col-lg-8 col-md-12">
+                                                <div class="item-heading d-flex justify-content-between">
+                                                    <div class="item-top">
+                                                        {{-- <ul class="list-unstyled list-inline cate">
+                                                            <li class="list-inline-item"><a href="#">Home Appliance,</a></li>
+                                                            <li class="list-inline-item"><a href="#">Smart Led</a></li>
+                                                        </ul> --}}
+                                                        <p><a href="">{{$product->name}}</a></p>
+                                                        <ul class="list-unstyled list-inline fav">
+                                                            <li class="list-inline-item"><i class="fa fa-star"></i></li>
+                                                            <li class="list-inline-item"><i class="fa fa-star"></i></li>
+                                                            <li class="list-inline-item"><i class="fa fa-star"></i></li>
+                                                            <li class="list-inline-item"><i class="fa fa-star"></i></li>
+                                                            <li class="list-inline-item"><i class="fa fa-star-o"></i>
+                                                            </li>
+                                                        </ul>
+                                                    </div>
+                                                    <div class="item-price">
+                                                        <ul class="list-unstyled list-inline">
+                                                            <li class="list-inline-item">UGX {{$product->price}}</li>
+                                                            {{-- <li class="list-inline-item">$150.00</li> --}}
+                                                        </ul>
+                                                    </div>
+                                                </div>
+                                                <div class="item-content">
+                                                    <p>{{$product->description}}</p>
+                                                    <a href="" class="it-cart"><span class="it-img"><img
+                                                                src="images/it-cart.png" alt=""></span><span
+                                                            class="it-title">Add To Cart</span></a>
+                                                    <a href="" class="it-fav" data-toggle="tooltip" data-placement="top"
+                                                        title="Favourite"><img src="images/it-fav.png" alt=""></a>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                   
+                                </div>
+                                @endforeach
+                            </div>
+                        </div>
                     </div>
                     <div class="d-flex justify-content-center">
                         {{ $products->appends(request()->input())->links()}}
