@@ -419,7 +419,7 @@ input:focus, textarea:focus {
   margin-right: 15px;
 }
 .header_social li a:hover{
-  color:#ec0002;
+  color:#f00c93;
 
 }
 /*End*/
@@ -469,7 +469,7 @@ input:focus, textarea:focus {
 }
 
 .top-bar .top-right ul li  a:hover {
-  color:  #ec0002;
+  color:  #f00c93;;
   font-weight: 600;
 }
 
@@ -703,12 +703,12 @@ input:focus, textarea:focus {
 }
 
 .logo-area form.search-bar input:focus {
-  border-color:  #ec0002;
+  border-color:  #f00c93;
 }
 
 .logo-area form.search-bar button {
   font-size: 18px;
-  color: #ec0002;;
+  color: #f00c93;
   background: transparent;
   height: 100%;
   width: 50px;
@@ -758,7 +758,7 @@ input:focus, textarea:focus {
 .logo-area .carts-area .cart-box a span {
   font-size: 12px;
   color: #fff;
-  background: #ec0002;
+  background: #f00c93;
   position: absolute;
   width: 20px;
   height: 20px;
@@ -1367,7 +1367,7 @@ input:focus, textarea:focus {
 }
 
 .sticky-menu .carts-area .src-box form input:focus {
-  border-color: #5677fc;
+  border-color: #f00c93;
 }
 
 .sticky-menu .carts-area .src-box form button {
@@ -1398,7 +1398,7 @@ input:focus, textarea:focus {
 .sticky-menu .carts-area .wsh-box a span {
   font-size: 12px;
   color: #fff;
-  background: #ec0002;
+  background: #f00c93;
   position: absolute;
   width: 20px;
   height: 20px;
@@ -1426,7 +1426,7 @@ input:focus, textarea:focus {
 .sticky-menu .carts-area .cart-box a span {
   font-size: 12px;
   color: #fff;
-  background: #ec0002;
+  background: #f00c93;
   position: absolute;
   width: 20px;
   height: 20px;
@@ -1486,10 +1486,10 @@ input:focus, textarea:focus {
 
 .menu-area .main-menu ul li:last-child.trac-btn a {
   font-size: 14px;
-  color: #e45151;
+  color: #f00c93;
   background: #fff;
   padding: 4px 15px;
-  border: 1px solid #e45151;
+  border: 1px solid #f00c93;
   -webkit-border-radius: 30px;
   -moz-border-radius: 30px;
   -ms-border-radius: 30px;
@@ -1497,7 +1497,7 @@ input:focus, textarea:focus {
 }
 
 .menu-area .main-menu ul li:last-child.trac-btn a:hover {
-  background: #e45151;
+  background: #f00c93;
   color: #fff;
 }
 
@@ -2314,7 +2314,7 @@ input:focus, textarea:focus {
 .slider-area .menu-widget p {
   font-size: 15px;
   color: #fff;
-  background: #ec0002;
+  background: #f00c93;
   padding: 12px 20px;
   text-transform: uppercase;
   font-weight: 700;
@@ -2487,7 +2487,7 @@ input:focus, textarea:focus {
 }
 
 .slider-area .owl-slider .slider-item .slider-box .slider-table .slider-tablecell h5 {
-  color: #e45151;
+  color: #f00c93;
   font-weight: 600;
   margin-bottom: 8px;
 }
@@ -2507,7 +2507,7 @@ input:focus, textarea:focus {
 .slider-area .owl-slider .slider-item .slider-box .slider-table .slider-tablecell a {
   font-size: 15px;
   color: #fff;
-  background:  #e45151;;
+  background:  #f00c93;
   padding: 8px 20px;
   -webkit-border-radius: 30px;
   -moz-border-radius: 30px;
@@ -2516,7 +2516,7 @@ input:focus, textarea:focus {
 }
 
 .slider-area .owl-slider .slider-item .slider-box .slider-table .slider-tablecell a:hover {
-  background: #5677fc;
+  background: #008B8B;
 }
 
 .slider-area .owl-slider .slider-item1 img {
@@ -2588,7 +2588,7 @@ input:focus, textarea:focus {
   display: inline-block;
   width: 15px;
   height: 15px;
-  border: 2px solid #e45151;
+  border: 2px solid #f00c93;
   -webkit-border-radius: 50%;
   -moz-border-radius: 50%;
   -ms-border-radius: 50%;
@@ -2597,9 +2597,9 @@ input:focus, textarea:focus {
 }
 
 .slider-area .owl-slider .owl-dots .owl-dot.active {
-  background: #e45151;
+  background: #f00c93;
 }
-
+  
 .slider-area .slider-btm-box .single-box {
   position: relative;
   overflow: hidden;
@@ -2920,9 +2920,9 @@ input:focus, textarea:focus {
 }
 
 .product-area .bt-deal .bt-body .owl-nav div:hover {
-  background: #5677fc;
+  background: #008B8B;
   color: #fff;
-  border-color: #5677fc;
+  border-color: #008B8B;
 }
 
 .product-area .bt-deal .bt-body .owl-nav div.owl-prev {
@@ -2966,7 +2966,7 @@ input:focus, textarea:focus {
 }
 
 .product-area .ftr-product .tab-box ul.nav li.nav-item a.nav-link.active {
-  background: #5677fc;
+  background: #008B8B;
   color: #fff;
 }
 
@@ -2988,7 +2988,7 @@ input:focus, textarea:focus {
 }
 
 .product-area .ftr-product .tab-content .tab-pane .tab-slider .tab-item .tab-heading ul li a:hover {
-  color: #e45151;
+  color: #f00c93;
 }
 
 .product-area .ftr-product .tab-content .tab-pane .tab-slider .tab-item .tab-heading p {
@@ -2997,12 +2997,12 @@ input:focus, textarea:focus {
 
 .product-area .ftr-product .tab-content .tab-pane .tab-slider .tab-item .tab-heading p a {
   font-size: 16px;
-  color: #5677fc;
-  font-weight: 600;
+  color: 	#414a4c;
+  font-weight: 500;
 }
 
 .product-area .ftr-product .tab-content .tab-pane .tab-slider .tab-item .tab-heading p a:hover {
-  color: #e45151;
+  color: #f00c93;
 }
 
 .product-area .ftr-product .tab-content .tab-pane .tab-slider .tab-item .tab-img {
@@ -3191,7 +3191,7 @@ input:focus, textarea:focus {
 }
 
 .product-area .ftr-product .tab-content .tab-pane .tab-slider .owl-nav div:hover {
-  background: #5677fc;
+  background: #008B8B;
   color: #fff;
 }
 
@@ -3388,9 +3388,9 @@ input:focus, textarea:focus {
 }
 
 .product-area .ht-offer .ht-body .owl-nav div:hover {
-  background: #5677fc;
+  background: #008B8B;
   color: #fff;
-  border-color: #5677fc;
+  border-color: #008B8B;
 }
 
 .product-area .ht-offer .ht-body .owl-nav div.owl-prev {
@@ -3435,12 +3435,12 @@ input:focus, textarea:focus {
 
 .product-area .new-product .new-slider .new-item .tab-heading p a {
   font-size: 16px;
-  color: #5677fc;
-  font-weight: 600;
+  color:	#414a4c;
+  font-weight: 500;
 }
 
 .product-area .new-product .new-slider .new-item .tab-heading p a:hover {
-  color: #e45151;
+  color: #f00c93;
 }
 
 .product-area .new-product .new-slider .new-item .new-img {
@@ -3955,9 +3955,9 @@ input:focus, textarea:focus {
 }
 
 .product-area .top-rtd .rt-slider .owl-nav div:hover {
-  background: #5677fc;
+  background: #008B8B;
   color: #fff;
-  border-color: #5677fc;
+  border-color:#008B8B;
 }
 
 .product-area .top-rtd .rt-slider .owl-nav div.owl-prev {
@@ -4025,7 +4025,7 @@ input:focus, textarea:focus {
 .product-area .nw-ltr .nw-box form button {
   width: 100%;
   height: 35px;
-  background: #ec0002;
+  background: #f00c93;
   color: #fff;
   border: none;
   -webkit-border-radius: 30px;
@@ -4036,7 +4036,7 @@ input:focus, textarea:focus {
 }
 
 .product-area .nw-ltr .nw-box form button:hover {
-  background: #5677fc;
+  background: #008B8B;
 }
 
 .product-area .tp-bnd {

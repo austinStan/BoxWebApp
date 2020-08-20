@@ -70,7 +70,10 @@
             <div class="row">
                 <div class="col-md-3">
                     <div class="logo">
-                        <a href=""><img src={{asset("images/box.png")}} alt="" height='60px' width='150px'></a>
+                        <a href=""><img src={{asset("images/logo/set.png")}} alt="" width='100px' height='90px' style="border-radius:5px; padding-top:10px;">
+                        
+                        </a>
+                      
                     </div>
                 </div>
                 <div class="col-md-5 padding-fix">
@@ -412,12 +415,14 @@
                         <div class="col-md-12">
                             <div class="ht-offer">
                                 <div class="sec-title">
-                                    <h6>Hot Offer</h6>
+                                    <h6>Hot Offers</h6>
                                 </div>
                                 <div class="ht-body owl-carousel">
+                                    @foreach($hot_offer as $hotoffer)
                                     <div class="ht-item">
                                         <div class="ht-img">
-                                            <a href="#"><img src="{{asset('images/hotoffers/hotoffer.png')}}" alt=""
+                                            <a href="#"><img src="{{asset('storage/'.$hotoffer->image)}}"
+                                               alt=""
                                                     class="img-fluid"></a>
                                             <span>- 59%</span>
                                             <ul class="list-unstyled list-inline counter-box">
@@ -432,7 +437,7 @@
                                             </ul>
                                         </div>
                                         <div class="ht-content">
-                                            <p><a href="">2 bedrooms,Ntinda kampala</a></p>
+                                        <p><a href="">{{$hotoffer->name}}</a></p>
                                             <ul class="list-unstyled list-inline fav">
                                                 <li class="list-inline-item"><i class="fa fa-star"></i></li>
                                                 <li class="list-inline-item"><i class="fa fa-star"></i></li>
@@ -441,42 +446,12 @@
                                                 <li class="list-inline-item"><i class="fa fa-star-o"></i></li>
                                             </ul>
                                             <ul class="list-unstyled list-inline">
-                                                <li class="list-inline-item">UGX 150M,negotiable</li>
+                                            <li class="list-inline-item">UGX {{$hotoffer->price}}</li>
                                                 {{-- <li class="list-inline-item">$150.00</li> --}}
                                             </ul>
                                         </div>
                                     </div>
-                                    <div class="ht-item">
-                                        <div class="ht-img">
-                                            <a href="#"><img src="{{asset('images/hotoffers/hotoffer2.png')}}" alt=""
-                                                    class="img-fluid"></a>
-                                            <span>- 59%</span>
-                                            <ul class="list-unstyled list-inline counter-box">
-                                                <li class="list-inline-item">185 <p>Days</p>
-                                                </li>
-                                                <li class="list-inline-item">11 <p>Hrs</p>
-                                                </li>
-                                                <li class="list-inline-item">39 <p>Mins</p>
-                                                </li>
-                                                <li class="list-inline-item">51 <p>Sec</p>
-                                                </li>
-                                            </ul>
-                                        </div>
-                                        <div class="ht-content">
-                                            <p><a href="">40 acres Matugga</a></p>
-                                            <ul class="list-unstyled list-inline fav">
-                                                <li class="list-inline-item"><i class="fa fa-star"></i></li>
-                                                <li class="list-inline-item"><i class="fa fa-star"></i></li>
-                                                <li class="list-inline-item"><i class="fa fa-star"></i></li>
-                                                <li class="list-inline-item"><i class="fa fa-star"></i></li>
-                                                <li class="list-inline-item"><i class="fa fa-star-o"></i></li>
-                                            </ul>
-                                            <ul class="list-unstyled list-inline">
-                                                <li class="list-inline-item">UGX 100M</li>
-                                                {{-- <li class="list-inline-item">$150.00</li> --}}
-                                            </ul>
-                                        </div>
-                                    </div>
+                                    @endforeach
                                 </div>
                             </div>
                         </div>
@@ -569,10 +544,10 @@
                                             @foreach($products as $product)
                                             <div class="tab-item">
                                                 <div class="tab-heading">
-                                                    <ul class="list-unstyled list-inline">
+                                                    {{-- <ul class="list-unstyled list-inline">
                                                     <li class="list-inline-item"><a href="#"></a></li>
-                                                        {{-- <li class="list-inline-item"><a href="#">Smart Led</a></li> --}}
-                                                    </ul>
+                                                        <li class="list-inline-item"><a href="#">Smart Led</a></li> --}}
+                                                    {{-- </ul> --}}
                                                 <p><a href="">{{$product->name}}</a></p>
                                                 </div>
                                                 <div class="tab-img">
@@ -619,7 +594,7 @@
                                 </div>
                             </div>
                         </div>
-                        <div class="col-md-12 padding-fix-l20">
+                        {{-- <div class="col-md-12 padding-fix-l20">
                             <div class="row">
                                 <div class="col-md-6">
                                     <div class="banner">
@@ -634,7 +609,7 @@
                                     </div>
                                 </div>
                             </div>
-                        </div>
+                        </div> --}}
                         <div class="col-md-12 padding-fix-l20">
                             <div class="new-product">
                                 <div class="sec-title">
@@ -686,12 +661,12 @@
                                 </div>
                             </div>
                         </div>
-                        <div class="col-md-12 padding-fix-l20">
+                        {{-- <div class="col-md-12 padding-fix-l20">
                             <div class="banner-two">
                                 <a href="#"><img src="{{asset('images/banners/banner-box.png')}}" alt=""
                                         class="img-fluid"></a>
                             </div>
-                        </div>
+                        </div> --}}
                         <div class="col-md-12 padding-fix-l20">
                             <div class="top-slr">
                                 <div class="sec-title">
