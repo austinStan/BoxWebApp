@@ -8,6 +8,7 @@ use App\User;
 use Illuminate\Foundation\Auth\RegistersUsers;
 use Illuminate\Support\Facades\Hash;
 use Illuminate\Support\Facades\Validator;
+use TCG\Voyager\Models\Category;
 
 class RegisterController extends Controller
 {
@@ -26,7 +27,9 @@ class RegisterController extends Controller
 
     public function showRegistrationForm()
     {
-        return view('authentication.register');
+        $categories=Category::whereNull('parent_id')->get();
+       
+        return view('authentication.register',compact('categories'));
     }
 
     /**

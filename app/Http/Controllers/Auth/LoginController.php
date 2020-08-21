@@ -5,6 +5,7 @@ namespace App\Http\Controllers\Auth;
 use App\Http\Controllers\Controller;
 use App\Providers\RouteServiceProvider;
 use Illuminate\Foundation\Auth\AuthenticatesUsers;
+use TCG\Voyager\Models\Category;
 
 class LoginController extends Controller
 {
@@ -24,7 +25,8 @@ class LoginController extends Controller
 
     public function showLoginForm()
     {
-        return view('authentication.login');
+        $categories=Category::whereNull('parent_id')->get();
+        return view('authentication.login',compact('categories'));
     }
 
 

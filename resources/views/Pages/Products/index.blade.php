@@ -7,56 +7,7 @@
 @include('_partials.scrollable')
 <!-- End Top Bar 2 -->
 <!-- Logo Area 2 -->
-<section class="logo-area2">
-    <div class="container">
-        <div class="row">
-            <div class="col-md-3">
-                <div class="logo">
-                    <a href="{{url('/')}}"><img src={{asset("images/logo/set.png")}} alt="" width='100px' height='90px'
-                            style="border-radius:5px; padding-top:20px;">
-                    </a>
-                </div>
-            </div>
-            <div class="col-lg-6 col-md-7 padding-fix">
-                <form action="#" class="search-bar d-flex">
-                    <input type="text" name="search-bar" placeholder="I'm looking for...">
-                    <div class="search-cat">
-                        <select class="form-control scat-id">
-                            <option>All Categories</option>
-                            <option>Land</option>
-                            <option>Houses</option>
-                            <option>Building Materials</option>
-                            <option>Plumbing Tools</option>
-                            <option>Electrical&Wiring</option>
-                            <option>Livestock</option>
-                            <option>Apartments</option>
-                            <option>Vehicles</option>
-                            <option>Groceries</option>
-                            <option>Services</option>
-                        </select>
-                    </div>
-                    <button type="submit"><i class="fa fa-search"></i></button>
-                </form>
-            </div>
-            <div class="col-lg-3 col-md-2">
-                <div class="carts-area d-flex">
-                    <div class="wsh-box ml-auto">
-                        <a href="" data-toggle="tooltip" data-placement="top" title="Wishlist">
-                            <img src="{{asset('images/heart.png')}}" alt="favorite">
-                            <span>0</span>
-                        </a>
-                    </div>
-                    <div class="cart-box ml-4">
-                        <a href="" data-toggle="tooltip" data-placement="top" title="Shopping Cart" class="cart-btn">
-                            <img src="{{asset('images/cart.png')}}" alt="cart">
-                            <span>2</span>
-                        </a>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-</section>
+@include('_partials.logo_area')
 <!-- End Logo Area 2 -->
 
 <!-- Cart Body -->
@@ -238,208 +189,34 @@
             <div class="col-md-3">
                 <div class="category-box">
                     <div class="sec-title">
-                        <h6>Categories</h6>
+                      <a href='{{route('products.index')}}'><h6>Categories</h6></a>
                     </div>
                     <!-- accordion -->
                     <div id="accordion">
+                        @foreach($categories as $category)
                         <div class="card">
                             <div class="card-header">
-                                <a href="" data-toggle="collapse" data-target="#collapse1">
-                                    <span>Land</span>
+                            <a href="{{route('products.index',['category_id'=>$category->id])}}" data-toggle="collapse" data-target="#collapse{{$category->id}}">
+                                <span>{{$category->name}}</span>
                                     <i class="fa fa-angle-down"></i>
+                                 
                                 </a>
                             </div>
-                            <div id="collapse1" class="collapse">
+                            <?php $children= TCG\Voyager\Models\Category::where('parent_id',$category->id)->get();
+                            ?>
+                              @if($children->isNotEmpty())
+                        <div id="collapse{{$category->id}}" class="collapse">
                                 <div class="card-body">
                                     <ul class="list-unstyled">
-                                        <li><a href=""><i class="fa fa-angle-right"></i> Catagory 1</a></li>
-                                        <li><a href=""><i class="fa fa-angle-right"></i> Catagory 2</a></li>
-                                        <li><a href=""><i class="fa fa-angle-right"></i> Catagory 3</a></li>
-                                        <li><a href=""><i class="fa fa-angle-right"></i> Catagory 4</a></li>
+                                        @foreach($children as  $child)
+                                    <li><a href="{{route('products.index',['category_id'=>$child->id])}}"><i class="fa fa-angle-right"></i>{{$child->name}}</a></li>
+                                        @endforeach
                                     </ul>
                                 </div>
                             </div>
+                            @endif
                         </div>
-                        <div class="card">
-                            <div class="card-header">
-                                <a href="" data-toggle="collapse" data-target="#collapse2">
-                                    <span>Houses</span>
-                                    <i class="fa fa-angle-down"></i>
-                                </a>
-                            </div>
-                            <div id="collapse2" class="collapse">
-                                <div class="card-body">
-                                    <ul class="list-unstyled">
-                                        <li><a href=""><i class="fa fa-angle-right"></i> Catagory 1</a></li>
-                                        <li><a href=""><i class="fa fa-angle-right"></i> Catagory 2</a></li>
-                                        <li><a href=""><i class="fa fa-angle-right"></i> Catagory 3</a></li>
-                                        <li><a href=""><i class="fa fa-angle-right"></i> Catagory 4</a></li>
-                                    </ul>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="card">
-                            <div class="card-header">
-                                <a href="" data-toggle="collapse" data-target="#collapse3">
-                                    <span>Building Materials</span>
-                                    <i class="fa fa-angle-down"></i>
-                                </a>
-                            </div>
-                            <div id="collapse3" class="collapse">
-                                <div class="card-body">
-                                    <ul class="list-unstyled">
-                                        <li><a href=""><i class="fa fa-angle-right"></i> Catagory 1</a></li>
-                                        <li><a href=""><i class="fa fa-angle-right"></i> Catagory 2</a></li>
-                                        <li><a href=""><i class="fa fa-angle-right"></i> Catagory 3</a></li>
-                                        <li><a href=""><i class="fa fa-angle-right"></i> Catagory 4</a></li>
-                                    </ul>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="card">
-                            <div class="card-header">
-                                <a href="" data-toggle="collapse" data-target="#collapse4">
-                                    <span>Plumbing Tools</span>
-                                    <i class="fa fa-angle-down"></i>
-                                </a>
-                            </div>
-                            <div id="collapse4" class="collapse">
-                                <div class="card-body">
-                                    <ul class="list-unstyled">
-                                        <li><a href=""><i class="fa fa-angle-right"></i> Catagory 1</a></li>
-                                        <li><a href=""><i class="fa fa-angle-right"></i> Catagory 2</a></li>
-                                        <li><a href=""><i class="fa fa-angle-right"></i> Catagory 3</a></li>
-                                        <li><a href=""><i class="fa fa-angle-right"></i> Catagory 4</a></li>
-                                    </ul>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="card">
-                            <div class="card-header">
-                                <a href="" data-toggle="collapse" data-target="#collapse5">
-                                    <span>Electricals & Wiring</span>
-                                    <i class="fa fa-angle-down"></i>
-                                </a>
-                            </div>
-                            <div id="collapse5" class="collapse">
-                                <div class="card-body">
-                                    <ul class="list-unstyled">
-                                        <li><a href=""><i class="fa fa-angle-right"></i> Catagory 1</a></li>
-                                        <li><a href=""><i class="fa fa-angle-right"></i> Catagory 2</a></li>
-                                        <li><a href=""><i class="fa fa-angle-right"></i> Catagory 3</a></li>
-                                        <li><a href=""><i class="fa fa-angle-right"></i> Catagory 4</a></li>
-                                    </ul>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="card">
-                            <div class="card-header">
-                                <a href="" data-toggle="collapse" data-target="#collapse6">
-                                    <span>Livestock</span>
-                                    <i class="fa fa-angle-down"></i>
-                                </a>
-                            </div>
-                            <div id="collapse6" class="collapse">
-                                <div class="card-body">
-                                    <ul class="list-unstyled">
-                                        <li><a href=""><i class="fa fa-angle-right"></i> Catagory 1</a></li>
-                                        <li><a href=""><i class="fa fa-angle-right"></i> Catagory 2</a></li>
-                                        <li><a href=""><i class="fa fa-angle-right"></i> Catagory 3</a></li>
-                                        <li><a href=""><i class="fa fa-angle-right"></i> Catagory 4</a></li>
-                                    </ul>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="card">
-                            <div class="card-header">
-                                <a href="" data-toggle="collapse" data-target="#collapse7">
-                                    <span>Apartments</span>
-                                    <i class="fa fa-angle-down"></i>
-                                </a>
-                            </div>
-                            <div id="collapse7" class="collapse">
-                                <div class="card-body">
-                                    <ul class="list-unstyled">
-                                        <li><a href=""><i class="fa fa-angle-right"></i> Catagory 1</a></li>
-                                        <li><a href=""><i class="fa fa-angle-right"></i> Catagory 2</a></li>
-                                        <li><a href=""><i class="fa fa-angle-right"></i> Catagory 3</a></li>
-                                        <li><a href=""><i class="fa fa-angle-right"></i> Catagory 4</a></li>
-                                    </ul>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="card">
-                            <div class="card-header">
-                                <a href="" data-toggle="collapse" data-target="#collapse7">
-                                    <span>Vehicles</span>
-                                    <i class="fa fa-angle-down"></i>
-                                </a>
-                            </div>
-                            <div id="collapse7" class="collapse">
-                                <div class="card-body">
-                                    <ul class="list-unstyled">
-                                        <li><a href=""><i class="fa fa-angle-right"></i> Catagory 1</a></li>
-                                        <li><a href=""><i class="fa fa-angle-right"></i> Catagory 2</a></li>
-                                        <li><a href=""><i class="fa fa-angle-right"></i> Catagory 3</a></li>
-                                        <li><a href=""><i class="fa fa-angle-right"></i> Catagory 4</a></li>
-                                    </ul>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="card">
-                            <div class="card-header">
-                                <a href="" data-toggle="collapse" data-target="#collapse7">
-                                    <span>Groceries</span>
-                                    <i class="fa fa-angle-down"></i>
-                                </a>
-                            </div>
-                            <div id="collapse7" class="collapse">
-                                <div class="card-body">
-                                    <ul class="list-unstyled">
-                                        <li><a href=""><i class="fa fa-angle-right"></i> Catagory 1</a></li>
-                                        <li><a href=""><i class="fa fa-angle-right"></i> Catagory 2</a></li>
-                                        <li><a href=""><i class="fa fa-angle-right"></i> Catagory 3</a></li>
-                                        <li><a href=""><i class="fa fa-angle-right"></i> Catagory 4</a></li>
-                                    </ul>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="card">
-                            <div class="card-header">
-                                <a href="" data-toggle="collapse" data-target="#collapse7">
-                                    <span>Clothings</span>
-                                    <i class="fa fa-angle-down"></i>
-                                </a>
-                            </div>
-                            <div id="collapse7" class="collapse">
-                                <div class="card-body">
-                                    <ul class="list-unstyled">
-                                        <li><a href=""><i class="fa fa-angle-right"></i> Catagory 1</a></li>
-                                        <li><a href=""><i class="fa fa-angle-right"></i> Catagory 2</a></li>
-                                        <li><a href=""><i class="fa fa-angle-right"></i> Catagory 3</a></li>
-                                        <li><a href=""><i class="fa fa-angle-right"></i> Catagory 4</a></li>
-                                    </ul>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="card">
-                            <div class="card-header">
-                                <a href="" data-toggle="collapse" data-target="#collapse7">
-                                    <span>Services</span>
-                                    <i class="fa fa-angle-down"></i>
-                                </a>
-                            </div>
-                            <div id="collapse7" class="collapse">
-                                <div class="card-body">
-                                    <ul class="list-unstyled">
-                                        <li><a href=""><i class="fa fa-angle-right"></i> Catagory 1</a></li>
-                                        <li><a href=""><i class="fa fa-angle-right"></i> Catagory 2</a></li>
-                                        <li><a href=""><i class="fa fa-angle-right"></i> Catagory 3</a></li>
-                                        <li><a href=""><i class="fa fa-angle-right"></i> Catagory 4</a></li>
-                                    </ul>
-                                </div>
-                            </div>
-                        </div>
+                        @endforeach
                     </div>
                 </div>
                 {{-- <div class="cat-brand">
