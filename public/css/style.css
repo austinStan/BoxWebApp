@@ -2814,7 +2814,7 @@ input:focus, textarea:focus {
 }
 
 .service-area .service-box .sr-img {
-  background: #ec0002;
+  background: #f00c93;
   padding: 18px;
   -webkit-border-radius: 50%;
   -moz-border-radius: 50%;
@@ -5074,7 +5074,7 @@ input:focus, textarea:focus {
 }
 
 .category .category-box #accordion .card .card-header a[aria-expanded="true"] span {
-  color: #5677fc;
+  color: #f00c93;
 }
 
 .category .category-box #accordion .card .card-header a[aria-expanded="true"] i {
@@ -5098,7 +5098,7 @@ input:focus, textarea:focus {
 }
 
 .category .category-box #accordion .card .card-body ul li a:hover {
-  color: #5677fc;
+  color: #f00c93;
 }
 
 .category .cat-brand {
@@ -5164,7 +5164,7 @@ input:focus, textarea:focus {
   height: 100%;
   z-index: 1;
   display: block;
-  background: #5677fc none repeat scroll 0 0;
+  background: #f00c93 none repeat scroll 0 0;
 }
 
 .category .price-range .price-filter #slider-range.ui-slider span.ui-slider-handle {
@@ -5199,9 +5199,9 @@ input:focus, textarea:focus {
 
 .category .price-range .price-filter button {
   font-size: 15px;
-  color: #5677fc;
+  color: #f00c93;
   background: transparent;
-  border: 1px solid #5677fc;
+  border: 1px solid #f00c93;
   -webkit-border-radius: 30px;
   -moz-border-radius: 30px;
   -ms-border-radius: 30px;
@@ -5211,7 +5211,7 @@ input:focus, textarea:focus {
 }
 
 .category .price-range .price-filter button:hover {
-  background: #5677fc;
+  background: #f00c93;
   color: #fff;
 }
 
@@ -7650,7 +7650,7 @@ input:focus, textarea:focus {
 
 .login .r-customer form .nam-btm a {
   font-size: 15px;
-  color: #e45151;
+  color: #f00c93;
   font-weight: 600;
 }
 
@@ -7661,7 +7661,7 @@ input:focus, textarea:focus {
 .login .r-customer form button {
   font-size: 15px;
   color: #fff;
-  background: #5677fc;
+  background:#008B8B;
   padding: 10px 25px;
   font-weight: 600;
   border: none;
@@ -7672,7 +7672,7 @@ input:focus, textarea:focus {
 }
 
 .login .r-customer form button:hover {
-  background: #e45151;
+  background: #f00c93;
 }
 
 /* =======================================

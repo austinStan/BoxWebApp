@@ -22,7 +22,6 @@ class ProductController extends Controller
 
         if ($categoryId) {
             $category = Category::find($categoryId);
-
             $categoryName = ucfirst($category->name);
             $products = $category->products()->paginate(6);
             
@@ -59,9 +58,11 @@ class ProductController extends Controller
      * @param  \App\Product  $product
      * @return \Illuminate\Http\Response
      */
-    public function show(Product $product)
-    {
-        //
+    public function show($slug)
+    {  
+        $categories=Category::whereNull('parent_id')->get();
+        $single_product=Product::where('slug',$slug)->firstorFail();
+        return view('Pages.Products.single-product',compact('single_product','categories'));
     }
 
     /**
@@ -72,7 +73,7 @@ class ProductController extends Controller
      */
     public function edit(Product $product)
     {
-        //
+        
     }
 
     /**

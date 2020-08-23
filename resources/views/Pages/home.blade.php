@@ -554,13 +554,15 @@
                                                     <img class="main-img img-fluid"
                                                         src="{{asset('storage/'.$product->image)}}"
                                                         alt="" >
+                                                        @if($product->images)
+                                                        @foreach(json_decode($product->images,true) as $image)
+                                                        <img class="sec-img img-fluid" src="{{asset('storage/'.$image)}}" alt="">
+                                                        @endforeach
+                                                        @endif
                                                     {{-- <img class="sec-img img-fluid"
                                                         src="{{asset('images/BuildingMaterials/Roofing/RoofingTools/handtool.png')}}"
                                                         alt=""> --}}
                                                     <div class="layer-box">
-                                                        <a href="" class="it-comp" data-toggle="tooltip"
-                                                            data-placement="left" title="Compare"><img
-                                                                src="images/it-comp.png" alt=""></a>
                                                         <a href="" class="it-fav" data-toggle="tooltip"
                                                             data-placement="left" title="Favourite"><img
                                                                 src="images/it-fav.png" alt=""></a>
@@ -628,11 +630,12 @@
                                         <div class="new-img">
                                             <img class="main-img img-fluid"
                                                  src="{{asset('storage/'.$latest->image)}}" alt="">
-                                             {{-- <img class="sec-img img-fluid"
-                                                src="{{asset('images/newproducts/cement.png')}}" alt=""> --}}
+                                                 @if($latest->images)
+                                                 @foreach(json_decode($latest->images,true) as $image)
+                                                 <img class="sec-img img-fluid" src="{{asset('storage/'.$image)}}" alt="">
+                                                 @endforeach
+                                                 @endif
                                             <div class="layer-box">
-                                                <a href="" class="it-comp" data-toggle="tooltip" data-placement="left"
-                                                    title="Compare"><img src="images/it-comp.png" alt=""></a>
                                                 <a href="" class="it-fav" data-toggle="tooltip" data-placement="left"
                                                     title="Favourite"><img src="images/it-fav.png" alt=""></a>
                                             </div>

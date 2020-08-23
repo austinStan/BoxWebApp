@@ -141,7 +141,7 @@ class DataTypesTableSeeder extends Seeder
                 'server_side' => 0,
                 'details' => '{"order_column":null,"order_display_column":null,"order_direction":"asc","default_search_key":null,"scope":null}',
                 'created_at' => '2020-08-13 15:58:53',
-                'updated_at' => '2020-08-18 17:20:25',
+                'updated_at' => '2020-08-19 17:32:42',
             ),
             7 => 
             array (
@@ -160,6 +160,24 @@ class DataTypesTableSeeder extends Seeder
                 'details' => '{"order_column":null,"order_display_column":null,"order_direction":"asc","default_search_key":null,"scope":null}',
                 'created_at' => '2020-08-13 16:46:49',
                 'updated_at' => '2020-08-15 20:37:15',
+            ),
+            8 => 
+            array (
+                'id' => 10,
+                'name' => 'groupings',
+                'slug' => 'groupings',
+                'display_name_singular' => 'Grouping',
+                'display_name_plural' => 'Groupings',
+                'icon' => 'voyager-data',
+                'model_name' => 'App\\Grouping',
+                'policy_name' => NULL,
+                'controller' => NULL,
+                'description' => NULL,
+                'generate_permissions' => 1,
+                'server_side' => 0,
+                'details' => '{"order_column":null,"order_display_column":null,"order_direction":"asc","default_search_key":null}',
+                'created_at' => '2020-08-19 00:16:47',
+                'updated_at' => '2020-08-19 00:16:47',
             ),
         ));
         

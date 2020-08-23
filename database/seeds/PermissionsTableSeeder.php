@@ -425,6 +425,46 @@ class PermissionsTableSeeder extends Seeder
                 'created_at' => '2020-08-13 16:46:49',
                 'updated_at' => '2020-08-13 16:46:49',
             ),
+            51 => 
+            array (
+                'id' => 57,
+                'key' => 'browse_groupings',
+                'table_name' => 'groupings',
+                'created_at' => '2020-08-19 00:16:47',
+                'updated_at' => '2020-08-19 00:16:47',
+            ),
+            52 => 
+            array (
+                'id' => 58,
+                'key' => 'read_groupings',
+                'table_name' => 'groupings',
+                'created_at' => '2020-08-19 00:16:47',
+                'updated_at' => '2020-08-19 00:16:47',
+            ),
+            53 => 
+            array (
+                'id' => 59,
+                'key' => 'edit_groupings',
+                'table_name' => 'groupings',
+                'created_at' => '2020-08-19 00:16:47',
+                'updated_at' => '2020-08-19 00:16:47',
+            ),
+            54 => 
+            array (
+                'id' => 60,
+                'key' => 'add_groupings',
+                'table_name' => 'groupings',
+                'created_at' => '2020-08-19 00:16:47',
+                'updated_at' => '2020-08-19 00:16:47',
+            ),
+            55 => 
+            array (
+                'id' => 61,
+                'key' => 'delete_groupings',
+                'table_name' => 'groupings',
+                'created_at' => '2020-08-19 00:16:47',
+                'updated_at' => '2020-08-19 00:16:47',
+            ),
         ));
         
         
