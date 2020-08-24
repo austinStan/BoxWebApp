@@ -265,12 +265,12 @@
                                 <div class="col-lg-4 col-md-6">
                                     <div class="tab-item">
                                         <div class="tab-img">
-                                            <img class="main-img img-fluid" src="{{asset('storage/'.$product->image)}}"
-                                                height='700px' width='650px' alt="">
+                                            <a href='{{route('products.show',$product->slug)}}'><img class="main-img img-fluid" src="{{asset('storage/'.$product->image)}}"
+                                                height='700px' width='650px' alt=""></a>
                                             <span class="sale">Sale</span>
                                             @if($product->images)
                                             @foreach(json_decode($product->images,true) as $image)
-                                            <img class="sec-img img-fluid" src="{{asset('storage/'.$image)}}" alt="">
+                                          <a href='{{route('products.show',$product->slug)}}'><img class="sec-img img-fluid" src="{{asset('storage/'.$image)}}" alt=""></a>
                                             @endforeach
                                             @endif
                                             <div class="layer-box">
@@ -280,7 +280,7 @@
                                             </div>
                                         </div>
                                         <div class="tab-heading">
-                                            <p><a href="">{{$product->name}}</a></p>
+                                        <p><a href="{{route('products.show',$product->slug)}}">{{$product->name}}</a></p>
                                         </div>
                                         <div class="img-content d-flex justify-content-between">
                                             <div>

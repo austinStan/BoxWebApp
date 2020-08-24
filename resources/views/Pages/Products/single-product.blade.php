@@ -11,12 +11,7 @@
 <!-- End Logo Area 2 -->
 
 <!-- Preloader -->
-<div class="preloader">
-    <div class="load-list">
-        <div class="load"></div>
-        <div class="load load2"></div>
-    </div>
-</div>
+
 <!-- End Preloader -->
 
 
@@ -154,13 +149,13 @@
                             <div class="tab-content">
                                 <div class="tab-pane fade show active" id="sg1" role="tabpanel">
                                     <img src="{{asset('storage/'.$single_product->image)}}" height='700px' width='650px'
-                                        alt='' class="img-fluid">
+                                        alt='' class="img-fluid" id='currentImage'>
                                 </div>
                             </div>
                             <div class="nav d-flex justify-content-between">
                                 @if($single_product->images)
                                 @foreach(json_decode($single_product->images,true) as $image)
-                                <a class="nav-item nav-link active" data-toggle="tab" href="#sg1">
+                                <a class="nav-item nav-link active product-section-thumbnail" data-toggle="tab" href="#sg1">
                                     <img class="img-fluid" src="{{asset('storage/'.$image)}}" alt="">
                                 </a>
                                 @endforeach
@@ -327,7 +322,7 @@
                                         @endif
                                         <div class="layer-box">
                                             <a href="" class="it-fav" data-toggle="tooltip" data-placement="left"
-                                                title="Favourite"><img src="images/it-fav.png" alt=""></a>
+                                                title="Favourite"><img src="{{asset('images/it-fav.png')}}" alt=""></a>
                                         </div>
                                     </div>
                                     <div class="sim-heading">
@@ -349,7 +344,7 @@
                                         </div>
                                         <div>
                                             <a href="" data-toggle="tooltip" data-placement="top"
-                                                title="Add to Cart"><img src="images/it-cart.png" alt=""></a>
+                                                title="Add to Cart"><img src="{{asset('images/it-cart.png')}}" alt=""></a>
                                         </div>
                                     </div>
                                 </div>
@@ -444,6 +439,27 @@
     </div>
 </section>
 <!-- End Single Product Area -->
+
+<script>
+    (function(){
+   const currentImage=document.querySelector('#currentImage');
+   const images =document.querySelectorAll('.product-section-thumbnail');
+
+   images.forEach((element)=>element.addEventListener('click',thumbnailClick));
+
+   function thumbnailClick(e){
+       currentImage.src=this.querySelector('img').src;
+
+       images.forEach((element)=>element.classList.remove('active'));
+
+       this.classList.add('active');
+   }
+
+
+    })();
+
+
+</script>
 
 
 @endsection
