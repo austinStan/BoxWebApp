@@ -64,18 +64,13 @@ class ProductController extends Controller
         $categories=Category::whereNull('parent_id')->get();
         $single_product=Product::where('slug',$slug)->firstorFail();
         $hot_offer=Product::where('types','hot offer')->inRandomOrder()->take(2)->get();
-
-
-        if ($slug) {
-            $product_slug=Product::where('slug',$slug)->firstorFail();
-            $category = $product_slug->category()->whereNull('parent_id')->get();
-            dd($category);
-            // $products = $category->products()->paginate(6);
-            
-        } else {
-            // $products = Product::inRandomOrder()->paginate(6);
+        $category = $single_product->category()->whereNull('parent_id')->get();
+      
+        foreach($category as $c){
+            $b = Category::find($c->id);
+            $cate_products = $b->products()->get();
         }
-        return view('Pages.Products.single-product',compact('single_product','categories','hot_offer'));
+        return view('Pages.Products.single-product',compact('single_product','categories','hot_offer','cate_products'));
     }
 
     /**
