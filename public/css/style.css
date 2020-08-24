@@ -5952,6 +5952,21 @@ input:focus, textarea:focus {
   font-weight: 600;
 }
 
+.sg-product .sg-content .old-price {
+  margin-bottom: 15px;
+}
+
+.sg-product .sg-content .old-price ul {
+  margin-bottom: 30px;
+}
+
+.sg-product .sg-content .old-price ul li:first-child {
+  font-size: 26px;
+  color: #5677fc;
+  font-weight: 600;
+  letter-spacing: 0;
+}
+
 .sg-product .sg-content .pro-price {
   margin-bottom: 15px;
 }
@@ -5966,6 +5981,8 @@ input:focus, textarea:focus {
   font-weight: 600;
   letter-spacing: 0;
 }
+
+
 
 .sg-product .sg-content .pro-price ul li:last-child {
   font-size: 15px;
@@ -6149,7 +6166,7 @@ input:focus, textarea:focus {
 
 .sg-product .sg-content .colo-siz .pro-btns a.cart {
   color: #fff;
-  background: #e45151;
+  background: #f00c93;
   display: inline-block;
   padding: 8px 20px;
   -webkit-border-radius: 30px;
@@ -6161,7 +6178,7 @@ input:focus, textarea:focus {
 }
 
 .sg-product .sg-content .colo-siz .pro-btns a.cart:hover {
-  background: #5677fc;
+  background: #008B8B;
 }
 
 .sg-product .sg-content .colo-siz .pro-btns a.fav-com {

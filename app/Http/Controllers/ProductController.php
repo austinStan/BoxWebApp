@@ -60,9 +60,22 @@ class ProductController extends Controller
      */
     public function show($slug)
     {  
+     
         $categories=Category::whereNull('parent_id')->get();
         $single_product=Product::where('slug',$slug)->firstorFail();
-        return view('Pages.Products.single-product',compact('single_product','categories'));
+        $hot_offer=Product::where('types','hot offer')->inRandomOrder()->take(2)->get();
+
+
+        if ($slug) {
+            $product_slug=Product::where('slug',$slug)->firstorFail();
+            $category = $product_slug->category()->whereNull('parent_id')->get();
+            dd($category);
+            // $products = $category->products()->paginate(6);
+            
+        } else {
+            // $products = Product::inRandomOrder()->paginate(6);
+        }
+        return view('Pages.Products.single-product',compact('single_product','categories','hot_offer'));
     }
 
     /**

@@ -170,14 +170,14 @@
                             </div>
                             <div class="col-md-7">
                                 <div class="sg-content">
-                                    <div class="pro-tag">
+                                    {{-- <div class="pro-tag">
                                         <ul class="list-unstyled list-inline">
                                             <li class="list-inline-item"><a href="">Home Appliance ,</a></li>
                                             <li class="list-inline-item"><a href="">Smart Led Tv</a></li>
                                         </ul>
-                                    </div>
+                                    </div> --}}
                                      <div class="pro-name">
-                                         <p>Samsung Smart Led Tv With Speaker</p>
+                                     <p>{{$single_product->name}}</p>
                                      </div>
                                      <div class="pro-rating">
                                          <ul class="list-unstyled list-inline">
@@ -190,7 +190,11 @@
                                          </ul>
                                      </div>
                                      @if($single_product->old_price==null)
+                                     <div class="old-price">
+                                     <ul class="list-unstyled list-inline">
                                      <li class="list-inline-item">UGX {{$single_product->price}}</li>
+                                     </div>
+                                     </ul>
                                      @else
                                      <div class="pro-price">
                                          <ul class="list-unstyled list-inline">
@@ -226,7 +230,7 @@
                                     </ul>
                                     <div class="tab-content">
                                         <div class="tab-pane fade show active" id="pro-det" role="tabpanel">
-                                            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Soluta consequatur, expedita, autem labore eos, totam rem quo similique est et qui quaerat cumque sed ab quae assumenda. Non, quas, nihil! Lorem ipsum dolor sit amet, consectetur adipisicing elit. Fugiat, necessitatibus, dicta iusto in, similique quas<br><br> accusamus debitis illum distinctio nemo numquam obcaecati at itaque odio ducimus cupiditate minima labore libero! Lorem ipsum dolor sit amet, consectetur adipisicing elit. Soluta consequatur, expedita, autem labore eos, totam rem quo similique est et qui quaerat cumque sed ab quae assumenda. <br><br>Non, quas, nihil! Lorem ipsum dolor sit amet, consectetur adipisicing elit. Fugiat, necessitatibus, dicta iusto in, similique quas accusamus debitis illum distinctio nemo numquam obcaecati at itaque odio ducimus cupiditate.</p>
+                                        <p>{{$single_product->description}}</p>
                                         </div>
                                         <div class="tab-pane fade" id="rev" role="tabpanel">
                                             <div class="review-box d-flex">
@@ -465,136 +469,34 @@
                     <div class="col-md-3">
                         <div class="category-box">
                             <div class="sec-title">
-                                <h6>Categories</h6>
+                                <a href='{{route('products.index')}}'><h6>Categories</h6></a>
                             </div>
                             <!-- accordion -->
                             <div id="accordion">
+                                @foreach($categories as $category)
                                 <div class="card">
                                     <div class="card-header">
-                                        <a href="" data-toggle="collapse" data-target="#collapse1">
-                                            <span>Clothing</span>
+                                    <a href="{{route('products.index',['category_id'=>$category->id])}}" data-toggle="collapse" data-target="#collapse{{$category->id}}">
+                                        <span>{{$category->name}}</span>
                                             <i class="fa fa-angle-down"></i>
+                                         
                                         </a>
                                     </div>
-                                    <div id="collapse1" class="collapse">
+                                    <?php $children= TCG\Voyager\Models\Category::where('parent_id',$category->id)->get();
+                                    ?>
+                                      @if($children->isNotEmpty())
+                                <div id="collapse{{$category->id}}" class="collapse">
                                         <div class="card-body">
                                             <ul class="list-unstyled">
-                                                <li><a href=""><i class="fa fa-angle-right"></i> Catagory 1</a></li>
-                                                <li><a href=""><i class="fa fa-angle-right"></i> Catagory 2</a></li>
-                                                <li><a href=""><i class="fa fa-angle-right"></i> Catagory 3</a></li>
-                                                <li><a href=""><i class="fa fa-angle-right"></i> Catagory 4</a></li>
+                                                @foreach($children as  $child)
+                                            <li><a href="{{route('products.index',['category_id'=>$child->id])}}"><i class="fa fa-angle-right"></i>{{$child->name}}</a></li>
+                                                @endforeach
                                             </ul>
                                         </div>
                                     </div>
+                                    @endif
                                 </div>
-                                <div class="card">
-                                    <div class="card-header">
-                                        <a href="" data-toggle="collapse" data-target="#collapse2">
-                                            <span>Electronics</span>
-                                            <i class="fa fa-angle-down"></i>
-                                        </a>
-                                    </div>
-                                    <div id="collapse2" class="collapse">
-                                        <div class="card-body">
-                                            <ul class="list-unstyled">
-                                                <li><a href=""><i class="fa fa-angle-right"></i> Catagory 1</a></li>
-                                                <li><a href=""><i class="fa fa-angle-right"></i> Catagory 2</a></li>
-                                                <li><a href=""><i class="fa fa-angle-right"></i> Catagory 3</a></li>
-                                                <li><a href=""><i class="fa fa-angle-right"></i> Catagory 4</a></li>
-                                            </ul>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="card">
-                                    <div class="card-header">
-                                        <a href="" data-toggle="collapse" data-target="#collapse3">
-                                            <span>Home Appliance</span>
-                                            <i class="fa fa-angle-down"></i>
-                                        </a>
-                                    </div>
-                                    <div id="collapse3" class="collapse">
-                                        <div class="card-body">
-                                            <ul class="list-unstyled">
-                                                <li><a href=""><i class="fa fa-angle-right"></i> Catagory 1</a></li>
-                                                <li><a href=""><i class="fa fa-angle-right"></i> Catagory 2</a></li>
-                                                <li><a href=""><i class="fa fa-angle-right"></i> Catagory 3</a></li>
-                                                <li><a href=""><i class="fa fa-angle-right"></i> Catagory 4</a></li>
-                                            </ul>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="card">
-                                    <div class="card-header">
-                                        <a href="" data-toggle="collapse" data-target="#collapse4">
-                                            <span>Smartphone</span>
-                                            <i class="fa fa-angle-down"></i>
-                                        </a>
-                                    </div>
-                                    <div id="collapse4" class="collapse">
-                                        <div class="card-body">
-                                            <ul class="list-unstyled">
-                                                <li><a href=""><i class="fa fa-angle-right"></i> Catagory 1</a></li>
-                                                <li><a href=""><i class="fa fa-angle-right"></i> Catagory 2</a></li>
-                                                <li><a href=""><i class="fa fa-angle-right"></i> Catagory 3</a></li>
-                                                <li><a href=""><i class="fa fa-angle-right"></i> Catagory 4</a></li>
-                                            </ul>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="card">
-                                    <div class="card-header">
-                                        <a href="" data-toggle="collapse" data-target="#collapse5">
-                                            <span>Computer</span>
-                                            <i class="fa fa-angle-down"></i>
-                                        </a>
-                                    </div>
-                                    <div id="collapse5" class="collapse">
-                                        <div class="card-body">
-                                            <ul class="list-unstyled">
-                                                <li><a href=""><i class="fa fa-angle-right"></i> Catagory 1</a></li>
-                                                <li><a href=""><i class="fa fa-angle-right"></i> Catagory 2</a></li>
-                                                <li><a href=""><i class="fa fa-angle-right"></i> Catagory 3</a></li>
-                                                <li><a href=""><i class="fa fa-angle-right"></i> Catagory 4</a></li>
-                                            </ul>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="card">
-                                    <div class="card-header">
-                                        <a href="" data-toggle="collapse" data-target="#collapse6">
-                                            <span>Kids Collection</span>
-                                            <i class="fa fa-angle-down"></i>
-                                        </a>
-                                    </div>
-                                    <div id="collapse6" class="collapse">
-                                        <div class="card-body">
-                                            <ul class="list-unstyled">
-                                                <li><a href=""><i class="fa fa-angle-right"></i> Catagory 1</a></li>
-                                                <li><a href=""><i class="fa fa-angle-right"></i> Catagory 2</a></li>
-                                                <li><a href=""><i class="fa fa-angle-right"></i> Catagory 3</a></li>
-                                                <li><a href=""><i class="fa fa-angle-right"></i> Catagory 4</a></li>
-                                            </ul>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="card">
-                                    <div class="card-header">
-                                        <a href="" data-toggle="collapse" data-target="#collapse7">
-                                            <span>Automobile</span>
-                                            <i class="fa fa-angle-down"></i>
-                                        </a>
-                                    </div>
-                                    <div id="collapse7" class="collapse">
-                                        <div class="card-body">
-                                            <ul class="list-unstyled">
-                                                <li><a href=""><i class="fa fa-angle-right"></i> Catagory 1</a></li>
-                                                <li><a href=""><i class="fa fa-angle-right"></i> Catagory 2</a></li>
-                                                <li><a href=""><i class="fa fa-angle-right"></i> Catagory 3</a></li>
-                                                <li><a href=""><i class="fa fa-angle-right"></i> Catagory 4</a></li>
-                                            </ul>
-                                        </div>
-                                    </div>
-                                </div>
+                                @endforeach
                             </div>
                         </div>
                         <div class="ht-offer">
@@ -602,19 +504,26 @@
                                 <h6>Hot Offer</h6>
                             </div>
                             <div class="ht-body owl-carousel">
+                                @foreach($hot_offer as $hotoffer)
                                 <div class="ht-item">
                                     <div class="ht-img">
-                                        <a href="#"><img src="images/tab-15.png" alt="" class="img-fluid"></a>
+                                        <a href="#"><img src="{{asset('storage/'.$hotoffer->image)}}"
+                                           alt=""
+                                                class="img-fluid"></a>
                                         <span>- 59%</span>
                                         <ul class="list-unstyled list-inline counter-box">
-                                            <li class="list-inline-item">185 <p>Days</p></li>
-                                            <li class="list-inline-item">11 <p>Hrs</p></li>
-                                            <li class="list-inline-item">39 <p>Mins</p></li>
-                                            <li class="list-inline-item">51 <p>Sec</p></li>
+                                            <li class="list-inline-item">185 <p>Days</p>
+                                            </li>
+                                            <li class="list-inline-item">11 <p>Hrs</p>
+                                            </li>
+                                            <li class="list-inline-item">39 <p>Mins</p>
+                                            </li>
+                                            <li class="list-inline-item">51 <p>Sec</p>
+                                            </li>
                                         </ul>
                                     </div>
                                     <div class="ht-content">
-                                        <p><a href="">Items Title Name Enter Here</a></p>
+                                    <p><a href="">{{$hotoffer->name}}</a></p>
                                         <ul class="list-unstyled list-inline fav">
                                             <li class="list-inline-item"><i class="fa fa-star"></i></li>
                                             <li class="list-inline-item"><i class="fa fa-star"></i></li>
@@ -622,38 +531,13 @@
                                             <li class="list-inline-item"><i class="fa fa-star"></i></li>
                                             <li class="list-inline-item"><i class="fa fa-star-o"></i></li>
                                         </ul>
-                                        <ul class="list-unstyled list-inline price">
-                                            <li class="list-inline-item">$120.00</li>
-                                            <li class="list-inline-item">$150.00</li>
+                                        <ul class="list-unstyled list-inline">
+                                        <li class="list-inline-item">UGX {{$hotoffer->price}}</li>
+                                            {{-- <li class="list-inline-item">$150.00</li> --}}
                                         </ul>
                                     </div>
                                 </div>
-                                <div class="ht-item">
-                                    <div class="ht-img">
-                                        <a href="#"><img src="images/tab-14.png" alt="" class="img-fluid"></a>
-                                        <span>- 59%</span>
-                                        <ul class="list-unstyled list-inline counter-box">
-                                            <li class="list-inline-item">185 <p>Days</p></li>
-                                            <li class="list-inline-item">11 <p>Hrs</p></li>
-                                            <li class="list-inline-item">39 <p>Mins</p></li>
-                                            <li class="list-inline-item">51 <p>Sec</p></li>
-                                        </ul>
-                                    </div>
-                                    <div class="ht-content">
-                                        <p><a href="">Items Title Name Enter Here</a></p>
-                                        <ul class="list-unstyled list-inline fav">
-                                            <li class="list-inline-item"><i class="fa fa-star"></i></li>
-                                            <li class="list-inline-item"><i class="fa fa-star"></i></li>
-                                            <li class="list-inline-item"><i class="fa fa-star"></i></li>
-                                            <li class="list-inline-item"><i class="fa fa-star"></i></li>
-                                            <li class="list-inline-item"><i class="fa fa-star-o"></i></li>
-                                        </ul>
-                                        <ul class="list-unstyled list-inline price">
-                                            <li class="list-inline-item">$120.00</li>
-                                            <li class="list-inline-item">$150.00</li>
-                                        </ul>
-                                    </div>
-                                </div>
+                                @endforeach
                             </div>
                         </div>
                         <div class="add-box">
