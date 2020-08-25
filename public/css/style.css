@@ -2887,6 +2887,13 @@ input:focus, textarea:focus {
   margin-right: 0;
 }
 
+.product-area .bt-deal .bt-body .bt-items .bt-box .bt-content ul.one-price li {
+  color: #444444;
+  font-weight: 600;
+  margin-right: 0;
+  letter-spacing: 0;
+}
+
 .product-area .bt-deal .bt-body .bt-items .bt-box .bt-content ul.price li {
   color: #444444;
   font-weight: 600;
@@ -2966,7 +2973,8 @@ input:focus, textarea:focus {
 }
 
 .product-area .ftr-product .tab-box ul.nav li.nav-item a.nav-link.active {
-  background: #008B8B;
+
+  background: #f00c93;
   color: #fff;
 }
 
@@ -3129,6 +3137,14 @@ input:focus, textarea:focus {
 .product-area .ftr-product .tab-content .tab-pane .tab-slider .tab-item .img-content ul.fav li i {
   font-size: 13px;
   color: #fdba2d;
+}
+
+
+.product-area .ftr-product .tab-content .tab-pane .tab-slider .tab-item .img-content ul.one-price li {
+  font-size: 18px;
+  color: #444444;
+  font-weight: 600;
+  letter-spacing: 0;
 }
 
 .product-area .ftr-product .tab-content .tab-pane .tab-slider .tab-item .img-content ul.price li {
@@ -3354,6 +3370,14 @@ input:focus, textarea:focus {
   margin-right: 0;
 }
 
+.product-area .ht-offer .ht-body .ht-item .ht-content ul.one-price li {
+  font-size: 15px;
+  color: #444444;
+  font-weight: 600;
+  margin-right: 0;
+  letter-spacing: 0;
+}
+
 .product-area .ht-offer .ht-body .ht-item .ht-content ul.price li {
   font-size: 15px;
   color: #444444;
@@ -3519,8 +3543,14 @@ input:focus, textarea:focus {
   font-size: 13px;
   color: #fdba2d;
 }
+.product-area .new-product .new-slider .new-item .img-content ul.one-price  li {
+  font-size: 18px;
+  color: #444444;
+  font-weight: 600;
+  letter-spacing: 0;
+}
 
-.product-area .new-product .new-slider .new-item .img-content ul.price li {
+.product-area .new-product .new-slider .new-item .img-content ul.price  li {
   font-size: 18px;
   color: #444444;
   font-weight: 600;
@@ -3688,6 +3718,13 @@ input:focus, textarea:focus {
   font-size: 13px;
   color: #fdba2d;
   margin-right: 0;
+}
+
+.product-area .top-slr .slr-slider .slr-items .slr-box .slr-content ul.one-price li {
+  color: #444444;
+  font-weight: 600;
+  margin-right: 0;
+  letter-spacing: 0;
 }
 
 .product-area .top-slr .slr-slider .slr-items .slr-box .slr-content ul.price li {
@@ -3920,6 +3957,13 @@ input:focus, textarea:focus {
   font-size: 13px;
   color: #fdba2d;
   margin-right: 0;
+}
+
+.product-area .top-rtd .rt-slider .rt-items .rt-box .rt-content ul.one-price li {
+  color: #444444;
+  font-weight: 600;
+  margin-right: 0;
+  letter-spacing: 0;
 }
 
 .product-area .top-rtd .rt-slider .rt-items .rt-box .rt-content ul.price li {
@@ -5616,6 +5660,13 @@ input:focus, textarea:focus {
   color: #fdba2d;
 }
 
+.category .product-box .tab-content .tab-pane .tab-item .img-content ul.one-price li {
+  font-size: 18px;
+  color: #444444;
+  font-weight: 600;
+  letter-spacing: 0;
+}
+
 .category .product-box .tab-content .tab-pane .tab-item .img-content ul.price li {
   font-size: 18px;
   color: #444444;
@@ -5774,6 +5825,17 @@ input:focus, textarea:focus {
   font-size: 13px;
   color: #fdba2d;
 }
+.category .product-box .tab-content .tab-pane .tab-item2 .item-heading .item-price ul.one-price {
+  padding-top: 15px;
+}
+
+.category .product-box .tab-content .tab-pane .tab-item2 .item-heading .item-price ul.one-price li {
+  font-size: 20px;
+  color: #444444;
+  font-weight: 600;
+  letter-spacing: 0;
+}
+
 
 .category .product-box .tab-content .tab-pane .tab-item2 .item-heading .item-price ul.price {
   padding-top: 15px;
@@ -6519,6 +6581,15 @@ input:focus, textarea:focus {
   color: #fdba2d;
 }
 
+
+
+.sg-product .sim-pro .sim-slider .sim-item .img-content ul.one-price li {
+  font-size: 16px;
+  color: #444444;
+  font-weight: 600;
+  letter-spacing: 0;
+}
+
 .sg-product .sim-pro .sim-slider .sim-item .img-content ul.price li {
   font-size: 16px;
   color: #444444;
@@ -6752,6 +6823,14 @@ input:focus, textarea:focus {
   font-size: 13px;
   color: #fdba2d;
   margin-right: 0;
+}
+
+.sg-product .ht-offer .ht-body .ht-item .ht-content ul.one-price li {
+  font-size: 15px;
+  color: #444444;
+  font-weight: 600;
+  margin-right: 0;
+  letter-spacing: 0;
 }
 
 .sg-product .ht-offer .ht-body .ht-item .ht-content ul.price li {

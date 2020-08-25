@@ -260,6 +260,7 @@
                     <!-- Tab panes -->
                     <div class="tab-content">
                         <div class="tab-pane fade show active" id="grid" role="tabpanel">
+
                             <div class="row">
                                 @foreach($products as $product)
                                 <div class="col-lg-4 col-md-6">
@@ -292,20 +293,34 @@
                                                     <li class="list-inline-item"><i class="fa fa-star"></i></li>
                                                     <li class="list-inline-item"><i class="fa fa-star-o"></i></li>
                                                 </ul>
-                                                <ul class="list-unstyled list-inline">
+                                                @if($product->old_price==null)
+                                                <ul class="list-unstyled list-inline one-price">
                                                     <li class="list-inline-item">UGX {{$product->price}}</li>
                                                     {{-- <li class="list-inline-item">12M</li> --}}
                                                 </ul>
+                                                @else
+                                                <ul class="list-unstyled list-inline price">
+                                                    <li class="list-inline-item">UGX {{$product->price}}</li>
+                                                    <li class="list-inline-item">UGX {{$product->old_price}}</li>
+                                                </ul>
+                                                @endif
                                             </div>
+                                            @if($product->main_category=='Land' || $product->main_category=='Houses'||  $product->main_category=='Apartments'||  $product->main_category=='Vehicles'||  $product->main_category=='Services')
+                                            <div>
+                                                <a href="" data-toggle="tooltip" data-placement="top"
+                                                    title="BUY"><i class="fa fa-money" aria-hidden="true"></i></a>
+                                            </div>
+                                            @else
                                             <div>
                                                 <a href="" data-toggle="tooltip" data-placement="top"
                                                     title="Add to Cart"><img src="{{asset('images/it-cart.png')}}"
                                                         alt=""></a>
                                             </div>
+                                            @endif
                                         </div>
                                     </div>
                                 </div>
-                                @endforeach
+                            @endforeach
 
                             </div>
                         </div>
@@ -346,24 +361,37 @@
                                                         </ul>
                                                     </div>
                                                     <div class="item-price">
-                                                        <ul class="list-unstyled list-inline">
+                                                        @if($product->old_price==null)
+                                                        <ul class="list-unstyled list-inline one-price">
                                                             <li class="list-inline-item">UGX {{$product->price}}</li>
-                                                            {{-- <li class="list-inline-item">$150.00</li> --}}
+                                                            {{-- <li class="list-inline-item">12M</li> --}}
                                                         </ul>
+                                                        @else
+                                                        <ul class="list-unstyled list-inline price">
+                                                            <li class="list-inline-item">UGX {{$product->price}}</li>
+                                                            <li class="list-inline-item">UGX {{$product->old_price}}</li>
+                                                        </ul>
+                                                        @endif
                                                     </div>
                                                 </div>
                                                 <div class="item-content">
                                                     <p>{{$product->description}}</p>
-                                                    <a href="" class="it-cart"><span class="it-img"><img
-                                                                src="images/it-cart.png" alt=""></span><span
-                                                            class="it-title">Add To Cart</span></a>
+                                                    @if($product->main_category=='Land' || $product->main_category=='Houses'||  $product->main_category=='Apartments'||  $product->main_category=='Vehicles'||  $product->main_category=='Services')
+                                                    <a href="" class="it-cart"><span class="it-img"><i class="fa fa-money" aria-hidden="true"></i></span><span
+                                                            class="it-title">BUY</span></a>
                                                     <a href="" class="it-fav" data-toggle="tooltip" data-placement="top"
                                                         title="Favourite"><img src="images/it-fav.png" alt=""></a>
+                                                    @else
+                                                    <a href="" class="it-cart"><span class="it-img"><img
+                                                        src="images/it-cart.png" alt=""></span><span
+                                                    class="it-title">Add To Cart</span></a>
+                                                    <a href="" class="it-fav" data-toggle="tooltip" data-placement="top"
+                                                        title="Favourite"><img src="images/it-fav.png" alt=""></a>
+                                                    @endif
                                                 </div>
-                                            </div>
+                                            </div> 
                                         </div>
                                     </div>
-                                   
                                 </div>
                                 @endforeach
                             </div>

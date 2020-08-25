@@ -210,12 +210,21 @@
                                         </li>
                                     </ul>
                                 </div>
+                                @if($single_product->main_category=='Land' || $single_product->main_category=='Houses'||  $single_product->main_category=='Apartments'||  $single_product->main_category=='Vehicles'||  $single_product->main_category=='Services')
+                                <div class="pro-btns">
+                                    <a href="" class="cart">Contact To Make Payment</a>
+                                    <a href="" class="fav-com" data-toggle="tooltip" data-placement="top"
+                                        title="Wishlist"><img src="{{asset('images/it-fav.png')}}" alt=""></a>
+
+                                </div>
+                                @else
                                 <div class="pro-btns">
                                     <a href="" class="cart">Add To Cart</a>
                                     <a href="" class="fav-com" data-toggle="tooltip" data-placement="top"
                                         title="Wishlist"><img src="{{asset('images/it-fav.png')}}" alt=""></a>
 
                                 </div>
+                                @endif
                             </div>
                         </div>
                     </div>
@@ -313,11 +322,11 @@
                                 @foreach($cate_products as $cate)
                                 <div class="sim-item">
                                     <div class="sim-img">
-                                        <img class="main-img img-fluid" src="{{asset('storage/'.$cate->image)}}"
-                                            height='700px' width='650px'>
+                                       <a href='{{route('products.show',$cate->slug)}}'> <img class="main-img img-fluid" src="{{asset('storage/'.$cate->image)}}"
+                                            height='700px' width='650px'></a>
                                         @if($cate->images)
                                         @foreach(json_decode($cate->images,true) as $image)
-                                        <img class="sec-img img-fluid" src="{{asset('storage/'.$image)}}" alt="">
+                                        <a href='{{route('products.show',$cate->slug)}}'><img class="sec-img img-fluid" src="{{asset('storage/'.$image)}}" alt=""></a>
                                         @endforeach
                                         @endif
                                         <div class="layer-box">
@@ -326,7 +335,7 @@
                                         </div>
                                     </div>
                                     <div class="sim-heading">
-                                        <p><a href="">{{$cate->name}}</a></p>
+                                        <p><a href="{{route('products.show',$cate->slug)}}">{{$cate->name}}</a></p>
                                     </div>
                                     <div class="img-content d-flex justify-content-between">
                                         <div>
@@ -337,15 +346,30 @@
                                                 <li class="list-inline-item"><i class="fa fa-star"></i></li>
                                                 <li class="list-inline-item"><i class="fa fa-star-o"></i></li>
                                             </ul>
-                                            <ul class="list-unstyled list-inline ">
-                                                <li class="list-inline-item">{{$cate->price}}</li>
-                                                {{-- <li class="list-inline-item">$150.00</li> --}}
+                                            @if($cate->old_price==null)
+                                            <ul class="list-unstyled list-inline one-price">
+                                                <li class="list-inline-item">UGX {{$cate->price}}</li>
+                                                {{-- <li class="list-inline-item">12M</li> --}}
                                             </ul>
+                                            @else
+                                            <ul class="list-unstyled list-inline price">
+                                                <li class="list-inline-item">UGX {{$cate->price}}</li>
+                                                <li class="list-inline-item">UGX {{$cate->old_price}}</li>
+                                            </ul>
+                                            @endif
                                         </div>
+                                        @if($cate->main_category=='Land' || $cate->main_category=='Houses'|| $cate->main_category=='Apartments'||  $cate->main_category=='Vehicles'||  $cate->main_category=='Services')
+                                        <div>
+                                            <a href="" data-toggle="tooltip" data-placement="top"
+                                                title="BUY"> <i class="fa fa-money" aria-hidden="true"></i></a>
+                                        </div>
+                                       
+                                        @else
                                         <div>
                                             <a href="" data-toggle="tooltip" data-placement="top"
                                                 title="Add to Cart"><img src="{{asset('images/it-cart.png')}}" alt=""></a>
                                         </div>
+                                        @endif
                                     </div>
                                 </div>
                                 @endforeach
@@ -399,7 +423,7 @@
                         @foreach($hot_offer as $hotoffer)
                         <div class="ht-item">
                             <div class="ht-img">
-                                <a href="#"><img src="{{asset('storage/'.$hotoffer->image)}}" alt=""
+                                <a href="{{route('products.show',$hotoffer->slug)}}"><img src="{{asset('storage/'.$hotoffer->image)}}" alt=""
                                         class="img-fluid"></a>
                                 <span>- 59%</span>
                                 <ul class="list-unstyled list-inline counter-box">
@@ -414,7 +438,7 @@
                                 </ul>
                             </div>
                             <div class="ht-content">
-                                <p><a href="">{{$hotoffer->name}}</a></p>
+                                <p><a href="{{route('products.show',$hotoffer->slug)}}">{{$hotoffer->name}}</a></p>
                                 <ul class="list-unstyled list-inline fav">
                                     <li class="list-inline-item"><i class="fa fa-star"></i></li>
                                     <li class="list-inline-item"><i class="fa fa-star"></i></li>
@@ -422,10 +446,17 @@
                                     <li class="list-inline-item"><i class="fa fa-star"></i></li>
                                     <li class="list-inline-item"><i class="fa fa-star-o"></i></li>
                                 </ul>
-                                <ul class="list-unstyled list-inline">
+                                @if($hotoffer->old_price==null)
+                                <ul class="list-unstyled list-inline one-price">
                                     <li class="list-inline-item">UGX {{$hotoffer->price}}</li>
-                                    {{-- <li class="list-inline-item">$150.00</li> --}}
+                                    {{-- <li class="list-inline-item">12M</li> --}}
                                 </ul>
+                                @else
+                                <ul class="list-unstyled list-inline price">
+                                    <li class="list-inline-item">UGX {{$hotoffer->price}}</li>
+                                    <li class="list-inline-item">UGX {{$hotoffer->old_price}}</li>
+                                </ul>
+                                @endif
                             </div>
                         </div>
                         @endforeach

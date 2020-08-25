@@ -13,14 +13,14 @@
 
 <body>
 
-        <!-- Preloader -->
-        <div class="preloader">
-            <div class="load-list">
-                <div class="load"></div>
-                <div class="load load2"></div>
-            </div>
+    <!-- Preloader -->
+    <div class="preloader">
+        <div class="load-list">
+            <div class="load"></div>
+            <div class="load load2"></div>
         </div>
-        <!-- End Preloader -->
+    </div>
+    <!-- End Preloader -->
     <section class="top-bar">
         <div class="container">
             <div class="row">
@@ -70,10 +70,11 @@
             <div class="row">
                 <div class="col-md-3">
                     <div class="logo">
-                        <a href=""><img src={{asset("images/logo/set.png")}} alt="" width='100px' height='90px' style="border-radius:5px; padding-top:10px;">
-                        
+                        <a href=""><img src={{asset("images/logo/set.png")}} alt="" width='100px' height='90px'
+                                style="border-radius:5px; padding-top:10px;">
+
                         </a>
-                      
+
                     </div>
                 </div>
                 <div class="col-md-5 padding-fix">
@@ -325,7 +326,7 @@
                     <a href=""><img src="{{asset('images/sb-3.png')}}" alt="" class="img-fluid"></a>
                 </div>
             </div> --}}
-            
+
         </div>
         </div>
         </div>
@@ -388,11 +389,14 @@
                                     <div class="bt-items">
                                         <div class="bt-box d-flex">
                                             <div class="bt-img">
-                                                <a href="#"><img src="{{asset('storage/'.$bdeals->image)}}"
-                                                    style="height:100px;width:100px;" alt=""></a>
+                                                <a href="{{route('products.show',$bdeals->slug)}}"><img
+                                                        src="{{asset('storage/'.$bdeals->image)}}"
+                                                        style="height:100px;width:100px;" alt=""></a>
                                             </div>
                                             <div class="bt-content">
-                                               <p><a href="">{{$bdeals->name}}</a></p>
+                                                <p><a
+                                                        href="{{route('products.show',$bdeals->slug)}}">{{$bdeals->name}}</a>
+                                                </p>
                                                 <ul class="list-unstyled list-inline fav">
                                                     <li class="list-inline-item"><i class="fa fa-star"></i></li>
                                                     <li class="list-inline-item"><i class="fa fa-star"></i></li>
@@ -400,12 +404,20 @@
                                                     <li class="list-inline-item"><i class="fa fa-star"></i></li>
                                                     <li class="list-inline-item"><i class="fa fa-star-o"></i></li>
                                                 </ul>
-                                                <ul class="list-unstyled list-inline">
-                                                <li class="list-inline-item">{{$bdeals->price}}</li>
+                                                @if($bdeals->old_price==null)
+                                                <ul class="list-unstyled list-inline one-price">
+                                                    <li class="list-inline-item">UGX {{$bdeals->price}}</li>
+                                                    {{-- <li class="list-inline-item">12M</li> --}}
                                                 </ul>
+                                                @else
+                                                <ul class="list-unstyled list-inline price">
+                                                    <li class="list-inline-item">UGX {{$bdeals->price}}</li>
+                                                    <li class="list-inline-item">UGX {{$bdeals->old_price}}</li>
+                                                </ul>
+                                                @endif
                                             </div>
                                         </div>
-                                    </div>        
+                                    </div>
                                     @empty
                                     No Products Found
                                     @endforelse
@@ -421,8 +433,8 @@
                                     @foreach($hot_offer as $hotoffer)
                                     <div class="ht-item">
                                         <div class="ht-img">
-                                            <a href="#"><img src="{{asset('storage/'.$hotoffer->image)}}"
-                                               alt=""
+                                            <a href="{{route('products.show',$hotoffer->slug)}}"><img
+                                                    src="{{asset('storage/'.$hotoffer->image)}}" alt=""
                                                     class="img-fluid"></a>
                                             <span>- 59%</span>
                                             <ul class="list-unstyled list-inline counter-box">
@@ -437,7 +449,9 @@
                                             </ul>
                                         </div>
                                         <div class="ht-content">
-                                        <p><a href="">{{$hotoffer->name}}</a></p>
+                                            <p><a
+                                                    href="{{route('products.show',$hotoffer->slug)}}">{{$hotoffer->name}}</a>
+                                            </p>
                                             <ul class="list-unstyled list-inline fav">
                                                 <li class="list-inline-item"><i class="fa fa-star"></i></li>
                                                 <li class="list-inline-item"><i class="fa fa-star"></i></li>
@@ -445,10 +459,17 @@
                                                 <li class="list-inline-item"><i class="fa fa-star"></i></li>
                                                 <li class="list-inline-item"><i class="fa fa-star-o"></i></li>
                                             </ul>
-                                            <ul class="list-unstyled list-inline">
-                                            <li class="list-inline-item">UGX {{$hotoffer->price}}</li>
-                                                {{-- <li class="list-inline-item">$150.00</li> --}}
+                                            @if($hotoffer->old_price==null)
+                                            <ul class="list-unstyled list-inline one-price">
+                                                <li class="list-inline-item">UGX {{$hotoffer->price}}</li>
+                                                {{-- <li class="list-inline-item">12M</li> --}}
                                             </ul>
+                                            @else
+                                            <ul class="list-unstyled list-inline price">
+                                                <li class="list-inline-item">UGX {{$hotoffer->price}}</li>
+                                                <li class="list-inline-item">UGX {{$hotoffer->old_price}}</li>
+                                            </ul>
+                                            @endif
                                         </div>
                                     </div>
                                     @endforeach
@@ -483,11 +504,14 @@
                                     <div class="rt-items">
                                         <div class="rt-box d-flex">
                                             <div class="rt-img">
-                                                <a href="#"><img  src="{{asset('storage/'.$toprated->image)}}"
-                                                    alt="" style="height:100px;width:100px;"></a>
+                                                <a href="{{route('products.show',$toprated->slug)}}"><img
+                                                        src="{{asset('storage/'.$toprated->image)}}" alt=""
+                                                        style="height:100px;width:100px;"></a>
                                             </div>
                                             <div class="rt-content">
-                                            <p><a href="">{{$toprated->name}}</a></p>
+                                                <p><a
+                                                        href="{{route('products.show',$toprated->slug)}}">{{$toprated->name}}</a>
+                                                </p>
                                                 <ul class="list-unstyled list-inline fav">
                                                     <li class="list-inline-item"><i class="fa fa-star"></i></li>
                                                     <li class="list-inline-item"><i class="fa fa-star"></i></li>
@@ -495,12 +519,19 @@
                                                     <li class="list-inline-item"><i class="fa fa-star"></i></li>
                                                     <li class="list-inline-item"><i class="fa fa-star-o"></i></li>
                                                 </ul>
-                                                <ul class="list-unstyled list-inline">
-                                                <li class="list-inline-item">UGX {{$toprated->price}}</li>
-                                                    {{-- <li class="list-inline-item">$150.00</li> --}}
+                                                @if($toprated->old_price==null)
+                                                <ul class="list-unstyled list-inline one-price">
+                                                    <li class="list-inline-item">UGX {{$toprated->price}}</li>
+                                                    {{-- <li class="list-inline-item">12M</li> --}}
                                                 </ul>
+                                                @else
+                                                <ul class="list-unstyled list-inline price">
+                                                    <li class="list-inline-item">UGX {{$toprated->price}}</li>
+                                                    <li class="list-inline-item">UGX {{$toprated->old_price}}</li>
+                                                </ul>
+                                                @endif
                                             </div>
-                                        </div>      
+                                        </div>
                                     </div>
                                     @endforeach
                                 </div>
@@ -533,7 +564,8 @@
                                     <!-- Nav tabs -->
                                     <ul class="nav nav-tabs" role="tablist">
                                         <li class="nav-item">
-                                        <a class="nav-link active" data-toggle="tab" href="{{route('products.index')}}">All</a>
+                                            <a class="nav-link active" data-toggle="tab"
+                                                href="{{route('products.index')}}">All</a>
                                         </li>
                                     </ul>
                                 </div>
@@ -548,20 +580,24 @@
                                                     <li class="list-inline-item"><a href="#"></a></li>
                                                         <li class="list-inline-item"><a href="#">Smart Led</a></li> --}}
                                                     {{-- </ul> --}}
-                                                <p><a href="">{{$product->name}}</a></p>
+                                                    <p><a
+                                                            href="{{route('products.show',$product->slug)}}">{{$product->name}}</a>
+                                                    </p>
                                                 </div>
                                                 <div class="tab-img">
-                                                    <img class="main-img img-fluid"
-                                                        src="{{asset('storage/'.$product->image)}}"
-                                                        alt="" >
-                                                        @if($product->images)
-                                                        @foreach(json_decode($product->images,true) as $image)
-                                                        <img class="sec-img img-fluid" src="{{asset('storage/'.$image)}}" alt="">
-                                                        @endforeach
-                                                        @endif
+                                                    <a href="{{route('products.show',$product->slug)}}"><img
+                                                            class="main-img img-fluid"
+                                                            src="{{asset('storage/'.$product->image)}}" alt=""></a>
+                                                    @if($product->images)
+                                                    @foreach(json_decode($product->images,true) as $image)
+                                                    <a href="{{route('products.show',$product->slug)}}"><img
+                                                            class="sec-img img-fluid" src="{{asset('storage/'.$image)}}"
+                                                            alt=""></a>
+                                                    @endforeach
+                                                    @endif
                                                     {{-- <img class="sec-img img-fluid"
                                                         src="{{asset('images/BuildingMaterials/Roofing/RoofingTools/handtool.png')}}"
-                                                        alt=""> --}}
+                                                    alt=""> --}}
                                                     <div class="layer-box">
                                                         <a href="" class="it-fav" data-toggle="tooltip"
                                                             data-placement="left" title="Favourite"><img
@@ -578,16 +614,36 @@
                                                             <li class="list-inline-item"><i class="fa fa-star-o"></i>
                                                             </li>
                                                         </ul>
-                                                        <ul class="list-unstyled list-inline ">
-                                                        <li class="list-inline-item">UGX {{$product->price}}</li>
-                                                            {{-- <li class="list-inline-item">$150.00</li> --}}
+                                                        @if($product->old_price==null)
+                                                        <ul class="list-unstyled list-inline one-price">
+                                                            <li class="list-inline-item">UGX {{$product->price}}</li>
+                                                            {{-- <li class="list-inline-item">12M</li> --}}
                                                         </ul>
+                                                        @else
+                                                        <ul class="list-unstyled list-inline price">
+                                                            <li class="list-inline-item">UGX {{$product->price}}</li>
+                                                            <li class="list-inline-item">UGX {{$product->old_price}}
+                                                            </li>
+                                                        </ul>
+                                                        @endif
                                                     </div>
+                                                    @if($product->main_category=='Land' ||
+                                                    $product->main_category=='Houses'||
+                                                    $product->main_category=='Apartments'||
+                                                    $product->main_category=='Vehicles'||
+                                                    $product->main_category=='Services')
+                                                    <div>
+                                                        <a href="" data-toggle="tooltip" data-placement="top"
+                                                            title="BUY"><i class="fa fa-money"
+                                                                aria-hidden="true"></i></a>
+                                                    </div>
+                                                    @else
                                                     <div>
                                                         <a href="" data-toggle="tooltip" data-placement="top"
                                                             title="Add to Cart"><img src="images/it-cart.png"
                                                                 alt=""></a>
                                                     </div>
+                                                    @endif
                                                 </div>
                                             </div>
                                             @endforeach
@@ -601,113 +657,137 @@
                                 <div class="col-md-6">
                                     <div class="banner">
                                         <a href="#"><img src="{{asset('images/banners/banner-sale.png')}}" alt=""
-                                                class="img-fluid"></a>
-                                    </div>
-                                </div>
-                                <div class="col-md-6">
-                                    <div class="banner">
-                                        <a href="#"><img src="{{asset('images/banners/banner1.png')}}" alt=""
-                                                class="img-fluid"></a>
-                                    </div>
-                                </div>
-                            </div>
-                        </div> --}}
-                        <div class="col-md-12 padding-fix-l20">
-                            <div class="new-product">
-                                <div class="sec-title">
-                                    <h5>Brand New Product</h5>
-                                </div>
-                                <div class="new-slider owl-carousel">
-                                      @foreach($latest_products as $latest)
-                                    <div class="new-item">
-                                        <div class="tab-heading">
-                                            {{-- <ul class="list-unstyled list-inline">
+                        class="img-fluid"></a>
+                    </div>
+                </div>
+                <div class="col-md-6">
+                    <div class="banner">
+                        <a href="#"><img src="{{asset('images/banners/banner1.png')}}" alt="" class="img-fluid"></a>
+                    </div>
+                </div>
+            </div>
+        </div> --}}
+        <div class="col-md-12 padding-fix-l20">
+            <div class="new-product">
+                <div class="sec-title">
+                    <h5>Brand New Product</h5>
+                </div>
+                <div class="new-slider owl-carousel">
+                    @foreach($latest_products as $latest)
+                    <div class="new-item">
+                        <div class="tab-heading">
+                            {{-- <ul class="list-unstyled list-inline">
                                                 <li class="list-inline-item"><a href="#"></a></li>
                                                 {{-- <li class="list-inline-item"><a href="#">Smart Led</a></li> --}}
-                                            {{-- </ul> --}}
-                                        <p><a href="">{{$latest->name}}</a></p>
-                                        </div>
-                                        <div class="new-img">
-                                            <img class="main-img img-fluid"
-                                                 src="{{asset('storage/'.$latest->image)}}" alt="">
-                                                 @if($latest->images)
-                                                 @foreach(json_decode($latest->images,true) as $image)
-                                                 <img class="sec-img img-fluid" src="{{asset('storage/'.$image)}}" alt="">
-                                                 @endforeach
-                                                 @endif
-                                            <div class="layer-box">
-                                                <a href="" class="it-fav" data-toggle="tooltip" data-placement="left"
-                                                    title="Favourite"><img src="images/it-fav.png" alt=""></a>
-                                            </div>
-                                        </div>
-                                        <div class="img-content d-flex justify-content-between">
-                                            <div>
-                                                <ul class="list-unstyled list-inline fav">
-                                                    <li class="list-inline-item"><i class="fa fa-star"></i></li>
-                                                    <li class="list-inline-item"><i class="fa fa-star"></i></li>
-                                                    <li class="list-inline-item"><i class="fa fa-star"></i></li>
-                                                    <li class="list-inline-item"><i class="fa fa-star"></i></li>
-                                                    <li class="list-inline-item"><i class="fa fa-star-o"></i></li>
-                                                </ul>
-                                                <ul class="list-unstyled list-inline">
-                                                <li class="list-inline-item">UGX {{$latest->price}}</li>
-                                                    {{-- <li class="list-inline-item">$150.00</li> --}}
-                                                </ul>
-                                            </div>
-                                            <div>
-                                                <a href="" data-toggle="tooltip" data-placement="top"
-                                                    title="Add to Cart"><img src="images/it-cart.png" alt=""></a>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    @endforeach
-                                </div>
+                            {{-- </ul> --}}
+                            <p><a href="{{route('products.show',$latest->slug)}}">{{$latest->name}}</a></p>
+                        </div>
+                        <div class="new-img">
+                            <a href='{{route('products.show',$latest->slug)}}'><img class="main-img img-fluid"
+                                    src="{{asset('storage/'.$latest->image)}}" alt=""></a>
+                            @if($latest->images)
+                            @foreach(json_decode($latest->images,true) as $image)
+                            <a href='{{route('products.show',$latest->slug)}}'><img class="sec-img img-fluid"
+                                    src="{{asset('storage/'.$image)}}" alt=""></a>
+                            @endforeach
+                            @endif
+                            <div class="layer-box">
+                                <a href="" class="it-fav" data-toggle="tooltip" data-placement="left"
+                                    title="Favourite"><img src="images/it-fav.png" alt=""></a>
                             </div>
                         </div>
-                        {{-- <div class="col-md-12 padding-fix-l20">
+                        <div class="img-content d-flex justify-content-between">
+                            <div>
+                                <ul class="list-unstyled list-inline fav">
+                                    <li class="list-inline-item"><i class="fa fa-star"></i></li>
+                                    <li class="list-inline-item"><i class="fa fa-star"></i></li>
+                                    <li class="list-inline-item"><i class="fa fa-star"></i></li>
+                                    <li class="list-inline-item"><i class="fa fa-star"></i></li>
+                                    <li class="list-inline-item"><i class="fa fa-star-o"></i></li>
+                                </ul>
+                                @if($latest->old_price==null)
+                                <ul class="list-unstyled list-inline one-price">
+                                    <li class="list-inline-item">UGX {{$latest->price}}</li>
+                                    {{-- <li class="list-inline-item">12M</li> --}}
+                                </ul>
+                                @else
+                                <ul class="list-unstyled list-inline price">
+                                    <li class="list-inline-item">UGX {{$latest->price}}</li>
+                                    <li class="list-inline-item">UGX {{$latest->old_price}}</li>
+                                </ul>
+                                @endif
+                            </div>
+                            @if($latest->main_category=='Land' || $latest->main_category=='Houses'||
+                            $latest->main_category=='Apartments'|| $latest->main_category=='Vehicles'||
+                            $latest->main_category=='Services')
+                            <div>
+                                <a href="" data-toggle="tooltip" data-placement="top" title="BUY"><i class="fa fa-money"
+                                        aria-hidden="true"></i></a>
+                            </div>
+                            @else
+                            <div>
+                                <a href="" data-toggle="tooltip" data-placement="top" title="Add to Cart"><img
+                                        src="images/it-cart.png" alt=""></a>
+                            </div>
+                            @endif
+                        </div>
+                    </div>
+                    @endforeach
+                </div>
+            </div>
+        </div>
+        {{-- <div class="col-md-12 padding-fix-l20">
                             <div class="banner-two">
                                 <a href="#"><img src="{{asset('images/banners/banner-box.png')}}" alt=""
-                                        class="img-fluid"></a>
+        class="img-fluid"></a>
+        </div>
+        </div> --}}
+        <div class="col-md-12 padding-fix-l20">
+            <div class="top-slr">
+                <div class="sec-title">
+                    <h5>Top Seller</h5>
+                </div>
+
+                <div class="slr-slider owl-carousel">
+                    @forelse($top_seller as $bseller)
+                    <div class="slr-items">
+                        <div class="slr-box d-flex">
+                            <div class="slr-img">
+                                <a href="{{route('products.show',$bseller->slug)}}"><img
+                                        src="{{asset('storage/'.$bseller->image)}}" alt=""
+                                        style="height:100px;width:100px;"></a>
                             </div>
-                        </div> --}}
-                        <div class="col-md-12 padding-fix-l20">
-                            <div class="top-slr">
-                                <div class="sec-title">
-                                    <h5>Top Seller</h5>
-                                </div>
-                               
-                                <div class="slr-slider owl-carousel">
-                                    @forelse($top_seller as $bseller)
-                                    <div class="slr-items">
-                                        <div class="slr-box d-flex">
-                                            <div class="slr-img">
-                                                <a href="#"><img  src="{{asset('storage/'.$bseller->image)}}"
-                                                        alt="" style="height:100px;width:100px;"></a>
-                                            </div>
-                                            <div class="slr-content">
-                                            <p><a href="">{{$bseller->name}}</a></p>
-                                                <ul class="list-unstyled list-inline fav">
-                                                    <li class="list-inline-item"><i class="fa fa-star"></i></li>
-                                                    <li class="list-inline-item"><i class="fa fa-star"></i></li>
-                                                    <li class="list-inline-item"><i class="fa fa-star"></i></li>
-                                                    <li class="list-inline-item"><i class="fa fa-star"></i></li>
-                                                    <li class="list-inline-item"><i class="fa fa-star-o"></i></li>
-                                                </ul>
-                                                <ul class="list-unstyled list-inline">
-                                                <li class="list-inline-item">UGX {{$bseller->price}}</li>
-                                                    {{-- <li class="list-inline-item">$150.00</li> --}}
-                                                </ul>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    @empty
-                                    No products Available
-                                    @endforelse
-                                </div>
-                               
+                            <div class="slr-content">
+                                <p><a href="{{route('products.show',$bseller->slug)}}">{{$bseller->name}}</a></p>
+                                <ul class="list-unstyled list-inline fav">
+                                    <li class="list-inline-item"><i class="fa fa-star"></i></li>
+                                    <li class="list-inline-item"><i class="fa fa-star"></i></li>
+                                    <li class="list-inline-item"><i class="fa fa-star"></i></li>
+                                    <li class="list-inline-item"><i class="fa fa-star"></i></li>
+                                    <li class="list-inline-item"><i class="fa fa-star-o"></i></li>
+                                </ul>
+                                @if($bseller->old_price==null)
+                                <ul class="list-unstyled list-inline one-price">
+                                    <li class="list-inline-item">UGX {{$bseller->price}}</li>
+                                    {{-- <li class="list-inline-item">12M</li> --}}
+                                </ul>
+                                @else
+                                <ul class="list-unstyled list-inline price">
+                                    <li class="list-inline-item">UGX {{$bseller->price}}</li>
+                                    <li class="list-inline-item">UGX {{$bseller->old_price}}</li>
+                                </ul>
+                                @endif
                             </div>
                         </div>
-                        {{-- <div class="col-md-12 padding-fix-l20">
+                    </div>
+                    @empty
+                    No products Available
+                    @endforelse
+                </div>
+
+            </div>
+        </div>
+        {{-- <div class="col-md-12 padding-fix-l20">
                                 <div class="hm-blog">
                                     <div class="sec-title">
                                         <h5>Latest News</h5>
@@ -768,9 +848,9 @@
                                     </div>
                                 </div>
                             </div> --}}
-                    </div>
-                </div>
-                {{-- <div class="col-md-12">
+        </div>
+        </div>
+        {{-- <div class="col-md-12">
                         <div class="tp-bnd owl-carousel">
                             <div class="bnd-items">
                                 <a href="#"><img src="images/brand-01.png" alt="" class="img-fluid"></a>
@@ -795,7 +875,7 @@
                             </div>
                         </div>
                     </div> --}}
-            </div>
+        </div>
         </div>
     </section>
     <!-- End Product Area -->
