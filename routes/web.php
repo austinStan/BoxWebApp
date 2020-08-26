@@ -21,6 +21,8 @@ Route::get('/', 'HomeController@index');
 
 Route::resource('products','ProductController');
 
+Route::resource('cart','CartController');
+
 
 //Voyager routes
 

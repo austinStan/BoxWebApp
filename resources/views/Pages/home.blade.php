@@ -95,7 +95,7 @@
                             </div>
                         </div>
                         <div class="cart-box ml-auto text-center">
-                            <a href="" class="cart-btn">
+                           <a href="{{route('cart.index')}}" class="cart-btn">
                                 <img src="images/cart.png" alt="cart">
                                 <span>2</span>
                             </a>

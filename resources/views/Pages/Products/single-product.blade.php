@@ -212,7 +212,7 @@
                                 </div>
                                 @if($single_product->main_category=='Land' || $single_product->main_category=='Houses'||  $single_product->main_category=='Apartments'||  $single_product->main_category=='Vehicles'||  $single_product->main_category=='Services')
                                 <div class="pro-btns">
-                                    <a href="" class="cart">Contact To Make Payment</a>
+                                    <a href="" class="cart">Purchase</a>
                                     <a href="" class="fav-com" data-toggle="tooltip" data-placement="top"
                                         title="Wishlist"><img src="{{asset('images/it-fav.png')}}" alt=""></a>
 

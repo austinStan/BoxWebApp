@@ -34,7 +34,7 @@
                         </a>
                     </div>
                     <div class="cart-box ml-4">
-                        <a href="" data-toggle="tooltip" data-placement="top" title="Shopping Cart" class="cart-btn">
+                        <a href="{{route('cart.index')}}" data-toggle="tooltip" data-placement="top" title="Shopping Cart" class="cart-btn">
                             <img src="{{asset('images/cart.png')}}" alt="cart">
                             <span>2</span>
                         </a>

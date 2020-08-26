@@ -6228,7 +6228,7 @@ input:focus, textarea:focus {
 
 .sg-product .sg-content .colo-siz .pro-btns a.cart {
   color: #fff;
-  background: #f00c93;
+  background:#007bff;
   display: inline-block;
   padding: 8px 20px;
   -webkit-border-radius: 30px;
