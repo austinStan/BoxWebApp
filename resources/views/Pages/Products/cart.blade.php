@@ -169,25 +169,36 @@
                                             </ul> --}}
                                         </div>
                                     </td>
-                                <td class="t-price">{{$item->price}}</td>
+                                <td class="t-price">UGX {{$item->price}}</td>
+                                  
                                     <td class="t-qty">
                                         <div class="qty-box">
+                                         <form action="{{route('cart.update',$item->id)}}">
+                                                @csrf
                                             <div class="quantity buttons_added">
-                                                <input type="button" value="-" class="minus">
-                                                <input type="number" step="1" min="1" max="10" value="1" class="qty text" size="4" readonly>
-                                                <input type="button" value="+" class="plus">
+                                                
+                                                <input type="submit" value="-" class="minus">
+                                                
+                                              <input type="number" step="1" min="1" name='quantity' value="{{$item->quantity}}" class="qty text" size="4" readonly>
+                    
+                                                <input type="submit" value="+" class="plus">
+                                               
                                             </div>
+                                            {{-- <button type='submit' class="btn btn-success" >update quantity</button> --}}
+                                        </form>
                                         </div>
                                     </td>
-                                    <td class="t-total">$189.00</td>
-                                    <td class="t-rem"><a href=""><i class="fa fa-trash-o"></i></a></td>
+                                    
+                               
+                                <td class="t-total">UGX {{\Cart::session(auth()->id())->get($item->id)->getPriceSum()}}</td>
+                                <td class="t-rem"><a href="{{route('cart.destroy',$item->id)}}"><i class="fa fa-trash-o"></i></a></td>
                                 </tr>
                                 @endforeach
                             </tbody>
                         </table>
                     </div>
                 </div>
-                <div class="col-md-4">
+                {{-- <div class="col-md-4">
                     <div class="shipping">
                         <h6>Calculate Shipping and Tax</h6>
                         <p>Enter your destination to get shipping estimate</p>
@@ -216,8 +227,8 @@
                             </div>
                         </form>
                     </div>
-                </div>
-                <div class="col-md-4">
+                </div> --}}
+                {{-- <div class="col-md-4">
                     <div class="coupon">
                         <h6>Discount Coupon</h6>
                         <p>Enter your coupon code if you have one</p>
@@ -226,14 +237,14 @@
                             <button type="button">Apply Code</button>
                         </form>
                     </div>
-                </div>
+                </div> --}}
                 <div class="col-md-4">
                     <div class="crt-sumry">
                         <h5>Cart Summery</h5>
                         <ul class="list-unstyled">
-                            <li>Subtotal <span>$328.00</span></li>
+                            <li>Subtotal <span>UGX {{\Cart::session(auth()->id())->getTotal()}}</span></li>
                             <li>Shipping & Tax <span>$00.00</span></li>
-                            <li>Grand Total <span>$328.00</span></li>
+                            <li>Grand Total <span>UGX {{\Cart::session(auth()->id())->getTotal()}}</span></li>
                         </ul>
                         <div class="cart-btns text-right">
                             <button type="button" class="up-cart">Update Cart</button>

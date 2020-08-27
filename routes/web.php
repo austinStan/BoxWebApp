@@ -23,7 +23,8 @@ Route::resource('products','ProductController');
 
 Route::get('/add-to-cart{product}','CartController@add')->name('cart.add')->middleware('auth');
 Route::get('/cart','CartController@index')->name('cart.index')->middleware('auth');
-
+Route::get('/cart/destroy/{itemid}','CartController@destroy')->name('cart.destroy')->middleware('auth');
+Route::get('/cart/update/{itemid}','CartController@update')->name('cart.update')->middleware('auth');
 
 //Voyager routes
 

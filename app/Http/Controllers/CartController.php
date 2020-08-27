@@ -10,12 +10,14 @@ class CartController extends Controller
 {
     public function add(Product $product){
 
-        dd(int($product->price));
+        $num =$product->price;
+        $value = floatval(preg_replace('/[^\d\.]+/', '', $num));
+        
 
         \Cart::session(auth()->id())->add(array(
             'id' => $product->id,
             'name' => $product->name,
-            'price' => $product->price,
+            'price' => $value,
             'quantity' => 1,
             'attributes' => array(
                'image' => $product->image
@@ -31,5 +33,21 @@ class CartController extends Controller
         // dd($cart_items);
         return view('Pages.Products.cart',compact('categories','cart_items'));
 
+    }
+    public function destroy($itemId){
+
+         \Cart::session(auth()->id())->remove($itemId);
+        // dd($cart_items);
+        return redirect()->route('cart.index')->with('error','Item was successfully deleted from your Cart!');
+    }
+
+    public function update($rowId){
+        \Cart::session(auth()->id())->update($rowId,[
+            'quantity' =>array(
+                'relative' => false,
+                'value' => request('quantity')
+            ),
+        ]);
+        return redirect()->route('cart.index')->with('success','item quantity was successfully updated!');
     }
 }

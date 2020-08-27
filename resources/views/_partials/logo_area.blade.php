@@ -33,7 +33,7 @@
                     <div class="cart-box ml-4">
                         <a href="" data-toggle="tooltip" data-placement="top" title="Shopping Cart" class="cart-btn">
                             <img src="{{asset('images/cart.png')}}" alt="cart">
-                            <span>2</span>
+                            <span>{{ \Cart::session(auth()->id())->getContent()->count()}}</span>
                         </a>
                     </div>
                 </div>
