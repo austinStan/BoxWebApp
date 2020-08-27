@@ -48,6 +48,6 @@ class CartController extends Controller
                 'value' => request('quantity')
             ),
         ]);
-        return redirect()->route('cart.index')->with('success','item quantity was successfully updated!');
+        return back();
     }
 }

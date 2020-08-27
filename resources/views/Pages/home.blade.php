@@ -97,7 +97,11 @@
                         <div class="cart-box ml-auto text-center">
                            <a href="{{route('cart.index')}}" class="cart-btn">
                                 <img src="images/cart.png" alt="cart">
+                                  @if(auth::check())
                                 <span>{{ \Cart::session(auth()->id())->getContent()->count()}}</span>
+                                  @else
+                                  <span>0</span>
+                                  @endif
                             </a>
                         </div>
                     </div>

@@ -38,6 +38,8 @@ class HomeController extends Controller
         $top_rated=Product::where('types','top rated')->inRandomOrder()->take(2)->get();
         $hot_offer=Product::where('types','hot offer')->inRandomOrder()->take(2)->get();
 
+        
+
         return view('Pages.home',compact('categories','products','latest_products','best_deal','top_seller','top_rated','hot_offer'));
     }
 }
