@@ -21,7 +21,8 @@ Route::get('/', 'HomeController@index');
 
 Route::resource('products','ProductController');
 
-Route::resource('cart','CartController');
+Route::get('/add-to-cart{product}','CartController@add')->name('cart.add')->middleware('auth');
+Route::get('/cart','CartController@index')->name('cart.index')->middleware('auth');
 
 
 //Voyager routes

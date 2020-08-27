@@ -219,7 +219,7 @@
                                 </div>
                                 @else
                                 <div class="pro-btns">
-                                <a href="{{route('cart.index')}}" class="cart">Add To Cart</a>
+                                <a href="{{route('cart.add',$single_product->id)}}" class="cart">Add To Cart</a>
                                     <a href="" class="fav-com" data-toggle="tooltip" data-placement="top"
                                         title="Wishlist"><img src="{{asset('images/it-fav.png')}}" alt=""></a>
 
