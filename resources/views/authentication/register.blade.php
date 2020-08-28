@@ -10,110 +10,13 @@
 @include('_partials.logo_area')
 <!-- End Logo Area 2 -->
 
-<!-- Cart Body -->
-<div class="cart-body">
-    <div class="close-btn">
-        <button class="close-cart"><img src="{{asset('images/close.png')}}" alt="">Close</button>
-    </div>
-    <div class="crt-bd-box">
-        <div class="cart-heading text-center">
-            <h5>Shopping Cart</h5>
-        </div>
-        <div class="cart-content">
-            <div class="content-item d-flex justify-content-between">
-                <div class="cart-img">
-                    <a href=""><img src="{{asset('images/cart1.png')}}" alt=""></a>
-                </div>
-                <div class="cart-disc">
-                    <p><a href="">SMART LED TV</a></p>
-                    <span>1 x $199.00</span>
-                </div>
-                <div class="delete-btn">
-                    <a href=""><i class="fa fa-trash-o"></i></a>
-                </div>
-            </div>
-            <div class="content-item d-flex justify-content-between">
-                <div class="cart-img">
-                    <a href=""><img src="{{asset('images/cart2.png')}}" alt=""></a>
-                </div>
-                <div class="cart-disc">
-                    <p><a href="">SMART LED TV</a></p>
-                    <span>1 x $199.00</span>
-                </div>
-                <div class="delete-btn">
-                    <a href=""><i class="fa fa-trash-o"></i></a>
-                </div>
-            </div>
-        </div>
-        <div class="cart-btm">
-            <p class="text-right">Sub Total: <span>$398.00</span></p>
-            <a href="#">Checkout</a>
-        </div>
-    </div>
-</div>
-<div class="cart-overlay"></div>
-<!-- End Cart Body -->
+
 
 @include('_partials.sticky_menu')
 
 
 <!-- Menu Area 2 -->
-<section class="menu-area2">
-    <div class="container">
-        <div class="row">
-            <div class="col-lg-3 col-md-0">
-                <div class="sidemenu">
-                    <p><a href="{{route('products.index')}}" class='text-white'>All Categories <i
-                                class="fa fa-bars"></i></a></p>
-                    <ul class="list-unstyled gt-menu">
-                        @foreach($categories as $category)
-                        <li><a href="{{route('products.index',['category_id'=>$category->id])}}">{{$category->name}}<i
-                                    class="fa fa-angle-right"></i></a>
-                            <?php $children= TCG\Voyager\Models\Category::where('parent_id',$category->id)->get();
-                            ?>
-                            @if($children->isNotEmpty())
-                            <div class="mega-menu">
-                                <div class="row">
-                                    @foreach($children as $child)
-                                    <div class="col-md-4">
-                                        <div class="smartphone">
-                                            <a href='{{route('products.index',['category_id'=>$child->id])}}'>
-                                                <h6>{{$child->name}}</h6>
-                                            </a>
-                                            <?php $grandchild= TCG\Voyager\Models\Category::where('parent_id',$child->id)->get();
-                                             ?>
-                                            @if($grandchild->isNotEmpty())
-                                            @foreach($grandchild as $gc)
-                                            <a
-                                                href="{{route('products.index',['category_id'=>$gc->id])}}">{{$gc->name}}</a>
-                                            @endforeach
-                                            @endif
-                                        </div>
-                                    </div>
-                                    @endforeach
-                                </div>
-                            </div>
-                        </li>
-                        @endif
-                        @endforeach
-                    </ul>
-                </div>
-            </div>
-            <div class="col-lg-9 col-md-12">
-                <div class="main-menu">
-                    <ul class="list-unstyled list-inline">
-                        <li class="list-inline-item"><a href="#">HOME</a></li>
-                        <li class="list-inline-item"><a href="#">ABOUT US</a></li>
-                        <li class="list-inline-item"><a href="#">FAQS</a></li>
-                        <li class="list-inline-item"><a href="#">REVIEWS</a></li>
-                        <li class="list-inline-item"><a href="#">CONTACT</a></li>
-                        <li class="list-inline-item cup-btn"><a href="">Get Your Coupon</a></li>
-                    </ul>
-                </div>
-            </div>
-        </div>
-    </div>
-</section>
+@include('_partials.menu_area')
 <!-- End Menu Area 2 -->
 
 <!-- Mobile Menu -->

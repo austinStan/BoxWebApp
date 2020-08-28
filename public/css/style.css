@@ -9513,8 +9513,8 @@ input:focus, textarea:focus {
 }
 
 .footer-top .f-contact .f-social ul li a i:hover {
-  background: #5677fc;
-  border-color: #5677fc;
+  background: #f00c93;
+  border-color: #f00c93;
   color: #e5e5e5;
 }
 
@@ -9539,11 +9539,11 @@ input:focus, textarea:focus {
 }
 
 .footer-top .f-cat ul li a:hover, .footer-top .f-sup ul li a:hover, .footer-top .f-link ul li a:hover {
-  color: #5677fc;
+  color: #f00c93;
 }
 
 .footer-top .f-cat ul li a:hover i, .footer-top .f-sup ul li a:hover i, .footer-top .f-link ul li a:hover i {
-  color: #5677fc;
+  color:#f00c93;
 }
 
 .footer-btm {
