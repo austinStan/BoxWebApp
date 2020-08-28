@@ -95,14 +95,17 @@
                             </div>
                         </div>
                         <div class="cart-box ml-auto text-center">
-                           <a href="{{route('cart.index')}}" class="cart-btn">
-                                <img src="images/cart.png" alt="cart">
-                                  @if(auth::check())
-                                <span>{{ \Cart::session(auth()->id())->getContent()->count()}}</span>
-                                  @else
-                                  <span>0</span>
-                                  @endif
+                            @if(auth::check())
+                            <a href="{{route('cart.index')}}" class="">
+                             <img src="{{asset('images/cart.png')}}" alt="cart">
+                                <span>{{ \Cart::session(auth()->id())->getContent()->count()}}</span>    
                             </a>
+                            @else 
+                            <a href="{{route('login')}}" class="">
+                                <img src="{{asset('images/cart.png')}}" alt="cart">
+                               
+                            </a>
+                            @endif
                         </div>
                     </div>
                 </div>
@@ -110,50 +113,6 @@
         </div>
     </section>
     <!-- End Logo Area -->
-
-    <!-- Cart Body -->
-    <div class="cart-body">
-        <div class="close-btn">
-            <button class="close-cart"><img src="images/close.png" alt="">Close</button>
-        </div>
-        <div class="crt-bd-box">
-            <div class="cart-heading text-center">
-                <h5>Shopping Cart</h5>
-            </div>
-            <div class="cart-content">
-                <div class="content-item d-flex justify-content-between">
-                    <div class="cart-img">
-                        <a href=""><img src="images/cart1.png" alt=""></a>
-                    </div>
-                    <div class="cart-disc">
-                        <p><a href="">SMART LED TV</a></p>
-                        <span>1 x $199.00</span>
-                    </div>
-                    <div class="delete-btn">
-                        <a href=""><i class="fa fa-trash-o"></i></a>
-                    </div>
-                </div>
-                <div class="content-item d-flex justify-content-between">
-                    <div class="cart-img">
-                        <a href=""><img src="images/cart2.png" alt=""></a>
-                    </div>
-                    <div class="cart-disc">
-                        <p><a href="">SMART LED TV</a></p>
-                        <span>1 x $199.00</span>
-                    </div>
-                    <div class="delete-btn">
-                        <a href=""><i class="fa fa-trash-o"></i></a>
-                    </div>
-                </div>
-            </div>
-            <div class="cart-btm">
-                <p class="text-right">Sub Total: <span>$398.00</span></p>
-                <a href="#">Checkout</a>
-            </div>
-        </div>
-    </div>
-    <div class="cart-overlay"></div>
-    <!-- End Cart Body -->
 
     @include('_partials.sticky_menu')
 

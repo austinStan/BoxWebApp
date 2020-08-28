@@ -23,11 +23,7 @@ class LoginController extends Controller
     use AuthenticatesUsers;
 
 
-    public function showLoginForm()
-    {
-        $categories=Category::whereNull('parent_id')->get();
-        return view('authentication.login',compact('categories'));
-    }
+ 
 
 
     /**
@@ -45,5 +41,16 @@ class LoginController extends Controller
     public function __construct()
     {
         $this->middleware('guest')->except('logout');
+    }
+    public function showLoginForm()
+    {
+
+        session()->put('previousUrl',url()->previous());
+        $categories=Category::whereNull('parent_id')->get();
+        return view('authentication.login',compact('categories'));
+    }
+
+    public function redirectTo(){
+       return str_replace(url('/'),'',session()->get('previousUrl','/'));
     }
 }

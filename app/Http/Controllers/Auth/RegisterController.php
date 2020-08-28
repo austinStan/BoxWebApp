@@ -25,12 +25,7 @@ class RegisterController extends Controller
 
     use RegistersUsers;
 
-    public function showRegistrationForm()
-    {
-        $categories=Category::whereNull('parent_id')->get();
-       
-        return view('authentication.register',compact('categories'));
-    }
+
 
     /**
      * Where to redirect users after registration.
@@ -48,6 +43,7 @@ class RegisterController extends Controller
     {
         $this->middleware('guest');
     }
+
 
     /**
      * Get a validator for an incoming registration request.
@@ -82,4 +78,17 @@ class RegisterController extends Controller
             'password' => Hash::make($data['password']),
         ]);
     }
+
+    public function showRegistrationForm()
+    {
+        session()->put('previousUrl',url()->previous());
+        $categories=Category::whereNull('parent_id')->get();
+       
+        return view('authentication.register',compact('categories'));
+    }
+
+
+    public function redirectTo(){
+        return str_replace(url('/'),'',session()->get('previousUrl','/'));
+     }
 }

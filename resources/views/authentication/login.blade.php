@@ -10,48 +10,7 @@
 @include('_partials.logo_area')
 <!-- End Logo Area 2 -->
 
-<!-- Cart Body -->
-<div class="cart-body">
-    <div class="close-btn">
-        <button class="close-cart"><img src="{{asset('images/close.png')}}" alt="">Close</button>
-    </div>
-    <div class="crt-bd-box">
-        <div class="cart-heading text-center">
-            <h5>Shopping Cart</h5>
-        </div>
-        <div class="cart-content">
-            <div class="content-item d-flex justify-content-between">
-                <div class="cart-img">
-                    <a href=""><img src="{{asset('images/cart1.png')}}" alt=""></a>
-                </div>
-                <div class="cart-disc">
-                    <p><a href="">SMART LED TV</a></p>
-                    <span>1 x $199.00</span>
-                </div>
-                <div class="delete-btn">
-                    <a href=""><i class="fa fa-trash-o"></i></a>
-                </div>
-            </div>
-            <div class="content-item d-flex justify-content-between">
-                <div class="cart-img">
-                    <a href=""><img src="{{asset('images/cart2.png')}}" alt=""></a>
-                </div>
-                <div class="cart-disc">
-                    <p><a href="">SMART LED TV</a></p>
-                    <span>1 x $199.00</span>
-                </div>
-                <div class="delete-btn">
-                    <a href=""><i class="fa fa-trash-o"></i></a>
-                </div>
-            </div>
-        </div>
-        <div class="cart-btm">
-            <p class="text-right">Sub Total: <span>$398.00</span></p>
-            <a href="#">Checkout</a>
-        </div>
-    </div>
-</div>
-<div class="cart-overlay"></div>
+
 <!-- End Cart Body -->
 
 @include('_partials.sticky_menu')
@@ -189,9 +148,7 @@
             <div class="col-md-6">
                 <div class="n-customer">
                     <h5>New Customer</h5>
-                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptatem est eum earum eius dolores,
-                        alias modi aut officia quo perferendis id aspernatur neque provident quas, quidem libero
-                        veritatis voluptatum illum!</p>
+                    <p>Box Uganda Customer Registration</p>
                     <a href="{{route('register')}}">Create an Account</a>
                 </div>
             </div>

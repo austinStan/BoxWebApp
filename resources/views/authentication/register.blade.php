@@ -235,6 +235,7 @@
                             <label for="password">Password*</label>
                             <input id="password" type="password" class=" @error('password') is-invalid @enderror"
                                 name="password" placeholder="Password should be atleast 8 character" required>
+                                <i id="pass-status" class="fa fa-eye fa-1x" style="position:relative; left:95%; bottom:65px;" onClick="viewPassword()" aria-hidden="true"></i>
                             @error('password')
                             <span class="invalid-feedback" role="alert">
                                 <strong>{{ $message }}</strong>
@@ -246,6 +247,7 @@
                             <input id="password_confirmation" type="password"
                                 class=" @error('password_confirmation') is-invalid @enderror"
                                 name="password_confirmation" placeholder="Confirm your password" required>
+                                <i id="pass-status-confirm" class="fa fa-eye fa-1x" style="position:relative; left:95%; bottom:65px;" onClick="viewConfirmPassword()" aria-hidden="true"></i>
                             @error('password_confirmation')
                             <span class="invalid-feedback" role="alert">
                                 <strong>{{ $message }}</strong>
@@ -345,4 +347,36 @@
 </section> --}}
 <!-- End Brand area 2 -->
 
+<script>
+    function viewPassword(){
+     var passwordInput = document.getElementById('password');
+     var passStatus = document.getElementById('pass-status');
+         if (passwordInput.type == 'password')
+         {
+             passwordInput.type='text';
+             passStatus.className='fa fa-eye-slash';
+         }
+         else
+         {
+             passwordInput.type='password';
+             passStatus.className='fa fa-eye';
+         }
+    }
+    
+     function viewConfirmPassword(){
+        var passwordInput = document.getElementById('password_confirmation');
+        var passStatus = document.getElementById('pass-status-confirm');
+            if (passwordInput.type == 'password')
+            {
+                passwordInput.type='text';
+                passStatus.className='fa fa-eye-slash';
+            }
+            else
+            {
+                passwordInput.type='password';
+                passStatus.className='fa fa-eye';
+            }
+       }
+        </script>
+   
 @endsection

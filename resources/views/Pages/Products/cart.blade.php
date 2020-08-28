@@ -147,15 +147,16 @@
 
                             
                             <tbody>
+                                @if(\Cart::session(auth()->id())->getContent()->count() > 0)
                                 @foreach($cart_items as $item)
                                 <tr>
                                     <td class="t-pro d-flex">
                                         <div class="t-img">
-                                            <a href=""><img src="{{asset('storage/'.$item->attributes->image)}}" alt=""
+                                        <a href="{{route('products.show',$item->attributes->slug)}}"><img src="{{asset('storage/'.$item->attributes->image)}}" alt=""
                                                 style="height:100px;width:100px;" ></a>
                                         </div>
                                         <div class="t-content">
-                                        <p class="t-heading"><a href="">{{$item->name}}</a></p>
+                                        <p class="t-heading"><a href="{{route('products.show',$item->attributes->slug)}}">{{$item->name}}</a></p>
                                             <ul class="list-unstyled list-inline rate">
                                                 <li class="list-inline-item"><i class="fa fa-star"></i></li>
                                                 <li class="list-inline-item"><i class="fa fa-star"></i></li>
@@ -194,6 +195,16 @@
                                 <td class="t-rem"><a href="{{route('cart.destroy',$item->id)}}"><i class="fa fa-trash-o"></i></a></td>
                                 </tr>
                                 @endforeach
+                                @else
+                                        
+                                        <div class="alert alert-warning alert-block">
+                                            No Items in The Cart
+                                        </div>
+                                        <div class='spacer'></div>
+                                        <a href={{route('products.index')}} class='btn btn-success btn-outline'>Continue Shopping</a>
+                                        <div class='spacer'></div>
+                                @endif
+                              
                             </tbody>
                         </table>
                     </div>

@@ -20,7 +20,8 @@ class CartController extends Controller
             'price' => $value,
             'quantity' => 1,
             'attributes' => array(
-               'image' => $product->image
+               'image' => $product->image,
+               'slug'=>$product->slug
             ),
             'associatedModel' => $product
         ));
@@ -32,7 +33,6 @@ class CartController extends Controller
         $cart_items = \Cart::session(auth()->id())->getContent();
         // dd($cart_items);
         return view('Pages.Products.cart',compact('categories','cart_items'));
-
     }
     public function destroy($itemId){
 
@@ -50,4 +50,5 @@ class CartController extends Controller
         ]);
         return back();
     }
+
 }
