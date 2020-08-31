@@ -28,6 +28,7 @@ Route::get('/add-to-cart{product}','CartController@add')->name('cart.add')->midd
 Route::get('/cart','CartController@index')->name('cart.index')->middleware('auth');
 Route::get('/cart/destroy/{itemid}','CartController@destroy')->name('cart.destroy')->middleware('auth');
 Route::get('/cart/update/{itemid}','CartController@update')->name('cart.update')->middleware('auth');
+Route::get('/cart/apply-coupon','CartController@applyCoupon')->name('cart.coupon')->middleware('auth');
 
 //Voyager routes
 

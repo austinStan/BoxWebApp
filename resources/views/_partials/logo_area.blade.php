@@ -4,8 +4,8 @@
             <div class="col-md-3">
                 <div class="logo">
                     <a href="{{url('/')}}"><img src={{asset("images/logo/set.png")}} alt="" width='100px' height='90px'
-                        style="border-radius:5px; padding-top:20px;">
-                </a>
+                            style="border-radius:5px; padding-top:20px;">
+                    </a>
                 </div>
             </div>
             <div class="col-lg-6 col-md-7 padding-fix">
@@ -14,9 +14,11 @@
                     <div class="search-cat">
                         <select class="form-control scat-id">
                             <option> <a href='{{route('products.index')}}'>All Categories</a></option>
-                           @foreach($categories as $category)
-                           <option><a href="{{route('products.index',['category_id'=>$category->id])}}">{{$category->name}}</a></option>
-                           @endforeach
+                            @foreach($categories as $category)
+                            <option><a
+                                    href="{{route('products.index',['category_id'=>$category->id])}}">{{$category->name}}</a>
+                            </option>
+                            @endforeach
                         </select>
                     </div>
                     <button type="submit"><i class="fa fa-search"></i></button>
@@ -31,14 +33,19 @@
                         </a>
                     </div>
                     <div class="cart-box ml-4">
-                        <a href="" data-toggle="tooltip" data-placement="top" title="Shopping Cart" class="cart-btn">
+                        @if(auth::check())
+                        <a href="{{route('cart.index')}}" data-toggle="tooltip" data-placement="top"
+                            title="Shopping Cart" class="">
                             <img src="{{asset('images/cart.png')}}" alt="cart">
-                            @if(auth::check())
                             <span>{{ \Cart::session(auth()->id())->getContent()->count()}}</span>
-                              @else
-                              <span>0</span>
-                              @endif
                         </a>
+                        @else
+                        <a href="{{route('login')}}" data-toggle="tooltip" data-placement="top"
+                        title="Shopping Cart" class="">
+                        <img src="{{asset('images/cart.png')}}" alt="cart">
+                        <span>0</span>
+                        </a>
+                        @endif
                     </div>
                 </div>
             </div>

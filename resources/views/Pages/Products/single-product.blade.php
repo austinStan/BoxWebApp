@@ -10,15 +10,6 @@
 @include('_partials.logo_area')
 <!-- End Logo Area 2 -->
 
-<!-- Preloader -->
-
-<!-- End Preloader -->
-
-
-<!-- End Logo Area 2 -->
-
-
-
 <!-- End Cart Body -->
 
 <!-- Sticky Menu -->

@@ -97,13 +97,13 @@
                         <div class="cart-box ml-auto text-center">
                             @if(auth::check())
                             <a href="{{route('cart.index')}}" class="">
-                             <img src="{{asset('images/cart.png')}}" alt="cart">
-                                <span>{{ \Cart::session(auth()->id())->getContent()->count()}}</span>    
+                                <img src="{{asset('images/cart.png')}}" alt="cart">
+                                <span>{{ \Cart::session(auth()->id())->getContent()->count()}}</span>
                             </a>
-                            @else 
+                            @else
                             <a href="{{route('login')}}" class="">
                                 <img src="{{asset('images/cart.png')}}" alt="cart">
-                               
+                                <span>0</span>
                             </a>
                             @endif
                         </div>
@@ -602,7 +602,7 @@
                                                     </div>
                                                     @else
                                                     <div>
-                                                        <a href="" data-toggle="tooltip" data-placement="top"
+                                                        <a href="{{route('cart.add',$product->id)}}" data-toggle="tooltip" data-placement="top"
                                                             title="Add to Cart"><img src="images/it-cart.png"
                                                                 alt=""></a>
                                                     </div>
@@ -689,7 +689,7 @@
                             </div>
                             @else
                             <div>
-                                <a href="" data-toggle="tooltip" data-placement="top" title="Add to Cart"><img
+                            <a href="{{route('cart.add',$product->id)}}" data-toggle="tooltip" data-placement="top" title="Add to Cart"><img
                                         src="images/it-cart.png" alt=""></a>
                             </div>
                             @endif

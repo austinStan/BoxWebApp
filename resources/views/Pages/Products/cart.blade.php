@@ -239,22 +239,23 @@
                         </form>
                     </div>
                 </div> --}}
-                {{-- <div class="col-md-4">
+                <div class="col-md-4">
                     <div class="coupon">
                         <h6>Discount Coupon</h6>
                         <p>Enter your coupon code if you have one</p>
-                        <form action="#">
-                            <input type="text" name="zip" value="" placeholder="Your Coupon">
-                            <button type="button">Apply Code</button>
+                    <form action="{{route('cart.coupon')}}">
+                             @csrf
+                            <input type="text" name="coupon_code" value="" placeholder="Your Coupon">
+                            <button type="submit" name='apply_coupon'>Apply Code</button>
                         </form>
                     </div>
-                </div> --}}
+                </div>
                 <div class="col-md-4">
                     <div class="crt-sumry">
                         <h5>Cart Summery</h5>
                         <ul class="list-unstyled">
                             <li>Subtotal <span>UGX {{\Cart::session(auth()->id())->getTotal()}}</span></li>
-                            <li>Shipping & Tax <span>$00.00</span></li>
+                            <li>Tax <span>$00.00</span></li>
                             <li>Grand Total <span>UGX {{\Cart::session(auth()->id())->getTotal()}}</span></li>
                         </ul>
                         <div class="cart-btns text-right">

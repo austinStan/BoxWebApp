@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 use App\Product;
 use App\Category;
+use App\Coupon;
 
 class CartController extends Controller
 {
@@ -12,7 +13,9 @@ class CartController extends Controller
 
         $num =$product->price;
         $value = floatval(preg_replace('/[^\d\.]+/', '', $num));
+
         
+    
 
         \Cart::session(auth()->id())->add(array(
             'id' => $product->id,
@@ -28,6 +31,7 @@ class CartController extends Controller
         return redirect()->route('cart.index')->with('success','Item was successfully added to your Cart!');
     }
     public function index(){
+
         $categories=Category::whereNull('parent_id')->get();
 
         $cart_items = \Cart::session(auth()->id())->getContent();
@@ -49,6 +53,27 @@ class CartController extends Controller
             ),
         ]);
         return back();
+    }
+
+    public function applyCoupon(){
+            // add single condition on a cart bases
+    $couponCode=request('coupon_code');
+
+    $couponData=Coupon::where('code',$couponCode)->first();
+
+    if(!$couponData){
+        
+        return back()->with('error','Coupon doesn\'t exist');
+    }
+    $condition = new \Darryldecode\Cart\CartCondition(array(
+        'name' => $couponData->name,
+        'type' => $couponData->type,
+        'target' => 'total', // this condition will be applied to cart's subtotal when getSubTotal() is called.
+        'value' => $couponData->value,
+    ));
+
+    \Cart::session(auth()->id())->condition($condition); 
+    return back()->with('success','Coupon was added!');
     }
 
 }

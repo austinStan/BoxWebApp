@@ -93,27 +93,31 @@
             <div class="col-md-3">
                 <div class="category-box">
                     <div class="sec-title">
-                      <a href='{{route('products.index')}}'><h6>Categories</h6></a>
+                        <a href='{{route('products.index')}}'>
+                            <h6>Categories</h6>
+                        </a>
                     </div>
                     <!-- accordion -->
                     <div id="accordion">
                         @foreach($categories as $category)
                         <div class="card">
                             <div class="card-header">
-                            <a href="{{route('products.index',['category_id'=>$category->id])}}" data-toggle="collapse" data-target="#collapse{{$category->id}}">
-                                <span>{{$category->name}}</span>
+                                <a href="{{route('products.index',['category_id'=>$category->id])}}"
+                                    data-toggle="collapse" data-target="#collapse{{$category->id}}">
+                                    <span>{{$category->name}}</span>
                                     <i class="fa fa-angle-down"></i>
-                                 
+
                                 </a>
                             </div>
                             <?php $children= TCG\Voyager\Models\Category::where('parent_id',$category->id)->get();
                             ?>
-                              @if($children->isNotEmpty())
-                        <div id="collapse{{$category->id}}" class="collapse">
+                            @if($children->isNotEmpty())
+                            <div id="collapse{{$category->id}}" class="collapse">
                                 <div class="card-body">
                                     <ul class="list-unstyled">
-                                        @foreach($children as  $child)
-                                    <li><a href="{{route('products.index',['category_id'=>$child->id])}}"><i class="fa fa-angle-right"></i>{{$child->name}}</a></li>
+                                        @foreach($children as $child)
+                                        <li><a href="{{route('products.index',['category_id'=>$child->id])}}"><i
+                                                    class="fa fa-angle-right"></i>{{$child->name}}</a></li>
                                         @endforeach
                                     </ul>
                                 </div>
@@ -226,12 +230,16 @@
                                 <div class="col-lg-4 col-md-6">
                                     <div class="tab-item">
                                         <div class="tab-img">
-                                            <a href='{{route('products.show',$product->slug)}}'><img class="main-img img-fluid" src="{{asset('storage/'.$product->image)}}"
-                                                height='700px' width='650px' alt=""></a>
+                                            <a href='{{route('products.show',$product->slug)}}'><img
+                                                    class="main-img img-fluid"
+                                                    src="{{asset('storage/'.$product->image)}}" height='700px'
+                                                    width='650px' alt=""></a>
                                             <span class="sale">Sale</span>
                                             @if($product->images)
                                             @foreach(json_decode($product->images,true) as $image)
-                                          <a href='{{route('products.show',$product->slug)}}'><img class="sec-img img-fluid" src="{{asset('storage/'.$image)}}" alt=""></a>
+                                            <a href='{{route('products.show',$product->slug)}}'><img
+                                                    class="sec-img img-fluid" src="{{asset('storage/'.$image)}}"
+                                                    alt=""></a>
                                             @endforeach
                                             @endif
                                             <div class="layer-box">
@@ -241,7 +249,9 @@
                                             </div>
                                         </div>
                                         <div class="tab-heading">
-                                        <p><a href="{{route('products.show',$product->slug)}}">{{$product->name}}</a></p>
+                                            <p><a
+                                                    href="{{route('products.show',$product->slug)}}">{{$product->name}}</a>
+                                            </p>
                                         </div>
                                         <div class="img-content d-flex justify-content-between">
                                             <div>
@@ -265,22 +275,24 @@
                                                 </ul>
                                                 @endif
                                             </div>
-                                            @if($product->main_category=='Land' || $product->main_category=='Houses'||  $product->main_category=='Apartments'||  $product->main_category=='Vehicles'||  $product->main_category=='Services')
+                                            @if($product->main_category=='Land' || $product->main_category=='Houses'||
+                                            $product->main_category=='Apartments'||
+                                            $product->main_category=='Vehicles'|| $product->main_category=='Services')
                                             <div>
-                                                <a href="" data-toggle="tooltip" data-placement="top"
-                                                    title="BUY"><i class="fa fa-money" aria-hidden="true"></i></a>
+                                                <a href="" data-toggle="tooltip" data-placement="top" title="BUY"><i
+                                                        class="fa fa-money" aria-hidden="true"></i></a>
                                             </div>
                                             @else
                                             <div>
-                                                <a href="" data-toggle="tooltip" data-placement="top"
-                                                    title="Add to Cart"><img src="{{asset('images/it-cart.png')}}"
-                                                        alt=""></a>
+                                                <a href="{{route('cart.add',$product->id)}}" data-toggle="tooltip"
+                                                    data-placement="top" title="Add to Cart"><img
+                                                        src="{{asset('images/it-cart.png')}}" alt=""></a>
                                             </div>
                                             @endif
                                         </div>
                                     </div>
                                 </div>
-                            @endforeach
+                                @endforeach
 
                             </div>
                         </div>
@@ -329,27 +341,34 @@
                                                         @else
                                                         <ul class="list-unstyled list-inline price">
                                                             <li class="list-inline-item">UGX {{$product->price}}</li>
-                                                            <li class="list-inline-item">UGX {{$product->old_price}}</li>
+                                                            <li class="list-inline-item">UGX {{$product->old_price}}
+                                                            </li>
                                                         </ul>
                                                         @endif
                                                     </div>
                                                 </div>
                                                 <div class="item-content">
                                                     <p>{{$product->description}}</p>
-                                                    @if($product->main_category=='Land' || $product->main_category=='Houses'||  $product->main_category=='Apartments'||  $product->main_category=='Vehicles'||  $product->main_category=='Services')
-                                                    <a href="" class="it-cart"><span class="it-img"><i class="fa fa-money" aria-hidden="true"></i></span><span
+                                                    @if($product->main_category=='Land' ||
+                                                    $product->main_category=='Houses'||
+                                                    $product->main_category=='Apartments'||
+                                                    $product->main_category=='Vehicles'||
+                                                    $product->main_category=='Services')
+                                                    <a href="" class="it-cart"><span class="it-img"><i
+                                                                class="fa fa-money" aria-hidden="true"></i></span><span
                                                             class="it-title">BUY</span></a>
                                                     <a href="" class="it-fav" data-toggle="tooltip" data-placement="top"
                                                         title="Favourite"><img src="images/it-fav.png" alt=""></a>
                                                     @else
                                                     <a href="" class="it-cart"><span class="it-img"><img
-                                                        src="images/it-cart.png" alt=""></span><span
-                                                    class="it-title">Add To Cart</span></a>
-                                                    <a href="" class="it-fav" data-toggle="tooltip" data-placement="top"
+                                                                src="images/it-cart.png" alt=""></span><span
+                                                            class="it-title">Add To Cart</span></a>
+                                                    <a href="{{route('cart.add',$product->id)}}" class="it-fav"
+                                                        data-toggle="tooltip" data-placement="top"
                                                         title="Favourite"><img src="images/it-fav.png" alt=""></a>
                                                     @endif
                                                 </div>
-                                            </div> 
+                                            </div>
                                         </div>
                                     </div>
                                 </div>

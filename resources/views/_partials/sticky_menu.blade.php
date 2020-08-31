@@ -4,8 +4,8 @@
         <div class="row">
             <div class="col-lg-2 col-md-3">
                 <div class="sticky-logo">
-                <a href="{{url('/')}}"><img src={{asset("images/logo/set.png")}} alt="" width='100px' height='65px' style="border-radius:5px; margin-top:40px;"
-                            ></a>
+                    <a href="{{url('/')}}"><img src={{asset("images/logo/set.png")}} alt="" width='100px' height='65px'
+                            style="border-radius:5px; margin-top:40px;"></a>
                 </div>
             </div>
             <div class="col-lg-6 col-md-7">
@@ -34,14 +34,19 @@
                         </a>
                     </div>
                     <div class="cart-box ml-4">
-                         <a href="{{route('cart.index')}}" data-toggle="tooltip" data-placement="top" title="Shopping Cart" class="cart-btn">
+                        @if(auth::check())
+                        <a href="{{route('cart.index')}}" data-toggle="tooltip" data-placement="top"
+                            title="Shopping Cart" class="">
                             <img src="{{asset('images/cart.png')}}" alt="cart">
-                            @if(auth::check())
                             <span>{{ \Cart::session(auth()->id())->getContent()->count()}}</span>
-                              @else
-                              <span>0</span>
-                              @endif
                         </a>
+                        @else
+                        <a href="{{route('login')}}" data-toggle="tooltip" data-placement="top" title="Shopping Cart"
+                            class="">
+                            <img src="{{asset('images/cart.png')}}" alt="cart">
+                            <span>0</span>
+                        </a>
+                        @endif
                     </div>
                 </div>
             </div>
