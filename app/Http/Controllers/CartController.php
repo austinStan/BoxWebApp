@@ -14,9 +14,6 @@ class CartController extends Controller
         $num =$product->price;
         $value = floatval(preg_replace('/[^\d\.]+/', '', $num));
 
-        
-    
-
         \Cart::session(auth()->id())->add(array(
             'id' => $product->id,
             'name' => $product->name,
@@ -74,6 +71,10 @@ class CartController extends Controller
 
     \Cart::session(auth()->id())->condition($condition); 
     return back()->with('success','Coupon was added!');
+    }
+
+    public function Tax(){
+        
     }
 
 }
